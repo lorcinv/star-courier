@@ -1,0 +1,5 @@
+Star Courier Sans is a renamed subset of Noto Sans CJK SC Regular.
+Original copyright and SIL Open Font License are in licenses/NotoSansCJK.txt.
+Only glyphs needed by this game UI and standard punctuation/symbols are kept.
+Rebuild with tools/subset_font.py and an installed NotoSansCJK-Regular.ttc.
+When adding new UI text, regenerate the subset before exporting.

@@ -1,0 +1,59 @@
+{
+  "palette": {
+    "Ink": "101c35",
+    "Cobalt": "3044aa",
+    "Cyan": "39d9d1",
+    "Yellow": "ffdf36",
+    "Coral": "fb6671",
+    "Cream": "fff1cc",
+    "Orange": "ff9748",
+    "Magenta": "be377a"
+  },
+  "front": "Blender -Y / Godot +Z",
+  "up": "Blender +Z / Godot +Y",
+  "rig": "Six rigid named pivots. Rotate HeadPivot / arms / legs relative to imported rest rotations. No skinning cost.",
+  "assets": [
+    {
+      "file": "courier_clerk.glb",
+      "title": "01 \u2022 NOVA / EXPRESS CLERK",
+      "vertices": 642,
+      "triangles": 1128,
+      "mesh_count": 6,
+      "surfaces": 22
+    },
+    {
+      "file": "customer.glb",
+      "title": "02 \u2022 BRAM / FREIGHT PILOT",
+      "vertices": 483,
+      "triangles": 830,
+      "mesh_count": 6,
+      "surfaces": 21
+    },
+    {
+      "file": "customer_2.glb",
+      "title": "03 \u2022 KIKI / SOUND TECH",
+      "vertices": 585,
+      "triangles": 1022,
+      "mesh_count": 6,
+      "surfaces": 26
+    },
+    {
+      "file": "customer_3.glb",
+      "title": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "vertices": 669,
+      "triangles": 1186,
+      "mesh_count": 6,
+      "surfaces": 22
+    }
+  ],
+  "geometry_validation": {
+    "silhouettes": 148,
+    "normalized_source_windings": 56,
+    "all_front_caps_face_negative_y": true,
+    "all_back_caps_face_positive_y": true,
+    "all_prisms_closed_and_consistently_oriented": true,
+    "all_outlines_simple_and_cap_triangles_oriented": true,
+    "backface_culling_in_blender_proofs": true,
+    "godot_generated_lods": false
+  }
+}

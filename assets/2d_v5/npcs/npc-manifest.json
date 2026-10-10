@@ -1,0 +1,1242 @@
+{
+  "version": 2,
+  "status": "asset delivery only; runtime integration must be verified separately",
+  "palette": "source_art/pixel_pipeline_studies/palette_96.json",
+  "palette_sha256": "5bb6b501d7bece46b528a3c230e39c207e5f8a3aac6be15969f21683e73f2944",
+  "provenance": "All character, parcel, expression and accessory pixels were generated with built-in imagegen. Original files preserved byte-for-byte. Derivatives only crop, uniformly nearest-resample, threshold alpha128 and map to the common approved 96-color palette in Oklab. No face-only scaling or procedural painted artwork.",
+  "animation_status": "Two matched whole-sprite poses. These are not Spine-bound assets and no Spine rig/export is claimed.",
+  "randomization_policy": "Choose one appearance_id, then one of its compatible accessory options. Never mix parts across species. Portrait identity is stable because every removable accessory mounts below the portrait crop.",
+  "appearances": {
+    "elf_archivist": {
+      "appearance_id": "elf_archivist",
+      "species": "elf",
+      "facing": "right",
+      "shared_canvas": [
+        192,
+        256
+      ],
+      "foot_anchor": [
+        96,
+        248
+      ],
+      "body_height": 240,
+      "default_accessory": "book_pouch",
+      "world": {
+        "idle": "assets/2d_v5/npcs/elf_archivist/idle-pixel.png",
+        "handoff": "assets/2d_v5/npcs/elf_archivist/handoff-pixel.png"
+      },
+      "poses": {
+        "idle": {
+          "runtime": "assets/2d_v5/npcs/elf_archivist/idle-pixel.png",
+          "sha256": "6b5ea8950377118695183a246168658c130684daf87e2517fbed031ead144dbd",
+          "dimensions": [
+            192,
+            256
+          ],
+          "alpha_bounds": [
+            31,
+            8,
+            158,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 68,
+          "all_colors_in_shared_palette": true,
+          "source_bounds": [
+            172,
+            29,
+            683,
+            994
+          ],
+          "source_extracted": "source_art/2d_v5/npc_debranding/elf_archivist-idle-extracted.png",
+          "source_foot_anchor": [
+            433.0,
+            994
+          ],
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "uniform_scale": 0.24870466321243523,
+          "paste_offset": [
+            31,
+            8
+          ],
+          "sampling_size": [
+            127,
+            240
+          ],
+          "debranding_source": "source_art/2d_v5/npc_debranding/elf-world-registered.png"
+        },
+        "handoff": {
+          "runtime": "assets/2d_v5/npcs/elf_archivist/handoff-pixel.png",
+          "sha256": "2e61b5c74b0d2d079de4ce74f1a048cdb3e813b8ce72df7342ca97509e01fcf2",
+          "dimensions": [
+            192,
+            256
+          ],
+          "alpha_bounds": [
+            31,
+            8,
+            171,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 69,
+          "all_colors_in_shared_palette": true,
+          "source_bounds": [
+            716,
+            29,
+            1278,
+            994
+          ],
+          "source_extracted": "source_art/2d_v5/npc_debranding/elf_archivist-handoff-extracted.png",
+          "source_foot_anchor": [
+            977.0,
+            994
+          ],
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "uniform_scale": 0.24870466321243523,
+          "paste_offset": [
+            31,
+            8
+          ],
+          "sampling_size": [
+            140,
+            240
+          ],
+          "debranding_source": "source_art/2d_v5/npc_debranding/elf-world-registered.png"
+        }
+      },
+      "accessory_options": {
+        "book_pouch": {
+          "runtime": "assets/2d_v5/npcs/elf_archivist/accessories/book_pouch-pixel.png",
+          "sha256": "95d092ac2e5764bf7bf76b7079ea1b15a65ee76cc50b97002b096d07fd28ccd3",
+          "dimensions": [
+            31,
+            48
+          ],
+          "alpha_bounds": [
+            0,
+            0,
+            31,
+            48
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 60,
+          "all_colors_in_shared_palette": true,
+          "accessory_id": "book_pouch",
+          "compatible_species": [
+            "elf"
+          ],
+          "compatible_appearance_ids": [
+            "elf_archivist"
+          ],
+          "local_anchor": [
+            11,
+            3
+          ],
+          "world_anchors": {
+            "idle": [
+              60,
+              150
+            ],
+            "handoff": [
+              60,
+              150
+            ]
+          },
+          "portrait_visibility": "below upper-waist portrait crop; no portrait overlay required",
+          "source_bounds": [
+            1337,
+            244,
+            1494,
+            484
+          ]
+        },
+        "map_case": {
+          "runtime": "assets/2d_v5/npcs/elf_archivist/accessories/map_case-pixel.png",
+          "sha256": "e54261f0628e95387e13f13365fdc5831e9025c47431beeccfe27c9234e5cfdf",
+          "dimensions": [
+            25,
+            60
+          ],
+          "alpha_bounds": [
+            0,
+            0,
+            25,
+            60
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 44,
+          "all_colors_in_shared_palette": true,
+          "accessory_id": "map_case",
+          "compatible_species": [
+            "elf"
+          ],
+          "compatible_appearance_ids": [
+            "elf_archivist"
+          ],
+          "local_anchor": [
+            9,
+            3
+          ],
+          "world_anchors": {
+            "idle": [
+              60,
+              150
+            ],
+            "handoff": [
+              60,
+              150
+            ]
+          },
+          "portrait_visibility": "below upper-waist portrait crop; no portrait overlay required",
+          "source_bounds": [
+            1348,
+            540,
+            1483,
+            866
+          ]
+        }
+      },
+      "portrait_canvas": [
+        512,
+        512
+      ],
+      "portrait_anchor": {
+        "waist": [
+          256,
+          512
+        ],
+        "shoulder": [
+          256,
+          291
+        ]
+      },
+      "portraits": {
+        "neutral": "assets/2d_v5/npcs/elf_archivist/portraits/neutral.png",
+        "pleased": "assets/2d_v5/npcs/elf_archivist/portraits/pleased.png",
+        "concerned": "assets/2d_v5/npcs/elf_archivist/portraits/concerned.png"
+      },
+      "portrait_metadata": {
+        "neutral": {
+          "runtime": "assets/2d_v5/npcs/elf_archivist/portraits/neutral.png",
+          "sha256": "a54bbc978ea1c69a2d7ae161d708665c6fbd37e00dfb92bdcf382d39d3a4f060",
+          "dimensions": [
+            512,
+            512
+          ],
+          "alpha_bounds": [
+            84,
+            32,
+            401,
+            512
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 71,
+          "all_colors_in_shared_palette": true,
+          "expression_id": "neutral",
+          "source_bounds": [
+            28,
+            130,
+            530,
+            889
+          ],
+          "source_extracted": "source_art/2d_v5/npc_debranding/elf_archivist-portrait-neutral-extracted.png",
+          "uniform_scale": 0.6324110671936759,
+          "paste_offset": [
+            84,
+            32
+          ],
+          "waist_anchor": [
+            256,
+            512
+          ],
+          "shoulder_anchor": [
+            256,
+            291
+          ],
+          "debranding_source": "source_art/2d_v5/npc_debranding/elf-portraits-registered.png"
+        },
+        "pleased": {
+          "runtime": "assets/2d_v5/npcs/elf_archivist/portraits/pleased.png",
+          "sha256": "aff07f65bb70b512f6bdee51d6a75f41097cc8a8bb726a34ad30d9cebff0b3b3",
+          "dimensions": [
+            512,
+            512
+          ],
+          "alpha_bounds": [
+            85,
+            32,
+            402,
+            512
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 67,
+          "all_colors_in_shared_palette": true,
+          "expression_id": "pleased",
+          "source_bounds": [
+            542,
+            130,
+            1043,
+            889
+          ],
+          "source_extracted": "source_art/2d_v5/npc_debranding/elf_archivist-portrait-pleased-extracted.png",
+          "uniform_scale": 0.6324110671936759,
+          "paste_offset": [
+            85,
+            32
+          ],
+          "waist_anchor": [
+            256,
+            512
+          ],
+          "shoulder_anchor": [
+            256,
+            291
+          ],
+          "debranding_source": "source_art/2d_v5/npc_debranding/elf-portraits-registered.png"
+        },
+        "concerned": {
+          "runtime": "assets/2d_v5/npcs/elf_archivist/portraits/concerned.png",
+          "sha256": "a265039df909ded2e3c64745a98f061f475403c392691a284f27d29522a2cc45",
+          "dimensions": [
+            512,
+            512
+          ],
+          "alpha_bounds": [
+            86,
+            32,
+            397,
+            512
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 69,
+          "all_colors_in_shared_palette": true,
+          "expression_id": "concerned",
+          "source_bounds": [
+            1044,
+            130,
+            1536,
+            889
+          ],
+          "source_extracted": "source_art/2d_v5/npc_debranding/elf_archivist-portrait-concerned-extracted.png",
+          "uniform_scale": 0.6324110671936759,
+          "paste_offset": [
+            86,
+            32
+          ],
+          "waist_anchor": [
+            256,
+            512
+          ],
+          "shoulder_anchor": [
+            256,
+            291
+          ],
+          "debranding_source": "source_art/2d_v5/npc_debranding/elf-portraits-registered.png"
+        }
+      },
+      "sources": {
+        "world": {
+          "path": "source_art/2d_v5/npcs/elf_archivist-world-original.png",
+          "sha256": "7883e30544a3df0b23c1ce984147e4d35095bbe73e0e087eb64cecef7cf28544",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "prompt": "source_art/2d_v5/npcs/elf_archivist-world.prompt.txt",
+          "tool": "built-in image_gen.imagegen",
+          "transparent_background": true
+        },
+        "portraits": {
+          "path": "source_art/2d_v5/npcs/elf_archivist-portraits-original.png",
+          "sha256": "328be0d0f94ff4eaf03ecfa76cc76f1a27bc4e10a11891dacbe2d3af9624a271",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "prompt": "source_art/2d_v5/npcs/elf_archivist-portraits.prompt.txt",
+          "tool": "built-in image_gen.imagegen",
+          "transparent_background": true
+        }
+      },
+      "debranding": {
+        "audit": "Clothing, personal accessories and customer-owned parcel are unbranded; unaffected originals retained.",
+        "provenance": "source_art/2d_v5/npc_debranding/provenance.json"
+      }
+    },
+    "alien_botanist": {
+      "appearance_id": "alien_botanist",
+      "species": "alien",
+      "facing": "right",
+      "shared_canvas": [
+        192,
+        256
+      ],
+      "foot_anchor": [
+        96,
+        248
+      ],
+      "body_height": 240,
+      "default_accessory": "seed_pod",
+      "world": {
+        "idle": "assets/2d_v5/npcs/alien_botanist/idle-pixel.png",
+        "handoff": "assets/2d_v5/npcs/alien_botanist/handoff-pixel.png"
+      },
+      "poses": {
+        "idle": {
+          "runtime": "assets/2d_v5/npcs/alien_botanist/idle-pixel.png",
+          "sha256": "3eaa08631bf9e1ebd1639fe75f7a60a2269930229f7a5ed1b379dac09502cbfa",
+          "dimensions": [
+            192,
+            256
+          ],
+          "alpha_bounds": [
+            43,
+            8,
+            163,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 86,
+          "all_colors_in_shared_palette": true,
+          "source_bounds": [
+            100,
+            19,
+            594,
+            1003
+          ],
+          "source_extracted": "source_art/2d_v5/npcs/alien_botanist-idle-extracted.png",
+          "source_foot_anchor": [
+            318.0,
+            1003
+          ],
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "uniform_scale": 0.24390243902439024,
+          "paste_offset": [
+            43,
+            8
+          ],
+          "sampling_size": [
+            120,
+            240
+          ]
+        },
+        "handoff": {
+          "runtime": "assets/2d_v5/npcs/alien_botanist/handoff-pixel.png",
+          "sha256": "cf0eb65847b015c33611152b3de2c2fa1b94bcb6c0b7440409bfaaa93fb2d7a1",
+          "dimensions": [
+            192,
+            256
+          ],
+          "alpha_bounds": [
+            42,
+            8,
+            172,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 87,
+          "all_colors_in_shared_palette": true,
+          "source_bounds": [
+            671,
+            19,
+            1205,
+            1003
+          ],
+          "source_extracted": "source_art/2d_v5/npc_debranding/alien_botanist-handoff-extracted.png",
+          "source_foot_anchor": [
+            892.5,
+            1003
+          ],
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "uniform_scale": 0.24390243902439024,
+          "paste_offset": [
+            42,
+            8
+          ],
+          "sampling_size": [
+            130,
+            240
+          ],
+          "debranding_source": "source_art/2d_v5/npc_debranding/alien-world-registered.png"
+        }
+      },
+      "accessory_options": {
+        "seed_pod": {
+          "runtime": "assets/2d_v5/npcs/alien_botanist/accessories/seed_pod-pixel.png",
+          "sha256": "d78de97897603ce34de9f676a15aec5cc51e3e11aee10f27ca1fe8670b235d60",
+          "dimensions": [
+            32,
+            52
+          ],
+          "alpha_bounds": [
+            0,
+            0,
+            32,
+            52
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 50,
+          "all_colors_in_shared_palette": true,
+          "accessory_id": "seed_pod",
+          "compatible_species": [
+            "alien"
+          ],
+          "compatible_appearance_ids": [
+            "alien_botanist"
+          ],
+          "local_anchor": [
+            12,
+            3
+          ],
+          "world_anchors": {
+            "idle": [
+              61,
+              163
+            ],
+            "handoff": [
+              57,
+              163
+            ]
+          },
+          "portrait_visibility": "below upper-waist portrait crop; no portrait overlay required",
+          "source_bounds": [
+            1278,
+            215,
+            1461,
+            517
+          ],
+          "debranding_source": "source_art/2d_v5/npc_debranding/alien-world-registered.png"
+        },
+        "field_vial": {
+          "runtime": "assets/2d_v5/npcs/alien_botanist/accessories/field_vial-pixel.png",
+          "sha256": "4aad3a3a7a31aa30a26d9c7fc2174bc36184c8c494726df22594a835f84e30c5",
+          "dimensions": [
+            18,
+            54
+          ],
+          "alpha_bounds": [
+            0,
+            0,
+            18,
+            54
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 52,
+          "all_colors_in_shared_palette": true,
+          "accessory_id": "field_vial",
+          "compatible_species": [
+            "alien"
+          ],
+          "compatible_appearance_ids": [
+            "alien_botanist"
+          ],
+          "local_anchor": [
+            7,
+            3
+          ],
+          "world_anchors": {
+            "idle": [
+              61,
+              163
+            ],
+            "handoff": [
+              57,
+              163
+            ]
+          },
+          "portrait_visibility": "below upper-waist portrait crop; no portrait overlay required",
+          "source_bounds": [
+            1318,
+            606,
+            1423,
+            915
+          ]
+        }
+      },
+      "portrait_canvas": [
+        512,
+        512
+      ],
+      "portrait_anchor": {
+        "waist": [
+          256,
+          512
+        ],
+        "shoulder": [
+          256,
+          313
+        ]
+      },
+      "portraits": {
+        "neutral": "assets/2d_v5/npcs/alien_botanist/portraits/neutral.png",
+        "pleased": "assets/2d_v5/npcs/alien_botanist/portraits/pleased.png",
+        "concerned": "assets/2d_v5/npcs/alien_botanist/portraits/concerned.png"
+      },
+      "portrait_metadata": {
+        "neutral": {
+          "runtime": "assets/2d_v5/npcs/alien_botanist/portraits/neutral.png",
+          "sha256": "868c1dc466958efba2dba20b37a9a28dd86c57b6c352070c3066cf45486531b6",
+          "dimensions": [
+            512,
+            512
+          ],
+          "alpha_bounds": [
+            72,
+            32,
+            394,
+            512
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 90,
+          "all_colors_in_shared_palette": true,
+          "expression_id": "neutral",
+          "source_bounds": [
+            37,
+            152,
+            513,
+            861
+          ],
+          "source_extracted": "source_art/2d_v5/npcs/alien_botanist-portrait-neutral-extracted.png",
+          "uniform_scale": 0.6770098730606487,
+          "paste_offset": [
+            72,
+            32
+          ],
+          "waist_anchor": [
+            256,
+            512
+          ],
+          "shoulder_anchor": [
+            256,
+            313
+          ]
+        },
+        "pleased": {
+          "runtime": "assets/2d_v5/npcs/alien_botanist/portraits/pleased.png",
+          "sha256": "fe9b8334db6c539eb7a38bf7698149bb539eefcfd79c893924671ca69f752460",
+          "dimensions": [
+            512,
+            512
+          ],
+          "alpha_bounds": [
+            73,
+            32,
+            395,
+            512
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 91,
+          "all_colors_in_shared_palette": true,
+          "expression_id": "pleased",
+          "source_bounds": [
+            540,
+            152,
+            1015,
+            861
+          ],
+          "source_extracted": "source_art/2d_v5/npcs/alien_botanist-portrait-pleased-extracted.png",
+          "uniform_scale": 0.6770098730606487,
+          "paste_offset": [
+            73,
+            32
+          ],
+          "waist_anchor": [
+            256,
+            512
+          ],
+          "shoulder_anchor": [
+            256,
+            313
+          ]
+        },
+        "concerned": {
+          "runtime": "assets/2d_v5/npcs/alien_botanist/portraits/concerned.png",
+          "sha256": "ca58864390a66f4f65f0ce18585cd83625c531b15bbbc8c83760a0f19b6b2ec7",
+          "dimensions": [
+            512,
+            512
+          ],
+          "alpha_bounds": [
+            76,
+            32,
+            395,
+            512
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 91,
+          "all_colors_in_shared_palette": true,
+          "expression_id": "concerned",
+          "source_bounds": [
+            1041,
+            152,
+            1512,
+            861
+          ],
+          "source_extracted": "source_art/2d_v5/npcs/alien_botanist-portrait-concerned-extracted.png",
+          "uniform_scale": 0.6770098730606487,
+          "paste_offset": [
+            76,
+            32
+          ],
+          "waist_anchor": [
+            256,
+            512
+          ],
+          "shoulder_anchor": [
+            256,
+            313
+          ]
+        }
+      },
+      "sources": {
+        "world": {
+          "path": "source_art/2d_v5/npcs/alien_botanist-world-original.png",
+          "sha256": "51bb31b3f3420b5f737c33f3b2a2f48f7d83e9e4d3cba9033f1994d79be6dd03",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "prompt": "source_art/2d_v5/npcs/alien_botanist-world.prompt.txt",
+          "tool": "built-in image_gen.imagegen",
+          "transparent_background": true
+        },
+        "portraits": {
+          "path": "source_art/2d_v5/npcs/alien_botanist-portraits-original.png",
+          "sha256": "717158c689ede728f2ab8d530f588bab57b4d447df1b72efc002faa37a0deace",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "prompt": "source_art/2d_v5/npcs/alien_botanist-portraits.prompt.txt",
+          "tool": "built-in image_gen.imagegen",
+          "transparent_background": true
+        }
+      },
+      "debranding": {
+        "audit": "Clothing, personal accessories and customer-owned parcel are unbranded; unaffected originals retained.",
+        "provenance": "source_art/2d_v5/npc_debranding/provenance.json"
+      }
+    },
+    "robot_machinist": {
+      "appearance_id": "robot_machinist",
+      "species": "robot",
+      "facing": "right",
+      "shared_canvas": [
+        192,
+        256
+      ],
+      "foot_anchor": [
+        96,
+        248
+      ],
+      "body_height": 240,
+      "default_accessory": "tool_pack",
+      "world": {
+        "idle": "assets/2d_v5/npcs/robot_machinist/idle-pixel.png",
+        "handoff": "assets/2d_v5/npcs/robot_machinist/handoff-pixel.png"
+      },
+      "poses": {
+        "idle": {
+          "runtime": "assets/2d_v5/npcs/robot_machinist/idle-pixel.png",
+          "sha256": "469632fe003c84793accf8e4726c354199a992f3716995c1ff3efcefaaf3db4e",
+          "dimensions": [
+            192,
+            256
+          ],
+          "alpha_bounds": [
+            35,
+            8,
+            172,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 80,
+          "all_colors_in_shared_palette": true,
+          "source_bounds": [
+            118,
+            83,
+            637,
+            989
+          ],
+          "source_extracted": "source_art/2d_v5/npc_debranding/robot_machinist-idle-extracted.png",
+          "source_foot_anchor": [
+            349.5,
+            989
+          ],
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "uniform_scale": 0.26490066225165565,
+          "paste_offset": [
+            35,
+            8
+          ],
+          "sampling_size": [
+            137,
+            240
+          ],
+          "debranding_source": "source_art/2d_v5/npc_debranding/robot-world-registered.png"
+        },
+        "handoff": {
+          "runtime": "assets/2d_v5/npcs/robot_machinist/handoff-pixel.png",
+          "sha256": "a0ad275ae4017509f26382f92622428da3ad2c16d1140eae5b6efaa9d5ac7c4e",
+          "dimensions": [
+            192,
+            256
+          ],
+          "alpha_bounds": [
+            34,
+            8,
+            182,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 79,
+          "all_colors_in_shared_palette": true,
+          "source_bounds": [
+            672,
+            83,
+            1230,
+            989
+          ],
+          "source_extracted": "source_art/2d_v5/npc_debranding/robot_machinist-handoff-extracted.png",
+          "source_foot_anchor": [
+            907.0,
+            989
+          ],
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "uniform_scale": 0.26490066225165565,
+          "paste_offset": [
+            34,
+            8
+          ],
+          "sampling_size": [
+            148,
+            240
+          ],
+          "debranding_source": "source_art/2d_v5/npc_debranding/robot-world-registered.png"
+        }
+      },
+      "accessory_options": {
+        "tool_pack": {
+          "runtime": "assets/2d_v5/npcs/robot_machinist/accessories/tool_pack-pixel.png",
+          "sha256": "ccc2aaee3ee9d78b1541cf3278816ff102ce254c73a48b8996002d1dfb4a3a91",
+          "dimensions": [
+            48,
+            55
+          ],
+          "alpha_bounds": [
+            0,
+            0,
+            48,
+            55
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 69,
+          "all_colors_in_shared_palette": true,
+          "accessory_id": "tool_pack",
+          "compatible_species": [
+            "robot"
+          ],
+          "compatible_appearance_ids": [
+            "robot_machinist"
+          ],
+          "local_anchor": [
+            4,
+            14
+          ],
+          "world_anchors": {
+            "idle": [
+              58,
+              158
+            ],
+            "handoff": [
+              58,
+              158
+            ]
+          },
+          "portrait_visibility": "below upper-waist portrait crop; no portrait overlay required",
+          "source_bounds": [
+            1234,
+            232,
+            1502,
+            539
+          ]
+        },
+        "power_cell": {
+          "runtime": "assets/2d_v5/npcs/robot_machinist/accessories/power_cell-pixel.png",
+          "sha256": "762b6f70d57fa907766ad371a27b3ffc00c2000fbdad8b0c6ec3d87ca7eae13a",
+          "dimensions": [
+            45,
+            55
+          ],
+          "alpha_bounds": [
+            0,
+            0,
+            45,
+            55
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 68,
+          "all_colors_in_shared_palette": true,
+          "accessory_id": "power_cell",
+          "compatible_species": [
+            "robot"
+          ],
+          "compatible_appearance_ids": [
+            "robot_machinist"
+          ],
+          "local_anchor": [
+            4,
+            14
+          ],
+          "world_anchors": {
+            "idle": [
+              58,
+              158
+            ],
+            "handoff": [
+              58,
+              158
+            ]
+          },
+          "portrait_visibility": "below upper-waist portrait crop; no portrait overlay required",
+          "source_bounds": [
+            1264,
+            640,
+            1484,
+            907
+          ]
+        }
+      },
+      "portrait_canvas": [
+        512,
+        512
+      ],
+      "portrait_anchor": {
+        "waist": [
+          256,
+          512
+        ],
+        "shoulder": [
+          256,
+          307
+        ]
+      },
+      "portraits": {
+        "neutral": "assets/2d_v5/npcs/robot_machinist/portraits/neutral.png",
+        "pleased": "assets/2d_v5/npcs/robot_machinist/portraits/pleased.png",
+        "concerned": "assets/2d_v5/npcs/robot_machinist/portraits/concerned.png"
+      },
+      "portrait_metadata": {
+        "neutral": {
+          "runtime": "assets/2d_v5/npcs/robot_machinist/portraits/neutral.png",
+          "sha256": "74fa60140c087afca3f3ffeb26065205ccaf2a9f1515bc580d4d5bec6e52bed6",
+          "dimensions": [
+            512,
+            512
+          ],
+          "alpha_bounds": [
+            20,
+            32,
+            475,
+            512
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 84,
+          "all_colors_in_shared_palette": true,
+          "expression_id": "neutral",
+          "source_bounds": [
+            47,
+            38,
+            682,
+            708
+          ],
+          "source_extracted": "source_art/2d_v5/npc_debranding/robot_machinist-portrait-neutral-extracted.png",
+          "uniform_scale": 0.7164179104477612,
+          "paste_offset": [
+            20,
+            32
+          ],
+          "waist_anchor": [
+            256,
+            512
+          ],
+          "shoulder_anchor": [
+            256,
+            307
+          ],
+          "debranding_source": "source_art/2d_v5/npc_debranding/robot-portraits-registered.png"
+        },
+        "pleased": {
+          "runtime": "assets/2d_v5/npcs/robot_machinist/portraits/pleased.png",
+          "sha256": "fafabb1a3c65f35f7be40a3c9f82580986e5f5c1aa917cd00f761c33285becbe",
+          "dimensions": [
+            512,
+            512
+          ],
+          "alpha_bounds": [
+            20,
+            32,
+            475,
+            512
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 83,
+          "all_colors_in_shared_palette": true,
+          "expression_id": "pleased",
+          "source_bounds": [
+            768,
+            38,
+            1404,
+            708
+          ],
+          "source_extracted": "source_art/2d_v5/npc_debranding/robot_machinist-portrait-pleased-extracted.png",
+          "uniform_scale": 0.7164179104477612,
+          "paste_offset": [
+            20,
+            32
+          ],
+          "waist_anchor": [
+            256,
+            512
+          ],
+          "shoulder_anchor": [
+            256,
+            307
+          ],
+          "debranding_source": "source_art/2d_v5/npc_debranding/robot-portraits-registered.png"
+        },
+        "concerned": {
+          "runtime": "assets/2d_v5/npcs/robot_machinist/portraits/concerned.png",
+          "sha256": "a33851b17153b108aea275d0df288e55546dbc92e1dfda15854025f8db6bba10",
+          "dimensions": [
+            512,
+            512
+          ],
+          "alpha_bounds": [
+            20,
+            32,
+            475,
+            512
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 84,
+          "all_colors_in_shared_palette": true,
+          "expression_id": "concerned",
+          "source_bounds": [
+            1492,
+            38,
+            2129,
+            708
+          ],
+          "source_extracted": "source_art/2d_v5/npc_debranding/robot_machinist-portrait-concerned-extracted.png",
+          "uniform_scale": 0.7164179104477612,
+          "paste_offset": [
+            20,
+            32
+          ],
+          "waist_anchor": [
+            256,
+            512
+          ],
+          "shoulder_anchor": [
+            256,
+            307
+          ],
+          "debranding_source": "source_art/2d_v5/npc_debranding/robot-portraits-registered.png"
+        }
+      },
+      "sources": {
+        "world": {
+          "path": "source_art/2d_v5/npcs/robot_machinist-world-v2-original.png",
+          "sha256": "503afcc729a6423bcb3ba317ab3b0997203b78ec26d49516658345f44f326e39",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "prompt": "source_art/2d_v5/npcs/robot_machinist-world-v2.prompt.txt",
+          "tool": "built-in image_gen.imagegen",
+          "transparent_background": true
+        },
+        "portraits": {
+          "path": "source_art/2d_v5/npcs/robot_machinist-portraits-original.png",
+          "sha256": "900d952e3697cedd3bf42087c01c385bdb526238fb33dc76f91535f5822af797",
+          "dimensions": [
+            2172,
+            724
+          ],
+          "prompt": "source_art/2d_v5/npcs/robot_machinist-portraits.prompt.txt",
+          "tool": "built-in image_gen.imagegen",
+          "transparent_background": true
+        }
+      },
+      "debranding": {
+        "audit": "Clothing, personal accessories and customer-owned parcel are unbranded; unaffected originals retained.",
+        "provenance": "source_art/2d_v5/npc_debranding/provenance.json"
+      }
+    }
+  },
+  "appearance_variants": [
+    {
+      "appearance_id": "elf_archivist",
+      "variant_id": "elf_archivist__book_pouch",
+      "species": "elf",
+      "accessory_id": "book_pouch"
+    },
+    {
+      "appearance_id": "elf_archivist",
+      "variant_id": "elf_archivist__map_case",
+      "species": "elf",
+      "accessory_id": "map_case"
+    },
+    {
+      "appearance_id": "alien_botanist",
+      "variant_id": "alien_botanist__seed_pod",
+      "species": "alien",
+      "accessory_id": "seed_pod"
+    },
+    {
+      "appearance_id": "alien_botanist",
+      "variant_id": "alien_botanist__field_vial",
+      "species": "alien",
+      "accessory_id": "field_vial"
+    },
+    {
+      "appearance_id": "robot_machinist",
+      "variant_id": "robot_machinist__tool_pack",
+      "species": "robot",
+      "accessory_id": "tool_pack"
+    },
+    {
+      "appearance_id": "robot_machinist",
+      "variant_id": "robot_machinist__power_cell",
+      "species": "robot",
+      "accessory_id": "power_cell"
+    }
+  ],
+  "debranding": {
+    "provenance": "source_art/2d_v5/npc_debranding/provenance.json",
+    "method": "Only bounded imagegen replacement regions were registered into original sheets; original alpha and all pixels outside regions preserved. Runtime identity and anchors unchanged."
+  },
+  "customer_parcel_transfer": {
+    "runtime": "assets/2d_v5/npcs/shared/customer-parcel-neutral-pixel.png",
+    "sha256": "d3cdfc57024208c6866c5f61f8b76031e7768664956494885bee8d2f0896733d",
+    "dimensions": [
+      66,
+      45
+    ],
+    "alpha_bounds": [
+      0,
+      0,
+      66,
+      45
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "source": "source_art/2d_v5/npc_debranding/original_edits/customer-parcel-extracted.png",
+    "source_sha256": "6cde94952f49b4a72e965cc49d974dab0745c7906f754156160b6362acd3488b",
+    "tool": "built-in image_gen.imagegen",
+    "transparent_background": true,
+    "prompt": "source_art/2d_v5/npc_debranding/parcel-extraction.prompt.txt",
+    "edit_target": "source_art/2d_v5/npc_debranding/parcel-extraction-target.png",
+    "target_crop_origin": "source_art/2d_v5/npc_debranding/original_edits/elf-world.png",
+    "target_crop_xyxy": [
+      1030,
+      405,
+      1280,
+      580
+    ],
+    "source_alpha128_crop": [
+      80,
+      56,
+      1445,
+      991
+    ],
+    "occlusion_disclosure": "Imagegen removed the occluding fingers and reconstructed only the continuation of the same box surfaces/edges. The complete hidden lower corners are reconstructed, not literal source extraction.",
+    "processing": "Alpha128 crop; one uniform nearest resize to 45px high; shared96 palette; no dithering; binary alpha; no procedural art.",
+    "use": "Shared neutral customer parcel for external robot transport. Do not replace branded ship module casing."
+  }
+}

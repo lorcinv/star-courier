@@ -1,0 +1,23 @@
+{
+  "inspected_images": [
+    "drill-original.png",
+    "drill-proofsheet-native.png",
+    "drill-sky-8x.png",
+    "drill-shop-8x.png",
+    "drill-alignment-8x.png"
+  ],
+  "visual_review": "Inspected native 72px and exact nearest 8x on actual runtime sky and shop backgrounds. Cream helical taper and cobalt/gold housing remain readable, source proportions retained, silhouette edges are crisp without glow or black fringe. Full silhouette stays within the 72px cell; intended tip pixel touches the rightmost column.",
+  "collision_review": "Housing fits body circle. The taper rear shoulder uses the body collider, with one index-coordinate/two rendered-center tip texels slightly outside the exact cutter collision union. No image or physics distortion applied to hide this. See drill-manifest.json for both coordinate conventions.",
+  "checks": {
+    "binary_alpha": true,
+    "shared_palette": true,
+    "zero_transparent_rgb": true,
+    "source_hash_preserved": true,
+    "no_clipped_opaque_source_pixels": true,
+    "nearest_8x_exact_repetition": true,
+    "deterministic_second_run": true,
+    "python_compile": true,
+    "godot_import_or_runtime_test": false
+  },
+  "scope": "Image processing only; no catalog, main, physics, world, or GUI changes."
+}

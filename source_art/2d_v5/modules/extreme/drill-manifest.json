@@ -1,0 +1,205 @@
+{
+  "id": "drill",
+  "generator": "built-in image_gen (supplied original)",
+  "original": "source_art/2d_v5/modules/extreme/drill-original.png",
+  "original_sha256": "cff828e4d1658c39a448bc8bac63268407b2907af590ec2ae948fc7a59a86a96",
+  "original_dimensions": [
+    1254,
+    1254
+  ],
+  "source_alpha128_bounds_xyxy": [
+    85,
+    356,
+    1204,
+    939
+  ],
+  "runtime": "assets/2d_v5/modules/drill-pixel.png",
+  "sha256": "da121a67f35f11cbb0fa7e269e927e7a11ccfd3df14ba06082314246b5c4c858",
+  "palette_source": "source_art/pixel_pipeline_studies/palette_96.json",
+  "palette_sha256": "5bb6b501d7bece46b528a3c230e39c207e5f8a3aac6be15969f21683e73f2944",
+  "script": "tools/prepare_drill_module.py",
+  "method": "Uniform nearest-neighbor inverse sampling; existing fixed 96-color Oklab mapper; no dithering; binary alpha >=128; largest 8-connected component; transparent RGB zero. No artwork painted, no silhouette reshaping, no nonuniform stretching, no generation.",
+  "mapping": {
+    "coordinate_convention": "Source and runtime integer coordinates identify texel centers. Nearest ties use numpy.rint (ties-to-even).",
+    "scale_xy": [
+      0.0575,
+      0.0575
+    ],
+    "rotation_degrees": 0,
+    "source_tip_landmark": [
+      1197,
+      680
+    ],
+    "runtime_tip_landmark": [
+      71,
+      36
+    ],
+    "forward": "x = (source_x - 1197) * 0.0575 + 71; y = (source_y - 680) * 0.0575 + 36",
+    "inverse_sampling": "source_x = rint((x - 71) / 0.0575 + 1197); source_y = rint((y - 36) / 0.0575 + 680)",
+    "projected_source_alpha_bounds_center_coordinates": [
+      7.06,
+      17.37,
+      71.345,
+      50.835
+    ]
+  },
+  "anchors": {
+    "cell_dimensions_px": [
+      72,
+      72
+    ],
+    "cell_dimensions_m": [
+      1,
+      1
+    ],
+    "module_center_and_rotation_anchor_px": [
+      36,
+      36
+    ],
+    "body_circle_center_px": [
+      36,
+      36
+    ],
+    "body_circle_radius_m": 0.43,
+    "body_circle_radius_px_exact": 30.96,
+    "cutter_offset_m": [
+      0.3,
+      0
+    ],
+    "cutter_center_px_exact": [
+      57.6,
+      36
+    ],
+    "cutter_center_px_rounded": [
+      58,
+      36
+    ],
+    "cutter_radius_m": 0.18,
+    "cutter_radius_px_exact": 12.96,
+    "cutter_radius_px_rounded": 13,
+    "suggested_cardinal_sockets_px": {
+      "left": [
+        0,
+        36
+      ],
+      "right": [
+        72,
+        36
+      ],
+      "top": [
+        36,
+        0
+      ],
+      "bottom": [
+        36,
+        72
+      ]
+    }
+  },
+  "collision_notes": [
+    "All housing texel centers fit the ordinary 0.43 m body circle.",
+    "The helical bit is a taper rather than a circular silhouette. Its rear shoulder has 28 texel indices outside the small exact cutter circle; these lie inside the ordinary body circle.",
+    "The tip texel at (71,36) lies 0.44 px (0.006111 m) beyond the exact small-circle radius. It fits the requested rounded center (58,36), radius 13 px. No other visible texel center lies outside the exact union.",
+    "The preceding measures use requested integer pixel-index coordinates. In a rendered texture rectangle [0,72], texel centers are index+0.5: indices (71,36) and (70,37) are outside the exact union, with maximum 0.94899 px (0.01318 m) protrusion at the tip center. No housing texel center is outside the body circle. Raster pixel footprints are not exact circular polygons.",
+    "The full alpha>=128 source silhouette fits the runtime pixel footprint; rightmost source contour projects to x=71.345. No drill tip was clipped or painted to force collider agreement.",
+    "These are texel-center diagnostics, not polygon-perfect collision claims. Runtime physics and texture filtering were not changed by this script."
+  ],
+  "texture_import": {
+    "lossless_compression": true,
+    "mipmaps": false,
+    "fix_alpha_border": false,
+    "engine_import_verified": false,
+    "note": "No Godot/GUI process run during simultaneous tests. Parent should import normally before runtime validation."
+  },
+  "validation": {
+    "runtime_dimensions": [
+      72,
+      72
+    ],
+    "runtime_alpha_bounds_xyxy": [
+      8,
+      18,
+      72,
+      51
+    ],
+    "visible_pixels": 1571,
+    "alpha_values": [
+      0,
+      255
+    ],
+    "visible_palette_color_count": 67,
+    "palette_outliers": 0,
+    "transparent_rgb_zero": true,
+    "pure_black_visible_pixels": 0,
+    "connected_components": 1,
+    "detached_sampling_fringe_pixels_removed": 0,
+    "opaque_source_pixels_outside_runtime_footprint": 0,
+    "housing_alpha_bounds_xyxy": [
+      8,
+      18,
+      47,
+      51
+    ],
+    "housing_pixels_outside_body_circle": 0,
+    "cutter_alpha_bounds_xyxy": [
+      47,
+      23,
+      72,
+      48
+    ],
+    "cutter_visible_pixels": 389,
+    "cutter_pixels_outside_exact_cutter_circle": 29,
+    "visible_pixels_outside_exact_collision_union": 1,
+    "outside_exact_union_xy": [
+      [
+        71,
+        36
+      ]
+    ],
+    "visible_pixels_outside_rounded_collision_union": 0,
+    "tip_outside_exact_cutter_radius_px": 0.44,
+    "rendered_texel_center_housing_pixels_outside_body": 0,
+    "rendered_texel_centers_outside_exact_union": 2,
+    "rendered_texel_centers_outside_exact_union_indices_xy": [
+      [
+        71,
+        36
+      ],
+      [
+        70,
+        37
+      ]
+    ],
+    "rendered_tip_texel_center_outside_exact_cutter_radius_px": 0.94899
+  },
+  "proofs": [
+    {
+      "background": "assets/2d_v5/environment/far-city.png",
+      "background_crop_xyxy": [
+        450,
+        28,
+        522,
+        100
+      ],
+      "native": "source_art/2d_v5/modules/extreme/drill-sky-native.png",
+      "nearest_8x": "source_art/2d_v5/modules/extreme/drill-sky-8x.png"
+    },
+    {
+      "background": "assets/2d_v5/environment/shop-shell.png",
+      "background_crop_xyxy": [
+        660,
+        230,
+        732,
+        302
+      ],
+      "native": "source_art/2d_v5/modules/extreme/drill-shop-native.png",
+      "nearest_8x": "source_art/2d_v5/modules/extreme/drill-shop-8x.png"
+    }
+  ],
+  "alignment_proof": {
+    "native": "source_art/2d_v5/modules/extreme/drill-alignment-native.png",
+    "nearest_8x": "source_art/2d_v5/modules/extreme/drill-alignment-8x.png",
+    "legend": "Cyan: exact body circle and module anchor. Pink: exact cutter circle and rounded center. Proof overlay only."
+  },
+  "native_proofsheet": "source_art/2d_v5/modules/extreme/drill-proofsheet-native.png"
+}

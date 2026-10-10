@@ -1,0 +1,74 @@
+{
+  "method": "Imagegen originals only; originals unchanged. Nearest sampling onto explicit 2px grid; source-only adaptive sky palette and shared reference-derived Oklab96 palette for other layers; binary alpha128; narrow premultiplied technical edge bridges. No added dithering, generated gradients, mirrored or reversed tiles, or procedural illustration.",
+  "palette": "source_art/pixel_pipeline_studies/palette_96.json",
+  "palette_sha256": "5bb6b501d7bece46b528a3c230e39c207e5f8a3aac6be15969f21683e73f2944",
+  "sky_palette_colors": 256,
+  "assets": [
+    {
+      "name": "atmosphere-tall",
+      "source": "source_art/2d_v5/ascent/atmosphere-tall-original.png",
+      "source_sha256": "167e9798c4d769e2c3f0fb40ef048737a4ba266e539120073e59eab80adeee5d",
+      "runtime": "source_art/2d_v5/ascent/sky-palette-refinement/source256/atmosphere-tall.png",
+      "runtime_sha256": "0952f1ae0a00ef50e381a017a11ac2bda99e1b640d2414ec3645b869780bf013",
+      "source_dimensions": [
+        887,
+        1774
+      ],
+      "dimensions": [
+        1280,
+        2560
+      ],
+      "crop": null,
+      "nearest_grid_px": 2,
+      "palette": {
+        "mode": "source-only-adaptive",
+        "requested_colors": 256,
+        "actual_palette_colors": 256,
+        "new_dither": false,
+        "path": "source_art/2d_v5/ascent/sky-palette-refinement/source256/sky-palette-source256.json",
+        "sha256": "d4b31c67f0d13cf66f645ec79f08a87bd9de002a30025436f00264c38726d82c"
+      },
+      "authored_island_scale": 1.0,
+      "alpha_threshold": 128,
+      "alpha_values": [
+        255
+      ],
+      "visible_palette_colors": 256,
+      "alpha_bbox": [
+        0,
+        0,
+        1280,
+        2560
+      ],
+      "edge_repair_grid_texels": {
+        "x": 8,
+        "y": 0
+      },
+      "repeat": {
+        "x": true,
+        "y": false
+      },
+      "edge_before": {
+        "x": {
+          "max_rgba_error": 19.0,
+          "mean_rgba_error": 1.414453148841858
+        },
+        "y": {
+          "max_rgba_error": 194.0,
+          "mean_rgba_error": 113.47578430175781
+        }
+      },
+      "edge_after": {
+        "x": {
+          "max_rgba_error": 0.0,
+          "mean_rgba_error": 0.0
+        },
+        "y": {
+          "max_rgba_error": 195.0,
+          "mean_rgba_error": 113.6644515991211
+        }
+      }
+    }
+  ],
+  "seam_validation": "Edge errors measured on final actual RGBA derivatives. Transparent margins alone are sufficient for both cloud layers. City/sky/star edges required repairs; generation was not assumed seamless. Seam proof crops composite actual opposite edges over an authored sky crop."
+}

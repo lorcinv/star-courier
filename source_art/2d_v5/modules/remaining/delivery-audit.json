@@ -1,0 +1,236 @@
+{
+  "requested_count": 19,
+  "delivered_count": 19,
+  "missing_ids": [],
+  "all_closed_sprites_untouched": true,
+  "closed_sprite_hash_checks": [
+    {
+      "id": "cargo",
+      "sha256_matches_closed_manifest": true
+    },
+    {
+      "id": "beam",
+      "sha256_matches_closed_manifest": true
+    },
+    {
+      "id": "battery",
+      "sha256_matches_closed_manifest": true
+    },
+    {
+      "id": "thruster",
+      "sha256_matches_closed_manifest": true
+    },
+    {
+      "id": "armor",
+      "sha256_matches_closed_manifest": true
+    },
+    {
+      "id": "coupler",
+      "sha256_matches_closed_manifest": true
+    },
+    {
+      "id": "spring",
+      "sha256_matches_closed_manifest": true
+    },
+    {
+      "id": "connector",
+      "sha256_matches_closed_manifest": true
+    }
+  ],
+  "all_originals_prompts_provenance_and_lossless_crops_preserved": true,
+  "checks": [
+    {
+      "id": "valve",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "rotator",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "damper",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "lance",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "accelerator",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "arc",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "bomb",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "shield",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "decoy",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "shrink",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "enlarge",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "teleporter",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "splitter",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "probe",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "collision",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "delay",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "and_gate",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "or_gate",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    },
+    {
+      "id": "not_gate",
+      "runtime_exists": true,
+      "original_exists": true,
+      "prompt_exists": true,
+      "has_provenance": true,
+      "crop_is_lossless": true,
+      "transparent_rgb_zero": true,
+      "unique_runtime_sha256": true
+    }
+  ],
+  "validation_file": "source_art/2d_v5/modules/remaining/pixel-validation.json",
+  "proofsheet_native": "source_art/2d_v5/modules/remaining/proofsheet-native.png",
+  "proofsheet_4x": "source_art/2d_v5/modules/remaining/proofsheet-4x.png"
+}

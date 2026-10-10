@@ -1,0 +1,32 @@
+[
+  {
+    "id": "valve",
+    "path": "/workspace/scratch/445d2872ecf6/generated_images/exec-e184221c-0eec-46b6-a6b8-3ed6cb6dc952.png",
+    "prompt": "Use case: precise-object-edit. Asset type: production 2D pixel-art modular courier component sprite. Input image1 is the approved pixel-cel courier shop art direction; input image2 is the approved golden courier module atlas. Extract its art style and manufacture exactly ONE new individual component variant matching these references. Power flow valve: one near-square gold/navy casing with a large dark circular adjustment dial centered on its side and a cream radial pointer, two small cyan flow slots left/right of dial, a short gold handwheel silhouette at top. Reads instantly as an adjustable power regulator, no text. Render one isolated component centered on a truly transparent square background with generous clear margins, no other components. Same shallow side view as the approved module atlas, same thick navy pixel silhouette, broad yellow-gold painted housing, navy-indigo recessed shadows, cream upper-right edge light, restrained bright cyan function accents. Genuine hand-pixelated raster art, large clean pixel clusters, limited flat colors, no smooth gradients, no antialias blur, no high-frequency texture. The piece must remain readable after nearest-neighbor reduction to72x72 pixels; use only a few large details. Compact approximately square gameplay-cell footprint; flat mating side edges, not a whole spacecraft, not a character, not an illustration scene. Warm lighting from upper RIGHT. Must be a pure2D pixel sprite, not a rendered3D model or isometric icon. No ground, shadow, background, label, text, border, frame, UI, watermark or detached particles. Entire main object connected, crisp alpha boundary.",
+    "generator": "built-in image_gen",
+    "references": [
+      "source_art/art_direction_v4/pixel-cel-shop-reference-03.png",
+      "source_art/2d_v5/modules/courier-kit-atlas-original.png"
+    ]
+  },
+  {
+    "id": "rotator",
+    "path": "/workspace/scratch/445d2872ecf6/generated_images/exec-78e0a8e8-d189-412f-8247-46fd251fe46a.png",
+    "prompt": "Use case: precise-object-edit. Asset type: production 2D pixel-art modular courier component sprite. Input image1 is the approved pixel-cel courier shop art direction; input image2 is the approved golden courier module atlas. Extract its art style and manufacture exactly ONE new individual component variant matching these references. Angle turntable: one near-square gold/navy housing built around a large exposed circular silver bearing ring with a dark center hub. One bold cream curved clockwise-arrow painted across the navy bearing face. Flat gold mounting cheeks left and right, no text. Render one isolated component centered on a truly transparent square background with generous clear margins, no other components. Same shallow side view as the approved module atlas, same thick navy pixel silhouette, broad yellow-gold painted housing, navy-indigo recessed shadows, cream upper-right edge light, restrained bright cyan function accents. Genuine hand-pixelated raster art, large clean pixel clusters, limited flat colors, no smooth gradients, no antialias blur, no high-frequency texture. The piece must remain readable after nearest-neighbor reduction to72x72 pixels; use only a few large details. Compact approximately square gameplay-cell footprint; flat mating side edges, not a whole spacecraft, not a character, not an illustration scene. Warm lighting from upper RIGHT. Must be a pure2D pixel sprite, not a rendered3D model or isometric icon. No ground, shadow, background, label, text, border, frame, UI, watermark or detached particles. Entire main object connected, crisp alpha boundary.",
+    "generator": "built-in image_gen",
+    "references": [
+      "source_art/art_direction_v4/pixel-cel-shop-reference-03.png",
+      "source_art/2d_v5/modules/courier-kit-atlas-original.png"
+    ]
+  },
+  {
+    "id": "damper",
+    "path": "/workspace/scratch/445d2872ecf6/generated_images/exec-bdb5fe90-d943-47b5-93c4-443188b3957b.png",
+    "prompt": "Use case: precise-object-edit. Asset type: production 2D pixel-art modular courier component sprite. Input image1 is the approved pixel-cel courier shop art direction; input image2 is the approved golden courier module atlas. Extract its art style and manufacture exactly ONE new individual component variant matching these references. Motion damper: one near-square compact gold/navy shock absorber housing, with a single thick horizontal silver hydraulic piston exposed between two gold end blocks and two dark stacked cooling fins underneath. No spring coil. Silver rod points right; no text. Render one isolated component centered on a truly transparent square background with generous clear margins, no other components. Same shallow side view as the approved module atlas, same thick navy pixel silhouette, broad yellow-gold painted housing, navy-indigo recessed shadows, cream upper-right edge light, restrained bright cyan function accents. Genuine hand-pixelated raster art, large clean pixel clusters, limited flat colors, no smooth gradients, no antialias blur, no high-frequency texture. The piece must remain readable after nearest-neighbor reduction to72x72 pixels; use only a few large details. Compact approximately square gameplay-cell footprint; flat mating side edges, not a whole spacecraft, not a character, not an illustration scene. Warm lighting from upper RIGHT. Must be a pure2D pixel sprite, not a rendered3D model or isometric icon. No ground, shadow, background, label, text, border, frame, UI, watermark or detached particles. Entire main object connected, crisp alpha boundary.",
+    "generator": "built-in image_gen",
+    "references": [
+      "source_art/art_direction_v4/pixel-cel-shop-reference-03.png",
+      "source_art/2d_v5/modules/courier-kit-atlas-original.png"
+    ]
+  }
+]

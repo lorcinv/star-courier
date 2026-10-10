@@ -1,0 +1,38 @@
+{
+  "orbital_city.glb": {
+    "nodes": 1,
+    "surfaces": 14,
+    "triangles": 20168,
+    "bytes": 1303888
+  },
+  "customer.glb": {
+    "nodes": 29,
+    "surfaces": 39,
+    "triangles": 916,
+    "bytes": 79820
+  },
+  "courier_clerk.glb": {
+    "nodes": 36,
+    "surfaces": 50,
+    "triangles": 1144,
+    "bytes": 97644
+  },
+  "shop_cutaway.glb": {
+    "nodes": 1,
+    "surfaces": 11,
+    "triangles": 20482,
+    "bytes": 1252792
+  },
+  "sky_backdrop.glb": {
+    "nodes": 1,
+    "surfaces": 6,
+    "triangles": 1980,
+    "bytes": 105280
+  },
+  "destination_kiosk.glb": {
+    "nodes": 1,
+    "surfaces": 7,
+    "triangles": 2060,
+    "bytes": 133132
+  }
+}

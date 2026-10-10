@@ -1,0 +1,255 @@
+[
+  {
+    "runtime": "assets/2d_v5/npcs/elf_archivist/idle--book_pouch-preview.png",
+    "changed_pixels": 239,
+    "changed_bbox": [
+      46,
+      91,
+      63,
+      106
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/elf_archivist/idle--map_case-preview.png",
+    "changed_pixels": 239,
+    "changed_bbox": [
+      46,
+      91,
+      63,
+      106
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/elf_archivist/idle-pixel.png",
+    "changed_pixels": 239,
+    "changed_bbox": [
+      46,
+      91,
+      63,
+      106
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/elf_archivist/handoff--map_case-preview.png",
+    "changed_pixels": 364,
+    "changed_bbox": [
+      53,
+      91,
+      164,
+      131
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/elf_archivist/handoff--book_pouch-preview.png",
+    "changed_pixels": 364,
+    "changed_bbox": [
+      53,
+      91,
+      164,
+      131
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/elf_archivist/handoff-pixel.png",
+    "changed_pixels": 364,
+    "changed_bbox": [
+      53,
+      91,
+      164,
+      131
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/alien_botanist/handoff--seed_pod-preview.png",
+    "changed_pixels": 576,
+    "changed_bbox": [
+      54,
+      125,
+      164,
+      205
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/alien_botanist/handoff--field_vial-preview.png",
+    "changed_pixels": 448,
+    "changed_bbox": [
+      140,
+      125,
+      164,
+      146
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/alien_botanist/idle--seed_pod-preview.png",
+    "changed_pixels": 128,
+    "changed_bbox": [
+      58,
+      193,
+      69,
+      205
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/alien_botanist/handoff-pixel.png",
+    "changed_pixels": 448,
+    "changed_bbox": [
+      140,
+      125,
+      164,
+      146
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/robot_machinist/idle--power_cell-preview.png",
+    "changed_pixels": 378,
+    "changed_bbox": [
+      42,
+      90,
+      114,
+      123
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/robot_machinist/idle-pixel.png",
+    "changed_pixels": 378,
+    "changed_bbox": [
+      42,
+      90,
+      114,
+      123
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/robot_machinist/handoff--power_cell-preview.png",
+    "changed_pixels": 732,
+    "changed_bbox": [
+      41,
+      90,
+      167,
+      146
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/robot_machinist/idle--tool_pack-preview.png",
+    "changed_pixels": 378,
+    "changed_bbox": [
+      42,
+      90,
+      114,
+      123
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/robot_machinist/handoff-pixel.png",
+    "changed_pixels": 732,
+    "changed_bbox": [
+      41,
+      90,
+      167,
+      146
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/robot_machinist/handoff--tool_pack-preview.png",
+    "changed_pixels": 732,
+    "changed_bbox": [
+      41,
+      90,
+      167,
+      146
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/elf_archivist/portraits/concerned.png",
+    "changed_pixels": 3142,
+    "changed_bbox": [
+      114,
+      322,
+      172,
+      379
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/elf_archivist/portraits/neutral.png",
+    "changed_pixels": 3130,
+    "changed_bbox": [
+      111,
+      322,
+      168,
+      379
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/elf_archivist/portraits/pleased.png",
+    "changed_pixels": 3101,
+    "changed_bbox": [
+      112,
+      322,
+      169,
+      379
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/alien_botanist/accessories/seed_pod-pixel.png",
+    "changed_pixels": 128,
+    "changed_bbox": [
+      9,
+      33,
+      20,
+      45
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/robot_machinist/portraits/concerned.png",
+    "changed_pixels": 7279,
+    "changed_bbox": [
+      45,
+      351,
+      346,
+      485
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/robot_machinist/portraits/neutral.png",
+    "changed_pixels": 7337,
+    "changed_bbox": [
+      46,
+      351,
+      346,
+      485
+    ],
+    "original_alpha_unchanged": true
+  },
+  {
+    "runtime": "assets/2d_v5/npcs/robot_machinist/portraits/pleased.png",
+    "changed_pixels": 7342,
+    "changed_bbox": [
+      46,
+      351,
+      347,
+      485
+    ],
+    "original_alpha_unchanged": true
+  }
+]

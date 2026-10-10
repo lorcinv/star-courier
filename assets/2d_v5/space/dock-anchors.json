@@ -1,0 +1,38 @@
+{
+  "texture": "res://assets/2d_v5/space/orbital-mail-dock.png",
+  "source_anchor_px": [
+    704.0,
+    466.0
+  ],
+  "source_unobscured_radius_px": 42.0,
+  "source_aperture_polygon_px": [
+    [
+      512,
+      417
+    ],
+    [
+      881,
+      416
+    ],
+    [
+      878,
+      511
+    ],
+    [
+      525,
+      521
+    ]
+  ],
+  "runtime_anchor_px": [
+    318.0846,
+    213.0552
+  ],
+  "runtime_anchor_snapped_px": [
+    318,
+    213
+  ],
+  "runtime_unobscured_radius_px": 19.8411,
+  "runtime_safe_radius_px": 19,
+  "meaning": "Center of the visible dark receiving bay above the platform, left of the overall station center. Radius deliberately excludes roof beams, floor rails and solar panels; dark interior remains opaque artwork, not an alpha hole.",
+  "sprite_alignment": "Use centered=false and offset=-runtime_anchor_snapped_px, then node.position is the true receiver center. Scale safe radius with the same uniform sprite scale. Do not align the bounding-box center."
+}

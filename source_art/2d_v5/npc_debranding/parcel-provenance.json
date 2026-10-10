@@ -1,0 +1,40 @@
+{
+  "runtime": "assets/2d_v5/npcs/shared/customer-parcel-neutral-pixel.png",
+  "sha256": "d3cdfc57024208c6866c5f61f8b76031e7768664956494885bee8d2f0896733d",
+  "dimensions": [
+    66,
+    45
+  ],
+  "alpha_bounds": [
+    0,
+    0,
+    66,
+    45
+  ],
+  "alpha_values": [
+    0,
+    255
+  ],
+  "source": "source_art/2d_v5/npc_debranding/original_edits/customer-parcel-extracted.png",
+  "source_sha256": "6cde94952f49b4a72e965cc49d974dab0745c7906f754156160b6362acd3488b",
+  "tool": "built-in image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "source_art/2d_v5/npc_debranding/parcel-extraction.prompt.txt",
+  "edit_target": "source_art/2d_v5/npc_debranding/parcel-extraction-target.png",
+  "target_crop_origin": "source_art/2d_v5/npc_debranding/original_edits/elf-world.png",
+  "target_crop_xyxy": [
+    1030,
+    405,
+    1280,
+    580
+  ],
+  "source_alpha128_crop": [
+    80,
+    56,
+    1445,
+    991
+  ],
+  "occlusion_disclosure": "Imagegen removed the occluding fingers and reconstructed only the continuation of the same box surfaces/edges. The complete hidden lower corners are reconstructed, not literal source extraction.",
+  "processing": "Alpha128 crop; one uniform nearest resize to 45px high; shared96 palette; no dithering; binary alpha; no procedural art.",
+  "use": "Shared neutral customer parcel for external robot transport. Do not replace branded ship module casing."
+}

@@ -1,0 +1,35 @@
+{
+  "source": "source_art/2d_v5/ground/near-city-strip-original.png",
+  "source_sha256": "53330fd82a5bcdaa567e2dff1fc8b92fbd1d84b63c75b03454819eb5f80894e5",
+  "runtime": "assets/2d_v5/ground/near-city-strip.png",
+  "runtime_sha256": "67624f62f26b97106f39ffe7e19ee29b3370d6e23f84ae1ee1be9a157355ac5d",
+  "original_dimensions": [
+    1774,
+    887
+  ],
+  "runtime_dimensions": [
+    1280,
+    640
+  ],
+  "logical_grid_px": 2,
+  "palette": "source_art/pixel_pipeline_studies/palette_96.json",
+  "alpha_values": [
+    0,
+    255
+  ],
+  "horizontal_edge_before": {
+    "max_rgba_error": 252.0,
+    "mean_rgba_error": 9.151410102844238
+  },
+  "horizontal_edge_after": {
+    "max_rgba_error": 0.0,
+    "mean_rgba_error": 0.0
+  },
+  "edge_repair_logical_texels": 8,
+  "ordinary_repeat_x": true,
+  "repeat_y": false,
+  "mirroring": false,
+  "source_changed": false,
+  "method": "Uniform nearest sampling, existing reference96 Oklab mapping, binary alpha128, eight-texel premultiplied periodic edge repair; no procedural illustration.",
+  "status": "Asset derivative only; not yet a playable ground route."
+}

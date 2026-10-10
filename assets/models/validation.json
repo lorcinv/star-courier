@@ -1,0 +1,204 @@
+{
+  "result": "PASS",
+  "count": 32,
+  "part_count": 25,
+  "checks": [
+    "glTF 2 binary structure",
+    "self-contained materials; no external texture dependencies",
+    "all 100 cardinal socket names and Godot-space coordinates"
+  ],
+  "assets": [
+    {
+      "asset": "accelerator",
+      "mesh_count": 9,
+      "bytes": 35896,
+      "sockets_verified": true
+    },
+    {
+      "asset": "and_gate",
+      "mesh_count": 12,
+      "bytes": 65916,
+      "sockets_verified": true
+    },
+    {
+      "asset": "arc_emitter",
+      "mesh_count": 11,
+      "bytes": 45536,
+      "sockets_verified": true
+    },
+    {
+      "asset": "armor",
+      "mesh_count": 7,
+      "bytes": 21096,
+      "sockets_verified": true
+    },
+    {
+      "asset": "asteroid_0",
+      "mesh_count": 5,
+      "bytes": 20696,
+      "sockets_verified": false
+    },
+    {
+      "asset": "asteroid_1",
+      "mesh_count": 5,
+      "bytes": 20828,
+      "sockets_verified": false
+    },
+    {
+      "asset": "asteroid_2",
+      "mesh_count": 5,
+      "bytes": 20736,
+      "sockets_verified": false
+    },
+    {
+      "asset": "beam",
+      "mesh_count": 9,
+      "bytes": 28656,
+      "sockets_verified": true
+    },
+    {
+      "asset": "cargo_crate",
+      "mesh_count": 5,
+      "bytes": 19724,
+      "sockets_verified": false
+    },
+    {
+      "asset": "cell",
+      "mesh_count": 11,
+      "bytes": 34248,
+      "sockets_verified": true
+    },
+    {
+      "asset": "collision_switch",
+      "mesh_count": 9,
+      "bytes": 27964,
+      "sockets_verified": true
+    },
+    {
+      "asset": "damper",
+      "mesh_count": 7,
+      "bytes": 43376,
+      "sockets_verified": true
+    },
+    {
+      "asset": "decoy",
+      "mesh_count": 10,
+      "bytes": 42968,
+      "sockets_verified": true
+    },
+    {
+      "asset": "delay",
+      "mesh_count": 10,
+      "bytes": 38560,
+      "sockets_verified": true
+    },
+    {
+      "asset": "displacer",
+      "mesh_count": 9,
+      "bytes": 26384,
+      "sockets_verified": true
+    },
+    {
+      "asset": "distance_probe",
+      "mesh_count": 11,
+      "bytes": 60692,
+      "sockets_verified": true
+    },
+    {
+      "asset": "enlarge_ring",
+      "mesh_count": 7,
+      "bytes": 38472,
+      "sockets_verified": true
+    },
+    {
+      "asset": "explosive_core",
+      "mesh_count": 11,
+      "bytes": 48076,
+      "sockets_verified": true
+    },
+    {
+      "asset": "hangar_arch",
+      "mesh_count": 15,
+      "bytes": 165336,
+      "sockets_verified": false
+    },
+    {
+      "asset": "hangar_terminal",
+      "mesh_count": 9,
+      "bytes": 48296,
+      "sockets_verified": false
+    },
+    {
+      "asset": "landing_pad",
+      "mesh_count": 19,
+      "bytes": 60784,
+      "sockets_verified": false
+    },
+    {
+      "asset": "not_gate",
+      "mesh_count": 12,
+      "bytes": 54448,
+      "sockets_verified": true
+    },
+    {
+      "asset": "or_gate",
+      "mesh_count": 12,
+      "bytes": 65024,
+      "sockets_verified": true
+    },
+    {
+      "asset": "power_valve",
+      "mesh_count": 11,
+      "bytes": 41172,
+      "sockets_verified": true
+    },
+    {
+      "asset": "separator",
+      "mesh_count": 7,
+      "bytes": 28344,
+      "sockets_verified": true
+    },
+    {
+      "asset": "shield",
+      "mesh_count": 14,
+      "bytes": 46396,
+      "sockets_verified": true
+    },
+    {
+      "asset": "shrink_ring",
+      "mesh_count": 7,
+      "bytes": 37092,
+      "sockets_verified": true
+    },
+    {
+      "asset": "splitter",
+      "mesh_count": 10,
+      "bytes": 35640,
+      "sockets_verified": true
+    },
+    {
+      "asset": "spring",
+      "mesh_count": 4,
+      "bytes": 64880,
+      "sockets_verified": true
+    },
+    {
+      "asset": "tachyon_lance",
+      "mesh_count": 6,
+      "bytes": 39868,
+      "sockets_verified": true
+    },
+    {
+      "asset": "thruster",
+      "mesh_count": 9,
+      "bytes": 30416,
+      "sockets_verified": true
+    },
+    {
+      "asset": "turntable",
+      "mesh_count": 10,
+      "bytes": 37796,
+      "sockets_verified": true
+    }
+  ]
+}

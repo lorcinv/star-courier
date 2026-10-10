@@ -1,0 +1,206 @@
+{
+  "license": "Original procedural artwork created for this game. No external asset dependencies.",
+  "generator": "tools/generate_assets.py",
+  "blend_source": "assets/source/star_courier_assets.blend",
+  "units": "metres",
+  "axes": "glTF/Godot X forward, Y up, Z toward camera",
+  "part_cell_size": 1.2,
+  "socket_names": [
+    "Socket_Right",
+    "Socket_Left",
+    "Socket_Top",
+    "Socket_Bottom"
+  ],
+  "materials": {
+    "ink": [
+      0.023,
+      0.041,
+      0.09
+    ],
+    "navy": [
+      0.07,
+      0.14,
+      0.24
+    ],
+    "metal": [
+      0.18,
+      0.27,
+      0.37
+    ],
+    "cream": [
+      0.88,
+      0.87,
+      0.72
+    ],
+    "white": [
+      0.96,
+      0.97,
+      0.91
+    ],
+    "orange": [
+      1,
+      0.3,
+      0.065
+    ],
+    "yellow": [
+      1,
+      0.7,
+      0.12
+    ],
+    "cyan": [
+      0.09,
+      0.8,
+      0.87
+    ],
+    "glass": [
+      0.12,
+      0.43,
+      0.59
+    ],
+    "pink": [
+      0.96,
+      0.19,
+      0.37
+    ],
+    "green": [
+      0.32,
+      0.82,
+      0.5
+    ],
+    "purple": [
+      0.43,
+      0.26,
+      0.66
+    ]
+  },
+  "assets": [
+    {
+      "id": "landing_pad",
+      "path": "res://assets/models/landing_pad.glb"
+    },
+    {
+      "id": "cargo_crate",
+      "path": "res://assets/models/cargo_crate.glb"
+    },
+    {
+      "id": "hangar_terminal",
+      "path": "res://assets/models/hangar_terminal.glb"
+    },
+    {
+      "id": "hangar_arch",
+      "path": "res://assets/models/hangar_arch.glb"
+    },
+    {
+      "id": "asteroid_0",
+      "path": "res://assets/models/asteroid_0.glb"
+    },
+    {
+      "id": "asteroid_1",
+      "path": "res://assets/models/asteroid_1.glb"
+    },
+    {
+      "id": "asteroid_2",
+      "path": "res://assets/models/asteroid_2.glb"
+    },
+    {
+      "id": "cell",
+      "path": "res://assets/models/cell.glb"
+    },
+    {
+      "id": "power_valve",
+      "path": "res://assets/models/power_valve.glb"
+    },
+    {
+      "id": "thruster",
+      "path": "res://assets/models/thruster.glb"
+    },
+    {
+      "id": "spring",
+      "path": "res://assets/models/spring.glb"
+    },
+    {
+      "id": "turntable",
+      "path": "res://assets/models/turntable.glb"
+    },
+    {
+      "id": "beam",
+      "path": "res://assets/models/beam.glb"
+    },
+    {
+      "id": "separator",
+      "path": "res://assets/models/separator.glb"
+    },
+    {
+      "id": "damper",
+      "path": "res://assets/models/damper.glb"
+    },
+    {
+      "id": "tachyon_lance",
+      "path": "res://assets/models/tachyon_lance.glb"
+    },
+    {
+      "id": "accelerator",
+      "path": "res://assets/models/accelerator.glb"
+    },
+    {
+      "id": "arc_emitter",
+      "path": "res://assets/models/arc_emitter.glb"
+    },
+    {
+      "id": "explosive_core",
+      "path": "res://assets/models/explosive_core.glb"
+    },
+    {
+      "id": "armor",
+      "path": "res://assets/models/armor.glb"
+    },
+    {
+      "id": "shield",
+      "path": "res://assets/models/shield.glb"
+    },
+    {
+      "id": "decoy",
+      "path": "res://assets/models/decoy.glb"
+    },
+    {
+      "id": "shrink_ring",
+      "path": "res://assets/models/shrink_ring.glb"
+    },
+    {
+      "id": "enlarge_ring",
+      "path": "res://assets/models/enlarge_ring.glb"
+    },
+    {
+      "id": "displacer",
+      "path": "res://assets/models/displacer.glb"
+    },
+    {
+      "id": "splitter",
+      "path": "res://assets/models/splitter.glb"
+    },
+    {
+      "id": "distance_probe",
+      "path": "res://assets/models/distance_probe.glb"
+    },
+    {
+      "id": "collision_switch",
+      "path": "res://assets/models/collision_switch.glb"
+    },
+    {
+      "id": "delay",
+      "path": "res://assets/models/delay.glb"
+    },
+    {
+      "id": "and_gate",
+      "path": "res://assets/models/and_gate.glb"
+    },
+    {
+      "id": "or_gate",
+      "path": "res://assets/models/or_gate.glb"
+    },
+    {
+      "id": "not_gate",
+      "path": "res://assets/models/not_gate.glb"
+    }
+  ]
+}

@@ -1,0 +1,579 @@
+{
+  "generator": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Asset type: production sprite atlas for an editable modular 2D courier craft. Image 1 is the golden courier art/style reference. Image 2 supplies the matching pixel-art palette and sunlight. Create ONE ATLAS of EIGHT completely separate isolated individual part sprites in exactly four columns and two rows on actual transparent alpha. Wide 2:1 canvas; each of eight equal square tile areas has one centered isolated sprite with generous transparent gutters, no overlapping between sprites, no labels, no text or grid lines. All parts face RIGHT in the SAME shallow side view, lit from upper right. They are manufactured components from ONE charming compact gold courier ship; large simple yellow-gold painted shells, deep navy indigo shadow faces, cream upper edge highlights, restrained cyan accents, chunky visible clean pixel clusters, minimal panel lines, no noisy detail, no gradient. Each part has approximately one square gameplay-cell footprint and can attach flush to neighbours on its four cardinal sides. They must be INDIVIDUAL PARTS rather than assembled spacecraft, characters, UI icons or whole vehicles. The eight tiles row-major: TOP LEFT Cargo: a substantial near-square golden body crate with a single simple navy ringed-planet mark and short understated corner caps, no handle or wing. TOP SECOND Beam: one golden rectangular flat fuselage box frame with broad plain navy inset side, no windows, visually fills a cell and bridges flush between neighbouring modules. TOP THIRD Battery: a chunky near-square gold/navy battery housing with one small cyan charge display and pale bottom protective plate. TOP RIGHT Thruster: one short navy exhaust nozzle on the LEFT end of a yellow engine casing with flat mating bulkhead on RIGHT; no flame, no wing, no canopy. BOTTOM LEFT Armor: a chunky yellow forward chin/nose armor panel, flat rear edge on LEFT, smoothly stepped sloping rounded nose on RIGHT, no window; this sits below the cockpit. BOTTOM SECOND Coupler/cockpit: ONE cockpit canopy module, dark navy curved glass under a clean cream rim, golden sloping nose-side frame, flat mating rear edge LEFT and flat underside. This is only the upper nose/cockpit section, not an entire ship, no engine, no tail, no wing. BOTTOM THIRD Spring: one compact horizontal silver compression coil housed between golden end caps, navy recess, flat mating faces. BOTTOM RIGHT Connector: one small plain navy square sleeve with gold rim for joining two modules. Vital design: cargo/beam/battery/thruster/armor/cockpit/spring are seven modular parts, visibly separate, each with identical scale/pixel density. A starter later combines upper row thruster + beam + cargo + cockpit over lower row thruster + beam + battery + armor. Do NOT draw this assembled starter, do not make multiple canopies or whole ships. The atlas alone should be neatly spaced eight separate objects with true transparent background and no cast shadows. Pixel sprites, NOT 3D models or renders, not smooth vector icons.",
+  "references": [
+    "source_art/art_direction_v4/pixel-cel-shop-reference-03.png",
+    "source_art/2d_v5/generated/shop-shell.png"
+  ],
+  "original": "source_art/2d_v5/modules/courier-kit-atlas-original.png",
+  "original_dimensions": [
+    1774,
+    887
+  ],
+  "original_sha256": "0bd373ce378df4b0ce731bd9b069ef3e60b745c70d94be17fad958c3c3b22bbd",
+  "source_crops": "Only lossless rectangular crops, no generated pixel changes. Each part is separately placed and independently damageable/detachable.",
+  "runtime_derivative_method": "Crop to alpha>=128 bounds; nearest-neighbor cell-fill normalization to72\u00d772 (connector20\u00d720); fixed reviewed96-color Oklab mapping, no dithering; binary alpha threshold128; transparent RGB zeroed. This deliberately normalizes differing atlas component aspect ratios to one square gameplay cell.",
+  "palette_source": "source_art/pixel_pipeline_studies/palette_96.json",
+  "starter_rows": [
+    [
+      "thruster",
+      "beam",
+      "cargo",
+      "coupler"
+    ],
+    [
+      "thruster",
+      "beam",
+      "battery",
+      "armor"
+    ]
+  ],
+  "starter_cell_px": 72,
+  "no_whole_ship_sprite": true,
+  "parts": [
+    {
+      "threshold_crop_xyxy": [
+        11,
+        83,
+        346,
+        368
+      ],
+      "runtime_dimensions": [
+        72,
+        72
+      ],
+      "runtime_alpha_bounds_xyxy": [
+        0,
+        0,
+        72,
+        72
+      ],
+      "visible_pixels": 4779,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_palette_color_count": 79,
+      "runtime": "assets/2d_v5/modules/cargo-pixel.png",
+      "sha256": "b58026bd47fe6cac1a904dbd2ec83b2ae99b80562500139e3c50f472a43a1d53",
+      "id": "cargo",
+      "atlas_region_xyxy": [
+        0,
+        0,
+        440,
+        440
+      ],
+      "source_alpha_crop_in_region_xyxy": [
+        49,
+        37,
+        407,
+        412
+      ],
+      "source_crop": "source_art/2d_v5/modules/cargo-crop.png",
+      "source_crop_dimensions": [
+        358,
+        375
+      ],
+      "lossless_runtime": "assets/2d_v5/modules/cargo.png",
+      "source_crop_sha256": "2da22a576c5178e9d4b55967688adce1daff878bbde9adaae0ac3e55fff5cf80",
+      "anchor_center": [
+        36.0,
+        36.0
+      ],
+      "suggested_cardinal_sockets": {
+        "left": [
+          0,
+          36.0
+        ],
+        "right": [
+          72,
+          36.0
+        ],
+        "top": [
+          36.0,
+          0
+        ],
+        "bottom": [
+          36.0,
+          72
+        ]
+      }
+    },
+    {
+      "threshold_crop_xyxy": [
+        23,
+        123,
+        489,
+        334
+      ],
+      "runtime_dimensions": [
+        72,
+        72
+      ],
+      "runtime_alpha_bounds_xyxy": [
+        0,
+        0,
+        72,
+        72
+      ],
+      "visible_pixels": 4582,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_palette_color_count": 67,
+      "runtime": "assets/2d_v5/modules/beam-pixel.png",
+      "sha256": "cc86c05d5770c9cad5332a9d8c41b5f7d660033678b444ea5fa07ab03ed456fe",
+      "id": "beam",
+      "atlas_region_xyxy": [
+        440,
+        0,
+        975,
+        440
+      ],
+      "source_alpha_crop_in_region_xyxy": [
+        12,
+        39,
+        514,
+        410
+      ],
+      "source_crop": "source_art/2d_v5/modules/beam-crop.png",
+      "source_crop_dimensions": [
+        502,
+        371
+      ],
+      "lossless_runtime": "assets/2d_v5/modules/beam.png",
+      "source_crop_sha256": "80797efe02fdf9410f29e0f9f3c77923a7229c997ad467fde659e7f06166e664",
+      "anchor_center": [
+        36.0,
+        36.0
+      ],
+      "suggested_cardinal_sockets": {
+        "left": [
+          0,
+          36.0
+        ],
+        "right": [
+          72,
+          36.0
+        ],
+        "top": [
+          36.0,
+          0
+        ],
+        "bottom": [
+          36.0,
+          72
+        ]
+      }
+    },
+    {
+      "threshold_crop_xyxy": [
+        14,
+        98,
+        313,
+        370
+      ],
+      "runtime_dimensions": [
+        72,
+        72
+      ],
+      "runtime_alpha_bounds_xyxy": [
+        0,
+        0,
+        72,
+        72
+      ],
+      "visible_pixels": 4719,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_palette_color_count": 83,
+      "runtime": "assets/2d_v5/modules/battery-pixel.png",
+      "sha256": "a5ec53e4ada584ce01f16dcbda3a411b5c0af86584b92a7d00a604968cbbb9cc",
+      "id": "battery",
+      "atlas_region_xyxy": [
+        975,
+        0,
+        1340,
+        440
+      ],
+      "source_alpha_crop_in_region_xyxy": [
+        10,
+        31,
+        365,
+        404
+      ],
+      "source_crop": "source_art/2d_v5/modules/battery-crop.png",
+      "source_crop_dimensions": [
+        355,
+        373
+      ],
+      "lossless_runtime": "assets/2d_v5/modules/battery.png",
+      "source_crop_sha256": "dc37e6dbcac547f0f344a69b95500aafd13375a77be84b068265531084919f5b",
+      "anchor_center": [
+        36.0,
+        36.0
+      ],
+      "suggested_cardinal_sockets": {
+        "left": [
+          0,
+          36.0
+        ],
+        "right": [
+          72,
+          36.0
+        ],
+        "top": [
+          36.0,
+          0
+        ],
+        "bottom": [
+          36.0,
+          72
+        ]
+      }
+    },
+    {
+      "threshold_crop_xyxy": [
+        24,
+        120,
+        384,
+        339
+      ],
+      "runtime_dimensions": [
+        72,
+        72
+      ],
+      "runtime_alpha_bounds_xyxy": [
+        0,
+        0,
+        72,
+        72
+      ],
+      "visible_pixels": 4502,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_palette_color_count": 79,
+      "runtime": "assets/2d_v5/modules/thruster-pixel.png",
+      "sha256": "8cdc5ec988e18010e654698ff562a6aee84f540c74016906922824546e805242",
+      "id": "thruster",
+      "atlas_region_xyxy": [
+        1340,
+        0,
+        1774,
+        440
+      ],
+      "source_alpha_crop_in_region_xyxy": [
+        0,
+        41,
+        387,
+        397
+      ],
+      "source_crop": "source_art/2d_v5/modules/thruster-crop.png",
+      "source_crop_dimensions": [
+        387,
+        356
+      ],
+      "lossless_runtime": "assets/2d_v5/modules/thruster.png",
+      "source_crop_sha256": "840ed801c995c96439bfa6c792c231576245c4826c88836e11ea6c9e36b0dbf0",
+      "anchor_center": [
+        36.0,
+        36.0
+      ],
+      "suggested_cardinal_sockets": {
+        "left": [
+          0,
+          36.0
+        ],
+        "right": [
+          72,
+          36.0
+        ],
+        "top": [
+          36.0,
+          0
+        ],
+        "bottom": [
+          36.0,
+          72
+        ]
+      }
+    },
+    {
+      "threshold_crop_xyxy": [
+        8,
+        105,
+        342,
+        320
+      ],
+      "runtime_dimensions": [
+        72,
+        72
+      ],
+      "runtime_alpha_bounds_xyxy": [
+        0,
+        0,
+        72,
+        72
+      ],
+      "visible_pixels": 4015,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_palette_color_count": 61,
+      "runtime": "assets/2d_v5/modules/armor-pixel.png",
+      "sha256": "d33f41280f1e59f113da23763fbd84b6c54a85b5a12f174eb343164733d2de82",
+      "id": "armor",
+      "atlas_region_xyxy": [
+        0,
+        440,
+        440,
+        887
+      ],
+      "source_alpha_crop_in_region_xyxy": [
+        67,
+        15,
+        440,
+        447
+      ],
+      "source_crop": "source_art/2d_v5/modules/armor-crop.png",
+      "source_crop_dimensions": [
+        373,
+        432
+      ],
+      "lossless_runtime": "assets/2d_v5/modules/armor.png",
+      "source_crop_sha256": "e5fc54ff36f7bef21e978850d16c7e3d7a97e35ce7fb30e06ae72c50e51e56f9",
+      "anchor_center": [
+        36.0,
+        36.0
+      ],
+      "suggested_cardinal_sockets": {
+        "left": [
+          0,
+          36.0
+        ],
+        "right": [
+          72,
+          36.0
+        ],
+        "top": [
+          36.0,
+          0
+        ],
+        "bottom": [
+          36.0,
+          72
+        ]
+      }
+    },
+    {
+      "threshold_crop_xyxy": [
+        40,
+        93,
+        455,
+        340
+      ],
+      "runtime_dimensions": [
+        72,
+        72
+      ],
+      "runtime_alpha_bounds_xyxy": [
+        0,
+        0,
+        72,
+        72
+      ],
+      "visible_pixels": 4213,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_palette_color_count": 81,
+      "runtime": "assets/2d_v5/modules/coupler-pixel.png",
+      "sha256": "a5b24782a23e63574c7bb45dc4224a37df4e72e5ec4a58773b74c2ecc5b102bc",
+      "id": "coupler",
+      "atlas_region_xyxy": [
+        440,
+        440,
+        965,
+        887
+      ],
+      "source_alpha_crop_in_region_xyxy": [
+        21,
+        2,
+        481,
+        447
+      ],
+      "source_crop": "source_art/2d_v5/modules/coupler-crop.png",
+      "source_crop_dimensions": [
+        460,
+        445
+      ],
+      "lossless_runtime": "assets/2d_v5/modules/coupler.png",
+      "source_crop_sha256": "e7c0ec88e818db0cfe466df8ebd279f16b36478443110d6dccae32aa23ba6f7d",
+      "anchor_center": [
+        36.0,
+        36.0
+      ],
+      "suggested_cardinal_sockets": {
+        "left": [
+          0,
+          36.0
+        ],
+        "right": [
+          72,
+          36.0
+        ],
+        "top": [
+          36.0,
+          0
+        ],
+        "bottom": [
+          36.0,
+          72
+        ]
+      }
+    },
+    {
+      "threshold_crop_xyxy": [
+        9,
+        92,
+        360,
+        269
+      ],
+      "runtime_dimensions": [
+        72,
+        72
+      ],
+      "runtime_alpha_bounds_xyxy": [
+        0,
+        0,
+        72,
+        72
+      ],
+      "visible_pixels": 4446,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_palette_color_count": 79,
+      "runtime": "assets/2d_v5/modules/spring-pixel.png",
+      "sha256": "1c7b6e497f3f71149d017ca500eb33f8258d348b2c43a4f07f09c0077c63b416",
+      "id": "spring",
+      "atlas_region_xyxy": [
+        965,
+        440,
+        1390,
+        887
+      ],
+      "source_alpha_crop_in_region_xyxy": [
+        8,
+        47,
+        406,
+        415
+      ],
+      "source_crop": "source_art/2d_v5/modules/spring-crop.png",
+      "source_crop_dimensions": [
+        398,
+        368
+      ],
+      "lossless_runtime": "assets/2d_v5/modules/spring.png",
+      "source_crop_sha256": "51061c967e293f116cec8a212225bc0543a2111b73ab2f369cdd8cf3587d3c64",
+      "anchor_center": [
+        36.0,
+        36.0
+      ],
+      "suggested_cardinal_sockets": {
+        "left": [
+          0,
+          36.0
+        ],
+        "right": [
+          72,
+          36.0
+        ],
+        "top": [
+          36.0,
+          0
+        ],
+        "bottom": [
+          36.0,
+          72
+        ]
+      }
+    },
+    {
+      "threshold_crop_xyxy": [
+        62,
+        93,
+        273,
+        284
+      ],
+      "runtime_dimensions": [
+        20,
+        20
+      ],
+      "runtime_alpha_bounds_xyxy": [
+        0,
+        0,
+        20,
+        20
+      ],
+      "visible_pixels": 371,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_palette_color_count": 47,
+      "runtime": "assets/2d_v5/modules/connector-pixel.png",
+      "sha256": "27312f20465a2beb377ea0b3b9bcab7e3709d84db133fbadf3c8eb1481c676d7",
+      "id": "connector",
+      "atlas_region_xyxy": [
+        1390,
+        440,
+        1774,
+        887
+      ],
+      "source_alpha_crop_in_region_xyxy": [
+        4,
+        36,
+        344,
+        427
+      ],
+      "source_crop": "source_art/2d_v5/modules/connector-crop.png",
+      "source_crop_dimensions": [
+        340,
+        391
+      ],
+      "lossless_runtime": "assets/2d_v5/modules/connector.png",
+      "source_crop_sha256": "5f5f03687579c73564e0447813a2fc9cdad7083b0412dbbb0a3d3c65a100ea57",
+      "anchor_center": [
+        10.0,
+        10.0
+      ],
+      "suggested_cardinal_sockets": {
+        "left": [
+          0,
+          10.0
+        ],
+        "right": [
+          20,
+          10.0
+        ],
+        "top": [
+          10.0,
+          0
+        ],
+        "bottom": [
+          10.0,
+          20
+        ]
+      }
+    }
+  ]
+}

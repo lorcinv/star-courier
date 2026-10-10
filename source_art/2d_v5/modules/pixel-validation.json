@@ -1,0 +1,146 @@
+[
+  {
+    "path": "assets/2d_v5/modules/armor-pixel.png",
+    "dimensions": [
+      72,
+      72
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "visible_colors": 61,
+    "visible_pixels": 4015,
+    "connected_components": 1,
+    "largest_component_pixels": 4015,
+    "pixels_outside_largest_component": 0,
+    "fully_transparent_rgb_zero": true,
+    "fixed_palette_valid": true
+  },
+  {
+    "path": "assets/2d_v5/modules/battery-pixel.png",
+    "dimensions": [
+      72,
+      72
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "visible_colors": 83,
+    "visible_pixels": 4719,
+    "connected_components": 1,
+    "largest_component_pixels": 4719,
+    "pixels_outside_largest_component": 0,
+    "fully_transparent_rgb_zero": true,
+    "fixed_palette_valid": true
+  },
+  {
+    "path": "assets/2d_v5/modules/beam-pixel.png",
+    "dimensions": [
+      72,
+      72
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "visible_colors": 67,
+    "visible_pixels": 4582,
+    "connected_components": 1,
+    "largest_component_pixels": 4582,
+    "pixels_outside_largest_component": 0,
+    "fully_transparent_rgb_zero": true,
+    "fixed_palette_valid": true
+  },
+  {
+    "path": "assets/2d_v5/modules/cargo-pixel.png",
+    "dimensions": [
+      72,
+      72
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "visible_colors": 79,
+    "visible_pixels": 4779,
+    "connected_components": 1,
+    "largest_component_pixels": 4779,
+    "pixels_outside_largest_component": 0,
+    "fully_transparent_rgb_zero": true,
+    "fixed_palette_valid": true
+  },
+  {
+    "path": "assets/2d_v5/modules/connector-pixel.png",
+    "dimensions": [
+      20,
+      20
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "visible_colors": 47,
+    "visible_pixels": 371,
+    "connected_components": 1,
+    "largest_component_pixels": 371,
+    "pixels_outside_largest_component": 0,
+    "fully_transparent_rgb_zero": true,
+    "fixed_palette_valid": true
+  },
+  {
+    "path": "assets/2d_v5/modules/coupler-pixel.png",
+    "dimensions": [
+      72,
+      72
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "visible_colors": 81,
+    "visible_pixels": 4213,
+    "connected_components": 1,
+    "largest_component_pixels": 4213,
+    "pixels_outside_largest_component": 0,
+    "fully_transparent_rgb_zero": true,
+    "fixed_palette_valid": true
+  },
+  {
+    "path": "assets/2d_v5/modules/spring-pixel.png",
+    "dimensions": [
+      72,
+      72
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "visible_colors": 79,
+    "visible_pixels": 4446,
+    "connected_components": 1,
+    "largest_component_pixels": 4446,
+    "pixels_outside_largest_component": 0,
+    "fully_transparent_rgb_zero": true,
+    "fixed_palette_valid": true
+  },
+  {
+    "path": "assets/2d_v5/modules/thruster-pixel.png",
+    "dimensions": [
+      72,
+      72
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "visible_colors": 79,
+    "visible_pixels": 4502,
+    "connected_components": 1,
+    "largest_component_pixels": 4502,
+    "pixels_outside_largest_component": 0,
+    "fully_transparent_rgb_zero": true,
+    "fixed_palette_valid": true
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "assets/2d_v5/ascent/atmosphere-tall.png": "80ae1504407d2595c43ebe11317abef9455dbd01ea22e31bce3b5f32f6a54e52",
+  "assets/2d_v5/ascent/cloud-banks.png": "67f85d1b6f87a9324eacb4f2cbbc42f230b608239df8b0e1793402476504fa3a",
+  "assets/2d_v5/ascent/far-city-band.png": "b98dfb46bff85f66adc9bbae95e70bb20323fa7ac4fc9e7b5ccacf3f6c5305db",
+  "assets/2d_v5/ascent/orbit-dust.png": "f186b8329b50a615897fd4f14c7736b4ba789ec077e3d557f4dfc660686716e1",
+  "assets/2d_v5/ascent/planet-limb.png": "987fee5d2c98add0c7a455842fca8e7a4456defa5ed31c8645cd81d69b36f8a9",
+  "assets/2d_v5/ascent/cloud-wisps.png": "02a2c7b3b10352416195d126eb8a870291e1828a17fe240b6cfe168d61e9b47e",
+  "assets/2d_v5/ascent/orbit-stars.png": "343b967d76383f4d8b4cf12465fa5736396c9ff8532b9ecd228f81c14a593969",
+  "source_art/2d_v5/ascent/cloud-banks-original.png": "babd276776fddecbc877856d156432db8e6c74094435db439bb814bf89b7df5f",
+  "source_art/2d_v5/ascent/cloud-wisps-original.png": "ecd210d09280d28b81d876b784c741cf3a99b812c47c25ec4874f30e6e251ec4",
+  "source_art/2d_v5/ascent/atmosphere-tall-original.png": "167e9798c4d769e2c3f0fb40ef048737a4ba266e539120073e59eab80adeee5d",
+  "source_art/2d_v5/ascent/far-city-band-original.png": "2b6193fc810b33544a597a974a82d6854a8d284b0491a33d15529107313dc466",
+  "source_art/2d_v5/ascent/orbit-dust-original.png": "279458865e1dd928d4a715d9c3f552b8641808a3c6a695f692ead6963b2a0562",
+  "source_art/2d_v5/ascent/technical-manifest.json": "5731a5738d275c43e888451216ea0b05c05896667f0d9b2eaa2dc4b9168a2605"
+}

@@ -1,0 +1,379 @@
+{
+  "version": 2,
+  "asset_type": "2D image-generated raster actors; proportion revision",
+  "status": "published as one atomic actor-directory exchange",
+  "tool": "built-in image_gen.imagegen, transparent_background=true",
+  "palette": "source_art/pixel_pipeline_studies/palette_96.json",
+  "palette_sha256": "5bb6b501d7bece46b528a3c230e39c207e5f8a3aac6be15969f21683e73f2944",
+  "source_policy": "Original paired imagegen outputs are preserved byte-for-byte. Per-actor crop, whole-body nearest sampling, alpha128 threshold and shared reference96 color cleanup only. No code deformation or face/head-only scaling.",
+  "animation_status": "Two matched whole-sprite poses; no Spine binding, project, rig, atlas, or runtime export is claimed.",
+  "runtime_compatibility": "Same canvas dimensions and semantic foot anchors as V1. Actor artwork scaled uniformly to 240px high with one common sampling grid per actor.",
+  "sources": {
+    "idle": {
+      "path": "source_art/2d_v5/actors/v2/pair-idle-original.png",
+      "sha256": "86238bdf31ea0ad115d64039786c7aeae85f047a5dfab4c6571401c0d1ba2d75",
+      "tool_output_filename": "exec-e0b85b64-5bb7-4a86-ac9f-01979668e7a0.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "raw_alpha_bounds": [
+        33,
+        21,
+        1516,
+        1024
+      ],
+      "alpha128_bounds": [
+        213,
+        87,
+        1245,
+        960
+      ],
+      "alpha_counts": {
+        "zero": 1067823,
+        "partial": 505041,
+        "opaque": 0
+      },
+      "prompt": "source_art/2d_v5/actors/v2/pair-idle.prompt.txt"
+    },
+    "handoff": {
+      "path": "source_art/2d_v5/actors/v2/pair-handoff-original.png",
+      "sha256": "4521374534aea6d66a3a1b07835d69215df39529bfa3dd062af9a0b212726b77",
+      "tool_output_filename": "exec-b30f5135-94e0-41b1-9af2-26c7d72e342d.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "raw_alpha_bounds": [
+        33,
+        19,
+        1522,
+        1004
+      ],
+      "alpha128_bounds": [
+        212,
+        86,
+        1247,
+        960
+      ],
+      "alpha_counts": {
+        "zero": 1064116,
+        "partial": 508748,
+        "opaque": 0
+      },
+      "prompt": "source_art/2d_v5/actors/v2/pair-handoff.prompt.txt"
+    }
+  },
+  "actors": {
+    "customer": {
+      "facing": "right",
+      "common_source_union": [
+        212,
+        86,
+        754,
+        960
+      ],
+      "shared_canvas": [
+        167,
+        256
+      ],
+      "foot_anchor": [
+        73.19,
+        247.78
+      ],
+      "body_height": 240,
+      "source_foot_anchor": [
+        466,
+        960
+      ],
+      "actual_sampling_foot": [
+        72.83,
+        248.0
+      ],
+      "common_resize": [
+        149,
+        240
+      ],
+      "common_paste_offset": [
+        3,
+        8
+      ],
+      "placement_suggestion": {
+        "scene": "1280x720",
+        "foot_position": [
+          148,
+          488
+        ],
+        "body_height": 215,
+        "scale_from_logical_body": 0.8958333333333334
+      },
+      "poses": {
+        "idle": {
+          "source_pair": "source_art/2d_v5/actors/v2/pair-idle-original.png",
+          "source_alpha128_bounds": [
+            213,
+            87,
+            714,
+            960
+          ],
+          "source_extracted": "source_art/2d_v5/actors/v2/customer-idle-extracted.png",
+          "runtime": "assets/2d_v5/actors/customer-idle-pixel.png",
+          "staged_runtime": "source_art/2d_v5/actors/v2/staged-runtime/customer-idle-pixel.png",
+          "runtime_sha256": "22d1233269cbae797b68cc07f3eb062f902312d0aebab0af3b93b3cf6210304f",
+          "runtime_dimensions": [
+            167,
+            256
+          ],
+          "runtime_alpha_bounds": [
+            3,
+            8,
+            141,
+            248
+          ],
+          "runtime_alpha_values": [
+            0,
+            255
+          ],
+          "runtime_palette_used": 79,
+          "runtime_all_colors_in_shared_palette": true,
+          "foot_anchor": [
+            73.19,
+            247.78
+          ],
+          "hand_and_parcel_anchors": {
+            "left": [
+              98.94,
+              143.93
+            ],
+            "right": [
+              127.53,
+              140.63
+            ],
+            "parcel": [
+              114.89,
+              128.82
+            ]
+          },
+          "native_dimensions": [
+            566,
+            898
+          ],
+          "native_foot_anchor": [
+            266,
+            886
+          ]
+        },
+        "handoff": {
+          "source_pair": "source_art/2d_v5/actors/v2/pair-handoff-original.png",
+          "source_alpha128_bounds": [
+            212,
+            86,
+            754,
+            960
+          ],
+          "source_extracted": "source_art/2d_v5/actors/v2/customer-handoff-extracted.png",
+          "runtime": "assets/2d_v5/actors/customer-handoff-pixel.png",
+          "staged_runtime": "source_art/2d_v5/actors/v2/staged-runtime/customer-handoff-pixel.png",
+          "runtime_sha256": "b74123ef6db4be5206acc4042abbacd2754a8291b4faefa532c18ecf919d64b7",
+          "runtime_dimensions": [
+            167,
+            256
+          ],
+          "runtime_alpha_bounds": [
+            3,
+            8,
+            152,
+            248
+          ],
+          "runtime_alpha_values": [
+            0,
+            255
+          ],
+          "runtime_palette_used": 82,
+          "runtime_all_colors_in_shared_palette": true,
+          "foot_anchor": [
+            73.19,
+            247.78
+          ],
+          "hand_and_parcel_anchors": {
+            "left": [
+              116.81,
+              132.94
+            ],
+            "right": [
+              137.7,
+              126.08
+            ],
+            "parcel": [
+              135.23,
+              115.37
+            ]
+          },
+          "native_dimensions": [
+            566,
+            898
+          ],
+          "native_foot_anchor": [
+            266,
+            886
+          ]
+        }
+      }
+    },
+    "clerk": {
+      "facing": "left",
+      "common_source_union": [
+        789,
+        131,
+        1247,
+        960
+      ],
+      "shared_canvas": [
+        159,
+        256
+      ],
+      "foot_anchor": [
+        85.59,
+        247.59
+      ],
+      "body_height": 240,
+      "source_foot_anchor": [
+        1065,
+        960
+      ],
+      "actual_sampling_foot": [
+        85.15,
+        248.0
+      ],
+      "common_resize": [
+        133,
+        240
+      ],
+      "common_paste_offset": [
+        5,
+        8
+      ],
+      "placement_suggestion": {
+        "scene": "1280x720",
+        "foot_position": [
+          276,
+          486
+        ],
+        "body_height": 210,
+        "scale_from_logical_body": 0.875
+      },
+      "poses": {
+        "idle": {
+          "source_pair": "source_art/2d_v5/actors/v2/pair-idle-original.png",
+          "source_alpha128_bounds": [
+            827,
+            131,
+            1245,
+            960
+          ],
+          "source_extracted": "source_art/2d_v5/actors/v2/clerk-idle-extracted.png",
+          "runtime": "assets/2d_v5/actors/clerk-idle-pixel.png",
+          "staged_runtime": "source_art/2d_v5/actors/v2/staged-runtime/clerk-idle-pixel.png",
+          "runtime_sha256": "8cf2e23a2dde0aefbd1d4a8cc4b974c35affd6e4579455f0b783a91c0ff1704f",
+          "runtime_dimensions": [
+            159,
+            256
+          ],
+          "runtime_alpha_bounds": [
+            16,
+            8,
+            137,
+            248
+          ],
+          "runtime_alpha_values": [
+            0,
+            255
+          ],
+          "runtime_palette_used": 86,
+          "runtime_all_colors_in_shared_palette": true,
+          "foot_anchor": [
+            85.59,
+            247.59
+          ],
+          "hand_and_parcel_anchors": {
+            "left": [
+              29.1,
+              136.54
+            ],
+            "right": [
+              83.7,
+              145.52
+            ],
+            "parcel": [
+              47.69,
+              126.7
+            ]
+          },
+          "native_dimensions": [
+            482,
+            853
+          ],
+          "native_foot_anchor": [
+            288,
+            841
+          ]
+        },
+        "handoff": {
+          "source_pair": "source_art/2d_v5/actors/v2/pair-handoff-original.png",
+          "source_alpha128_bounds": [
+            789,
+            131,
+            1247,
+            960
+          ],
+          "source_extracted": "source_art/2d_v5/actors/v2/clerk-handoff-extracted.png",
+          "runtime": "assets/2d_v5/actors/clerk-handoff-pixel.png",
+          "staged_runtime": "source_art/2d_v5/actors/v2/staged-runtime/clerk-handoff-pixel.png",
+          "runtime_sha256": "0c88c200599f799dcd5c0fbf7b2fdf04171f73ce5a7b836b74d23af9c478f94d",
+          "runtime_dimensions": [
+            159,
+            256
+          ],
+          "runtime_alpha_bounds": [
+            5,
+            8,
+            138,
+            248
+          ],
+          "runtime_alpha_values": [
+            0,
+            255
+          ],
+          "runtime_palette_used": 87,
+          "runtime_all_colors_in_shared_palette": true,
+          "foot_anchor": [
+            85.59,
+            247.59
+          ],
+          "hand_and_parcel_anchors": {
+            "left": [
+              19.23,
+              121.2
+            ],
+            "right": [
+              46.82,
+              131.33
+            ],
+            "parcel": [
+              30.26,
+              107.3
+            ]
+          },
+          "native_dimensions": [
+            482,
+            853
+          ],
+          "native_foot_anchor": [
+            288,
+            841
+          ]
+        }
+      }
+    }
+  }
+}

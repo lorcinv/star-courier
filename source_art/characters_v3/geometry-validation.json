@@ -1,0 +1,1346 @@
+{
+  "summary": {
+    "silhouettes": 148,
+    "normalized_source_windings": 56,
+    "all_front_caps_face_negative_y": true,
+    "all_back_caps_face_positive_y": true,
+    "all_prisms_closed_and_consistently_oriented": true,
+    "all_outlines_simple_and_cap_triangles_oriented": true,
+    "backface_culling_in_blender_proofs": true,
+    "godot_generated_lods": false
+  },
+  "silhouettes": [
+    {
+      "name": "Tapered_work_trouser",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Trouser_light_seam",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Oversize_sneaker",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Shoe_color_tab",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Dark_rubber_sole",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Tapered_work_trouser",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Trouser_light_seam",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Oversize_sneaker",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Shoe_color_tab",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Dark_rubber_sole",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Angular_courier_jacket",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Oversize_white_lapel",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Heavy_jacket_hem",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Slant_satchel_strap0",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Yellow_hard_satchel",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Satchel_latch",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Express_badge",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Long_sleeve",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Broad_cuff",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Open_courier_hand",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Bent_sleeve",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Hip_glove",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Hip_gloveknuckles0",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Neck",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Angular_face",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Asymmetric_rocket_hair",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Cyan_hair_streak",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Expressive_eye_white",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Tall_ink_pupil",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Expressive_eye_white",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Tall_ink_pupil",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Confident_brow_L0",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Confident_brow_R0",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Side_smirk",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Smirk_tooth",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Headset_ear",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Headset_teal_disc",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Headset_mic0",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Headset_mic1",
+      "collection": "01 \u2022 NOVA / EXPRESS CLERK",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Wide_work_trouser",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Oversize_sneaker",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Shoe_color_tab",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Dark_rubber_sole",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Wide_work_trouser",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Oversize_sneaker",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Shoe_color_tab",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Dark_rubber_sole",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Block_parka",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Large_standing_collar",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Center_zip0",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Oversize_pocket",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Oversize_pocket",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Long_sleeve",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Broad_cuff",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Expressive_glove",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Expressive_gloveknuckles0",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Long_sleeve",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Broad_cuff",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Expressive_glove",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Expressive_gloveknuckles0",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Neck",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Square_face",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "High_block_pompadour",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Pompadour_cream_slash",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Chunky_square_glasses",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Lens",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Pupil",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Chunky_square_glasses",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Lens",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Pupil",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Glasses_bridge",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Chevrons_moustache",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Small_grin0",
+      "collection": "02 \u2022 BRAM / FREIGHT PILOT",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Tapered_work_trouser",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Trouser_light_seam",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Oversize_sneaker",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Shoe_color_tab",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Dark_rubber_sole",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Tapered_work_trouser",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Trouser_light_seam",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Oversize_sneaker",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Shoe_color_tab",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Dark_rubber_sole",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Cropped_cobalt_workcoat",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Cyan_diagonal_panel",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Work_belt",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Square_belt_buckle",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Messenger_document_bag",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Messenger_strap0",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Long_sleeve",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Broad_cuff",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Expressive_glove",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Expressive_gloveknuckles0",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Bent_sleeve",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Hip_glove",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Hip_gloveknuckles0",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Neck",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Graphic_bob_back",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Diamond_face",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Heavy_diagonal_fringe",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Expressive_eye_white",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Tall_ink_pupil",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Expressive_eye_white",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Tall_ink_pupil",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Wry_eyelid0",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Wry_right_eyelid0",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Open_laugh",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Laugh_tooth",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Round_earring",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Yellow_hair_pin",
+      "collection": "03 \u2022 KIKI / SOUND TECH",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Tapered_work_trouser",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Trouser_light_seam",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Oversize_sneaker",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Shoe_color_tab",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Dark_rubber_sole",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Tapered_work_trouser",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Trouser_light_seam",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Oversize_sneaker",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Shoe_color_tab",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Dark_rubber_sole",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Oversize_research_coat",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Coat_lapel",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Button",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Button",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Field_pouch",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Long_sleeve",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Broad_cuff",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Expressive_glove",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Expressive_gloveknuckles0",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Long_sleeve",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Broad_cuff",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Expressive_glove",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Expressive_gloveknuckles0",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Neck",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Long_face",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Cloud_hair",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Round_goggles",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Goggle_lens",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Tiny_attentive_pupil",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Round_goggles",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Goggle_lens",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Tiny_attentive_pupil",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Goggle_bridge",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": false,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Delighted_smile0",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Delighted_smile1",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Delighted_smile2",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Yellow_pencil0",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    },
+    {
+      "name": "Coral_pencil0",
+      "collection": "04 \u2022 ORIN / FIELD RESEARCHER",
+      "source_winding_reversed": true,
+      "front_normal_y": -1.0,
+      "back_normal_y": 1.0,
+      "closed_oriented_edges": true,
+      "simple_outline_and_cap_triangles": true
+    }
+  ]
+}

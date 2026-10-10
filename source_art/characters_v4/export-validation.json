@@ -1,0 +1,84 @@
+{
+  "pass": true,
+  "actors": [
+    {
+      "file": "clerk.glb",
+      "bounds_min": [
+        -0.68646,
+        -0.0,
+        -0.42423
+      ],
+      "bounds_max": [
+        0.63481,
+        2.4,
+        0.71312
+      ],
+      "triangles": 15908,
+      "degenerate_triangles": 0,
+      "inverted_triangle_normals": 0,
+      "material_surfaces": 19,
+      "palette_materials": 8,
+      "all_palette_names_valid": true,
+      "single_sided_materials": true,
+      "named_pivots_and_face_palm_anchors": true,
+      "anchors": {
+        "FaceLook_Anchor": [
+          0.0,
+          1.7852,
+          0.3713
+        ],
+        "LeftPalm_Anchor": [
+          -0.5455,
+          1.12,
+          0.576
+        ],
+        "RightPalm_Anchor": [
+          0.318,
+          1.1,
+          0.557
+        ]
+      },
+      "spine_data": false
+    },
+    {
+      "file": "customer.glb",
+      "bounds_min": [
+        -0.57941,
+        -0.0,
+        -0.44216
+      ],
+      "bounds_max": [
+        0.76667,
+        2.4,
+        0.55196
+      ],
+      "triangles": 15684,
+      "degenerate_triangles": 0,
+      "inverted_triangle_normals": 0,
+      "material_surfaces": 17,
+      "palette_materials": 7,
+      "all_palette_names_valid": true,
+      "single_sided_materials": true,
+      "named_pivots_and_face_palm_anchors": true,
+      "anchors": {
+        "FaceLook_Anchor.001": [
+          0.0,
+          1.8382,
+          0.3824
+        ],
+        "LeftPalm_Anchor.001": [
+          -0.452,
+          0.8696,
+          0.1588
+        ],
+        "RightPalm_Anchor.001": [
+          0.6392,
+          1.3814,
+          0.3539
+        ]
+      },
+      "spine_data": false
+    }
+  ],
+  "note": "Structural GLB checks and Blender proof inspection do not substitute for in-engine review. Disable Godot generated LODs for layered face meshes on eventual import."
+}

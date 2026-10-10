@@ -1,0 +1,5509 @@
+{
+  "version": 2,
+  "asset_type": "Image-generated whole-raster walk and waybill-tablet poses",
+  "provenance": "Original built-in imagegen PNGs are preserved. Derivatives use alpha masking/cropping, 2D rigid raster-part transforms, common nearest-neighbor sampling, shared96 palette and bounded stance-only shader sampling. No code-painted character art, SVG or3D.",
+  "palette": "source_art/pixel_pipeline_studies/palette_96.json",
+  "palette_sha256": "5bb6b501d7bece46b528a3c230e39c207e5f8a3aac6be15969f21683e73f2944",
+  "animation_status": "Two original imagegen full-character sources are segmented into fixed torso/limb raster cutouts. Each gait has32 distinct assembled raster samples, not32 new imagegen drawings. Run has separate forward-leaning torso, stronger leg recovery and25% airborne samples. Pure2D custom cutout animation, not Spine.",
+  "registration_policy": "One common whole-body scale per source sheet; no face/head scaling and no gesture-width normalization. Pelvis-projected foot origin, measured boot baseline and per-frame hip anchor.",
+  "actors": {
+    "clerk": {
+      "appearance_id": "clerk",
+      "walk_cycle_distance": 135.38461538461536,
+      "walk": [
+        {
+          "id": "clerk-walk-rig-00",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-00-pixel.png",
+          "sha256": "6b433b62ea3bd2ae8187e69a05a9ba9170b3ebbf790622916225e50e3ed3d004",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            87,
+            38,
+            222,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            179.4871794871795
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "near",
+          "distance_phase": 0.0,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                113.23076923076923,
+                280
+              ],
+              "grounded": true
+            },
+            {
+              "id": "near",
+              "point": [
+                180.9230769230769,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                159.0
+              ],
+              "knee": [
+                113.64677239389863,
+                208.8765869101022
+              ],
+              "ankle": [
+                90.0,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                159.0
+              ],
+              "knee": [
+                163.9868198201118,
+                199.53988715237034
+              ],
+              "ankle": [
+                156.0,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-01",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-01-pixel.png",
+          "sha256": "fd2e95984daa16e9bbfeb714d202e798c45989d9ab739507675c474015247d89",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            87,
+            38,
+            217,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            180.036673646473
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "near",
+          "distance_phase": 0.03125,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                109.0,
+                280
+              ],
+              "grounded": true
+            },
+            {
+              "id": "near",
+              "point": [
+                176.69230769230768,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                159.53575680531114
+              ],
+              "knee": [
+                109.57074760047689,
+                208.96979635260564
+              ],
+              "ankle": [
+                85.875,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                159.53575680531114
+              ],
+              "knee": [
+                163.0590058197167,
+                200.99269714138916
+              ],
+              "ankle": [
+                151.875,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-02",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-02-pixel.png",
+          "sha256": "33f3475feb6eefd9bbaade251c21c7ada768083d800b448abe3fd9cb8d54ad49",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            86,
+            39,
+            213,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            180.50251230119093
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "near",
+          "distance_phase": 0.0625,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                104.76923076923077,
+                280
+              ],
+              "grounded": true
+            },
+            {
+              "id": "near",
+              "point": [
+                172.46153846153845,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                159.98994949366116
+              ],
+              "knee": [
+                105.2350580662494,
+                208.5749698031637
+              ],
+              "ankle": [
+                81.75,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                159.98994949366116
+              ],
+              "knee": [
+                161.664212599633,
+                202.75068514382988
+              ],
+              "ankle": [
+                147.75,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-03",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-03-pixel.png",
+          "sha256": "9fec4280bc5ddbb7e62a5196af599f5895b9ff89bc97b078f306b77c43ffad93",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            81,
+            39,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            180.81377573899059
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "near",
+          "distance_phase": 0.09375,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                100.53846153846155,
+                280
+              ],
+              "grounded": true
+            },
+            {
+              "id": "near",
+              "point": [
+                168.23076923076923,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                160.2934313455158
+              ],
+              "knee": [
+                100.47531894570047,
+                207.47237763761703
+              ],
+              "ankle": [
+                77.625,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                160.2934313455158
+              ],
+              "knee": [
+                159.79473485315623,
+                204.67303630521727
+              ],
+              "ankle": [
+                143.625,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-04",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-04-pixel.png",
+          "sha256": "cbccb840fbb5f743a218b6f1f7730ef8fb41cffc204f4d92ec4afcd2159c913b",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            82,
+            39,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            180.92307692307693
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "down",
+          "support_half": "near",
+          "distance_phase": 0.125,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                164.0,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                160.4
+              ],
+              "knee": [
+                103.25888290098823,
+                208.46349714752915
+              ],
+              "ankle": [
+                77.689453125,
+                216.2884763698487
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                160.4
+              ],
+              "knee": [
+                157.45945549902595,
+                206.61631504137776
+              ],
+              "ankle": [
+                139.5,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-05",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-05-pixel.png",
+          "sha256": "78fc651ef4f2a85b2b00bb2b9eb81236e073605c480d85a1f5fdf5e400ce0bc8",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            88,
+            39,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            180.81377573899059
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "down",
+          "support_half": "near",
+          "distance_phase": 0.15625,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                159.76923076923077,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                160.2934313455158
+              ],
+              "knee": [
+                107.78558118590345,
+                209.42603297719944
+              ],
+              "ankle": [
+                81.05813598632812,
+                210.2443923130807
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                160.2934313455158
+              ],
+              "knee": [
+                154.69374434449614,
+                208.44847696608343
+              ],
+              "ankle": [
+                135.375,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-06",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-06-pixel.png",
+          "sha256": "2fb6664a33a2f5b9a1735053653f0cb2b82126a3abc43d0b9d50858d0159a984",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            93,
+            39,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            180.50251230119093
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "down",
+          "support_half": "near",
+          "distance_phase": 0.1875,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                155.53846153846155,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                159.98994949366116
+              ],
+              "knee": [
+                112.79208943767652,
+                209.80171061368966
+              ],
+              "ankle": [
+                86.511474609375,
+                204.86659935401326
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                159.98994949366116
+              ],
+              "knee": [
+                151.558129380494,
+                210.06823915674966
+              ],
+              "ankle": [
+                131.25,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-07",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-07-pixel.png",
+          "sha256": "7f2a92ba1dbf243f0b877e1fcbf285c06fd8edfb3c3c237d95b6764297d339e5",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            38,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            180.036673646473
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "down",
+          "support_half": "near",
+          "distance_phase": 0.21875,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                151.30769230769232,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                159.53575680531114
+              ],
+              "knee": [
+                118.77037896494514,
+                209.4935771690918
+              ],
+              "ankle": [
+                93.59628295898438,
+                200.47742892377124
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                159.53575680531114
+              ],
+              "knee": [
+                148.1279741785272,
+                211.4201163270061
+              ],
+              "ankle": [
+                127.125,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-08",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-08-pixel.png",
+          "sha256": "1f0a80ee85ab1d1f069d0fa5f39c5bdb12cc5265b9d3296ab0c9595501f5a5c0",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            38,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            179.4871794871795
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "passing",
+          "support_half": "near",
+          "distance_phase": 0.25,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                147.07692307692307,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                159.0
+              ],
+              "knee": [
+                126.33454430035955,
+                208.10992099244228
+              ],
+              "ankle": [
+                101.859375,
+                197.33995689697457
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                159.0
+              ],
+              "knee": [
+                144.47996960245754,
+                212.49778271265762
+              ],
+              "ankle": [
+                123.0,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-09",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-09-pixel.png",
+          "sha256": "5de611c238c231987099037bf6cf02077fbf69bcbfe5e1ef738823b4667d3921",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            37,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            178.93768532788602
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "passing",
+          "support_half": "near",
+          "distance_phase": 0.28125,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                142.84615384615384,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                158.46424319468886
+              ],
+              "knee": [
+                136.00709361166537,
+                204.69895363626821
+              ],
+              "ankle": [
+                110.84756469726562,
+                195.64223548318375
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                158.46424319468886
+              ],
+              "knee": [
+                140.6815081250605,
+                213.33469170494482
+              ],
+              "ankle": [
+                118.875,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-10",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-10-pixel.png",
+          "sha256": "818e4e449d47296a2a5788002e11c117b237f286de0734b8b0d29d949895db42",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            37,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            178.47184667316805
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "passing",
+          "support_half": "near",
+          "distance_phase": 0.3125,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                138.6153846153846,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                158.01005050633884
+              ],
+              "knee": [
+                146.70813685595937,
+                198.2138396527226
+              ],
+              "ankle": [
+                120.107666015625,
+                195.48602184879093
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                158.01005050633884
+              ],
+              "knee": [
+                136.78546945676308,
+                213.98649806377037
+              ],
+              "ankle": [
+                114.75,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-11",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-11-pixel.png",
+          "sha256": "772ba9bad8268277f8a5b4c9f7b2ce0e283e20dd98f6c2905170b8439d7f22ed",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            37,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            178.1605832353684
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "passing",
+          "support_half": "near",
+          "distance_phase": 0.34375,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                134.3846153846154,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                157.7065686544842
+              ],
+              "knee": [
+                155.0573869650237,
+                190.11880946831468
+              ],
+              "ankle": [
+                129.18649291992188,
+                196.8806790475095
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                157.7065686544842
+              ],
+              "knee": [
+                132.829231394299,
+                214.5113929169582
+              ],
+              "ankle": [
+                110.625,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-12",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-12-pixel.png",
+          "sha256": "2bbd6c64d03673c9dd484f07db439a14fd185dadb3e27babc03e90b43b5f85f4",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            37,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            178.05128205128204
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "up",
+          "support_half": "near",
+          "distance_phase": 0.375,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                130.15384615384616,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                157.6
+              ],
+              "knee": [
+                159.35498872218275,
+                184.15132741546205
+              ],
+              "ankle": [
+                137.630859375,
+                199.74261482240183
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                157.6
+              ],
+              "knee": [
+                128.83562700307286,
+                214.95283172411138
+              ],
+              "ankle": [
+                106.5,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-13",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-13-pixel.png",
+          "sha256": "93d27a6ec548b72e43dc709005f4e53a6b9e2400d7076d2c4ea4dd3781dcd7c9",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            37,
+            214,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            178.1605832353684
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "up",
+          "support_half": "near",
+          "distance_phase": 0.40625,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                125.92307692307692,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                157.7065686544842
+              ],
+              "knee": [
+                160.58736496298025,
+                182.18226420666937
+              ],
+              "ankle": [
+                144.98757934570312,
+                203.90029191624558
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                157.7065686544842
+              ],
+              "knee": [
+                124.81458656608575,
+                215.32695675528936
+              ],
+              "ankle": [
+                102.375,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-14",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-14-pixel.png",
+          "sha256": "15d9f47bcbcf7e498de15491c0e2f51b577d287d0d4d25796eb29c0904471dfd",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            37,
+            219,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            178.47184667316805
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "up",
+          "support_half": "near",
+          "distance_phase": 0.4375,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                121.6923076923077,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                158.01005050633884
+              ],
+              "knee": [
+                159.7574744081512,
+                183.90824425446715
+              ],
+              "ankle": [
+                150.803466796875,
+                209.10450958479208
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                158.01005050633884
+              ],
+              "knee": [
+                120.76523557627496,
+                215.6156724304504
+              ],
+              "ankle": [
+                98.25,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-15",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-15-pixel.png",
+          "sha256": "9c35cceee83feb0915137e20ecb3f2ee4d4b2de3b720e36d2e3a2da7e2912810",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            37,
+            222,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            178.93768532788602
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "up",
+          "support_half": "near",
+          "distance_phase": 0.46875,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                117.46153846153847,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                158.46424319468886
+              ],
+              "knee": [
+                157.0260950781423,
+                188.4113594160349
+              ],
+              "ankle": [
+                154.62533569335938,
+                215.0433400647832
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                158.46424319468886
+              ],
+              "knee": [
+                116.6779351110097,
+                215.76549400854654
+              ],
+              "ankle": [
+                94.125,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-16",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-16-pixel.png",
+          "sha256": "23edce0982a2c0ee228b2f7ddfae91b2450f52f90687554d9faf29d85591533c",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            38,
+            222,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            179.4871794871795
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "far",
+          "distance_phase": 0.5,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                180.9230769230769,
+                280
+              ],
+              "grounded": true
+            },
+            {
+              "id": "near",
+              "point": [
+                113.23076923076923,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                159.0
+              ],
+              "knee": [
+                151.7185275542677,
+                194.96584354137758
+              ],
+              "ankle": [
+                156.0,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                159.0
+              ],
+              "knee": [
+                112.534327184086,
+                215.69101817575222
+              ],
+              "ankle": [
+                90.0,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-17",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-17-pixel.png",
+          "sha256": "e9bfb89eb8deab1e5fecefd091cbe7fbdb8b348054c17cbaf17da5b9199a1c48",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            91,
+            38,
+            217,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            180.036673646473
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "far",
+          "distance_phase": 0.53125,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                176.69230769230768,
+                280
+              ],
+              "grounded": true
+            },
+            {
+              "id": "near",
+              "point": [
+                109.0,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                159.53575680531114
+              ],
+              "knee": [
+                152.5986885078971,
+                194.6306486515188
+              ],
+              "ankle": [
+                151.875,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                159.53575680531114
+              ],
+              "knee": [
+                108.30176936322839,
+                215.27949067237012
+              ],
+              "ankle": [
+                85.875,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-18",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-18-pixel.png",
+          "sha256": "0a2657a7bee81e19b3be2a0729605b0995c538fb01bc199627522016fc63b4cf",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            86,
+            39,
+            213,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            180.50251230119093
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "far",
+          "distance_phase": 0.5625,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                172.46153846153845,
+                280
+              ],
+              "grounded": true
+            },
+            {
+              "id": "near",
+              "point": [
+                104.76923076923077,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                159.98994949366116
+              ],
+              "knee": [
+                152.61595568096075,
+                195.0673176690408
+              ],
+              "ankle": [
+                147.75,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                159.98994949366116
+              ],
+              "knee": [
+                103.91594430552101,
+                214.38848502122158
+              ],
+              "ankle": [
+                81.75,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-19",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-19-pixel.png",
+          "sha256": "788c4bf387f508a8e9b4bb3a10ca0361958fce82dc809a2fa2d40498a564e944",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            81,
+            39,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            180.81377573899059
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "far",
+          "distance_phase": 0.59375,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                168.23076923076923,
+                280
+              ],
+              "grounded": true
+            },
+            {
+              "id": "near",
+              "point": [
+                100.53846153846155,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                160.2934313455158
+              ],
+              "knee": [
+                152.0146358528932,
+                195.97106205817082
+              ],
+              "ankle": [
+                143.625,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                160.2934313455158
+              ],
+              "knee": [
+                99.23323926994473,
+                212.8152642694869
+              ],
+              "ankle": [
+                77.625,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-20",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-20-pixel.png",
+          "sha256": "8510f06cbf26b7f0e40c326fbe0c6bd47583275679ec4d2e3eff0c42507fd934",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            82,
+            39,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            180.92307692307693
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "down",
+          "support_half": "far",
+          "distance_phase": 0.625,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                164.0,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                160.4
+              ],
+              "knee": [
+                150.87536389506823,
+                197.16109054633725
+              ],
+              "ankle": [
+                139.5,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                160.4
+              ],
+              "knee": [
+                100.76890376641785,
+                213.5900386308042
+              ],
+              "ankle": [
+                77.689453125,
+                216.2884763698487
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-21",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-21-pixel.png",
+          "sha256": "11f0cb8389a490b10d15ae92c5a39df16f2ae68fade11348d6f652d0b78f1c61",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            88,
+            39,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            180.81377573899059
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "down",
+          "support_half": "far",
+          "distance_phase": 0.65625,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                159.76923076923077,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                160.2934313455158
+              ],
+              "knee": [
+                149.24039248731336,
+                198.49650909382407
+              ],
+              "ankle": [
+                135.375,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                160.2934313455158
+              ],
+              "knee": [
+                103.86843773677708,
+                214.67527734821834
+              ],
+              "ankle": [
+                81.05813598632812,
+                210.2443923130807
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-22",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-22-pixel.png",
+          "sha256": "7e7265481e0da4f37870965e8937b6d93ba5737d0e94772f32646c2b8e696e63",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            39,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            180.50251230119093
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "down",
+          "support_half": "far",
+          "distance_phase": 0.6875,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                155.53846153846155,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                159.98994949366116
+              ],
+              "knee": [
+                147.1512230228532,
+                199.8625191049298
+              ],
+              "ankle": [
+                131.25,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                159.98994949366116
+              ],
+              "knee": [
+                107.20656266670937,
+                215.43333671425447
+              ],
+              "ankle": [
+                86.511474609375,
+                204.86659935401326
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-23",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-23-pixel.png",
+          "sha256": "1c125cc7900bfc7a46a5b66c050c493189b8e662b30ad24d47ac386a27ab7709",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            38,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            180.036673646473
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "down",
+          "support_half": "far",
+          "distance_phase": 0.71875,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                151.30769230769232,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                159.53575680531114
+              ],
+              "knee": [
+                144.661454067094,
+                201.17422478953634
+              ],
+              "ankle": [
+                127.125,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                159.53575680531114
+              ],
+              "knee": [
+                110.96421788302814,
+                215.91431476954085
+              ],
+              "ankle": [
+                93.59628295898438,
+                200.47742892377124
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-24",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-24-pixel.png",
+          "sha256": "f1f42cc7649d55fc43f2c596235679563bf9561c22bcb2ce72e0bf34300fe18b",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            38,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            179.4871794871795
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "passing",
+          "support_half": "far",
+          "distance_phase": 0.75,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                147.07692307692307,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                159.0
+              ],
+              "knee": [
+                141.83728178462604,
+                202.38234077052988
+              ],
+              "ankle": [
+                123.0,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                159.0
+              ],
+              "knee": [
+                115.49128908411605,
+                216.15786131123974
+              ],
+              "ankle": [
+                101.859375,
+                197.33995689697457
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-25",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-25-pixel.png",
+          "sha256": "7682e987702147ecda2ddf50c6ce0077f1dbbe12f212121e591bd81272d0f725",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            37,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            178.93768532788602
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "passing",
+          "support_half": "far",
+          "distance_phase": 0.78125,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                142.84615384615384,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                158.46424319468886
+              ],
+              "knee": [
+                138.75110298340613,
+                203.4732153689627
+              ],
+              "ankle": [
+                118.875,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                158.46424319468886
+              ],
+              "knee": [
+                121.86306629177092,
+                216.10198457164014
+              ],
+              "ankle": [
+                110.84756469726562,
+                195.64223548318375
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-26",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-26-pixel.png",
+          "sha256": "a79226d2ce19d265bc23388781d86d477205d5cb4cb23d841daefa66371281b7",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            93,
+            37,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            178.47184667316805
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "passing",
+          "support_half": "far",
+          "distance_phase": 0.8125,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                138.6153846153846,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                158.01005050633884
+              ],
+              "knee": [
+                135.4724600428031,
+                204.46095229679216
+              ],
+              "ankle": [
+                114.75,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                158.01005050633884
+              ],
+              "knee": [
+                133.0671192772128,
+                214.77319839959438
+              ],
+              "ankle": [
+                120.107666015625,
+                195.48602184879093
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-27",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-27-pixel.png",
+          "sha256": "f27d424057726f61a4655745440265bb255528e3ff2f1226561516c7c9922c19",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            91,
+            37,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            178.1605832353684
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "passing",
+          "support_half": "far",
+          "distance_phase": 0.84375,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                134.3846153846154,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                157.7065686544842
+              ],
+              "knee": [
+                132.0593377683194,
+                205.373479642705
+              ],
+              "ankle": [
+                110.625,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                157.7065686544842
+              ],
+              "knee": [
+                148.87447886586392,
+                209.2227136258734
+              ],
+              "ankle": [
+                129.18649291992188,
+                196.8806790475095
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-28",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-28-pixel.png",
+          "sha256": "02a4d568f9c445c3f60cc38fc9a4a8a966bfa4b38103274689408b52a6373ce6",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            89,
+            37,
+            211,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            178.05128205128204
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "up",
+          "support_half": "far",
+          "distance_phase": 0.875,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                130.15384615384616,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                157.6
+              ],
+              "knee": [
+                128.55156648548163,
+                206.2361940216419
+              ],
+              "ankle": [
+                106.5,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                157.6
+              ],
+              "knee": [
+                160.8276982392469,
+                201.10249527571617
+              ],
+              "ankle": [
+                137.630859375,
+                199.74261482240183
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-29",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-29-pixel.png",
+          "sha256": "6a93f52cfc5a500f1ad0b76e1b64728973a791697e0c24b86cd2f934f63a3a95",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            88,
+            37,
+            214,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            178.1605832353684
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "up",
+          "support_half": "far",
+          "distance_phase": 0.90625,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                125.92307692307692,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                157.7065686544842
+              ],
+              "knee": [
+                124.9674486691994,
+                207.05672386075452
+              ],
+              "ankle": [
+                102.375,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                157.7065686544842
+              ],
+              "knee": [
+                166.61529743286636,
+                195.40415052833694
+              ],
+              "ankle": [
+                144.98757934570312,
+                203.90029191624558
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-30",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-30-pixel.png",
+          "sha256": "bd176e2b1a5371a1a6ad4cbf0923590c4e338c82ddb5e9c5651aabe8b89c1994",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            87,
+            37,
+            219,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            178.47184667316805
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "up",
+          "support_half": "far",
+          "distance_phase": 0.9375,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                121.6923076923077,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                158.01005050633884
+              ],
+              "knee": [
+                121.30424461634773,
+                207.81357985378506
+              ],
+              "ankle": [
+                98.25,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                158.01005050633884
+              ],
+              "knee": [
+                168.2385250551972,
+                193.74347603655534
+              ],
+              "ankle": [
+                150.803466796875,
+                209.10450958479208
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-walk-rig-31",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-31-pixel.png",
+          "sha256": "262ade576b7130c778f49bb3324ed8b775f3f0eef9dcc2f0e94c84d645c0655a",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            87,
+            37,
+            222,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            178.93768532788602
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+          "source_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-walk-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "up",
+          "support_half": "far",
+          "distance_phase": 0.96875,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                117.46153846153847,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                158.46424319468886
+              ],
+              "knee": [
+                117.54185689634056,
+                208.45048578485745
+              ],
+              "ankle": [
+                94.125,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                158.46424319468886
+              ],
+              "knee": [
+                167.1844411490666,
+                195.49311044225536
+              ],
+              "ankle": [
+                154.62533569335938,
+                215.0433400647832
+              ]
+            }
+          }
+        }
+      ],
+      "gestures": {
+        "reach": {
+          "id": "clerk-tablet-read",
+          "runtime": "assets/2d_v5/actors/cooperative/clerk-tablet-read-pixel.png",
+          "sha256": "216eb87a6b503e92b7de9cef84e4b074e30e79e8e9069f510da3ed8c927ab116",
+          "dimensions": [
+            208,
+            256
+          ],
+          "alpha_bounds": [
+            39,
+            9,
+            154,
+            248
+          ],
+          "foot_anchor": [
+            95.88679245283018,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            95.88679245283018,
+            153.9056603773585
+          ],
+          "facing": "right",
+          "contains_parcel": false,
+          "held_prop": "waybill_tablet",
+          "semantic": "tablet_read",
+          "source": "source_art/2d_v5/actors/cooperative/clerk-tablet-original.png",
+          "source_sha256": "5de8f2b4cf72ad2200aaa9a7ccd6c691b1e9388e9fded5a56f87e1bc7d5497fb",
+          "source_cell": [
+            0,
+            0,
+            620,
+            887
+          ],
+          "source_bounds": [
+            169,
+            24,
+            574,
+            869
+          ],
+          "source_foot_anchor": [
+            370,
+            869
+          ],
+          "source_hip_anchor": [
+            370,
+            536
+          ],
+          "uniform_scale": 0.2830188679245283,
+          "sampling_size": [
+            115,
+            239
+          ],
+          "paste_offset": [
+            39,
+            9
+          ],
+          "stance_family": "tablet_stationary",
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 90
+        },
+        "align": {
+          "id": "clerk-tablet-tap",
+          "runtime": "assets/2d_v5/actors/cooperative/clerk-tablet-tap-pixel.png",
+          "sha256": "0a56c3d67250410b74b28d1ab118a65913b534082bab398a8bdc35cec2040332",
+          "dimensions": [
+            208,
+            256
+          ],
+          "alpha_bounds": [
+            37,
+            8,
+            148,
+            248
+          ],
+          "foot_anchor": [
+            95.86792452830188,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            95.86792452830188,
+            153.75471698113208
+          ],
+          "facing": "right",
+          "contains_parcel": false,
+          "held_prop": "waybill_tablet",
+          "semantic": "tablet_tap",
+          "source": "source_art/2d_v5/actors/cooperative/clerk-tablet-original.png",
+          "source_sha256": "5de8f2b4cf72ad2200aaa9a7ccd6c691b1e9388e9fded5a56f87e1bc7d5497fb",
+          "source_cell": [
+            620,
+            0,
+            1160,
+            887
+          ],
+          "source_bounds": [
+            696,
+            21,
+            1088,
+            869
+          ],
+          "source_foot_anchor": [
+            904,
+            869
+          ],
+          "source_hip_anchor": [
+            904,
+            536
+          ],
+          "uniform_scale": 0.2830188679245283,
+          "sampling_size": [
+            111,
+            240
+          ],
+          "paste_offset": [
+            37,
+            8
+          ],
+          "stance_family": "tablet_stationary",
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 89
+        },
+        "ready": {
+          "id": "clerk-tablet-check",
+          "runtime": "assets/2d_v5/actors/cooperative/clerk-tablet-check-pixel.png",
+          "sha256": "ca21efa77c7669c4bf1e9076fc5aa61a0a5bf593a498c7394cbfeea66e701b74",
+          "dimensions": [
+            208,
+            256
+          ],
+          "alpha_bounds": [
+            42,
+            8,
+            152,
+            248
+          ],
+          "foot_anchor": [
+            96.33962264150944,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            96.33962264150944,
+            154.32075471698113
+          ],
+          "facing": "right",
+          "contains_parcel": false,
+          "held_prop": "waybill_tablet",
+          "semantic": "tablet_check",
+          "source": "source_art/2d_v5/actors/cooperative/clerk-tablet-original.png",
+          "source_sha256": "5de8f2b4cf72ad2200aaa9a7ccd6c691b1e9388e9fded5a56f87e1bc7d5497fb",
+          "source_cell": [
+            1160,
+            0,
+            1774,
+            887
+          ],
+          "source_bounds": [
+            1224,
+            21,
+            1612,
+            869
+          ],
+          "source_foot_anchor": [
+            1416,
+            869
+          ],
+          "source_hip_anchor": [
+            1416,
+            538
+          ],
+          "uniform_scale": 0.2830188679245283,
+          "sampling_size": [
+            110,
+            240
+          ],
+          "paste_offset": [
+            42,
+            8
+          ],
+          "stance_family": "tablet_stationary",
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 90
+        }
+      },
+      "walk_reference_height": 240,
+      "walk_sequence": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "walk_phase_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "run": [
+        {
+          "id": "clerk-run-rig-00",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-00-pixel.png",
+          "sha256": "c40f1e71dd8c0755c1c19579656c2b12a7941368055e6af45b0c1f22f3a8714a",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            97,
+            41,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            183.5897435897436
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "near",
+          "distance_phase": 0.0,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                175.7948717948718,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                163.0
+              ],
+              "knee": [
+                101.85661219673749,
+                210.64027563962344
+              ],
+              "ankle": [
+                85.3017578125,
+                189.64116053408577
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                163.0
+              ],
+              "knee": [
+                164.81956574444567,
+                202.68029448276835
+              ],
+              "ankle": [
+                151.0,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-01",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-01-pixel.png",
+          "sha256": "dc1eefacf55fbf7af444dfd749eb14bc06797fa0884a17aab89c967b77e547a4",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            102,
+            42,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            184.3747352458771
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "near",
+          "distance_phase": 0.03125,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                169.12820512820514,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                163.76536686473017
+              ],
+              "knee": [
+                97.19847764132574,
+                209.66545149927327
+              ],
+              "ankle": [
+                89.33467364311218,
+                184.10793547019472
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                163.76536686473017
+              ],
+              "knee": [
+                162.0706438545709,
+                206.1550665343729
+              ],
+              "ankle": [
+                144.5,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-02",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-02-pixel.png",
+          "sha256": "6f9c1adef562a737fa8136731a4e2aa33868be4dceda227179ce70058f5a05cd",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            102,
+            42,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            185.0402190383314
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "near",
+          "distance_phase": 0.0625,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                162.46153846153845,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                164.4142135623731
+              ],
+              "knee": [
+                88.8316766058468,
+                205.71147272495793
+              ],
+              "ankle": [
+                93.86551475524902,
+                179.44958946452613
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                164.4142135623731
+              ],
+              "knee": [
+                158.27587371847568,
+                210.01042593457993
+              ],
+              "ankle": [
+                138.0,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-03",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-03-pixel.png",
+          "sha256": "04e62909cb8f031983a60e07e23a3bca55149bc4b8a758bf468592c0260815fe",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            93,
+            43,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            185.48488109233085
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "near",
+          "distance_phase": 0.09375,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                155.7948717948718,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                164.8477590650226
+              ],
+              "knee": [
+                80.38704277243038,
+                198.8831732718668
+              ],
+              "ankle": [
+                96.20726562622576,
+                177.32519127551157
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                164.8477590650226
+              ],
+              "knee": [
+                153.46790716139395,
+                213.7876046154318
+              ],
+              "ankle": [
+                131.5,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-04",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-04-pixel.png",
+          "sha256": "0cf67bfd9de7cb202d73c50366721f6510b7ee6fc04d17aebc8bb46d64613cfc",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            93,
+            43,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            185.64102564102564
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "compression",
+          "support_half": "near",
+          "distance_phase": 0.125,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                149.12820512820514,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                165.0
+              ],
+              "knee": [
+                81.10290313112363,
+                199.78960323955712
+              ],
+              "ankle": [
+                96.4712956153335,
+                177.90722331071464
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                165.0
+              ],
+              "knee": [
+                147.8291368659255,
+                217.02802909765435
+              ],
+              "ankle": [
+                125.0,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-05",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-05-pixel.png",
+          "sha256": "86f9af09fbf4009865e66dbffe3f1c969578e5b40fcec3a75c7779764b99a382",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            100,
+            43,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            185.48488109233085
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "compression",
+          "support_half": "near",
+          "distance_phase": 0.15625,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                142.46153846153845,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                164.8477590650226
+              ],
+              "knee": [
+                87.60332694895956,
+                205.27984620765636
+              ],
+              "ankle": [
+                98.98990259999792,
+                181.08538539857636
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                164.8477590650226
+              ],
+              "knee": [
+                141.65340101345703,
+                219.39546735716252
+              ],
+              "ankle": [
+                118.5,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-06",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-06-pixel.png",
+          "sha256": "dbd45b90d110e40999065a9e935516388ccdb1563095077ed33061ab2fe3a849",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            102,
+            42,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            185.0402190383314
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "compression",
+          "support_half": "near",
+          "distance_phase": 0.1875,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                135.7948717948718,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                164.4142135623731
+              ],
+              "knee": [
+                112.66005862849717,
+                214.2146449467619
+              ],
+              "ankle": [
+                109.94110198070707,
+                187.6132669063978
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                164.4142135623731
+              ],
+              "knee": [
+                135.22866817416076,
+                220.7512486634458
+              ],
+              "ankle": [
+                112.0,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-07",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-07-pixel.png",
+          "sha256": "30f07b228e66f64185ead656a01fe407f1aed15ce213d06fa4ff2a8b4bfded84",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            102,
+            42,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            184.3747352458771
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "compression",
+          "support_half": "near",
+          "distance_phase": 0.21875,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                129.12820512820514,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                163.76536686473017
+              ],
+              "knee": [
+                144.4653387406333,
+                205.533455461667
+              ],
+              "ankle": [
+                125.84185183507843,
+                186.34513155420825
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                163.76536686473017
+              ],
+              "knee": [
+                128.73550170449465,
+                221.12829800925041
+              ],
+              "ankle": [
+                105.5,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-08",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-08-pixel.png",
+          "sha256": "e1910e4271a7fa436abfbe4b9038dbdf9d784814e971aea5a862c199d5de24c1",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            102,
+            41,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            183.5897435897436
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "toe_off",
+          "support_half": "near",
+          "distance_phase": 0.25,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                122.46153846153847,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                163.0
+              ],
+              "knee": [
+                154.9631871683254,
+                195.5225226143667
+              ],
+              "ankle": [
+                131.7521264156641,
+                182.2457497521387
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                163.0
+              ],
+              "knee": [
+                122.22559826798232,
+                220.64375205736246
+              ],
+              "ankle": [
+                99.0,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-09",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-09-pixel.png",
+          "sha256": "fdbb572a930681a4e665baf5b8b9c5abce3d176b0a8731a2a79b1afb3f758259",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            97,
+            40,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            182.80475193361008
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "toe_off",
+          "support_half": "near",
+          "distance_phase": 0.28125,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                115.7948717948718,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                162.23463313526983
+              ],
+              "knee": [
+                157.48995290664587,
+                191.5515526664364
+              ],
+              "ankle": [
+                133.27309481552126,
+                180.21268927131345
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                162.23463313526983
+              ],
+              "knee": [
+                115.65494611196911,
+                219.41375548491027
+              ],
+              "ankle": [
+                92.5,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-10",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-10-pixel.png",
+          "sha256": "563a9896243d11ed05424ebb90018f8b4a82c98a165c6eba9689300693ea42fa",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            91,
+            40,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            182.1392681411558
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "toe_off",
+          "support_half": "near",
+          "distance_phase": 0.3125,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                109.12820512820514,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                161.5857864376269
+              ],
+              "knee": [
+                162.18850841301537,
+                182.96139788118884
+              ],
+              "ankle": [
+                135.48481559753418,
+                181.56897951182384
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                161.5857864376269
+              ],
+              "knee": [
+                108.9114362269367,
+                217.48671863115618
+              ],
+              "ankle": [
+                86.0,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-11",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-11-pixel.png",
+          "sha256": "02ef34a2163f9cab72b4a3ab50a0209bd46e94721a49bbc2d7e5d985a25a7b61",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            83,
+            39,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            181.69460608715633
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "toe_off",
+          "support_half": "near",
+          "distance_phase": 0.34375,
+          "support_feet": [
+            {
+              "id": "near",
+              "point": [
+                102.46153846153847,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                161.1522409349774
+              ],
+              "knee": [
+                164.55211792679037,
+                176.57022192653136
+              ],
+              "ankle": [
+                139.78970742225647,
+                186.66225169778534
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                161.1522409349774
+              ],
+              "knee": [
+                101.77719632262108,
+                214.75256232734094
+              ],
+              "ankle": [
+                79.5,
+                221.36082474226805
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-12",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-12-pixel.png",
+          "sha256": "7fcd709983cf035c070fc7d0b7e7a643253d537923fd66aa29ee21b14c2986b9",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            81,
+            39,
+            251,
+            276
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            181.53846153846155
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "flight",
+          "support_half": "near",
+          "distance_phase": 0.375,
+          "support_feet": [],
+          "foot_lock": false,
+          "flight": true,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                161.0
+              ],
+              "knee": [
+                164.6418546936704,
+                176.13841928757722
+              ],
+              "ankle": [
+                143.5464630126953,
+                192.57041517137577
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                161.0
+              ],
+              "knee": [
+                99.0907115008925,
+                213.45710412098325
+              ],
+              "ankle": [
+                76.24147033691406,
+                217.6825965622847
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-13",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-13-pixel.png",
+          "sha256": "1dcbc70d390ca17edeb7d2a7156bfd99743414057b4d8d529c2f0c76edb699d9",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            85,
+            39,
+            251,
+            268
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            181.69460608715633
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "flight",
+          "support_half": "near",
+          "distance_phase": 0.40625,
+          "support_feet": [],
+          "foot_lock": false,
+          "flight": true,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                161.1522409349774
+              ],
+              "knee": [
+                163.8236990565674,
+                178.6582188807908
+              ],
+              "ankle": [
+                146.6504762172699,
+                199.15471751374656
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                161.1522409349774
+              ],
+              "knee": [
+                100.1324776872204,
+                214.07178621427624
+              ],
+              "ankle": [
+                77.2366235256195,
+                210.1066291742784
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-14",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-14-pixel.png",
+          "sha256": "8fd60672837f674ce82c1ef7a4851a175b00e7e77ca4240d8a0489a80bdfe9d7",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            90,
+            40,
+            251,
+            264
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            182.1392681411558
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "flight",
+          "support_half": "near",
+          "distance_phase": 0.4375,
+          "support_feet": [],
+          "foot_lock": false,
+          "flight": true,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                161.5857864376269
+              ],
+              "knee": [
+                162.17379142450537,
+                182.9924822479238
+              ],
+              "ankle": [
+                148.9971408843994,
+                206.26052727630662
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                161.5857864376269
+              ],
+              "knee": [
+                99.40241122512768,
+                214.18384394268358
+              ],
+              "ankle": [
+                79.14812660217285,
+                202.7949650446762
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-15",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-15-pixel.png",
+          "sha256": "b3cbe6a73c1c0dc5226f5880bfffec10108dae57d51e12d34286fbb131458265",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            40,
+            251,
+            271
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            182.80475193361008
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "flight",
+          "support_half": "near",
+          "distance_phase": 0.46875,
+          "support_feet": [],
+          "foot_lock": false,
+          "flight": true,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                162.23463313526983
+              ],
+              "knee": [
+                159.5028553890271,
+                188.5486092878536
+              ],
+              "ankle": [
+                150.48185086250305,
+                213.72096547934586
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                162.23463313526983
+              ],
+              "knee": [
+                96.90355183959655,
+                213.63869175620565
+              ],
+              "ankle": [
+                81.87137341499329,
+                195.91931761511267
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-16",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-16-pixel.png",
+          "sha256": "4af7343a2b1a5b71822b116f725659d5df34f55bb8c308aba775c251bcf58c1c",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            97,
+            41,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            183.5897435897436
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "far",
+          "distance_phase": 0.5,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                175.7948717948718,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                163.0
+              ],
+              "knee": [
+                155.41480929007315,
+                194.98781774967787
+              ],
+              "ankle": [
+                151.0,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                163.0
+              ],
+              "knee": [
+                92.30460525538072,
+                211.79748549633706
+              ],
+              "ankle": [
+                85.3017578125,
+                189.64116053408577
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-17",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-17-pixel.png",
+          "sha256": "266391b6c19e88f68c9df7aeab8a14e390cf3072c2e014618a4a6d2edd84d475",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            96,
+            42,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            184.3747352458771
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "far",
+          "distance_phase": 0.53125,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                169.12820512820514,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                163.76536686473017
+              ],
+              "knee": [
+                154.66788059392093,
+                196.62946321228569
+              ],
+              "ankle": [
+                144.5,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                163.76536686473017
+              ],
+              "knee": [
+                84.7365899154824,
+                206.8851221747649
+              ],
+              "ankle": [
+                89.33467364311218,
+                184.10793547019472
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-18",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-18-pixel.png",
+          "sha256": "0adb725b7ac11c498ba5a911467132e010cf4a55d37224b41ea8a42894a7148f",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            88,
+            42,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            185.0402190383314
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "far",
+          "distance_phase": 0.5625,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                162.46153846153845,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                164.4142135623731
+              ],
+              "knee": [
+                152.92578847160706,
+                199.17418738101458
+              ],
+              "ankle": [
+                138.0,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                164.4142135623731
+              ],
+              "knee": [
+                76.27599685065664,
+                198.18208851762284
+              ],
+              "ankle": [
+                91.53112643464772,
+                180.6542926060776
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-19",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-19-pixel.png",
+          "sha256": "6a3c973ecf10488246233f9c08d02392fc7b168bb2592e00d8d788f92b7f1ec3",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            87,
+            43,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            185.48488109233085
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "contact",
+          "support_half": "far",
+          "distance_phase": 0.59375,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                155.7948717948718,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                164.8477590650226
+              ],
+              "knee": [
+                150.18545052929247,
+                202.23283537024335
+              ],
+              "ankle": [
+                131.5,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                164.8477590650226
+              ],
+              "knee": [
+                74.57061574743494,
+                196.1206960906784
+              ],
+              "ankle": [
+                90.72331608721416,
+                179.41641879788784
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-20",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-20-pixel.png",
+          "sha256": "9628e5aff9ac0a15246c0fb5a0448a39a0941bfb3e0a6fe3d63154c76af94642",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            86,
+            43,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            185.64102564102564
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "compression",
+          "support_half": "far",
+          "distance_phase": 0.625,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                149.12820512820514,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                165.0
+              ],
+              "knee": [
+                146.44940249831302,
+                205.3936969052308
+              ],
+              "ankle": [
+                125.0,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                165.0
+              ],
+              "knee": [
+                74.02304605531465,
+                195.40821980309602
+              ],
+              "ankle": [
+                90.46975913556321,
+                178.99334127789447
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-21",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-21-pixel.png",
+          "sha256": "396a7478ee328183d06e3e184cabfd44ec71331f616d546b9a047f9d6bdb536a",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            88,
+            43,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            185.48488109233085
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "compression",
+          "support_half": "far",
+          "distance_phase": 0.65625,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                142.46153846153845,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                164.8477590650226
+              ],
+              "knee": [
+                141.8045402633611,
+                208.24882863136617
+              ],
+              "ankle": [
+                118.5,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                164.8477590650226
+              ],
+              "knee": [
+                75.95051969175661,
+                198.16064323942942
+              ],
+              "ankle": [
+                91.37501743211139,
+                180.7817054813577
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-22",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-22-pixel.png",
+          "sha256": "7c2a41dbaff1cfd05b33dc3ee285550955205b05ae242cf110aa422331fb575c",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            96,
+            42,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            185.0402190383314
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "compression",
+          "support_half": "far",
+          "distance_phase": 0.6875,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                135.7948717948718,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                164.4142135623731
+              ],
+              "knee": [
+                136.42400392586555,
+                210.47532653923523
+              ],
+              "ankle": [
+                112.0,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                164.4142135623731
+              ],
+              "knee": [
+                85.35369505015461,
+                208.07377806909346
+              ],
+              "ankle": [
+                96.14089365613079,
+                187.49274421808474
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-23",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-23-pixel.png",
+          "sha256": "7ed85cea07a4f8d545084c977525a50d1597327b7bf9410ed86620af743e60d0",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            102,
+            42,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            184.3747352458771
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "compression",
+          "support_half": "far",
+          "distance_phase": 0.71875,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                129.12820512820514,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                163.76536686473017
+              ],
+              "knee": [
+                130.5084021374795,
+                211.89478748114146
+              ],
+              "ankle": [
+                105.5,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                163.76536686473017
+              ],
+              "knee": [
+                114.08054328056303,
+                220.72013085443803
+              ],
+              "ankle": [
+                112.375048258201,
+                197.54613907766722
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-24",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-24-pixel.png",
+          "sha256": "712714b40c7b4070b022ea65c54eb92a00ca04bbf7e65fe93dab468262156f61",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            102,
+            41,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            183.5897435897436
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "toe_off",
+          "support_half": "far",
+          "distance_phase": 0.75,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                122.46153846153847,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                163.0
+              ],
+              "knee": [
+                124.21703126777702,
+                212.46546792318077
+              ],
+              "ankle": [
+                99.0,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                163.0
+              ],
+              "knee": [
+                144.38206357903405,
+                216.53698914204435
+              ],
+              "ankle": [
+                131.09366182917663,
+                197.47495915897258
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-25",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-25-pixel.png",
+          "sha256": "c8b4c01428a2b46f69097a654d5009cdd3b3eafe009970a04a8f9bfdc926b423",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            97,
+            40,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            182.80475193361008
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "toe_off",
+          "support_half": "far",
+          "distance_phase": 0.78125,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                115.7948717948718,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                162.23463313526983
+              ],
+              "knee": [
+                117.62904104211835,
+                212.2198545966841
+              ],
+              "ankle": [
+                92.5,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                162.23463313526983
+              ],
+              "knee": [
+                156.53530979697666,
+                209.12583536035712
+              ],
+              "ankle": [
+                139.08352539247136,
+                193.78380716197972
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-26",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-26-pixel.png",
+          "sha256": "0f4162e23ad821ee14890d329452c2f7954d8cc01624f48a1de65dc84c0f20ca",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            91,
+            40,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            182.1392681411558
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "toe_off",
+          "support_half": "far",
+          "distance_phase": 0.8125,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                109.12820512820514,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                161.5857864376269
+              ],
+              "knee": [
+                110.72590184407986,
+                211.17967466499996
+              ],
+              "ankle": [
+                86.0,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                161.5857864376269
+              ],
+              "knee": [
+                160.48199722648027,
+                205.3864911489367
+              ],
+              "ankle": [
+                141.76341713101212,
+                191.6185077326667
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-27",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-27-pixel.png",
+          "sha256": "b6f298d4e16560d63ba9ae3a7776c30d68af54c19e6cfa721641594d157ff1ef",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            83,
+            39,
+            251,
+            280
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            181.69460608715633
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "toe_off",
+          "support_half": "far",
+          "distance_phase": 0.84375,
+          "support_feet": [
+            {
+              "id": "far",
+              "point": [
+                102.46153846153847,
+                280
+              ],
+              "grounded": true
+            }
+          ],
+          "foot_lock": true,
+          "flight": false,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                161.1522409349774
+              ],
+              "knee": [
+                103.33358306651074,
+                209.2370317256145
+              ],
+              "ankle": [
+                79.5,
+                221.36082474226805
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                161.1522409349774
+              ],
+              "knee": [
+                161.50775192092098,
+                204.05392961141575
+              ],
+              "ankle": [
+                142.46868538825217,
+                190.73264762709636
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-28",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-28-pixel.png",
+          "sha256": "7aca90e1fc95dad446d2685e4db48d39a587564f80cd0e8b945d30254971c071",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            81,
+            39,
+            251,
+            276
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            181.53846153846155
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "flight",
+          "support_half": "far",
+          "distance_phase": 0.875,
+          "support_feet": [],
+          "foot_lock": false,
+          "flight": true,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                161.0
+              ],
+              "knee": [
+                101.34617604340752,
+                208.47500239826542
+              ],
+              "ankle": [
+                76.24147033691406,
+                217.6825965622847
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                161.0
+              ],
+              "knee": [
+                165.62550126715018,
+                199.81325148731307
+              ],
+              "ankle": [
+                143.5464630126953,
+                192.57041517137577
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-29",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-29-pixel.png",
+          "sha256": "d321c269c92a94b24cd375e53438bbdb78619e0ca04e293754325c4dfabb28bf",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            85,
+            39,
+            251,
+            268
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            181.69460608715633
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "flight",
+          "support_half": "far",
+          "distance_phase": 0.90625,
+          "support_feet": [],
+          "foot_lock": false,
+          "flight": true,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                161.1522409349774
+              ],
+              "knee": [
+                103.96758938958547,
+                209.41272508983076
+              ],
+              "ankle": [
+                77.2366235256195,
+                210.1066291742784
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                161.1522409349774
+              ],
+              "knee": [
+                169.54282924570578,
+                195.16939682870705
+              ],
+              "ankle": [
+                146.6504762172699,
+                199.15471751374656
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-30",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-30-pixel.png",
+          "sha256": "7cce7cc057bfe5af0fe28ab760a6c4e46adb07d3ad6a471ad781dc82395b73f9",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            90,
+            40,
+            251,
+            264
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            182.1392681411558
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "flight",
+          "support_half": "far",
+          "distance_phase": 0.9375,
+          "support_feet": [],
+          "foot_lock": false,
+          "flight": true,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                161.5857864376269
+              ],
+              "knee": [
+                104.87591082644376,
+                210.0824308461935
+              ],
+              "ankle": [
+                79.14812660217285,
+                202.7949650446762
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                161.5857864376269
+              ],
+              "knee": [
+                169.60288950849127,
+                195.52061425143174
+              ],
+              "ankle": [
+                148.9971408843994,
+                206.26052727630662
+              ]
+            }
+          }
+        },
+        {
+          "id": "clerk-run-rig-31",
+          "runtime": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-31-pixel.png",
+          "sha256": "991197076fdfd6a016dd3475fe794ce12f876533eea3bd6e2d075d8be4590392",
+          "dimensions": [
+            288,
+            288
+          ],
+          "alpha_bounds": [
+            94,
+            40,
+            251,
+            271
+          ],
+          "foot_anchor": [
+            144,
+            280
+          ],
+          "hip_anchor": [
+            144.0,
+            182.80475193361008
+          ],
+          "body_height": 240,
+          "facing": "right",
+          "contains_parcel": false,
+          "source": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+          "source_sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+          "uniform_scale": 0.507533703409992,
+          "source_parts": [
+            "clerk-walk-original.png",
+            "clerk-run-original.png"
+          ],
+          "raster_assembly": "Original generated torso and limb cutouts; per-leg measured 2D joint rotations; one uniform final sample scale. No new painted pixels.",
+          "stance_family": "flight",
+          "support_half": "far",
+          "distance_phase": 0.96875,
+          "support_feet": [],
+          "foot_lock": false,
+          "flight": true,
+          "source_joints": {
+            "far": {
+              "hip": [
+                117,
+                162.23463313526983
+              ],
+              "knee": [
+                104.24173230651952,
+                210.56831355214672
+              ],
+              "ankle": [
+                81.87137341499329,
+                195.91931761511267
+              ]
+            },
+            "near": {
+              "hip": [
+                123,
+                162.23463313526983
+              ],
+              "knee": [
+                167.92177255055245,
+                198.3654537765127
+              ],
+              "ankle": [
+                150.48185086250305,
+                213.72096547934586
+              ]
+            }
+          }
+        }
+      ],
+      "run_cycle_distance": 213.33333333333331,
+      "run_reference_height": 240,
+      "run_sequence": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "run_phase_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "locomotion_raster_samples_per_cycle": 32,
+      "locomotion_original_drawings_used": 2,
+      "stance_contract": {
+        "walk_support_intervals": [
+          [
+            0,
+            0.625
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0,
+            0.125
+          ]
+        ],
+        "run_support_intervals": [
+          [
+            0,
+            0.375
+          ],
+          [
+            0.5,
+            0.875
+          ]
+        ],
+        "run_flight_intervals": [
+          [
+            0.375,
+            0.5
+          ],
+          [
+            0.875,
+            1.0
+          ]
+        ],
+        "phase_input": "actual cumulative absolute world distance",
+        "residual_compensation": "Only raster pixels below the pelvis shift; semantic supporting sole cancels caller displacement between adjacent samples. Sprite position is never changed.",
+        "turn_behavior": "Mirroring replants current support without retaining an old-world-space anchor. No direction-history spring or delayed correction."
+      },
+      "idle_facing": "left"
+    }
+  },
+  "sources": [
+    {
+      "path": "source_art/2d_v5/actors/cooperative/clerk-walk-original.png",
+      "sha256": "b97c64c641da8f3cb50dad64aa23fd832138dbad76033f7dc85e8f0057c01715",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/actors/cooperative/clerk-help-original.png",
+      "sha256": "008b0ad3f187abbe3959ab487be7f191e2a8ed93c16571d1e5325d30ac54492f",
+      "dimensions": [
+        1881,
+        836
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/actors/cooperative/clerk-tablet-original.png",
+      "sha256": "5de8f2b4cf72ad2200aaa9a7ccd6c691b1e9388e9fded5a56f87e1bc7d5497fb",
+      "dimensions": [
+        1774,
+        887
+      ]
+    }
+  ],
+  "tablet_status": "Read waybill, tap loading confirmation, then look toward cargo. Tablet never moves the parcel. Legacy internal gesture keys are retained for controller compatibility.",
+  "walk_registration_policy": "Exact generated raster parts, measured per-leg joints, stable undeformed head/torso, one uniform final scale and a shared floor. Distance-driven lower-body-only residual compensation locks supporting feet without moving actor nodes.",
+  "walk_sources": [
+    {
+      "path": "source_art/2d_v5/actors/cooperative/clerk-walk-opposite-original.png",
+      "sha256": "36b9e1abd536c60b9fc2e53f1e622cd5e05a2bc7e0388f63ddbbabc6080fde18",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/actors/cooperative/clerk-walk-support-original.png",
+      "sha256": "cb23e86da985400cd6d1c02b87dee8666d0028cbf729b581becdb61ef39279ec",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/actors/cooperative/clerk-walk-v2-original.png",
+      "sha256": "33b89fda8fb0e483b62e219ddd2f2147491a4d11817a34f2637c29b6ae72fc62",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "locomotion_sources": [
+    {
+      "path": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+      "sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9"
+    },
+    {
+      "path": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+      "sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49"
+    }
+  ]
+}

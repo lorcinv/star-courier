@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "editable_source_mesh_components": 168,
+  "source_socket_empties": 36,
+  "nonmanifold_components": [],
+  "nonpositive_volume_components": [],
+  "normal_direction_failures": [],
+  "exact_compact_grid_verified": true,
+  "layout_errors": []
+}

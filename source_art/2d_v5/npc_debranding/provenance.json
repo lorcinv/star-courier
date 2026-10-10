@@ -1,0 +1,248 @@
+{
+  "scope": "Customer NPC emblem removal only; clerk, shop robot and environment unchanged.",
+  "sources": [
+    {
+      "key": "elf-world",
+      "original": "source_art/2d_v5/npcs/elf_archivist-world-original.png",
+      "original_sha256": "7883e30544a3df0b23c1ce984147e4d35095bbe73e0e087eb64cecef7cf28544",
+      "edit": "source_art/2d_v5/npc_debranding/original_edits/elf-world.png",
+      "edit_sha256": "71eb814ec1269787aa070b6be90969b15c47900ef6f8121bfd54546d41c99ffe",
+      "registered_source": "source_art/2d_v5/npc_debranding/elf-world-registered.png",
+      "registered_sha256": "2621a2687ff75b0b40f7ed12b3184e246498a81447bfcbf4a4d3afe9fd4d6b7d",
+      "prompt": "source_art/2d_v5/npc_debranding/elf-world.prompt.txt",
+      "tool": "built-in image_gen.imagegen",
+      "transparent_background": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "replacement_regions_xyxy": [
+        [
+          232,
+          363,
+          302,
+          425
+        ],
+        [
+          805,
+          361,
+          858,
+          426
+        ],
+        [
+          1168,
+          450,
+          1248,
+          526
+        ]
+      ],
+      "all_pixels_outside_regions_unchanged": true,
+      "original_alpha_unchanged": true
+    },
+    {
+      "key": "elf-portraits",
+      "original": "source_art/2d_v5/npcs/elf_archivist-portraits-original.png",
+      "original_sha256": "328be0d0f94ff4eaf03ecfa76cc76f1a27bc4e10a11891dacbe2d3af9624a271",
+      "edit": "source_art/2d_v5/npc_debranding/original_edits/elf-portraits.png",
+      "edit_sha256": "7d65b6e5756fce1fa947513f922683d7085fbe6ee838f7bf7a87e6bfb497285d",
+      "registered_source": "source_art/2d_v5/npc_debranding/elf-portraits-registered.png",
+      "registered_sha256": "65455cede1db7bcd1709f6de70104ad5c7750ec9751e996388d8632c56de87e5",
+      "prompt": "source_art/2d_v5/npc_debranding/elf-portraits.prompt.txt",
+      "tool": "built-in image_gen.imagegen",
+      "transparent_background": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "replacement_regions_xyxy": [
+        [
+          71,
+          589,
+          161,
+          678
+        ],
+        [
+          585,
+          589,
+          675,
+          678
+        ],
+        [
+          1088,
+          589,
+          1180,
+          678
+        ]
+      ],
+      "all_pixels_outside_regions_unchanged": true,
+      "original_alpha_unchanged": true
+    },
+    {
+      "key": "robot-world",
+      "original": "source_art/2d_v5/npcs/robot_machinist-world-v2-original.png",
+      "original_sha256": "503afcc729a6423bcb3ba317ab3b0997203b78ec26d49516658345f44f326e39",
+      "edit": "source_art/2d_v5/npc_debranding/original_edits/robot-world.png",
+      "edit_sha256": "f9f364d474e447b40d5f353d96d64b0c2e653b794f3c9f7501c4b74c61d5eb1d",
+      "registered_source": "source_art/2d_v5/npc_debranding/robot-world-registered.png",
+      "registered_sha256": "291d909268d38361837e96d6fb0dd0f9f9b1e6af37a87ccf3b6bf21f54f09002",
+      "prompt": "source_art/2d_v5/npc_debranding/robot-world.prompt.txt",
+      "tool": "built-in image_gen.imagegen",
+      "transparent_background": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "replacement_regions_xyxy": [
+        [
+          143,
+          391,
+          207,
+          449
+        ],
+        [
+          339,
+          451,
+          419,
+          517
+        ],
+        [
+          698,
+          391,
+          759,
+          451
+        ],
+        [
+          873,
+          452,
+          944,
+          519
+        ],
+        [
+          1079,
+          513,
+          1175,
+          605
+        ]
+      ],
+      "all_pixels_outside_regions_unchanged": true,
+      "original_alpha_unchanged": true
+    },
+    {
+      "key": "robot-portraits",
+      "original": "source_art/2d_v5/npcs/robot_machinist-portraits-original.png",
+      "original_sha256": "900d952e3697cedd3bf42087c01c385bdb526238fb33dc76f91535f5822af797",
+      "edit": "source_art/2d_v5/npc_debranding/original_edits/robot-portraits.png",
+      "edit_sha256": "a88371b794387539af7e7f4774d36321131a1a08cf8b46473b930c31fe6c49ca",
+      "registered_source": "source_art/2d_v5/npc_debranding/robot-portraits-registered.png",
+      "registered_sha256": "82d5712093ebde72c51b8ae92d48ed7ba75b3ffdc2c92d43f8a4ac708b16b046",
+      "prompt": "source_art/2d_v5/npc_debranding/robot-portraits.prompt.txt",
+      "tool": "built-in image_gen.imagegen",
+      "transparent_background": true,
+      "dimensions": [
+        2172,
+        724
+      ],
+      "replacement_regions_xyxy": [
+        [
+          83,
+          483,
+          181,
+          574
+        ],
+        [
+          391,
+          581,
+          502,
+          671
+        ],
+        [
+          804,
+          483,
+          903,
+          574
+        ],
+        [
+          1112,
+          581,
+          1224,
+          671
+        ],
+        [
+          1527,
+          483,
+          1626,
+          574
+        ],
+        [
+          1836,
+          581,
+          1948,
+          671
+        ]
+      ],
+      "all_pixels_outside_regions_unchanged": true,
+      "original_alpha_unchanged": true
+    },
+    {
+      "key": "alien-world",
+      "original": "source_art/2d_v5/npcs/alien_botanist-world-original.png",
+      "original_sha256": "51bb31b3f3420b5f737c33f3b2a2f48f7d83e9e4d3cba9033f1994d79be6dd03",
+      "edit": "source_art/2d_v5/npc_debranding/original_edits/alien-world.png",
+      "edit_sha256": "9caa6de61595da39792523c772370695163d0e81624840e64943449aa8a8e80a",
+      "registered_source": "source_art/2d_v5/npc_debranding/alien-world-registered.png",
+      "registered_sha256": "b18bb9b0404b8eeb3d73748ddce7340e572e66011ea0fe41d5a4271af523e824",
+      "prompt": "source_art/2d_v5/npc_debranding/alien-world.prompt.txt",
+      "tool": "built-in image_gen.imagegen",
+      "transparent_background": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "replacement_regions_xyxy": [
+        [
+          1072,
+          500,
+          1174,
+          585
+        ],
+        [
+          1328,
+          408,
+          1391,
+          475
+        ]
+      ],
+      "all_pixels_outside_regions_unchanged": true,
+      "original_alpha_unchanged": true
+    }
+  ],
+  "runtime_changes": [
+    "assets/2d_v5/npcs/elf_archivist/idle-pixel.png",
+    "assets/2d_v5/npcs/elf_archivist/handoff-pixel.png",
+    "assets/2d_v5/npcs/elf_archivist/portraits/neutral.png",
+    "assets/2d_v5/npcs/elf_archivist/portraits/pleased.png",
+    "assets/2d_v5/npcs/elf_archivist/portraits/concerned.png",
+    "assets/2d_v5/npcs/elf_archivist/idle--book_pouch-preview.png",
+    "assets/2d_v5/npcs/elf_archivist/handoff--book_pouch-preview.png",
+    "assets/2d_v5/npcs/elf_archivist/idle--map_case-preview.png",
+    "assets/2d_v5/npcs/elf_archivist/handoff--map_case-preview.png",
+    "assets/2d_v5/npcs/robot_machinist/idle-pixel.png",
+    "assets/2d_v5/npcs/robot_machinist/handoff-pixel.png",
+    "assets/2d_v5/npcs/robot_machinist/portraits/neutral.png",
+    "assets/2d_v5/npcs/robot_machinist/portraits/pleased.png",
+    "assets/2d_v5/npcs/robot_machinist/portraits/concerned.png",
+    "assets/2d_v5/npcs/robot_machinist/idle--tool_pack-preview.png",
+    "assets/2d_v5/npcs/robot_machinist/handoff--tool_pack-preview.png",
+    "assets/2d_v5/npcs/robot_machinist/idle--power_cell-preview.png",
+    "assets/2d_v5/npcs/robot_machinist/handoff--power_cell-preview.png",
+    "assets/2d_v5/npcs/alien_botanist/handoff-pixel.png",
+    "assets/2d_v5/npcs/alien_botanist/accessories/seed_pod-pixel.png",
+    "assets/2d_v5/npcs/alien_botanist/idle--seed_pod-preview.png",
+    "assets/2d_v5/npcs/alien_botanist/handoff--seed_pod-preview.png",
+    "assets/2d_v5/npcs/alien_botanist/handoff--field_vial-preview.png",
+    "assets/2d_v5/npcs/npc-manifest.json",
+    "assets/2d_v5/npcs/shared/customer-parcel-neutral-pixel.png"
+  ],
+  "unaffected": "Human courier world + all expressions; alien idle + all expressions; elf and robot accessory cutouts remain original.",
+  "parcel_provenance": "source_art/2d_v5/npc_debranding/parcel-provenance.json"
+}

@@ -1,0 +1,164 @@
+{
+  "result": "PASS",
+  "compact_aabb_intersections": [],
+  "assembled_bounds_godot_m": {
+    "min": [
+      -2.564999997615814,
+      -1.4900000095367432,
+      -0.4335070848464966
+    ],
+    "max": [
+      1.5824999809265137,
+      0.5289999842643738,
+      0.49549999833106995
+    ]
+  },
+  "module_count": 7,
+  "starter_module_count": 8,
+  "checks": [
+    "GLB 2 binary headers",
+    "Identity origin roots",
+    "Native metre-space bounds read from binary POSITION accessors",
+    "Cardinal socket names and 0.6 m coordinates",
+    "Finite geometry and unit normals",
+    "Triangle totals",
+    "At most 10 material surfaces per module",
+    "V4 source albedo material names",
+    "No external textures or buffers"
+  ],
+  "modules": [
+    {
+      "id": "cargo_crate",
+      "result": "PASS",
+      "surface_count": 7,
+      "triangles": 964,
+      "bounds_godot_m": {
+        "min": [
+          -0.48500001430511475,
+          -0.4659999907016754,
+          -0.375
+        ],
+        "max": [
+          0.4934999942779541,
+          0.5289999842643738,
+          0.49549999833106995
+        ]
+      },
+      "bytes": 61556
+    },
+    {
+      "id": "beam",
+      "result": "PASS",
+      "surface_count": 6,
+      "triangles": 696,
+      "bounds_godot_m": {
+        "min": [
+          -0.48500001430511475,
+          -0.49000000953674316,
+          -0.3319999873638153
+        ],
+        "max": [
+          0.49799999594688416,
+          0.4934999942779541,
+          0.4410000145435333
+        ]
+      },
+      "bytes": 45728
+    },
+    {
+      "id": "cell",
+      "result": "PASS",
+      "surface_count": 6,
+      "triangles": 916,
+      "bounds_godot_m": {
+        "min": [
+          -0.47450000047683716,
+          -0.4794999957084656,
+          -0.32499998807907104
+        ],
+        "max": [
+          0.49050000309944153,
+          0.5074999928474426,
+          0.44699999690055847
+        ]
+      },
+      "bytes": 55736
+    },
+    {
+      "id": "thruster",
+      "result": "PASS",
+      "surface_count": 7,
+      "triangles": 1348,
+      "bounds_godot_m": {
+        "min": [
+          -0.5649999976158142,
+          -0.4735071063041687,
+          -0.4335070848464966
+        ],
+        "max": [
+          0.49799999594688416,
+          0.39350709319114685,
+          0.4335070848464966
+        ]
+      },
+      "bytes": 70840
+    },
+    {
+      "id": "armor",
+      "result": "PASS",
+      "surface_count": 7,
+      "triangles": 512,
+      "bounds_godot_m": {
+        "min": [
+          -0.4934999942779541,
+          -0.46546444296836853,
+          -0.36500000953674316
+        ],
+        "max": [
+          0.5824999809265137,
+          0.47999998927116394,
+          0.447299987077713
+        ]
+      },
+      "bytes": 35072
+    },
+    {
+      "id": "separator",
+      "result": "PASS",
+      "surface_count": 7,
+      "triangles": 716,
+      "bounds_godot_m": {
+        "min": [
+          -0.49799999594688416,
+          -0.48750001192092896,
+          -0.3580000102519989
+        ],
+        "max": [
+          0.5099999904632568,
+          0.4959999918937683,
+          0.4399999976158142
+        ]
+      },
+      "bytes": 46848
+    },
+    {
+      "id": "spring",
+      "result": "PASS",
+      "surface_count": 6,
+      "triangles": 1960,
+      "bounds_godot_m": {
+        "min": [
+          -0.5024999976158142,
+          -0.33399999141693115,
+          -0.28700000047683716
+        ],
+        "max": [
+          0.5024999976158142,
+          0.33399999141693115,
+          0.3179999887943268
+        ]
+      },
+      "bytes": 111728
+    }
+  ]
+}

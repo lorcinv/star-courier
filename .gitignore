@@ -1,0 +1,31 @@
+.godot/
+.runtime/
+builds/*
+!builds/.gitkeep
+*.tmp
+.DS_Store
+
+# Generated validation evidence is preserved in dated backups, not source Git.
+docs/qa/
+source_art/2d_v5/ascent/*.mp4
+source_art/2d_v5/ascent/*.log
+source_art/2d_v5/ascent/sky-palette-refinement/*.log
+source_art/2d_v5/ascent/sky-palette-refinement/isolated-xdg.txt
+__pycache__/
+*.pyc
+*.blend1
+# Local editor tooling
+export_templates/
+feature_profiles/
+script_templates/
+text_editor_themes/
+
+# Reproducible imagegen publication staging/exchange copies stay local.
+source_art/2d_v5/npc_debranding/staged-runtime/
+source_art/2d_v5/npc_debranding/before-runtime-directory/
+
+# Generated logs, historical ZIP checkpoints and isolated QA caches stay local.
+*.log
+source_art/modules_v4/archive/**/*.zip
+source_art/modules_v4/joint_validation_project/cache/
+source_art/modules_v4/joint_validation_project/data/

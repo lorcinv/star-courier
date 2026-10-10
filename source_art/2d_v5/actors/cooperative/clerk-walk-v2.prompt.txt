@@ -1,0 +1,14 @@
+Use case: identity-preserve. Asset type: production 2D game walking sprite sheet, replacement motion art.
+Image 1 is the identity/style reference and incorrect old gait to fix. Preserve exactly the same young blue-haired clerk with orange hair streak, big blue eyes, yellow short jacket with planet shoulder patch, navy shorts, bare knees, yellow/navy boots, small hip badge, same charming Q/chibi proportions, head size, outfit, outlines and crisp hand-painted pixel-like raster finish. Empty hands, no parcel, no tablet.
+Create ONE complete seamless EIGHT-PHASE walking cycle, arranged in exactly 4 columns × 2 rows of equal cells, read left to right top row then bottom row. All eight full-body characters face RIGHT in the SAME three-quarter side view. This is a relaxed WALK, never a run or kick. Head stays over pelvis; head scale/camera identical. Anatomically coherent opposite arms and legs, bent supporting knee, realistic heel strike, roll to toe, then lift. Small natural rise only, no airborne body.
+Critical: first four drawings show the NEAR leg progressing from forward heel contact to rear toe-off; last four drawings show the opposite FAR leg progressing from forward heel contact to rear toe-off. You MUST visibly alternate which leg is forward. Do not repeat the first four poses on row 2.
+Cell 1: near foot forward heel just meets ground, far foot behind on toe, far arm forward.
+Cell 2: near foot flat under forward body weight, near knee flexed, far foot lifting behind, arms approaching sides.
+Cell 3: near support foot planted directly below hip, far bent leg swings past it slightly in front, near arm swinging forward.
+Cell 4: near support foot behind on toe, far knee/foot reaching forward low, near arm forward.
+Cell 5: far foot forward heel meets ground, near foot behind on toe, near arm forward. Clear opposite contact from cell 1.
+Cell 6: far foot flat with bent supporting knee, near foot lifting behind, arms approaching sides. Clear opposite down from cell 2.
+Cell 7: far support foot planted under hip, near bent leg swings past it slightly in front, far arm swinging forward.
+Cell 8: far support foot behind on toe, near knee/foot reaching forward low, far arm forward. Seamlessly returns to cell 1.
+Use a modest short everyday walking stride, feet separated by roughly one head width at contact. Keep both arms low and gently swinging. Preserve exact face, jacket, shorts, boots and body proportions across frames. Center each hip at its cell center and put each supporting sole on a consistent floor within its row. Fully visible hair and boots with transparent padding; no touching or overlap between cells.
+Output 1536×1024 if possible. Genuine transparent background. No ground, shadows, background colors, grid lines, labels, text, arrows, extra objects or limbs. Clean high-quality animation drawings with correct distinct alternating legs.

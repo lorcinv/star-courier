@@ -1,0 +1,84 @@
+{
+  "source": "docs/qa/v4/stability-*.png produced by integration lead",
+  "independent_recount": true,
+  "logical_size": [
+    640,
+    360
+  ],
+  "static_changed_pixels": 0,
+  "quarter_texel_changed_pixels": 0,
+  "one_texel_vs_exact_shift_changed_pixels": 5,
+  "one_texel_compared_pixels": 230040,
+  "one_texel_differences": [
+    {
+      "x": 224,
+      "y": 147,
+      "base_at_x_plus_1": [
+        34,
+        44,
+        82
+      ],
+      "shifted": [
+        35,
+        44,
+        82
+      ]
+    },
+    {
+      "x": 240,
+      "y": 170,
+      "base_at_x_plus_1": [
+        32,
+        43,
+        82
+      ],
+      "shifted": [
+        143,
+        148,
+        168
+      ]
+    },
+    {
+      "x": 241,
+      "y": 170,
+      "base_at_x_plus_1": [
+        32,
+        43,
+        82
+      ],
+      "shifted": [
+        143,
+        148,
+        168
+      ]
+    },
+    {
+      "x": 41,
+      "y": 177,
+      "base_at_x_plus_1": [
+        136,
+        101,
+        73
+      ],
+      "shifted": [
+        137,
+        101,
+        73
+      ]
+    },
+    {
+      "x": 322,
+      "y": 279,
+      "base_at_x_plus_1": [
+        40,
+        73,
+        121
+      ],
+      "shifted": [
+        6,
+        21,
+        60
+      ]
+    }
+  ]
+}

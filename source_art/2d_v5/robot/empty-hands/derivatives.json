@@ -1,0 +1,74 @@
+{
+  "method": "Imagegen originals preserved; alpha isolation; whole-body uniform nearest sampling; shared96 palette; binary alpha. Lift arm separately transforms authored mechanical pixels only. No Spine.",
+  "sources": {
+    "carry-offer-original.png": "67fa519f0fb6ecaead87ed245c0df8944d17bddb0ef171a8f97b9c70d930ebad",
+    "raised-gripper-original.png": "7ce6f9f560bef14f731c9d76f0c724522dbcfe30a76879cdf4559bc34679c773"
+  },
+  "poses": [
+    {
+      "name": "carry-empty",
+      "source_roi": [
+        315,
+        265,
+        765,
+        740
+      ],
+      "source_foot_anchor": [
+        556,
+        732
+      ],
+      "uniform_scale": 0.188,
+      "foot_anchor": [
+        80,
+        136
+      ],
+      "canvas": [
+        160,
+        144
+      ]
+    },
+    {
+      "name": "offer-empty",
+      "source_roi": [
+        1120,
+        273,
+        1660,
+        742
+      ],
+      "source_foot_anchor": [
+        1336,
+        735
+      ],
+      "uniform_scale": 0.188,
+      "foot_anchor": [
+        80,
+        136
+      ],
+      "canvas": [
+        160,
+        144
+      ]
+    }
+  ],
+  "arm": {
+    "source_roi": [
+      550,
+      140,
+      1134,
+      970
+    ],
+    "runtime_size": [
+      118,
+      166
+    ],
+    "shoulder_anchor": [
+      17.8,
+      150.0
+    ],
+    "grip_anchor": [
+      92.0,
+      23.4
+    ],
+    "runtime": "assets/2d_v5/robot/lift-arm.png"
+  }
+}

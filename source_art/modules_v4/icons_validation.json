@@ -1,0 +1,128 @@
+{
+  "result": "PASS",
+  "icon_count": 7,
+  "all_source_and_glb_hashes_unchanged": true,
+  "proof": "source_art/modules_v4/proofs/module_icons_sheet.png",
+  "alpha_bounds_convention": "left, top, right-exclusive, bottom-exclusive; alpha > 0",
+  "icons": [
+    {
+      "filename": "cargo.png",
+      "actual_model": "cargo_crate",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alpha_bounds_ltrb_exclusive": [
+        12,
+        11,
+        113,
+        117
+      ],
+      "fully_transparent_corners": true,
+      "sha256": "6c70d5fc05f6dc523cd1bdb99a47af238da66c2fd52b8bd9c16c8fa74511d952"
+    },
+    {
+      "filename": "beam.png",
+      "actual_model": "beam",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alpha_bounds_ltrb_exclusive": [
+        11,
+        9,
+        115,
+        117
+      ],
+      "fully_transparent_corners": true,
+      "sha256": "e0ffaff6acda02b88e29226f22efe5b1c09d0d0b1a650d7de19f072c0d209ff5"
+    },
+    {
+      "filename": "battery.png",
+      "actual_model": "cell",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alpha_bounds_ltrb_exclusive": [
+        12,
+        9,
+        111,
+        116
+      ],
+      "fully_transparent_corners": true,
+      "sha256": "d96faf5225a1946836b9ed9aadf0e62c7976eb94e4ad52daaf1dde67d32e9b18"
+    },
+    {
+      "filename": "thruster.png",
+      "actual_model": "thruster",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alpha_bounds_ltrb_exclusive": [
+        7,
+        20,
+        118,
+        107
+      ],
+      "fully_transparent_corners": true,
+      "sha256": "e1d1b4e694d1f461ff799f95cb2afa880650775fcfca373bf12a91e3ba5c564b"
+    },
+    {
+      "filename": "armor.png",
+      "actual_model": "armor",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alpha_bounds_ltrb_exclusive": [
+        7,
+        15,
+        114,
+        114
+      ],
+      "fully_transparent_corners": true,
+      "sha256": "4d07efd763d2400a3afa4f2362977df174da2a26f9e7f7e925043c1e36041c08"
+    },
+    {
+      "filename": "coupler.png",
+      "actual_model": "separator",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alpha_bounds_ltrb_exclusive": [
+        10,
+        16,
+        112,
+        116
+      ],
+      "fully_transparent_corners": true,
+      "sha256": "accaa0f89470b978832ae83f0ea274a45fe3012aa8c3a7108cb432c9b8b0a792"
+    },
+    {
+      "filename": "spring.png",
+      "actual_model": "spring",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alpha_bounds_ltrb_exclusive": [
+        14,
+        25,
+        113,
+        103
+      ],
+      "fully_transparent_corners": true,
+      "sha256": "273d56b6b5808b21391f04c78661cc62b7637ebeedcdcddf390bdb821a0e665b"
+    }
+  ]
+}

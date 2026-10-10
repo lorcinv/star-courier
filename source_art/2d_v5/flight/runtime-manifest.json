@@ -1,0 +1,138 @@
+{
+  "source": "source_art/2d_v5/flight/flight-sheet-v2.png",
+  "source_sha256": "7bdc2805fd047469385c3c7c880adaf457fb338c3a5b656c793cb1115dfe3244",
+  "method": "Existing-pixel crops, nearest resample, fixed96-palette, binary alpha128. No painted pixels invented.",
+  "exhaust_direction": "points right; flip horizontally for rear exhaust",
+  "sprites": [
+    {
+      "id": "rock-1",
+      "region": [
+        0,
+        0,
+        512,
+        590
+      ],
+      "source_alpha128_bounds": [
+        60,
+        66,
+        504,
+        558
+      ],
+      "runtime_dimensions": [
+        144,
+        160
+      ],
+      "runtime": "assets/2d_v5/flight/rock-1.png",
+      "sha256": "795c9de6c637ab59083e0a51f38b1e877cd4e4f8679580712a2b66e2e0394e01",
+      "opaque_pixels": 13752,
+      "alpha_values": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "rock-2",
+      "region": [
+        512,
+        0,
+        1024,
+        590
+      ],
+      "source_alpha128_bounds": [
+        142,
+        139,
+        402,
+        502
+      ],
+      "runtime_dimensions": [
+        115,
+        160
+      ],
+      "runtime": "assets/2d_v5/flight/rock-2.png",
+      "sha256": "e2d4b611b18040a00924172d61a152dfe452f6d7c61d8ec0fbee64cc5d9eaa26",
+      "opaque_pixels": 8886,
+      "alpha_values": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "receiver",
+      "region": [
+        1024,
+        0,
+        1536,
+        590
+      ],
+      "source_alpha128_bounds": [
+        19,
+        159,
+        489,
+        529
+      ],
+      "runtime_dimensions": [
+        279,
+        220
+      ],
+      "runtime": "assets/2d_v5/flight/receiver.png",
+      "sha256": "8b9303bb183d412e8f601da83f4a199d25bcfb36c5751d6e13ea26a6c0a481f0",
+      "opaque_pixels": 30548,
+      "alpha_values": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "exhaust",
+      "region": [
+        0,
+        590,
+        512,
+        1024
+      ],
+      "source_alpha128_bounds": [
+        59,
+        80,
+        511,
+        368
+      ],
+      "runtime_dimensions": [
+        132,
+        84
+      ],
+      "runtime": "assets/2d_v5/flight/exhaust.png",
+      "sha256": "29c1bd422a33b92075b1c4db6bffad34909076d4c2fcd6188155997e29f09251",
+      "opaque_pixels": 4371,
+      "alpha_values": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "ignition",
+      "region": [
+        512,
+        590,
+        1024,
+        1024
+      ],
+      "source_alpha128_bounds": [
+        107,
+        41,
+        480,
+        378
+      ],
+      "runtime_dimensions": [
+        159,
+        144
+      ],
+      "runtime": "assets/2d_v5/flight/ignition.png",
+      "sha256": "f93917b04ae07eb17b87c0c939f8431b5e880e5e9638bd4ef6934edecc83b512",
+      "opaque_pixels": 7072,
+      "alpha_values": [
+        0,
+        255
+      ]
+    }
+  ]
+}

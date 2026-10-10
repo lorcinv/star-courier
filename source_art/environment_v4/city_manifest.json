@@ -1,0 +1,97 @@
+{
+  "version": 4,
+  "status": "fresh V4 modeled assets from approved 4K upscaled reference baseline",
+  "reference": "source_art/art_direction_v4/pixel-cel-shop-reference-03-4k-upscaled.png",
+  "coordinate_system": "Godot X horizontal, Y up, Z toward camera",
+  "root_transform": "identity",
+  "fresh_geometry": true,
+  "composition_revision": "Smaller distant skyline after integrated Godot shop proof; orbital XY scale baked .40/.42, depth retained.",
+  "image_textures": 0,
+  "source": "source_art/environment_v4/city_source.blend",
+  "generator": "source_art/environment_v4/city_build.py",
+  "palette_srgb_hex": {
+    "V4_CityFarHaze": "a7dcec",
+    "V4_CityFarLight": "d7edf0",
+    "V4_CityMidBlue": "92c8e1",
+    "V4_CityMidShade": "79b4d4",
+    "V4_CityNearCerulean": "71b3d4",
+    "V4_CityNearShade": "5b9dc6",
+    "V4_CityTrimIce": "c4e8ee",
+    "V4_CityWindowMint": "89e2e2",
+    "V4_CityDeckBlue": "98cce1",
+    "V4_CityDeckShade": "78b4d3",
+    "V4_CityTrafficGold": "ffd477",
+    "V4_CityTrafficInk": "4669a0",
+    "V4_SkyCyan": "72d4f0",
+    "V4_SkyCloudIvory": "fff8de",
+    "V4_SkyCloudCream": "f5e6cf",
+    "V4_SkyCloudShade": "e1d7d4"
+  },
+  "assets": {
+    "orbital_city": {
+      "file": "assets/environment_v4/orbital_city.glb",
+      "material_surfaces": 12,
+      "mesh_nodes": 12,
+      "triangles": 20956,
+      "godot_bounds": {
+        "min": [
+          -27.29,
+          -13.0,
+          -24.128
+        ],
+        "max": [
+          28.25,
+          5.24,
+          -9.762
+        ]
+      },
+      "logical_components": 1015,
+      "bytes": 1131380
+    },
+    "flight_city": {
+      "file": "assets/environment_v4/flight_city.glb",
+      "material_surfaces": 12,
+      "mesh_nodes": 12,
+      "triangles": 28072,
+      "godot_bounds": {
+        "min": [
+          -31.04,
+          -13.75,
+          -33.487
+        ],
+        "max": [
+          52.282,
+          7.02,
+          -10.941
+        ]
+      },
+      "logical_components": 1116,
+      "bytes": 1511172
+    },
+    "sky_backdrop": {
+      "file": "assets/environment_v4/sky_backdrop.glb",
+      "material_surfaces": 4,
+      "mesh_nodes": 4,
+      "triangles": 14796,
+      "godot_bounds": {
+        "min": [
+          -110.0,
+          -58.0,
+          -57.0
+        ],
+        "max": [
+          110.0,
+          72.0,
+          -27.312
+        ]
+      },
+      "logical_components": 67,
+      "bytes": 854120
+    }
+  },
+  "proofs": [
+    "source_art/environment_v4/city_proof_wide.png",
+    "source_art/environment_v4/city_proof_shop_vista.png",
+    "source_art/environment_v4/city_proof_flight.png"
+  ]
+}

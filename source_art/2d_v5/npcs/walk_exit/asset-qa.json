@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "checks": 399,
+  "runtime_frames": 24,
+  "untouched_originals": [
+    "source_art/2d_v5/npcs/walk_exit/human_customer-original.png",
+    "source_art/2d_v5/npcs/walk_exit/elf_archivist-original.png",
+    "source_art/2d_v5/npcs/walk_exit/alien_botanist-original.png",
+    "source_art/2d_v5/npcs/walk_exit/robot_machinist-v2-original.png",
+    "source_art/2d_v5/npcs/walk_exit/robot_machinist-original.png"
+  ],
+  "actors": {
+    "human_courier": {
+      "frames": 6,
+      "opaque_heights": [
+        240,
+        239,
+        240,
+        241,
+        241,
+        240
+      ],
+      "lowest_foot_y": 248,
+      "minimum_lower_limb_pixel_difference": 2606,
+      "all_poses_manually_reviewed": true
+    },
+    "elf_archivist": {
+      "frames": 6,
+      "opaque_heights": [
+        237,
+        237,
+        237,
+        238,
+        238,
+        240
+      ],
+      "lowest_foot_y": 248,
+      "minimum_lower_limb_pixel_difference": 1071,
+      "all_poses_manually_reviewed": true
+    },
+    "alien_botanist": {
+      "frames": 6,
+      "opaque_heights": [
+        239,
+        234,
+        243,
+        239,
+        239,
+        240
+      ],
+      "lowest_foot_y": 248,
+      "minimum_lower_limb_pixel_difference": 2091,
+      "all_poses_manually_reviewed": true
+    },
+    "robot_machinist": {
+      "frames": 6,
+      "opaque_heights": [
+        236,
+        237,
+        236,
+        236,
+        241,
+        240
+      ],
+      "lowest_foot_y": 248,
+      "minimum_lower_limb_pixel_difference": 1748,
+      "all_poses_manually_reviewed": true
+    }
+  },
+  "visual_review": "All five generated sheets inspected; selected 24 registered derivatives inspected at native 1x with original idle identities. Robot V1 replaced with V2 to correct boot/head direction. Empty hands, no baked parcel, no shop insignia observed. No Spine rig/export claimed."
+}

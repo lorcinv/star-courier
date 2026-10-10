@@ -1,0 +1,156 @@
+{
+  "generator": "built-in image_gen",
+  "generated_at_utc": "2026-10-10T09:06:32Z",
+  "references": [
+    "source_art/art_direction_v4/pixel-cel-shop-reference-03.png",
+    "source_art/2d_v5/generated/shop-shell.png"
+  ],
+  "items": [
+    {
+      "id": "counter",
+      "source": "/workspace/scratch/445d2872ecf6/generated_images/exec-cc00c24c-26b5-432b-b362-111a3c11e0fe.png",
+      "prompt": "Use case: background-extraction. Asset type: single transparent 2D pixel-art foreground counter prop for a side-view game. Image 1 is the approved concept; image 2 is the reconstructed room shell that will receive this prop. Reconstruct ONLY the front-left shop counter seen in image 1, with its broad warm brown rim, long dark navy/slate front panels, understated worn tan rectangular label patches, a small upright dark register/terminal toward its right end with cyan screen and orange keys, and one cream parcel with navy ringed-planet stamp on the counter near the left-middle. Preserve the reference's handsome substantial simple painted surfaces, warm sunlight from upper right, deep indigo shadow planes, chunky crisp stair-step pixel edges and restrained pixel details. The counter is an independent foreground layer: include complete counter from its wood top down to its plinth/feet and complete left and right ends. Horizontal shallow three-quarter side view consistent with the side-scrolling room, approximately 3.3:1 width-to-height. Render it large and centered with transparent padding all around; background must be real alpha transparency, no colored backdrop. No humans, no robot, no ship, no shelves, no plants, no walls, no floor, no railings, no floating UI, no caption or text, no soft shadow extending outside counter. Do not paste any room fragments around it. NOT a 3D render, not vector art, not smooth anti-aliased concept illustration: this is deliberate clean large-mass 2D pixel sprite art matching both reference images.",
+      "original": "source_art/2d_v5/props/counter-original.png",
+      "runtime": "assets/2d_v5/props/counter.png",
+      "source_dimensions": [
+        2079,
+        756
+      ],
+      "source_alpha_bounds_xyxy": [
+        0,
+        19,
+        2065,
+        756
+      ],
+      "runtime_dimensions": [
+        2065,
+        737
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "runtime_alpha_bounds_xyxy": [
+        0,
+        0,
+        2065,
+        737
+      ],
+      "crop_operation": "Lossless RGBA rectangular crop to nonzero-alpha bounds; no resampling, repainting, or alpha modification.",
+      "anchor_bottom_center": [
+        1032.5,
+        737
+      ],
+      "sha256_original": "538a12a6d72a5b42fcfd349e746b01d89cd9c1e01279dbd46d3910a12a9b6068",
+      "sha256_runtime": "3fd9ad3f8ea5a3b9deb51ea2e4195983e6bb2737035b8a5e44015c1273744182",
+      "runtime_derivative": {
+        "threshold_crop_xyxy": [
+          62,
+          48,
+          2022,
+          679
+        ],
+        "runtime_dimensions": [
+          410,
+          132
+        ],
+        "runtime_alpha_bounds_xyxy": [
+          0,
+          0,
+          410,
+          132
+        ],
+        "visible_pixels": 35914,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "visible_palette_color_count": 82,
+        "runtime": "assets/2d_v5/props/counter-pixel.png",
+        "sha256": "9ac63e617a7209a1205ac9d8a7738a7c58ad15f233e0247c124c2ee87092f7af",
+        "anchor_bottom_center": [
+          205.0,
+          132
+        ],
+        "suggested_scene_bottom_center": [
+          222,
+          486
+        ]
+      }
+    },
+    {
+      "id": "launch-cradle",
+      "source": "/workspace/scratch/445d2872ecf6/generated_images/exec-e7d5166f-3cd3-4ff8-a25e-d352b3567637.png",
+      "prompt": "Use case: background-extraction. Asset type: single transparent 2D pixel-art launch cradle prop for a side-view game. Image 1 is the approved concept. Image 2 is its reconstructed room shell. Reconstruct ONLY the empty fixed launch cradle located in the far right open-air bay of image 1. Include its low dark-navy industrial support frame, four upturned yellow-gold clamp/fork arms, horizontal transverse rails, central short ochre launch ramp extending toward the viewer with a pale simple arrow-like stripe, and squat feet. It is an open low mechanical cradle that receives a small courier craft above it. Match the reference exactly in language: large clean gold painted masses, navy-blue shadow planes, cream sunlight from upper right, readable chunky stair-step pixel silhouette, a restrained number of bolts and mechanical details. View is the same shallow three-quarter side-view as the room, horizontal wide object approximately 2.7:1 width-to-height. Complete isolated prop centered large on a genuinely transparent alpha background, with padding on every side. No ship, no robot, no people, no floor or sidewalk, no ground plane, no sky, no walls, no rear safety fence or yellow railings, no extra objects. No caption or text. No soft shadow beyond prop. Pure 2D pixel illustration, not 3D render, not vector art, no tiny noisy greebles. Preserve reference lighting and palette so the sprite will composite directly over image 2.",
+      "original": "source_art/2d_v5/props/launch-cradle-original.png",
+      "runtime": "assets/2d_v5/props/launch-cradle.png",
+      "source_dimensions": [
+        2060,
+        763
+      ],
+      "source_alpha_bounds_xyxy": [
+        55,
+        33,
+        1984,
+        763
+      ],
+      "runtime_dimensions": [
+        1929,
+        730
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "runtime_alpha_bounds_xyxy": [
+        0,
+        0,
+        1929,
+        730
+      ],
+      "crop_operation": "Lossless RGBA rectangular crop to nonzero-alpha bounds; no resampling, repainting, or alpha modification.",
+      "anchor_bottom_center": [
+        964.5,
+        730
+      ],
+      "sha256_original": "1a5151e4ceca9d51df128e2bcf6e1eb460247d836a5361f9208595108348b47f",
+      "sha256_runtime": "60fd11cd89da9b4a38c557e9fac8f40366e8cdb7a0059403a26edcae2a8a6f80",
+      "runtime_derivative": {
+        "threshold_crop_xyxy": [
+          140,
+          20,
+          1841,
+          671
+        ],
+        "runtime_dimensions": [
+          300,
+          115
+        ],
+        "runtime_alpha_bounds_xyxy": [
+          0,
+          0,
+          300,
+          115
+        ],
+        "visible_pixels": 20121,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "visible_palette_color_count": 75,
+        "runtime": "assets/2d_v5/props/launch-cradle-pixel.png",
+        "sha256": "1ba35f543269a271dcb702066965014364018a7f91ca9427bb2021367f48f23c",
+        "anchor_bottom_center": [
+          150.0,
+          115
+        ],
+        "suggested_scene_bottom_center": [
+          1115,
+          486
+        ]
+      }
+    }
+  ],
+  "runtime_derivative_method": "Crop to alpha>=128 bounds; nearest-neighbor to native runtime dimensions; fixed reviewed96-color Oklab mapping without dithering; alpha threshold128; transparent RGB zeroed. Source artwork untouched.",
+  "palette_source": "source_art/pixel_pipeline_studies/palette_96.json"
+}

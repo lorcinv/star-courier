@@ -1,0 +1,262 @@
+{
+  "source": "source_art/2d_v5/robot/cargo-robot-six-poses.png",
+  "source_sha256": "4620271793abc1cb5d84f845773e4f58ea85e61eb0836f609701c7c6ffa1917e",
+  "method": "Manual middle-wheel/body + floor registration; nearest to 80x72; shared96-color Oklab; binary alpha128; nearest2x runtime. No repainted/procedural artwork.",
+  "source_spine": false,
+  "runtime_anchor": [
+    80,
+    136
+  ],
+  "canvas_size": [
+    160,
+    144
+  ],
+  "poses": [
+    {
+      "name": "idle",
+      "source_roi": [
+        75,
+        100,
+        448,
+        453
+      ],
+      "source_body_foot_anchor": [
+        293,
+        447
+      ],
+      "logical_dimensions": [
+        80,
+        72
+      ],
+      "logical_anchor": [
+        40,
+        68
+      ],
+      "runtime_dimensions": [
+        160,
+        144
+      ],
+      "runtime_anchor": [
+        80,
+        136
+      ],
+      "visible_alpha_bbox": [
+        28,
+        52,
+        116,
+        136
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "rgb_colors": 71,
+      "sha256": "d641279dc7d082fdd3b9030a0b6dca75d15761619f4e87576bbecfb295f86c9e"
+    },
+    {
+      "name": "carry-parcel",
+      "source_roi": [
+        552,
+        100,
+        961,
+        453
+      ],
+      "source_body_foot_anchor": [
+        772,
+        447
+      ],
+      "logical_dimensions": [
+        80,
+        72
+      ],
+      "logical_anchor": [
+        40,
+        68
+      ],
+      "runtime_dimensions": [
+        160,
+        144
+      ],
+      "runtime_anchor": [
+        80,
+        136
+      ],
+      "visible_alpha_bbox": [
+        28,
+        52,
+        124,
+        136
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "rgb_colors": 72,
+      "sha256": "c3f67c8ecf0e4d7369d9a8021636a69a234bb40451d55ad275d97da400d88c1f"
+    },
+    {
+      "name": "offer-parcel",
+      "source_roi": [
+        1027,
+        100,
+        1510,
+        453
+      ],
+      "source_body_foot_anchor": [
+        1251,
+        447
+      ],
+      "logical_dimensions": [
+        80,
+        72
+      ],
+      "logical_anchor": [
+        40,
+        68
+      ],
+      "runtime_dimensions": [
+        160,
+        144
+      ],
+      "runtime_anchor": [
+        80,
+        136
+      ],
+      "visible_alpha_bbox": [
+        26,
+        52,
+        142,
+        136
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "rgb_colors": 70,
+      "sha256": "7f76fe830cfc0a58561b339f7cacfa92888d4cbf54bed05b73173ed95478620c"
+    },
+    {
+      "name": "carry-part",
+      "source_roi": [
+        75,
+        532,
+        452,
+        968
+      ],
+      "source_body_foot_anchor": [
+        293,
+        963
+      ],
+      "logical_dimensions": [
+        80,
+        72
+      ],
+      "logical_anchor": [
+        40,
+        68
+      ],
+      "runtime_dimensions": [
+        160,
+        144
+      ],
+      "runtime_anchor": [
+        80,
+        136
+      ],
+      "visible_alpha_bbox": [
+        28,
+        30,
+        118,
+        136
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "rgb_colors": 74,
+      "sha256": "8b87f071e7f22a4802a145ed5ae5721a0677474dbcf9e6ace8d88d37d2e15c2a"
+    },
+    {
+      "name": "offer-part",
+      "source_roi": [
+        544,
+        555,
+        1087,
+        968
+      ],
+      "source_body_foot_anchor": [
+        772,
+        963
+      ],
+      "logical_dimensions": [
+        80,
+        72
+      ],
+      "logical_anchor": [
+        40,
+        68
+      ],
+      "runtime_dimensions": [
+        160,
+        144
+      ],
+      "runtime_anchor": [
+        80,
+        136
+      ],
+      "visible_alpha_bbox": [
+        26,
+        36,
+        156,
+        136
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "rgb_colors": 73,
+      "sha256": "6979f895605f359bca7d7124b576f8ddb732e8c097b63e3256d8c5c011f69cf4"
+    },
+    {
+      "name": "alert",
+      "source_roi": [
+        1090,
+        601,
+        1500,
+        968
+      ],
+      "source_body_foot_anchor": [
+        1303,
+        962
+      ],
+      "logical_dimensions": [
+        80,
+        72
+      ],
+      "logical_anchor": [
+        40,
+        68
+      ],
+      "runtime_dimensions": [
+        160,
+        144
+      ],
+      "runtime_anchor": [
+        80,
+        136
+      ],
+      "visible_alpha_bbox": [
+        26,
+        50,
+        126,
+        136
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "rgb_colors": 73,
+      "sha256": "b4342b0d77b44aad9043d71d8c8f7974d94f12d843089cf2e3d2d0402af7a024"
+    }
+  ]
+}

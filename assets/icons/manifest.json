@@ -1,0 +1,102 @@
+{
+  "battery": {
+    "model": "assets/models/cell.glb",
+    "icon": "assets/icons/battery.png"
+  },
+  "valve": {
+    "model": "assets/models/power_valve.glb",
+    "icon": "assets/icons/valve.png"
+  },
+  "thruster": {
+    "model": "assets/models/thruster.glb",
+    "icon": "assets/icons/thruster.png"
+  },
+  "spring": {
+    "model": "assets/models/spring.glb",
+    "icon": "assets/icons/spring.png"
+  },
+  "rotator": {
+    "model": "assets/models/turntable.glb",
+    "icon": "assets/icons/rotator.png"
+  },
+  "beam": {
+    "model": "assets/models/beam.glb",
+    "icon": "assets/icons/beam.png"
+  },
+  "coupler": {
+    "model": "assets/models/separator.glb",
+    "icon": "assets/icons/coupler.png"
+  },
+  "damper": {
+    "model": "assets/models/damper.glb",
+    "icon": "assets/icons/damper.png"
+  },
+  "lance": {
+    "model": "assets/models/tachyon_lance.glb",
+    "icon": "assets/icons/lance.png"
+  },
+  "accelerator": {
+    "model": "assets/models/accelerator.glb",
+    "icon": "assets/icons/accelerator.png"
+  },
+  "arc": {
+    "model": "assets/models/arc_emitter.glb",
+    "icon": "assets/icons/arc.png"
+  },
+  "bomb": {
+    "model": "assets/models/explosive_core.glb",
+    "icon": "assets/icons/bomb.png"
+  },
+  "armor": {
+    "model": "assets/models/armor.glb",
+    "icon": "assets/icons/armor.png"
+  },
+  "shield": {
+    "model": "assets/models/shield.glb",
+    "icon": "assets/icons/shield.png"
+  },
+  "decoy": {
+    "model": "assets/models/decoy.glb",
+    "icon": "assets/icons/decoy.png"
+  },
+  "shrink": {
+    "model": "assets/models/shrink_ring.glb",
+    "icon": "assets/icons/shrink.png"
+  },
+  "enlarge": {
+    "model": "assets/models/enlarge_ring.glb",
+    "icon": "assets/icons/enlarge.png"
+  },
+  "teleporter": {
+    "model": "assets/models/displacer.glb",
+    "icon": "assets/icons/teleporter.png"
+  },
+  "splitter": {
+    "model": "assets/models/splitter.glb",
+    "icon": "assets/icons/splitter.png"
+  },
+  "probe": {
+    "model": "assets/models/distance_probe.glb",
+    "icon": "assets/icons/probe.png"
+  },
+  "collision": {
+    "model": "assets/models/collision_switch.glb",
+    "icon": "assets/icons/collision.png"
+  },
+  "delay": {
+    "model": "assets/models/delay.glb",
+    "icon": "assets/icons/delay.png"
+  },
+  "and_gate": {
+    "model": "assets/models/and_gate.glb",
+    "icon": "assets/icons/and_gate.png"
+  },
+  "or_gate": {
+    "model": "assets/models/or_gate.glb",
+    "icon": "assets/icons/or_gate.png"
+  },
+  "not_gate": {
+    "model": "assets/models/not_gate.glb",
+    "icon": "assets/icons/not_gate.png"
+  }
+}

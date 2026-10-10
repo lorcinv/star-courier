@@ -1,0 +1,56 @@
+{
+  "source": "/workspace/scratch/445d2872ecf6/star-courier/source_art/art_direction_v4/pixel-cel-shop-reference-03.png",
+  "source_sha256": "bd9388bd6cb6784572cabd0eca876bb6fce9a6d7c538438128d22d8367242cae",
+  "source_size": [
+    1672,
+    941
+  ],
+  "higher_density_built_from_original": true,
+  "palette": "unchanged previous 96-color palette for fair density comparison",
+  "dither": "none",
+  "variants": {
+    "960x540": {
+      "logical_size": [
+        960,
+        540
+      ],
+      "4k_size": [
+        3840,
+        2160
+      ],
+      "scale": 4,
+      "constant_square_pixel_blocks": true,
+      "colors_used": 96,
+      "source_cell_widths": [
+        1,
+        2
+      ],
+      "source_cell_heights": [
+        1,
+        2
+      ]
+    },
+    "1280x720": {
+      "logical_size": [
+        1280,
+        720
+      ],
+      "4k_size": [
+        3840,
+        2160
+      ],
+      "scale": 3,
+      "constant_square_pixel_blocks": true,
+      "colors_used": 96,
+      "source_cell_widths": [
+        1,
+        2
+      ],
+      "source_cell_heights": [
+        1,
+        2
+      ]
+    }
+  },
+  "previous_files_unchanged": true
+}

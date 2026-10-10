@@ -1,0 +1,93 @@
+{
+  "orbital_city.glb": {
+    "validated": true,
+    "identity_nodes": true,
+    "image_dependencies": 0,
+    "materials": [
+      "V4_CityFarHaze",
+      "V4_CityFarLight",
+      "V4_CityMidBlue",
+      "V4_CityMidShade",
+      "V4_CityTrimIce",
+      "V4_CityNearCerulean",
+      "V4_CityNearShade",
+      "V4_CityDeckBlue",
+      "V4_CityDeckShade",
+      "V4_CityTrafficGold",
+      "V4_CityTrafficInk",
+      "V4_CityWindowMint"
+    ],
+    "draw_surfaces": 12,
+    "godot_bounds": {
+      "min": [
+        -27.290000915527344,
+        -13,
+        -24.127599716186523
+      ],
+      "max": [
+        28.25,
+        5.239999771118164,
+        -9.762399673461914
+      ]
+    },
+    "bytes": 1131380
+  },
+  "flight_city.glb": {
+    "validated": true,
+    "identity_nodes": true,
+    "image_dependencies": 0,
+    "materials": [
+      "V4_CityFarHaze",
+      "V4_CityFarLight",
+      "V4_CityNearShade",
+      "V4_CityNearCerulean",
+      "V4_CityTrimIce",
+      "V4_CityMidBlue",
+      "V4_CityMidShade",
+      "V4_CityDeckBlue",
+      "V4_CityDeckShade",
+      "V4_CityTrafficGold",
+      "V4_CityTrafficInk",
+      "V4_CityWindowMint"
+    ],
+    "draw_surfaces": 12,
+    "godot_bounds": {
+      "min": [
+        -31.04034423828125,
+        -13.75,
+        -33.4868278503418
+      ],
+      "max": [
+        52.28199768066406,
+        7.019625663757324,
+        -10.940500259399414
+      ]
+    },
+    "bytes": 1511172
+  },
+  "sky_backdrop.glb": {
+    "validated": true,
+    "identity_nodes": true,
+    "image_dependencies": 0,
+    "materials": [
+      "V4_SkyCyan",
+      "V4_SkyCloudCream",
+      "V4_SkyCloudIvory",
+      "V4_SkyCloudShade"
+    ],
+    "draw_surfaces": 4,
+    "godot_bounds": {
+      "min": [
+        -110,
+        -58,
+        -57
+      ],
+      "max": [
+        110,
+        72,
+        -27.312000274658203
+      ]
+    },
+    "bytes": 854120
+  }
+}

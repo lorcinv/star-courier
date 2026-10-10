@@ -1,0 +1,38 @@
+{
+  "result": "PASS",
+  "asset": "res://assets/modules_v4/joint_sleeve.glb",
+  "source": "source_art/modules_v4/joint_sleeve_source.blend",
+  "generator": "source_art/modules_v4/build_joint_sleeve.py",
+  "render_use": "Place only at actual cardinal structural edges; remove when sim link breaks. Rotate X axis onto edge axis. No sockets or gameplay changes.",
+  "root": "One native MeshInstance3D at origin with identity transform; GODOT_single_root prevents wrapper nodes",
+  "axes": "X along structural connection, Y up, Z toward camera",
+  "bounds_godot_m": {
+    "min": [
+      -0.16,
+      -0.24,
+      -0.34
+    ],
+    "max": [
+      0.16,
+      0.24,
+      0.34
+    ]
+  },
+  "surfaces": 2,
+  "triangles": 88,
+  "closed_source_components": 2,
+  "source_srgb_hex": {
+    "V4_JointOchre": "#cf982d",
+    "V4_InkNavy": "#18273d"
+  },
+  "sha256": "4793ee74fc953b847d7cae51d185a7bea0a4ebf0e140cccc67f8fb8a88bb45a1",
+  "godot_single_root_spec": "https://github.com/KhronosGroup/glTF/blob/main/extensions/2.0/Vendor/GODOT_single_root/README.md",
+  "existing_glbs_unchanged_during_joint_build": true,
+  "native_godot_root_verified": {
+    "version": "4.6.3",
+    "class": "MeshInstance3D",
+    "children": 0,
+    "surfaces": 2,
+    "identity_transform": true
+  }
+}

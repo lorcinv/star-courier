@@ -1,0 +1,492 @@
+{
+  "scope": "Static raster connectivity and frozen implementation evidence; not a substitute for native loop inspection.",
+  "status": "pass",
+  "runtime_sha256": "ca854f2425c4ad8952e8ea49c576f869eedd7e9822ba68467ed23ad2e3849adc",
+  "manifest_sha256": "f226059830f7534cdb84ef930e3c9148198f7e1bf2438348e0289c12cf484043",
+  "tests": {
+    "existing_actor_motion": {
+      "passed": 1157,
+      "failed": 0
+    },
+    "new_actor_locomotion": {
+      "passed": 2612,
+      "failed": 0
+    },
+    "static_assets": {
+      "passed": 1080,
+      "failed": 0
+    }
+  },
+  "sources": [
+    {
+      "path": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-opposite-original.png",
+      "sha256": "e677bc48039a10d1b0d693e4e0f0bfe864d7be4ea87304fbd8bdc567a9efba57",
+      "used_in_production": false
+    },
+    {
+      "path": "source_art/2d_v5/actors/locomotion_v2/clerk-run-opposite-original.png",
+      "sha256": "17684044955a53cf1c813205c7431954692913fb679a1b4cda137a475f342fa7",
+      "used_in_production": false
+    },
+    {
+      "path": "source_art/2d_v5/actors/locomotion_v2/clerk-run-original.png",
+      "sha256": "78fd98bde28bb70eeaad11af9b437666cf8af22fca8512baf882cbfb8b842e49",
+      "used_in_production": true
+    },
+    {
+      "path": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+      "sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+      "used_in_production": true
+    }
+  ],
+  "frames": [
+    {
+      "id": "clerk-walk-rig-00",
+      "sha256": "6b433b62ea3bd2ae8187e69a05a9ba9170b3ebbf790622916225e50e3ed3d004",
+      "largest_connected_pixels": 17987,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-01",
+      "sha256": "fd2e95984daa16e9bbfeb714d202e798c45989d9ab739507675c474015247d89",
+      "largest_connected_pixels": 18018,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-02",
+      "sha256": "33f3475feb6eefd9bbaade251c21c7ada768083d800b448abe3fd9cb8d54ad49",
+      "largest_connected_pixels": 18065,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-03",
+      "sha256": "9fec4280bc5ddbb7e62a5196af599f5895b9ff89bc97b078f306b77c43ffad93",
+      "largest_connected_pixels": 18069,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-04",
+      "sha256": "cbccb840fbb5f743a218b6f1f7730ef8fb41cffc204f4d92ec4afcd2159c913b",
+      "largest_connected_pixels": 17998,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-05",
+      "sha256": "78fc651ef4f2a85b2b00bb2b9eb81236e073605c480d85a1f5fdf5e400ce0bc8",
+      "largest_connected_pixels": 17835,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-06",
+      "sha256": "2fb6664a33a2f5b9a1735053653f0cb2b82126a3abc43d0b9d50858d0159a984",
+      "largest_connected_pixels": 17544,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-07",
+      "sha256": "7f2a92ba1dbf243f0b877e1fcbf285c06fd8edfb3c3c237d95b6764297d339e5",
+      "largest_connected_pixels": 17033,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-08",
+      "sha256": "1f0a80ee85ab1d1f069d0fa5f39c5bdb12cc5265b9d3296ab0c9595501f5a5c0",
+      "largest_connected_pixels": 16570,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-09",
+      "sha256": "5de611c238c231987099037bf6cf02077fbf69bcbfe5e1ef738823b4667d3921",
+      "largest_connected_pixels": 16131,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-10",
+      "sha256": "818e4e449d47296a2a5788002e11c117b237f286de0734b8b0d29d949895db42",
+      "largest_connected_pixels": 16286,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-11",
+      "sha256": "772ba9bad8268277f8a5b4c9f7b2ce0e283e20dd98f6c2905170b8439d7f22ed",
+      "largest_connected_pixels": 16821,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-12",
+      "sha256": "2bbd6c64d03673c9dd484f07db439a14fd185dadb3e27babc03e90b43b5f85f4",
+      "largest_connected_pixels": 17514,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-13",
+      "sha256": "93d27a6ec548b72e43dc709005f4e53a6b9e2400d7076d2c4ea4dd3781dcd7c9",
+      "largest_connected_pixels": 17877,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-14",
+      "sha256": "15d9f47bcbcf7e498de15491c0e2f51b577d287d0d4d25796eb29c0904471dfd",
+      "largest_connected_pixels": 17939,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-15",
+      "sha256": "9c35cceee83feb0915137e20ecb3f2ee4d4b2de3b720e36d2e3a2da7e2912810",
+      "largest_connected_pixels": 17900,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-16",
+      "sha256": "23edce0982a2c0ee228b2f7ddfae91b2450f52f90687554d9faf29d85591533c",
+      "largest_connected_pixels": 17849,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-17",
+      "sha256": "e9bfb89eb8deab1e5fecefd091cbe7fbdb8b348054c17cbaf17da5b9199a1c48",
+      "largest_connected_pixels": 17876,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-18",
+      "sha256": "0a2657a7bee81e19b3be2a0729605b0995c538fb01bc199627522016fc63b4cf",
+      "largest_connected_pixels": 17882,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-19",
+      "sha256": "788c4bf387f508a8e9b4bb3a10ca0361958fce82dc809a2fa2d40498a564e944",
+      "largest_connected_pixels": 17851,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-20",
+      "sha256": "8510f06cbf26b7f0e40c326fbe0c6bd47583275679ec4d2e3eff0c42507fd934",
+      "largest_connected_pixels": 17863,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-21",
+      "sha256": "11f0cb8389a490b10d15ae92c5a39df16f2ae68fade11348d6f652d0b78f1c61",
+      "largest_connected_pixels": 17768,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-22",
+      "sha256": "7e7265481e0da4f37870965e8937b6d93ba5737d0e94772f32646c2b8e696e63",
+      "largest_connected_pixels": 17487,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-23",
+      "sha256": "1c125cc7900bfc7a46a5b66c050c493189b8e662b30ad24d47ac386a27ab7709",
+      "largest_connected_pixels": 17038,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-24",
+      "sha256": "f1f42cc7649d55fc43f2c596235679563bf9561c22bcb2ce72e0bf34300fe18b",
+      "largest_connected_pixels": 16614,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-25",
+      "sha256": "7682e987702147ecda2ddf50c6ce0077f1dbbe12f212121e591bd81272d0f725",
+      "largest_connected_pixels": 16225,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-26",
+      "sha256": "a79226d2ce19d265bc23388781d86d477205d5cb4cb23d841daefa66371281b7",
+      "largest_connected_pixels": 15979,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-27",
+      "sha256": "f27d424057726f61a4655745440265bb255528e3ff2f1226561516c7c9922c19",
+      "largest_connected_pixels": 16318,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-28",
+      "sha256": "02a4d568f9c445c3f60cc38fc9a4a8a966bfa4b38103274689408b52a6373ce6",
+      "largest_connected_pixels": 17220,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-29",
+      "sha256": "6a93f52cfc5a500f1ad0b76e1b64728973a791697e0c24b86cd2f934f63a3a95",
+      "largest_connected_pixels": 17740,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-30",
+      "sha256": "bd176e2b1a5371a1a6ad4cbf0923590c4e338c82ddb5e9c5651aabe8b89c1994",
+      "largest_connected_pixels": 17918,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-walk-rig-31",
+      "sha256": "262ade576b7130c778f49bb3324ed8b775f3f0eef9dcc2f0e94c84d645c0655a",
+      "largest_connected_pixels": 17957,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-00",
+      "sha256": "c40f1e71dd8c0755c1c19579656c2b12a7941368055e6af45b0c1f22f3a8714a",
+      "largest_connected_pixels": 19483,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-01",
+      "sha256": "dc1eefacf55fbf7af444dfd749eb14bc06797fa0884a17aab89c967b77e547a4",
+      "largest_connected_pixels": 19151,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-02",
+      "sha256": "6f9c1adef562a737fa8136731a4e2aa33868be4dceda227179ce70058f5a05cd",
+      "largest_connected_pixels": 18916,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-03",
+      "sha256": "04e62909cb8f031983a60e07e23a3bca55149bc4b8a758bf468592c0260815fe",
+      "largest_connected_pixels": 18958,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-04",
+      "sha256": "0cf67bfd9de7cb202d73c50366721f6510b7ee6fc04d17aebc8bb46d64613cfc",
+      "largest_connected_pixels": 18889,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-05",
+      "sha256": "86f9af09fbf4009865e66dbffe3f1c969578e5b40fcec3a75c7779764b99a382",
+      "largest_connected_pixels": 18679,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-06",
+      "sha256": "dbd45b90d110e40999065a9e935516388ccdb1563095077ed33061ab2fe3a849",
+      "largest_connected_pixels": 18020,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-07",
+      "sha256": "30f07b228e66f64185ead656a01fe407f1aed15ce213d06fa4ff2a8b4bfded84",
+      "largest_connected_pixels": 18365,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-08",
+      "sha256": "e1910e4271a7fa436abfbe4b9038dbdf9d784814e971aea5a862c199d5de24c1",
+      "largest_connected_pixels": 18853,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-09",
+      "sha256": "fdbb572a930681a4e665baf5b8b9c5abce3d176b0a8731a2a79b1afb3f758259",
+      "largest_connected_pixels": 19109,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-10",
+      "sha256": "563a9896243d11ed05424ebb90018f8b4a82c98a165c6eba9689300693ea42fa",
+      "largest_connected_pixels": 19565,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-11",
+      "sha256": "02ef34a2163f9cab72b4a3ab50a0209bd46e94721a49bbc2d7e5d985a25a7b61",
+      "largest_connected_pixels": 20010,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-12",
+      "sha256": "7fcd709983cf035c070fc7d0b7e7a643253d537923fd66aa29ee21b14c2986b9",
+      "largest_connected_pixels": 20099,
+      "detached_component_pixels": [],
+      "flight": true
+    },
+    {
+      "id": "clerk-run-rig-13",
+      "sha256": "1dcbc70d390ca17edeb7d2a7156bfd99743414057b4d8d529c2f0c76edb699d9",
+      "largest_connected_pixels": 20017,
+      "detached_component_pixels": [],
+      "flight": true
+    },
+    {
+      "id": "clerk-run-rig-14",
+      "sha256": "8fd60672837f674ce82c1ef7a4851a175b00e7e77ca4240d8a0489a80bdfe9d7",
+      "largest_connected_pixels": 19793,
+      "detached_component_pixels": [],
+      "flight": true
+    },
+    {
+      "id": "clerk-run-rig-15",
+      "sha256": "b3cbe6a73c1c0dc5226f5880bfffec10108dae57d51e12d34286fbb131458265",
+      "largest_connected_pixels": 19601,
+      "detached_component_pixels": [],
+      "flight": true
+    },
+    {
+      "id": "clerk-run-rig-16",
+      "sha256": "4af7343a2b1a5b71822b116f725659d5df34f55bb8c308aba775c251bcf58c1c",
+      "largest_connected_pixels": 19349,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-17",
+      "sha256": "266391b6c19e88f68c9df7aeab8a14e390cf3072c2e014618a4a6d2edd84d475",
+      "largest_connected_pixels": 19306,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-18",
+      "sha256": "0adb725b7ac11c498ba5a911467132e010cf4a55d37224b41ea8a42894a7148f",
+      "largest_connected_pixels": 19380,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-19",
+      "sha256": "6a3c973ecf10488246233f9c08d02392fc7b168bb2592e00d8d788f92b7f1ec3",
+      "largest_connected_pixels": 19284,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-20",
+      "sha256": "9628e5aff9ac0a15246c0fb5a0448a39a0941bfb3e0a6fe3d63154c76af94642",
+      "largest_connected_pixels": 19214,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-21",
+      "sha256": "396a7478ee328183d06e3e184cabfd44ec71331f616d546b9a047f9d6bdb536a",
+      "largest_connected_pixels": 19132,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-22",
+      "sha256": "7c2a41dbaff1cfd05b33dc3ee285550955205b05ae242cf110aa422331fb575c",
+      "largest_connected_pixels": 18864,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-23",
+      "sha256": "7ed85cea07a4f8d545084c977525a50d1597327b7bf9410ed86620af743e60d0",
+      "largest_connected_pixels": 18133,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-24",
+      "sha256": "712714b40c7b4070b022ea65c54eb92a00ca04bbf7e65fe93dab468262156f61",
+      "largest_connected_pixels": 18661,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-25",
+      "sha256": "c8b4c01428a2b46f69097a654d5009cdd3b3eafe009970a04a8f9bfdc926b423",
+      "largest_connected_pixels": 19101,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-26",
+      "sha256": "0f4162e23ad821ee14890d329452c2f7954d8cc01624f48a1de65dc84c0f20ca",
+      "largest_connected_pixels": 19268,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-27",
+      "sha256": "b6f298d4e16560d63ba9ae3a7776c30d68af54c19e6cfa721641594d157ff1ef",
+      "largest_connected_pixels": 19376,
+      "detached_component_pixels": [],
+      "flight": false
+    },
+    {
+      "id": "clerk-run-rig-28",
+      "sha256": "7aca90e1fc95dad446d2685e4db48d39a587564f80cd0e8b945d30254971c071",
+      "largest_connected_pixels": 19583,
+      "detached_component_pixels": [],
+      "flight": true
+    },
+    {
+      "id": "clerk-run-rig-29",
+      "sha256": "d321c269c92a94b24cd375e53438bbdb78619e0ca04e293754325c4dfabb28bf",
+      "largest_connected_pixels": 19957,
+      "detached_component_pixels": [],
+      "flight": true
+    },
+    {
+      "id": "clerk-run-rig-30",
+      "sha256": "7cce7cc057bfe5af0fe28ab760a6c4e46adb07d3ad6a471ad781dc82395b73f9",
+      "largest_connected_pixels": 19894,
+      "detached_component_pixels": [],
+      "flight": true
+    },
+    {
+      "id": "clerk-run-rig-31",
+      "sha256": "991197076fdfd6a016dd3475fe794ce12f876533eea3bd6e2d075d8be4590392",
+      "largest_connected_pixels": 19684,
+      "detached_component_pixels": [],
+      "flight": true
+    }
+  ]
+}

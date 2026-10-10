@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "actors": {
+    "clerk": {
+      "idle": {
+        "runtime": "assets/2d_v5/actors/clerk-idle-pixel.png",
+        "size": [
+          159,
+          256
+        ],
+        "alpha_bounds": [
+          16,
+          8,
+          150,
+          248
+        ],
+        "opaque_colors": 87,
+        "original_sha256_verified": true,
+        "source_default_copy_matches": true
+      },
+      "handoff": {
+        "runtime": "assets/2d_v5/actors/clerk-handoff-pixel.png",
+        "size": [
+          159,
+          256
+        ],
+        "alpha_bounds": [
+          8,
+          8,
+          151,
+          248
+        ],
+        "opaque_colors": 86,
+        "original_sha256_verified": true,
+        "source_default_copy_matches": true
+      }
+    },
+    "customer": {
+      "idle": {
+        "runtime": "assets/2d_v5/actors/customer-idle-pixel.png",
+        "size": [
+          167,
+          256
+        ],
+        "alpha_bounds": [
+          8,
+          8,
+          138,
+          248
+        ],
+        "opaque_colors": 73,
+        "original_sha256_verified": true,
+        "source_default_copy_matches": true
+      },
+      "handoff": {
+        "runtime": "assets/2d_v5/actors/customer-handoff-pixel.png",
+        "size": [
+          167,
+          256
+        ],
+        "alpha_bounds": [
+          8,
+          8,
+          159,
+          248
+        ],
+        "opaque_colors": 71,
+        "original_sha256_verified": true,
+        "source_default_copy_matches": true
+      }
+    }
+  },
+  "checks": [
+    "Original SHA256 matches manifest and tool output",
+    "Common frame dimensions and foot registration per actor",
+    "Strict binary alpha",
+    "Every opaque RGB is in approved reference96 palette",
+    "Transparent margin on every edge",
+    "No full-body clipping"
+  ],
+  "deterministic_rebuild_originals_and_runtime_hashes_unchanged": true
+}

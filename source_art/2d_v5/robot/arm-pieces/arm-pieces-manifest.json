@@ -1,0 +1,88 @@
+{
+  "source": "assets/2d_v5/robot/lift-arm.png",
+  "source_sha256": "6743c1d0b9d2d4514a7beacb0e989a73826eca94eda84d6143f9d5a5e496beb5",
+  "preserved_imagegen_original": "source_art/2d_v5/robot/empty-hands/raised-gripper-original.png",
+  "original_sha256": "7ce6f9f560bef14f731c9d76f0c724522dbcfe30a76879cdf4559bc34679c773",
+  "method": "Affine nearest source-pixel registration then rectangular alpha-preserving crops. No painted pixels. Fixed 0.65 claw/joint scale, shaft length only; overlap under housings. No Spine.",
+  "aligned_canvas": [
+    196,
+    80
+  ],
+  "inverse_affine": [
+    0.505649542003077,
+    0.8627389759782957,
+    -26.822549879193367,
+    -0.8627389759782957,
+    0.505649542003077,
+    147.02879783944283
+  ],
+  "source_shoulder": [
+    17.8,
+    150.0
+  ],
+  "source_grip": [
+    92,
+    23.4
+  ],
+  "aligned_grip": [
+    166.74195037548057,
+    40
+  ],
+  "runtime_rigid_scale": 0.65,
+  "pieces": [
+    {
+      "name": "lift-shaft",
+      "aligned_roi": [
+        41,
+        31,
+        69,
+        53
+      ],
+      "anchor": [
+        0,
+        9
+      ],
+      "size": [
+        28,
+        22
+      ],
+      "sha256": "644f16ecbf340f7d68406d8dc957d2b534a9df64084ecc5c9e523316184b58e5"
+    },
+    {
+      "name": "lift-joint",
+      "aligned_roi": [
+        2,
+        21,
+        39,
+        59
+      ],
+      "anchor": [
+        18,
+        19
+      ],
+      "size": [
+        37,
+        38
+      ],
+      "sha256": "ccb7436bd499220968f5d3169b1754121eeacda3268ecbf5b673083e1bed8f24"
+    },
+    {
+      "name": "lift-claw",
+      "aligned_roi": [
+        121,
+        14,
+        193,
+        70
+      ],
+      "anchor": [
+        45.74195037548057,
+        26
+      ],
+      "size": [
+        72,
+        56
+      ],
+      "sha256": "be41c046667c885d323c479cf944b5ce0caef73339eadcd15e4c21fce25e50ec"
+    }
+  ]
+}

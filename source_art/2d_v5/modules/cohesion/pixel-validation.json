@@ -1,0 +1,153 @@
+{
+  "passed": true,
+  "assets": [
+    {
+      "id": "joint-collar",
+      "original": "source_art/2d_v5/modules/cohesion/joint-collar-original.png",
+      "original_sha256": "b5dc3998d94d7138e0225dfca55f61fc1553b83c4a7dc0b984131aa1a655681b",
+      "source_crop": "source_art/2d_v5/modules/cohesion/joint-collar-crop.png",
+      "crop_xyxy": [
+        210,
+        387,
+        1130,
+        792
+      ],
+      "source_crop_dimensions": [
+        920,
+        405
+      ],
+      "anchor_center": [
+        16,
+        14
+      ],
+      "runtime": "assets/2d_v5/modules/cohesion/joint-collar-pixel.png",
+      "dimensions": [
+        32,
+        28
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_colors": 36,
+      "outside_palette": 0,
+      "sha256": "695b916fe6a49981b4d9d60ab9d5c28c177d1835a562b88912021942e0feb02e"
+    },
+    {
+      "id": "coupler-latch",
+      "original": "source_art/2d_v5/modules/cohesion/coupler-latch-original.png",
+      "original_sha256": "deb419c67e3ec0a5a363310870b7a6bca9d9b7cee45478c24406cfe95f68c67f",
+      "source_crop": "source_art/2d_v5/modules/cohesion/coupler-latch-crop.png",
+      "crop_xyxy": [
+        311,
+        256,
+        1240,
+        846
+      ],
+      "source_crop_dimensions": [
+        929,
+        590
+      ],
+      "anchor_center": [
+        36,
+        36
+      ],
+      "runtime": "assets/2d_v5/modules/cohesion/coupler-latch-pixel.png",
+      "dimensions": [
+        72,
+        72
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_colors": 58,
+      "outside_palette": 0,
+      "sha256": "d7bbd70e407c922543e0eec67c8215d667d106d80268d205c8b454635d7fb477"
+    },
+    {
+      "id": "hull-edge-strip",
+      "original": "source_art/2d_v5/modules/cohesion/hull-edge-strip-original.png",
+      "original_sha256": "c73addd99199c240e2da22e674b5d2f219b52597165b856444f52c5d151cc431",
+      "source_crop": "source_art/2d_v5/modules/cohesion/hull-edge-strip-crop.png",
+      "crop_xyxy": [
+        207,
+        301,
+        1965,
+        422
+      ],
+      "source_crop_dimensions": [
+        1758,
+        121
+      ],
+      "anchor_center": [
+        30,
+        4
+      ],
+      "runtime": "assets/2d_v5/modules/cohesion/hull-edge-strip-pixel.png",
+      "dimensions": [
+        60,
+        8
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_colors": 13,
+      "outside_palette": 0,
+      "sha256": "2bf2d1ecc165f7948a5ca95dbebb17526e9b3a180b80ff6c255f16d8bc9d938b"
+    },
+    {
+      "id": "joint-collar-half-left",
+      "derived_from": "joint-collar",
+      "crop_xyxy": [
+        0,
+        0,
+        16,
+        28
+      ],
+      "seam_anchor": [
+        16,
+        14
+      ],
+      "runtime": "assets/2d_v5/modules/cohesion/joint-collar-half-left-pixel.png",
+      "dimensions": [
+        16,
+        28
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_colors": 28,
+      "outside_palette": 0,
+      "sha256": "cb01e94c25a6984732a569e11fd3b6a816fb98432e83a4645dd2e56fd537bbc9"
+    },
+    {
+      "id": "joint-collar-half-right",
+      "derived_from": "joint-collar",
+      "crop_xyxy": [
+        16,
+        0,
+        32,
+        28
+      ],
+      "seam_anchor": [
+        0,
+        14
+      ],
+      "runtime": "assets/2d_v5/modules/cohesion/joint-collar-half-right-pixel.png",
+      "dimensions": [
+        16,
+        28
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_colors": 32,
+      "outside_palette": 0,
+      "sha256": "ddec87ff0f11ebdc38260fd60729909ac4e70bbed85971fe18faab2bcdca99c6"
+    }
+  ]
+}

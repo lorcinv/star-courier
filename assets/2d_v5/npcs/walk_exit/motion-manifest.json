@@ -1,0 +1,2024 @@
+{
+  "version": 1,
+  "generator": "built-in image_gen.imagegen",
+  "generated_at_utc": "2026-10-10T13:46:00Z",
+  "animation_status": "Four newly generated articulated walk poses per identity, plus farewell and neutral raster frames. No Spine rig, skeleton, atlas or Spine runtime/export is supplied or claimed.",
+  "contains_parcel": false,
+  "palette": "source_art/pixel_pipeline_studies/palette_96.json",
+  "palette_sha256": "5bb6b501d7bece46b528a3c230e39c207e5f8a3aac6be15969f21683e73f2944",
+  "method": "Original PNG bytes preserved; largest connected component per declared sheet cell; rectangular crop; optional lossless full-image horizontal reflection to normalize semantic direction; one uniform anatomical scale per identity from neutral body height; NEAREST sample; fixed reference96 Oklab mapping without dithering; alpha threshold128; zero transparent RGB; place on 192x256 common canvas. No synthetic or repainted character pixels.",
+  "coordinates": "Pixel units from top left. Foot anchor [96,248] is the pelvis ground projection and exclusive sole baseline; actual supporting shoe varies with stride. Hip anchor is a measured accessory attachment peg, not the pelvis center. Head landmark is a measured cranial/face center.",
+  "sources": {
+    "human_customer": {
+      "original": "source_art/2d_v5/npcs/walk_exit/human_customer-original.png",
+      "sha256": "babf26a193a924a641ad932f9a7e900a0ceb6de964b04b5eaafd1ea9740111c5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generated_file": "exec-add4c6c6-3106-40f7-9276-a5503e40b580.png",
+      "prompt": "source_art/2d_v5/npcs/walk_exit/human_customer.prompt.txt",
+      "requested_transparent_background": true,
+      "actual_zero_alpha_fraction": 0.6330795288085938,
+      "selected": true
+    },
+    "elf_archivist": {
+      "original": "source_art/2d_v5/npcs/walk_exit/elf_archivist-original.png",
+      "sha256": "0170ed3712dad765ad007f4b8d907118fe2c14c62812407bd913075dc4bb1fbb",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generated_file": "exec-e9c62bdb-3477-4f3e-8293-eeb4b8f96c6f.png",
+      "prompt": "source_art/2d_v5/npcs/walk_exit/elf_archivist.prompt.txt",
+      "requested_transparent_background": true,
+      "actual_zero_alpha_fraction": 0.6542917887369791,
+      "selected": true
+    },
+    "alien_botanist": {
+      "original": "source_art/2d_v5/npcs/walk_exit/alien_botanist-original.png",
+      "sha256": "55b5094110400f5df3306d1b8744ac811675f3ff4031e629cf6fc46d54d7463c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generated_file": "exec-d3322d32-7bf0-4063-bb39-37f51411d1ea.png",
+      "prompt": "source_art/2d_v5/npcs/walk_exit/alien_botanist.prompt.txt",
+      "requested_transparent_background": true,
+      "actual_zero_alpha_fraction": 0.6570116678873698,
+      "selected": true
+    },
+    "robot_machinist": {
+      "original": "source_art/2d_v5/npcs/walk_exit/robot_machinist-v2-original.png",
+      "sha256": "95c4c8ce85dff8edd9b400114f2cc239495c27a60d72cfbc0d57a7b1fbd68496",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generated_file": "exec-4b6dec62-e1d7-4ecb-9a78-3514107a98f3.png",
+      "prompt": "source_art/2d_v5/npcs/walk_exit/robot_machinist-v2.prompt.txt",
+      "requested_transparent_background": true,
+      "actual_zero_alpha_fraction": 0.6171855926513672,
+      "selected": true
+    },
+    "robot_machinist-v1-archived": {
+      "original": "source_art/2d_v5/npcs/walk_exit/robot_machinist-original.png",
+      "sha256": "804b8c9f0ceaebb1b0803a9c476dfca9fe380a4afe6679dd58e0245ea361893f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generated_file": "exec-b5043e5b-769e-47df-a4da-a52d670d8b9e.png",
+      "prompt": "source_art/2d_v5/npcs/walk_exit/robot_machinist.prompt.txt",
+      "selected": false,
+      "reason": "Replaced by V2 to correct boot direction in left-walking contact poses; untouched original retained."
+    }
+  },
+  "actors": {
+    "human_courier": {
+      "species": "human",
+      "appearance_id": "human_courier",
+      "walk_cycle_distance": 164,
+      "shared_canvas": [
+        192,
+        256
+      ],
+      "foot_anchor": [
+        96,
+        248
+      ],
+      "body_height": 240,
+      "uniform_source_scale": 0.49382716049382713,
+      "walk": [
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/human_courier/walk-contact-a-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "4e55f869ac34a462fc2a0c5c9d96cea647d12c81b27fc9169e78199b99a1e93f",
+          "alpha_bounds": [
+            19,
+            8,
+            177,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 75,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-contact-a",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            119,
+            161
+          ],
+          "head_anchor": [
+            89,
+            59
+          ],
+          "head_top_y": 8,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "human_customer",
+          "source_cell_xyxy": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "source_crop_xyxy": [
+            113,
+            13,
+            433,
+            500
+          ],
+          "source_foot_anchor": [
+            268,
+            500
+          ],
+          "source_hip_anchor": [
+            315,
+            322
+          ],
+          "source_head_anchor": [
+            254,
+            117
+          ],
+          "source_head_top_y": 13,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.49382716049382713,
+          "sampled_dimensions": [
+            158,
+            240
+          ],
+          "paste_offset": [
+            19,
+            8
+          ],
+          "sole_baseline_y": 248
+        },
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/human_courier/walk-down-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "a71766ef9e634f915c22fecc7a4de2cbe86e48be5f12e9dd673cf71b3c3bd325",
+          "alpha_bounds": [
+            34,
+            9,
+            171,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 78,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-down",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            118,
+            163
+          ],
+          "head_anchor": [
+            88,
+            61
+          ],
+          "head_top_y": 9,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "human_customer",
+          "source_cell_xyxy": [
+            512,
+            0,
+            1024,
+            512
+          ],
+          "source_crop_xyxy": [
+            653,
+            14,
+            930,
+            498
+          ],
+          "source_foot_anchor": [
+            778,
+            498
+          ],
+          "source_hip_anchor": [
+            823,
+            326
+          ],
+          "source_head_anchor": [
+            763,
+            119
+          ],
+          "source_head_top_y": 14,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.49382716049382713,
+          "sampled_dimensions": [
+            137,
+            239
+          ],
+          "paste_offset": [
+            34,
+            9
+          ],
+          "sole_baseline_y": 248
+        },
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/human_courier/walk-pass-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "1f19bd09e9a2c3d99072c9465a9abb952d1478233fce888ac6b33f0e6d3e9dbb",
+          "alpha_bounds": [
+            41,
+            8,
+            160,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 76,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-pass",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            115,
+            165
+          ],
+          "head_anchor": [
+            90,
+            61
+          ],
+          "head_top_y": 8,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "human_customer",
+          "source_cell_xyxy": [
+            1024,
+            0,
+            1536,
+            512
+          ],
+          "source_crop_xyxy": [
+            1140,
+            11,
+            1380,
+            498
+          ],
+          "source_foot_anchor": [
+            1268,
+            498
+          ],
+          "source_hip_anchor": [
+            1230,
+            329
+          ],
+          "source_head_anchor": [
+            1281,
+            118
+          ],
+          "source_head_top_y": 11,
+          "source_facing": "right",
+          "reflected_x": true,
+          "uniform_source_scale": 0.49382716049382713,
+          "sampled_dimensions": [
+            119,
+            240
+          ],
+          "paste_offset": [
+            41,
+            8
+          ],
+          "sole_baseline_y": 248
+        },
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/human_courier/walk-contact-b-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "269eb35ce6c1064d86fc248ba12117b1294ef6316ebfb0b5a1179ee20d4695eb",
+          "alpha_bounds": [
+            20,
+            7,
+            187,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 83,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-contact-b",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            123,
+            161
+          ],
+          "head_anchor": [
+            95,
+            62
+          ],
+          "head_top_y": 7,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "human_customer",
+          "source_cell_xyxy": [
+            0,
+            512,
+            512,
+            1024
+          ],
+          "source_crop_xyxy": [
+            88,
+            512,
+            427,
+            1001
+          ],
+          "source_foot_anchor": [
+            273,
+            1001
+          ],
+          "source_hip_anchor": [
+            219,
+            824
+          ],
+          "source_head_anchor": [
+            276,
+            623
+          ],
+          "source_head_top_y": 512,
+          "source_facing": "right",
+          "reflected_x": true,
+          "uniform_source_scale": 0.49382716049382713,
+          "sampled_dimensions": [
+            167,
+            241
+          ],
+          "paste_offset": [
+            20,
+            7
+          ],
+          "sole_baseline_y": 248
+        }
+      ],
+      "gestures": {
+        "farewell": {
+          "runtime": "assets/2d_v5/npcs/walk_exit/human_courier/farewell-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "f2de1940a39e7ece8c0b572885244ca76db757e5b5d20cff52f5e6c0ce16d8fe",
+          "alpha_bounds": [
+            27,
+            7,
+            181,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 79,
+          "all_colors_in_shared_palette": true,
+          "id": "farewell",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            66,
+            164
+          ],
+          "head_anchor": [
+            96,
+            62
+          ],
+          "head_top_y": 7,
+          "facing": "right",
+          "contains_parcel": false,
+          "source_id": "human_customer",
+          "source_cell_xyxy": [
+            512,
+            512,
+            1024,
+            1024
+          ],
+          "source_crop_xyxy": [
+            640,
+            512,
+            952,
+            1000
+          ],
+          "source_foot_anchor": [
+            780,
+            1000
+          ],
+          "source_hip_anchor": [
+            719,
+            829
+          ],
+          "source_head_anchor": [
+            779,
+            624
+          ],
+          "source_head_top_y": 512,
+          "source_facing": "right",
+          "reflected_x": false,
+          "uniform_source_scale": 0.49382716049382713,
+          "sampled_dimensions": [
+            154,
+            241
+          ],
+          "paste_offset": [
+            27,
+            7
+          ],
+          "sole_baseline_y": 248
+        },
+        "neutral": {
+          "runtime": "assets/2d_v5/npcs/walk_exit/human_courier/neutral-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "33ad1f69d0667a0489e0acbfa2650971420c6aec17e0d43cc63990f024d26b35",
+          "alpha_bounds": [
+            53,
+            8,
+            166,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 72,
+          "all_colors_in_shared_palette": true,
+          "id": "neutral",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            122,
+            169
+          ],
+          "head_anchor": [
+            101,
+            64
+          ],
+          "head_top_y": 8,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "human_customer",
+          "source_cell_xyxy": [
+            1024,
+            512,
+            1536,
+            1024
+          ],
+          "source_crop_xyxy": [
+            1144,
+            512,
+            1373,
+            998
+          ],
+          "source_foot_anchor": [
+            1286,
+            998
+          ],
+          "source_hip_anchor": [
+            1233,
+            838
+          ],
+          "source_head_anchor": [
+            1275,
+            625
+          ],
+          "source_head_top_y": 512,
+          "source_facing": "right",
+          "reflected_x": true,
+          "uniform_source_scale": 0.49382716049382713,
+          "sampled_dimensions": [
+            113,
+            240
+          ],
+          "paste_offset": [
+            53,
+            8
+          ],
+          "sole_baseline_y": 248
+        }
+      },
+      "walk_reference_height": 240,
+      "walk_sequence": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        1
+      ],
+      "walk_phase_weights": [
+        1.15,
+        0.9,
+        0.95,
+        1.15,
+        0.95,
+        0.9
+      ]
+    },
+    "elf_archivist": {
+      "species": "elf",
+      "appearance_id": "elf_archivist",
+      "walk_cycle_distance": 176,
+      "shared_canvas": [
+        192,
+        256
+      ],
+      "foot_anchor": [
+        96,
+        248
+      ],
+      "body_height": 240,
+      "uniform_source_scale": 0.49382716049382713,
+      "walk": [
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/elf_archivist/walk-contact-a-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "5c9d0cb2e827cd8f7c5ab2cc398d9f82c0ddf8e106a12836d65893353b1bc059",
+          "alpha_bounds": [
+            22,
+            11,
+            185,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 60,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-contact-a",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            124,
+            156
+          ],
+          "head_anchor": [
+            94,
+            51
+          ],
+          "head_top_y": 11,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "elf_archivist",
+          "source_cell_xyxy": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "source_crop_xyxy": [
+            130,
+            13,
+            461,
+            493
+          ],
+          "source_foot_anchor": [
+            280,
+            493
+          ],
+          "source_hip_anchor": [
+            336,
+            306
+          ],
+          "source_head_anchor": [
+            275,
+            93
+          ],
+          "source_head_top_y": 13,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.49382716049382713,
+          "sampled_dimensions": [
+            163,
+            237
+          ],
+          "paste_offset": [
+            22,
+            11
+          ],
+          "sole_baseline_y": 248
+        },
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/elf_archivist/walk-down-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "882b65e91249ee06d30552b735e374fc96c8aee71656b7dd37dee22550097dbb",
+          "alpha_bounds": [
+            41,
+            11,
+            178,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 59,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-down",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            126,
+            161
+          ],
+          "head_anchor": [
+            90,
+            51
+          ],
+          "head_top_y": 11,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "elf_archivist",
+          "source_cell_xyxy": [
+            512,
+            0,
+            1024,
+            512
+          ],
+          "source_crop_xyxy": [
+            655,
+            13,
+            933,
+            493
+          ],
+          "source_foot_anchor": [
+            766,
+            493
+          ],
+          "source_hip_anchor": [
+            827,
+            316
+          ],
+          "source_head_anchor": [
+            754,
+            94
+          ],
+          "source_head_top_y": 13,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.49382716049382713,
+          "sampled_dimensions": [
+            137,
+            237
+          ],
+          "paste_offset": [
+            41,
+            11
+          ],
+          "sole_baseline_y": 248
+        },
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/elf_archivist/walk-pass-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "b747736686002ce517db80d611b4123f1b013ce7814f44b309d7547d4124b540",
+          "alpha_bounds": [
+            33,
+            11,
+            168,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 58,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-pass",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            126,
+            156
+          ],
+          "head_anchor": [
+            82,
+            51
+          ],
+          "head_top_y": 11,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "elf_archivist",
+          "source_cell_xyxy": [
+            1024,
+            0,
+            1536,
+            512
+          ],
+          "source_crop_xyxy": [
+            1150,
+            13,
+            1423,
+            493
+          ],
+          "source_foot_anchor": [
+            1278,
+            493
+          ],
+          "source_hip_anchor": [
+            1339,
+            306
+          ],
+          "source_head_anchor": [
+            1249,
+            93
+          ],
+          "source_head_top_y": 13,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.49382716049382713,
+          "sampled_dimensions": [
+            135,
+            237
+          ],
+          "paste_offset": [
+            33,
+            11
+          ],
+          "sole_baseline_y": 248
+        },
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/elf_archivist/walk-contact-b-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "00a56f0d6439d060556d1457b5d391b0dd4ce5007c81938914119eb6ef40b9fd",
+          "alpha_bounds": [
+            17,
+            10,
+            189,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 60,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-contact-b",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            123,
+            154
+          ],
+          "head_anchor": [
+            95,
+            50
+          ],
+          "head_top_y": 10,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "elf_archivist",
+          "source_cell_xyxy": [
+            0,
+            512,
+            512,
+            1024
+          ],
+          "source_crop_xyxy": [
+            115,
+            514,
+            464,
+            996
+          ],
+          "source_foot_anchor": [
+            274,
+            996
+          ],
+          "source_hip_anchor": [
+            329,
+            806
+          ],
+          "source_head_anchor": [
+            272,
+            594
+          ],
+          "source_head_top_y": 514,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.49382716049382713,
+          "sampled_dimensions": [
+            172,
+            238
+          ],
+          "paste_offset": [
+            17,
+            10
+          ],
+          "sole_baseline_y": 248
+        }
+      ],
+      "gestures": {
+        "farewell": {
+          "runtime": "assets/2d_v5/npcs/walk_exit/elf_archivist/farewell-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "073953960167ba43f4c1e4b1a220858c6254e96d1b69b5830ae6c271ed027176",
+          "alpha_bounds": [
+            38,
+            10,
+            167,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 58,
+          "all_colors_in_shared_palette": true,
+          "id": "farewell",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            66,
+            157
+          ],
+          "head_anchor": [
+            88,
+            50
+          ],
+          "head_top_y": 10,
+          "facing": "right",
+          "contains_parcel": false,
+          "source_id": "elf_archivist",
+          "source_cell_xyxy": [
+            512,
+            512,
+            1024,
+            1024
+          ],
+          "source_crop_xyxy": [
+            663,
+            514,
+            924,
+            996
+          ],
+          "source_foot_anchor": [
+            781,
+            996
+          ],
+          "source_hip_anchor": [
+            719,
+            811
+          ],
+          "source_head_anchor": [
+            764,
+            596
+          ],
+          "source_head_top_y": 514,
+          "source_facing": "right",
+          "reflected_x": false,
+          "uniform_source_scale": 0.49382716049382713,
+          "sampled_dimensions": [
+            129,
+            238
+          ],
+          "paste_offset": [
+            38,
+            10
+          ],
+          "sole_baseline_y": 248
+        },
+        "neutral": {
+          "runtime": "assets/2d_v5/npcs/walk_exit/elf_archivist/neutral-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "3bc59755f9e7189f873adde429514b3cd116e597ec7d77db35bce26dc5f0f8fb",
+          "alpha_bounds": [
+            42,
+            8,
+            153,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 62,
+          "all_colors_in_shared_palette": true,
+          "id": "neutral",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            120,
+            165
+          ],
+          "head_anchor": [
+            85,
+            47
+          ],
+          "head_top_y": 8,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "elf_archivist",
+          "source_cell_xyxy": [
+            1024,
+            512,
+            1536,
+            1024
+          ],
+          "source_crop_xyxy": [
+            1174,
+            512,
+            1398,
+            998
+          ],
+          "source_foot_anchor": [
+            1284,
+            998
+          ],
+          "source_hip_anchor": [
+            1332,
+            829
+          ],
+          "source_head_anchor": [
+            1261,
+            591
+          ],
+          "source_head_top_y": 512,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.49382716049382713,
+          "sampled_dimensions": [
+            111,
+            240
+          ],
+          "paste_offset": [
+            42,
+            8
+          ],
+          "sole_baseline_y": 248
+        }
+      },
+      "walk_reference_height": 240,
+      "walk_sequence": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        1
+      ],
+      "walk_phase_weights": [
+        1.15,
+        0.9,
+        0.95,
+        1.15,
+        0.95,
+        0.9
+      ]
+    },
+    "alien_botanist": {
+      "species": "alien",
+      "appearance_id": "alien_botanist",
+      "walk_cycle_distance": 160,
+      "shared_canvas": [
+        192,
+        256
+      ],
+      "foot_anchor": [
+        96,
+        248
+      ],
+      "body_height": 240,
+      "uniform_source_scale": 0.4979253112033195,
+      "walk": [
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/alien_botanist/walk-contact-a-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "5e6e217f343d3cfa22b0b209837d0594973fe5dc675257c2049b2bfce8b2874b",
+          "alpha_bounds": [
+            16,
+            9,
+            183,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 92,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-contact-a",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            121,
+            159
+          ],
+          "head_anchor": [
+            92,
+            71
+          ],
+          "head_top_y": 9,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "alien_botanist",
+          "source_cell_xyxy": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "source_crop_xyxy": [
+            93,
+            18,
+            429,
+            497
+          ],
+          "source_foot_anchor": [
+            254,
+            497
+          ],
+          "source_hip_anchor": [
+            303,
+            320
+          ],
+          "source_head_anchor": [
+            246,
+            143
+          ],
+          "source_head_top_y": 18,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.4979253112033195,
+          "sampled_dimensions": [
+            167,
+            239
+          ],
+          "paste_offset": [
+            16,
+            9
+          ],
+          "sole_baseline_y": 248
+        },
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/alien_botanist/walk-down-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "e6f8eaab0593077c2628b6d85f80fb41f452bd45214e911395e245bfb851be9e",
+          "alpha_bounds": [
+            29,
+            14,
+            185,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 90,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-down",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            121,
+            163
+          ],
+          "head_anchor": [
+            88,
+            74
+          ],
+          "head_top_y": 14,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "alien_botanist",
+          "source_cell_xyxy": [
+            512,
+            0,
+            1024,
+            512
+          ],
+          "source_crop_xyxy": [
+            616,
+            26,
+            929,
+            496
+          ],
+          "source_foot_anchor": [
+            750,
+            496
+          ],
+          "source_hip_anchor": [
+            800,
+            325
+          ],
+          "source_head_anchor": [
+            735,
+            147
+          ],
+          "source_head_top_y": 26,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.4979253112033195,
+          "sampled_dimensions": [
+            156,
+            234
+          ],
+          "paste_offset": [
+            29,
+            14
+          ],
+          "sole_baseline_y": 248
+        },
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/alien_botanist/walk-pass-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "1d2d40e49023cd13f833328901cfb611f3cc5a4ee009f5d39f274fb2b49a01a2",
+          "alpha_bounds": [
+            26,
+            5,
+            174,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 94,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-pass",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            124,
+            155
+          ],
+          "head_anchor": [
+            84,
+            67
+          ],
+          "head_top_y": 5,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "alien_botanist",
+          "source_cell_xyxy": [
+            1024,
+            0,
+            1536,
+            512
+          ],
+          "source_crop_xyxy": [
+            1125,
+            18,
+            1422,
+            507
+          ],
+          "source_foot_anchor": [
+            1265,
+            507
+          ],
+          "source_hip_anchor": [
+            1321,
+            319
+          ],
+          "source_head_anchor": [
+            1241,
+            143
+          ],
+          "source_head_top_y": 18,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.4979253112033195,
+          "sampled_dimensions": [
+            148,
+            243
+          ],
+          "paste_offset": [
+            26,
+            5
+          ],
+          "sole_baseline_y": 248
+        },
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/alien_botanist/walk-contact-b-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "431c503b947b25b24504269cf342c8c52c13303781b87ce370a68d7cc593b582",
+          "alpha_bounds": [
+            22,
+            9,
+            176,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 94,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-contact-b",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            122,
+            159
+          ],
+          "head_anchor": [
+            90,
+            71
+          ],
+          "head_top_y": 9,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "alien_botanist",
+          "source_cell_xyxy": [
+            0,
+            512,
+            512,
+            1024
+          ],
+          "source_crop_xyxy": [
+            105,
+            518,
+            415,
+            998
+          ],
+          "source_foot_anchor": [
+            254,
+            998
+          ],
+          "source_hip_anchor": [
+            305,
+            819
+          ],
+          "source_head_anchor": [
+            241,
+            643
+          ],
+          "source_head_top_y": 518,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.4979253112033195,
+          "sampled_dimensions": [
+            154,
+            239
+          ],
+          "paste_offset": [
+            22,
+            9
+          ],
+          "sole_baseline_y": 248
+        }
+      ],
+      "gestures": {
+        "farewell": {
+          "runtime": "assets/2d_v5/npcs/walk_exit/alien_botanist/farewell-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "2aeda66ac2a297e01abe0c12138524c03cb2b037dcfaf934385a1aa50ff3e3f8",
+          "alpha_bounds": [
+            14,
+            9,
+            164,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 91,
+          "all_colors_in_shared_palette": true,
+          "id": "farewell",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            75,
+            155
+          ],
+          "head_anchor": [
+            110,
+            75
+          ],
+          "head_top_y": 9,
+          "facing": "right",
+          "contains_parcel": false,
+          "source_id": "alien_botanist",
+          "source_cell_xyxy": [
+            512,
+            512,
+            1024,
+            1024
+          ],
+          "source_crop_xyxy": [
+            651,
+            518,
+            953,
+            998
+          ],
+          "source_foot_anchor": [
+            788,
+            998
+          ],
+          "source_hip_anchor": [
+            831,
+            811
+          ],
+          "source_head_anchor": [
+            760,
+            650
+          ],
+          "source_head_top_y": 518,
+          "source_facing": "left",
+          "reflected_x": true,
+          "uniform_source_scale": 0.4979253112033195,
+          "sampled_dimensions": [
+            150,
+            239
+          ],
+          "paste_offset": [
+            14,
+            9
+          ],
+          "sole_baseline_y": 248
+        },
+        "neutral": {
+          "runtime": "assets/2d_v5/npcs/walk_exit/alien_botanist/neutral-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "30a199d00cf9a1f0aad151a9044e894a260dad36baca8e9784fb63c58153a8a3",
+          "alpha_bounds": [
+            37,
+            8,
+            155,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 93,
+          "all_colors_in_shared_palette": true,
+          "id": "neutral",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            123,
+            162
+          ],
+          "head_anchor": [
+            108,
+            72
+          ],
+          "head_top_y": 8,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "alien_botanist",
+          "source_cell_xyxy": [
+            1024,
+            512,
+            1536,
+            1024
+          ],
+          "source_crop_xyxy": [
+            1167,
+            521,
+            1403,
+            1003
+          ],
+          "source_foot_anchor": [
+            1284,
+            1003
+          ],
+          "source_hip_anchor": [
+            1231,
+            830
+          ],
+          "source_head_anchor": [
+            1261,
+            650
+          ],
+          "source_head_top_y": 521,
+          "source_facing": "right",
+          "reflected_x": true,
+          "uniform_source_scale": 0.4979253112033195,
+          "sampled_dimensions": [
+            118,
+            240
+          ],
+          "paste_offset": [
+            37,
+            8
+          ],
+          "sole_baseline_y": 248
+        }
+      },
+      "walk_reference_height": 240,
+      "walk_sequence": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        1
+      ],
+      "walk_phase_weights": [
+        1.15,
+        0.9,
+        0.95,
+        1.15,
+        0.95,
+        0.9
+      ]
+    },
+    "robot_machinist": {
+      "species": "robot",
+      "appearance_id": "robot_machinist",
+      "walk_cycle_distance": 148,
+      "shared_canvas": [
+        192,
+        256
+      ],
+      "foot_anchor": [
+        96,
+        248
+      ],
+      "body_height": 240,
+      "uniform_source_scale": 0.4948453608247423,
+      "walk": [
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/robot_machinist/walk-contact-a-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "85fd910c8a04fdd7e560a07cadb8e018e80c0d7e1e4391dc91274b8ac45a9f41",
+          "alpha_bounds": [
+            8,
+            12,
+            185,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 80,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-contact-a",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            124,
+            157
+          ],
+          "head_anchor": [
+            94,
+            56
+          ],
+          "head_top_y": 12,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "robot_machinist",
+          "source_cell_xyxy": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "source_crop_xyxy": [
+            86,
+            17,
+            443,
+            494
+          ],
+          "source_foot_anchor": [
+            264,
+            494
+          ],
+          "source_hip_anchor": [
+            321,
+            311
+          ],
+          "source_head_anchor": [
+            259,
+            106
+          ],
+          "source_head_top_y": 17,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.4948453608247423,
+          "sampled_dimensions": [
+            177,
+            236
+          ],
+          "paste_offset": [
+            8,
+            12
+          ],
+          "sole_baseline_y": 248
+        },
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/robot_machinist/walk-down-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "b9f9638a1a3a406cee18543e01ac80f3dd437523b7e71edb46308a63cb54c23d",
+          "alpha_bounds": [
+            19,
+            11,
+            174,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 82,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-down",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            125,
+            158
+          ],
+          "head_anchor": [
+            95,
+            56
+          ],
+          "head_top_y": 11,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "robot_machinist",
+          "source_cell_xyxy": [
+            512,
+            0,
+            1024,
+            512
+          ],
+          "source_crop_xyxy": [
+            596,
+            16,
+            910,
+            494
+          ],
+          "source_foot_anchor": [
+            752,
+            494
+          ],
+          "source_hip_anchor": [
+            810,
+            313
+          ],
+          "source_head_anchor": [
+            750,
+            106
+          ],
+          "source_head_top_y": 16,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.4948453608247423,
+          "sampled_dimensions": [
+            155,
+            237
+          ],
+          "paste_offset": [
+            19,
+            11
+          ],
+          "sole_baseline_y": 248
+        },
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/robot_machinist/walk-pass-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "14b286e386b5c0d3212b98788a5db7db44a574bb183bee451d9447c9ef934f78",
+          "alpha_bounds": [
+            20,
+            12,
+            185,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 80,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-pass",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            127,
+            155
+          ],
+          "head_anchor": [
+            97,
+            57
+          ],
+          "head_top_y": 12,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "robot_machinist",
+          "source_cell_xyxy": [
+            1024,
+            0,
+            1536,
+            512
+          ],
+          "source_crop_xyxy": [
+            1111,
+            17,
+            1444,
+            494
+          ],
+          "source_foot_anchor": [
+            1265,
+            494
+          ],
+          "source_hip_anchor": [
+            1327,
+            306
+          ],
+          "source_head_anchor": [
+            1266,
+            107
+          ],
+          "source_head_top_y": 17,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.4948453608247423,
+          "sampled_dimensions": [
+            165,
+            236
+          ],
+          "paste_offset": [
+            20,
+            12
+          ],
+          "sole_baseline_y": 248
+        },
+        {
+          "runtime": "assets/2d_v5/npcs/walk_exit/robot_machinist/walk-contact-b-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "a8e38bc8a7a3409b0ee0f0d1663ce865d38919384bc132e2612aa80a45d5e2eb",
+          "alpha_bounds": [
+            15,
+            12,
+            185,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 78,
+          "all_colors_in_shared_palette": true,
+          "id": "walk-contact-b",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            127,
+            155
+          ],
+          "head_anchor": [
+            92,
+            56
+          ],
+          "head_top_y": 12,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "robot_machinist",
+          "source_cell_xyxy": [
+            0,
+            512,
+            512,
+            1024
+          ],
+          "source_crop_xyxy": [
+            95,
+            522,
+            438,
+            999
+          ],
+          "source_foot_anchor": [
+            258,
+            999
+          ],
+          "source_hip_anchor": [
+            321,
+            811
+          ],
+          "source_head_anchor": [
+            250,
+            610
+          ],
+          "source_head_top_y": 522,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.4948453608247423,
+          "sampled_dimensions": [
+            170,
+            236
+          ],
+          "paste_offset": [
+            15,
+            12
+          ],
+          "sole_baseline_y": 248
+        }
+      ],
+      "gestures": {
+        "farewell": {
+          "runtime": "assets/2d_v5/npcs/walk_exit/robot_machinist/farewell-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "71363c485da0b7a3fad98d374c2a0df78430e0c7637039267c54d0d8f4ad5959",
+          "alpha_bounds": [
+            19,
+            7,
+            189,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 83,
+          "all_colors_in_shared_palette": true,
+          "id": "farewell",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            62,
+            154
+          ],
+          "head_anchor": [
+            90,
+            54
+          ],
+          "head_top_y": 7,
+          "facing": "right",
+          "contains_parcel": false,
+          "source_id": "robot_machinist",
+          "source_cell_xyxy": [
+            512,
+            512,
+            1024,
+            1024
+          ],
+          "source_crop_xyxy": [
+            625,
+            519,
+            969,
+            1006
+          ],
+          "source_foot_anchor": [
+            780,
+            1006
+          ],
+          "source_hip_anchor": [
+            711,
+            817
+          ],
+          "source_head_anchor": [
+            769,
+            613
+          ],
+          "source_head_top_y": 519,
+          "source_facing": "right",
+          "reflected_x": false,
+          "uniform_source_scale": 0.4948453608247423,
+          "sampled_dimensions": [
+            170,
+            241
+          ],
+          "paste_offset": [
+            19,
+            7
+          ],
+          "sole_baseline_y": 248
+        },
+        "neutral": {
+          "runtime": "assets/2d_v5/npcs/walk_exit/robot_machinist/neutral-pixel.png",
+          "dimensions": [
+            192,
+            256
+          ],
+          "sha256": "7905142c0f0d5828234aaf22211ff019c2a973023290cff62f5062af7f4280d2",
+          "alpha_bounds": [
+            34,
+            8,
+            152,
+            248
+          ],
+          "alpha_values": [
+            0,
+            255
+          ],
+          "palette_used": 80,
+          "all_colors_in_shared_palette": true,
+          "id": "neutral",
+          "foot_anchor": [
+            96,
+            248
+          ],
+          "body_height": 240,
+          "hip_anchor": [
+            124,
+            163
+          ],
+          "head_anchor": [
+            92,
+            53
+          ],
+          "head_top_y": 8,
+          "facing": "left",
+          "contains_parcel": false,
+          "source_id": "robot_machinist",
+          "source_cell_xyxy": [
+            1024,
+            512,
+            1536,
+            1024
+          ],
+          "source_crop_xyxy": [
+            1149,
+            521,
+            1387,
+            1006
+          ],
+          "source_foot_anchor": [
+            1275,
+            1006
+          ],
+          "source_hip_anchor": [
+            1330,
+            835
+          ],
+          "source_head_anchor": [
+            1267,
+            612
+          ],
+          "source_head_top_y": 521,
+          "source_facing": "left",
+          "reflected_x": false,
+          "uniform_source_scale": 0.4948453608247423,
+          "sampled_dimensions": [
+            118,
+            240
+          ],
+          "paste_offset": [
+            34,
+            8
+          ],
+          "sole_baseline_y": 248
+        }
+      },
+      "walk_reference_height": 240,
+      "walk_sequence": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        1
+      ],
+      "walk_phase_weights": [
+        1.15,
+        0.9,
+        0.95,
+        1.15,
+        0.95,
+        0.9
+      ]
+    }
+  },
+  "cadence_policy": "Six distance-driven beats reuse the four declared drawings. Contact B returns through passing/down before contact A; repeated raster beats are not new generated frames. Ground stride scales with rendered anatomical height."
+}

@@ -1,0 +1,67 @@
+{
+  "direction": "Original dimensional Q cast for approved pixel-cel workshop; isolated studies only",
+  "reference_pixels": [
+    1672,
+    941
+  ],
+  "runtime_integration": false,
+  "spine_status": "Not exported or bound. Actual editor/license not available. Named Blender pivots are not Spine.",
+  "coordinate_contract": {
+    "up": "+Y",
+    "front": "+Z",
+    "floor": 0,
+    "height": 2.4,
+    "counter_top": 1.3,
+    "clerk_dais_height": 0.25
+  },
+  "palette": {
+    "V4_InkNavy": "#192438",
+    "V4_SkinPeach": "#f7c7a4",
+    "V4_Cream": "#fff1d6",
+    "V4_HairBlue": "#1668b7",
+    "V4_HairCyan": "#38b7df",
+    "V4_IrisCyan": "#48dcd5",
+    "V4_CourierYellow": "#ffc637",
+    "V4_RustOchre": "#b77640",
+    "V4_HairBrown": "#59413a",
+    "V4_Coral": "#f36f74",
+    "V4_Charcoal": "#394455",
+    "V4_IrisAmber": "#bd7837"
+  },
+  "actors": [
+    {
+      "filename": "clerk.glb",
+      "height": 2.4,
+      "mesh_nodes": 6,
+      "triangles": 15908,
+      "palette_materials": 8,
+      "material_surfaces": 19,
+      "named_pivots": [
+        "BodyPivot",
+        "HeadPivot",
+        "LeftArmPivot",
+        "RightArmPivot",
+        "LeftLegPivot",
+        "RightLegPivot"
+      ],
+      "authoring_scale": 0.9520909989865566
+    },
+    {
+      "filename": "customer.glb",
+      "height": 2.4,
+      "mesh_nodes": 6,
+      "triangles": 15684,
+      "palette_materials": 7,
+      "material_surfaces": 17,
+      "named_pivots": [
+        "BodyPivot",
+        "HeadPivot",
+        "LeftArmPivot",
+        "RightArmPivot",
+        "LeftLegPivot",
+        "RightLegPivot"
+      ],
+      "authoring_scale": 0.980392175195585
+    }
+  ]
+}

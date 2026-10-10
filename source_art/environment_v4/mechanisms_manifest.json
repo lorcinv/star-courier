@@ -1,0 +1,130 @@
+{
+  "purpose": "decorative workshop mechanisms; no colliders, fake craft, or automated motion",
+  "palette_srgb_hex": {
+    "V4_Ink": "101C34",
+    "V4_FrameNavy": "21375A",
+    "V4_Cobalt": "31527D",
+    "V4_EdgeBlue": "536F91",
+    "V4_Gold": "E8AF30",
+    "V4_SunGold": "FFCF4F",
+    "V4_LiftWarmMetal": "B9AF95",
+    "V4_DaisTread": "51637B"
+  },
+  "assembly_lift": {
+    "file": "assets/environment_v4/assembly_lift.glb",
+    "bytes": 54676,
+    "sha256": "03158feed5868cb5d59100377dec7d8c086cba8014181a5bad3b7cdbc4ee6cf2",
+    "nodes": 5,
+    "surfaces": 11,
+    "triangles": 852,
+    "node_transforms": {
+      "BaseHousing": {},
+      "PistonRod": {
+        "translation": [
+          0,
+          0.30000001192092896,
+          0
+        ],
+        "scale": [
+          1,
+          1.0199999809265137,
+          1
+        ]
+      },
+      "TopSaddleMesh": {},
+      "TopSaddle": {
+        "translation": [
+          0,
+          1.4500000476837158,
+          0
+        ]
+      },
+      "AssemblyLift": {}
+    },
+    "textures": 0,
+    "default_pose_godot_bounds": {
+      "min": [
+        -0.4300000071525574,
+        0,
+        -0.4300000071525574
+      ],
+      "max": [
+        0.4300000071525574,
+        1.4499999950639904,
+        0.45750001072883606
+      ]
+    },
+    "piston_mesh_local_bounds": {
+      "min": [
+        -0.10000000149011612,
+        -2.9802322387695312e-08,
+        -0.10999999940395355
+      ],
+      "max": [
+        0.10350000113248825,
+        1,
+        0.10999999940395355
+      ]
+    }
+  },
+  "clerk_dais": {
+    "file": "assets/environment_v4/clerk_dais.glb",
+    "bytes": 15512,
+    "sha256": "9f615a9deaa7823258bde1c9f47d0262adfb8fcf2cc50c1b3c70b6e732e57b14",
+    "nodes": 2,
+    "surfaces": 4,
+    "triangles": 220,
+    "node_transforms": {
+      "DaisBody": {},
+      "ClerkDais": {}
+    },
+    "textures": 0,
+    "default_pose_godot_bounds": {
+      "min": [
+        -0.550000011920929,
+        0,
+        -0.42500001192092896
+      ],
+      "max": [
+        0.550000011920929,
+        0.25,
+        0.42500001192092896
+      ]
+    }
+  },
+  "contract": {
+    "coordinate_system": "Godot +Y up / +Z toward camera",
+    "instantiate_lift_count": 2,
+    "lift_root": "floor contact at Y0 and X/Z centered",
+    "base_footprint": [
+      0.86,
+      0.86
+    ],
+    "base_fixed_top_y": 0.6,
+    "piston_node": "PistonRod",
+    "piston_origin_y": 0.3,
+    "piston_mesh_height": 1.0,
+    "piston_default_scale_y": 1.02,
+    "saddle_node": "TopSaddle",
+    "saddle_contact_plane_local_y": 0,
+    "saddle_default_position_y": 1.45,
+    "saddle_size": [
+      0.82,
+      0.25,
+      0.816
+    ],
+    "recommended_minimum_contact_height": 0.66,
+    "recommended_maximum_contact_height": 3.1,
+    "runtime_update": "TopSaddle.position.y = contact_y; PistonRod.scale.y = max(0.02, contact_y - 0.43)",
+    "root_runtime_position_y": 0.46,
+    "dais_size": [
+      1.1,
+      0.25,
+      0.85
+    ],
+    "dais_top_y": 0.25,
+    "cast_shadows": true,
+    "physics_collision": false,
+    "visibility": "hide lifts before launch; hide or retract when cell geometry reaches their working envelope"
+  }
+}

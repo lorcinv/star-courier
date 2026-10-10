@@ -1,0 +1,64 @@
+{
+  "result": "PASS",
+  "revision": "CourierYellow #ffc431 to #eab32c only",
+  "geometry_binary_byte_identical": true,
+  "cream_and_ochre_unchanged": true,
+  "assets": [
+    {
+      "asset": "armor.glb",
+      "binary_geometry_identical": true,
+      "node_transform_socket_and_mesh_metadata_identical": true,
+      "only_material_changed": "V4_CourierYellow",
+      "before_srgb": "#ffc431",
+      "after_srgb": "#eab32c"
+    },
+    {
+      "asset": "beam.glb",
+      "binary_geometry_identical": true,
+      "node_transform_socket_and_mesh_metadata_identical": true,
+      "only_material_changed": "V4_CourierYellow",
+      "before_srgb": "#ffc431",
+      "after_srgb": "#eab32c"
+    },
+    {
+      "asset": "cargo_crate.glb",
+      "binary_geometry_identical": true,
+      "node_transform_socket_and_mesh_metadata_identical": true,
+      "only_material_changed": "V4_CourierYellow",
+      "before_srgb": "#ffc431",
+      "after_srgb": "#eab32c"
+    },
+    {
+      "asset": "cell.glb",
+      "binary_geometry_identical": true,
+      "node_transform_socket_and_mesh_metadata_identical": true,
+      "only_material_changed": "V4_CourierYellow",
+      "before_srgb": "#ffc431",
+      "after_srgb": "#eab32c"
+    },
+    {
+      "asset": "separator.glb",
+      "binary_geometry_identical": true,
+      "node_transform_socket_and_mesh_metadata_identical": true,
+      "only_material_changed": "V4_CourierYellow",
+      "before_srgb": "#ffc431",
+      "after_srgb": "#eab32c"
+    },
+    {
+      "asset": "spring.glb",
+      "binary_geometry_identical": true,
+      "node_transform_socket_and_mesh_metadata_identical": true,
+      "only_material_changed": "V4_CourierYellow",
+      "before_srgb": "#ffc431",
+      "after_srgb": "#eab32c"
+    },
+    {
+      "asset": "thruster.glb",
+      "binary_geometry_identical": true,
+      "node_transform_socket_and_mesh_metadata_identical": true,
+      "only_material_changed": "V4_CourierYellow",
+      "before_srgb": "#ffc431",
+      "after_srgb": "#eab32c"
+    }
+  ]
+}

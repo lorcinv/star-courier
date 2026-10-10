@@ -1,0 +1,216 @@
+{
+  "status": "selective textured proof; no widespread material replacement",
+  "atlas_source": "source_art/environment_v4/surface_atlas/hero-surface-atlas-01.png",
+  "atlas_runtime": "assets/environment_v4/textures/hero-surface-atlas-01.png",
+  "atlas_dimensions": [
+    1254,
+    1254
+  ],
+  "atlas_sha256": "23b997d3feb765fd4a1961fe065d3ec3f01d27844749d1b20f5f1f157f36b360",
+  "generation_tool": "built-in image_gen",
+  "original_source": "source_art/environment_v4/shop_editable.blend",
+  "original_source_sha256": "03cdcbd42920a4b1ba1737feb4fe39f0c7c81909c5b20a2f71cb9ec124617067",
+  "untextured_glb_backup": "source_art/environment_v4/surface_atlas/shop_cutaway_untextured.glb",
+  "untextured_glb_sha256": "13498972f526b98b32322f34e3c938d88b8187292ea0dae173a5cec14b3524ce",
+  "textured_source": "source_art/environment_v4/surface_atlas/shop_textured_editable.blend",
+  "review_export": "source_art/environment_v4/surface_atlas/shop_cutaway_textured.glb",
+  "textured_export_sha256": "72ffa83a2ef68c0698fe2305238b1043aea7cc713d2954ab30eb12dd9fa5ae55",
+  "material": "V4_HeroSurfaceAtlas01",
+  "albedo_multiplier": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "texture_filter": "nearest",
+  "texture_repeat": false,
+  "emissive": false,
+  "applied_source_objects": [
+    {
+      "object": "Tool drawer -1.71 0",
+      "front_polygons": 1,
+      "pixel_rect_top_origin": [
+        8,
+        8,
+        617,
+        148
+      ],
+      "purpose": "drawer_01: quiet navy front"
+    },
+    {
+      "object": "Tool drawer -1.71 2",
+      "front_polygons": 1,
+      "pixel_rect_top_origin": [
+        8,
+        166,
+        617,
+        302
+      ],
+      "purpose": "drawer_02: quiet cobalt front"
+    },
+    {
+      "object": "Tool drawer 3.84 1",
+      "front_polygons": 1,
+      "pixel_rect_top_origin": [
+        8,
+        321,
+        617,
+        461
+      ],
+      "purpose": "drawer_03: navy front"
+    },
+    {
+      "object": "Counter outgoing parcel corrugated body",
+      "front_polygons": 1,
+      "pixel_rect_top_origin": [
+        796,
+        145,
+        928,
+        293
+      ],
+      "purpose": "kraft_a: quiet body with sparse lower edge wear"
+    },
+    {
+      "object": "Counter outgoing parcel shipping label",
+      "front_polygons": 1,
+      "pixel_rect_top_origin": [
+        802,
+        50,
+        908,
+        124
+      ],
+      "purpose": "kraft_a: existing raised A2 postage label"
+    },
+    {
+      "object": "Counter outgoing parcel front tape",
+      "front_polygons": 1,
+      "pixel_rect_top_origin": [
+        764,
+        12,
+        784,
+        63
+      ],
+      "purpose": "kraft_a: quiet tape on existing tape geometry"
+    },
+    {
+      "object": "Shelf parcel 1.995 0 corrugated body",
+      "front_polygons": 1,
+      "pixel_rect_top_origin": [
+        956,
+        444,
+        1117,
+        605
+      ],
+      "purpose": "kraft_d: quiet dark kraft body"
+    },
+    {
+      "object": "Shelf parcel 1.995 0 shipping label",
+      "front_polygons": 1,
+      "pixel_rect_top_origin": [
+        991,
+        355,
+        1088,
+        424
+      ],
+      "purpose": "kraft_d: existing raised A2 label"
+    },
+    {
+      "object": "Shelf parcel 1.995 0 front tape",
+      "front_polygons": 1,
+      "pixel_rect_top_origin": [
+        764,
+        12,
+        784,
+        63
+      ],
+      "purpose": "quiet tape on existing tape geometry"
+    },
+    {
+      "object": "Shelf parcel 3.355 1 corrugated body",
+      "front_polygons": 1,
+      "pixel_rect_top_origin": [
+        952,
+        8,
+        1243,
+        298
+      ],
+      "purpose": "kraft_b: single printed03 label on previously unlabelled face"
+    },
+    {
+      "object": "Shelf parcel 3.355 1 front tape",
+      "front_polygons": 1,
+      "pixel_rect_top_origin": [
+        1078,
+        12,
+        1100,
+        41
+      ],
+      "purpose": "kraft_b: tape on existing tape geometry"
+    }
+  ],
+  "textured_front_polygons": 11,
+  "source_geometry_unchanged": true,
+  "geometry_evidence": {
+    "evaluated_vertex_position_sha256_1e5": "12ed83560d6ba74589d929be6d74b657e6047ecbffbfe7823891159c25ae5776",
+    "evaluated_vertices": 20580,
+    "triangles": 37412,
+    "source_meshes": 928,
+    "world_bounds_godot": {
+      "min": [
+        -13.725000381469727,
+        -3.8650002479553223,
+        -3.5
+      ],
+      "max": [
+        13.425000190734863,
+        12.859999656677246,
+        3.0864999294281006
+      ]
+    }
+  },
+  "export_surfaces": 31,
+  "added_surfaces": 1,
+  "textured_surfaces": 1,
+  "export_triangles": 37412,
+  "identity_export_nodes": true,
+  "export_images": 1,
+  "existing_other_asset_sha256": {
+    "orbital_city.glb": "f4d04a13ed584802fb209446cd55ba206bd9f50ac699e43bb9f744677af3e785",
+    "flight_city.glb": "cc458a3bd4e1d80bf5bd73537e3b8c48a19d0971c9774b9e9414ccc6d68c2124",
+    "assembly_lift.glb": "03158feed5868cb5d59100377dec7d8c086cba8014181a5bad3b7cdbc4ee6cf2",
+    "launch_pier.glb": "a3ef1929226af9f6ea5960d90381d5c9b7d29ad3bb64b018cfa8dc0f6b287c20",
+    "sky_backdrop.glb": "48b599482f6eb9bd3a35d197914cc241f4ece7caa8141c288407c60a91e71f44",
+    "launch_rail.glb": "36d8b2786eec6ebc952c97053158c28aaefce88473ef388b6ffed6858e329a42",
+    "clerk_dais.glb": "9f615a9deaa7823258bde1c9f47d0262adfb8fcf2cc50c1b3c70b6e732e57b14"
+  },
+  "inherited_unchanged_clearance": {
+    "method": "conservative per-source-object world AABBs; excludes merged export duplicates",
+    "tested_source_meshes": 928,
+    "module_envelope_godot": {
+      "min": [
+        -3.5,
+        0.5,
+        0.0
+      ],
+      "max": [
+        5.5,
+        5.5,
+        1.0
+      ]
+    },
+    "overlapping_objects": [],
+    "passed": true
+  },
+  "runtime_export_closed": true,
+  "runtime_export": "assets/environment_v4/shop_cutaway.glb",
+  "packed_preview_fresh_reopen_verified": true,
+  "proofs": [
+    "hero-drawer-proof-01.png",
+    "hero-parcel-proof-01.png"
+  ],
+  "proof_sha256": {
+    "hero-drawer-proof-01.png": "62ec13dac7d4800a29e2c06e9aa70c2dab37581dd64958219829fc54cefa1722",
+    "hero-parcel-proof-01.png": "8a4f23b484ec081ee51b5c6359eb0b3d1c7e3ef49defd2d2a2aafde7121aa5bb"
+  },
+  "embedded_atlas_pixels_identical": true
+}

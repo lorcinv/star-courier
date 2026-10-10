@@ -1,0 +1,20 @@
+{
+  "generator": "built-in image_gen",
+  "generated_at_utc": "2026-10-10T09:06:32Z",
+  "references": [
+    "source_art/art_direction_v4/pixel-cel-shop-reference-03.png",
+    "source_art/2d_v5/generated/shop-shell.png"
+  ],
+  "items": [
+    {
+      "id": "counter",
+      "source": "/workspace/scratch/445d2872ecf6/generated_images/exec-cc00c24c-26b5-432b-b362-111a3c11e0fe.png",
+      "prompt": "Use case: background-extraction. Asset type: single transparent 2D pixel-art foreground counter prop for a side-view game. Image 1 is the approved concept; image 2 is the reconstructed room shell that will receive this prop. Reconstruct ONLY the front-left shop counter seen in image 1, with its broad warm brown rim, long dark navy/slate front panels, understated worn tan rectangular label patches, a small upright dark register/terminal toward its right end with cyan screen and orange keys, and one cream parcel with navy ringed-planet stamp on the counter near the left-middle. Preserve the reference's handsome substantial simple painted surfaces, warm sunlight from upper right, deep indigo shadow planes, chunky crisp stair-step pixel edges and restrained pixel details. The counter is an independent foreground layer: include complete counter from its wood top down to its plinth/feet and complete left and right ends. Horizontal shallow three-quarter side view consistent with the side-scrolling room, approximately 3.3:1 width-to-height. Render it large and centered with transparent padding all around; background must be real alpha transparency, no colored backdrop. No humans, no robot, no ship, no shelves, no plants, no walls, no floor, no railings, no floating UI, no caption or text, no soft shadow extending outside counter. Do not paste any room fragments around it. NOT a 3D render, not vector art, not smooth anti-aliased concept illustration: this is deliberate clean large-mass 2D pixel sprite art matching both reference images."
+    },
+    {
+      "id": "launch-cradle",
+      "source": "/workspace/scratch/445d2872ecf6/generated_images/exec-e7d5166f-3cd3-4ff8-a25e-d352b3567637.png",
+      "prompt": "Use case: background-extraction. Asset type: single transparent 2D pixel-art launch cradle prop for a side-view game. Image 1 is the approved concept. Image 2 is its reconstructed room shell. Reconstruct ONLY the empty fixed launch cradle located in the far right open-air bay of image 1. Include its low dark-navy industrial support frame, four upturned yellow-gold clamp/fork arms, horizontal transverse rails, central short ochre launch ramp extending toward the viewer with a pale simple arrow-like stripe, and squat feet. It is an open low mechanical cradle that receives a small courier craft above it. Match the reference exactly in language: large clean gold painted masses, navy-blue shadow planes, cream sunlight from upper right, readable chunky stair-step pixel silhouette, a restrained number of bolts and mechanical details. View is the same shallow three-quarter side-view as the room, horizontal wide object approximately 2.7:1 width-to-height. Complete isolated prop centered large on a genuinely transparent alpha background, with padding on every side. No ship, no robot, no people, no floor or sidewalk, no ground plane, no sky, no walls, no rear safety fence or yellow railings, no extra objects. No caption or text. No soft shadow beyond prop. Pure 2D pixel illustration, not 3D render, not vector art, no tiny noisy greebles. Preserve reference lighting and palette so the sprite will composite directly over image 2."
+    }
+  ]
+}

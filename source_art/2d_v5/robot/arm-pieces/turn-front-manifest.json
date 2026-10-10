@@ -1,0 +1,27 @@
+{
+  "source": "source_art/2d_v5/robot/empty-hands/front-neutral-original.png",
+  "source_sha256": "a01cf5ca2f12f234ddc6bc50e0cf8e77fd50efa18ae3200607b33175bdfc0584",
+  "method": "Whole-body uniform nearest resampling, shared96 palette, binary alpha128; middle wheel/floor registration. No face/body deformation, repainting, or Spine.",
+  "source_roi": [
+    320,
+    348,
+    934,
+    1030
+  ],
+  "source_body_foot_anchor": [
+    627,
+    1026
+  ],
+  "visible_body_height": 674,
+  "target_body_height": 84,
+  "uniform_scale": 0.12462908011869436,
+  "runtime_anchor": [
+    80,
+    136
+  ],
+  "runtime_size": [
+    160,
+    144
+  ],
+  "runtime_sha256": "a8baa7286c2ef651a35d18d88f058f65a4266815163984dd7b43402b2f9c3b96"
+}

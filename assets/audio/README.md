@@ -1,0 +1,1 @@
+Original Star Courier audio. Music mixed/rendered with REAPER 7.82; OGG encoding with FFmpeg. Five SFX synthesized directly. No sampled third-party media. CC0 1.0 to the extent rights apply. Editable projects, stems, masters, provenance and validation: source_art/audio/README.md.

@@ -1,0 +1,24 @@
+{
+  "name": "Courier reference 16",
+  "source_sha256": "bd9388bd6cb6784572cabd0eca876bb6fce9a6d7c538438128d22d8367242cae",
+  "colors": [
+    "#080f26",
+    "#0c1831",
+    "#16213e",
+    "#2c2c3c",
+    "#18325e",
+    "#403f58",
+    "#2f508d",
+    "#694f51",
+    "#806e75",
+    "#ab8371",
+    "#76a2dc",
+    "#df9c66",
+    "#8cd3f9",
+    "#eec6aa",
+    "#f9cf67",
+    "#fbf3df"
+  ],
+  "dither": "none",
+  "method": "weighted Oklab; source-pixel representatives; 12 measured accent anchors for 64/96; fixed across frames"
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "repo": "Hugo-Dz/spritefusion-pixel-snapper",
+    "path": "src/lib.rs",
+    "blob_sha": "92a0dec453fa90e11a85a5495ce9319efafd06cc",
+    "url": "https://github.com/Hugo-Dz/spritefusion-pixel-snapper/blob/main/src/lib.rs"
+  },
+  {
+    "repo": "kenyonxu/pixel-game-kit",
+    "path": "src/lib.rs",
+    "blob_sha": "94254ead673b8ab8403ef9a2d9d22992baf0729f",
+    "url": "https://github.com/kenyonxu/pixel-game-kit/blob/main/src/lib.rs"
+  },
+  {
+    "repo": "kenyonxu/pixel-game-kit",
+    "path": "src/detect/mod.rs",
+    "blob_sha": "16bd05a2b8c817c73281ef7fb9ed4a784c8f062e",
+    "url": "https://github.com/kenyonxu/pixel-game-kit/blob/main/src/detect/mod.rs"
+  },
+  {
+    "repo": "kenyonxu/pixel-game-kit",
+    "path": "src/detect/tiled.rs",
+    "blob_sha": "64ac821fd637c006b8f690560b85c9e55c35280b",
+    "url": "https://github.com/kenyonxu/pixel-game-kit/blob/main/src/detect/tiled.rs"
+  },
+  {
+    "repo": "kenyonxu/pixel-game-kit",
+    "path": "src/detect/runs.rs",
+    "blob_sha": "3f5e5642fd021b96f4dda2e61287cf1b9a283a38",
+    "url": "https://github.com/kenyonxu/pixel-game-kit/blob/main/src/detect/runs.rs"
+  },
+  {
+    "repo": "kenyonxu/pixel-game-kit",
+    "path": "src/resample/majority.rs",
+    "blob_sha": "b42bca9d42808b6e49a1c71af4727dcbd096dc95",
+    "url": "https://github.com/kenyonxu/pixel-game-kit/blob/main/src/resample/majority.rs"
+  },
+  {
+    "repo": "kenyonxu/pixel-game-kit",
+    "path": "src/resample/median.rs",
+    "blob_sha": "0c54ba5c0ef778a45c5ad14cd804a719ec66750d",
+    "url": "https://github.com/kenyonxu/pixel-game-kit/blob/main/src/resample/median.rs"
+  },
+  {
+    "repo": "kenyonxu/pixel-game-kit",
+    "path": "src/quantize/oklab.rs",
+    "blob_sha": "7a9dabd4103d052c4ac988c1f8fec891f37e2b43",
+    "url": "https://github.com/kenyonxu/pixel-game-kit/blob/main/src/quantize/oklab.rs"
+  },
+  {
+    "repo": "kenyonxu/pixel-game-kit",
+    "path": "src/palette.rs",
+    "blob_sha": "cfdaf392b806f49a85e85c207c4697eb2549235f",
+    "url": "https://github.com/kenyonxu/pixel-game-kit/blob/main/src/palette.rs"
+  },
+  {
+    "repo": "astrellon/godot-3d-pixel-art",
+    "path": "camera/main_camera.gd",
+    "blob_sha": "f97b86c809cb411db592b267d0fc891694caf004",
+    "url": "https://github.com/astrellon/godot-3d-pixel-art/blob/main/camera/main_camera.gd"
+  },
+  {
+    "repo": "astrellon/godot-3d-pixel-art",
+    "path": "materials/outline.gdshader",
+    "blob_sha": "340a098853816fd3868f9780ebe564ceadafde99",
+    "url": "https://github.com/astrellon/godot-3d-pixel-art/blob/main/materials/outline.gdshader"
+  },
+  {
+    "repo": "leopeltola/Godot-3d-pixelart-demo",
+    "path": "pixelart_stylizer.gdshader",
+    "blob_sha": "7275f288b2ba03cd3de4fcc2dc10e266dd27c599",
+    "url": "https://github.com/leopeltola/Godot-3d-pixelart-demo/blob/master/pixelart_stylizer.gdshader"
+  },
+  {
+    "repo": "Robert-K/godot-3d-pixel-art",
+    "path": "scripts/rendering/camera_3d_texel_snapped.gd",
+    "blob_sha": "0777e66e7d39dfc9c5b63426008f4ac157b05c3f",
+    "url": "https://github.com/Robert-K/godot-3d-pixel-art/blob/main/scripts/rendering/camera_3d_texel_snapped.gd"
+  },
+  {
+    "repo": "Robert-K/godot-3d-pixel-art",
+    "path": "scripts/rendering/display.gd",
+    "blob_sha": "d5bab4227119a5ba331440688c4f9e98fe1140ce",
+    "url": "https://github.com/Robert-K/godot-3d-pixel-art/blob/main/scripts/rendering/display.gd"
+  },
+  {
+    "repo": "Robert-K/godot-3d-pixel-art",
+    "path": "shaders/pixel_art_upscale.gdshader",
+    "blob_sha": "8bfe5b82eced17fccac7ccb6cb06738a299801c1",
+    "url": "https://github.com/Robert-K/godot-3d-pixel-art/blob/main/shaders/pixel_art_upscale.gdshader"
+  }
+]
