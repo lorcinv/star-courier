@@ -1,0 +1,38 @@
+{
+  "source_delta": {
+    "added": 256,
+    "modified": 34,
+    "identical": 278,
+    "old_only_omitted_not_deleted": 1570
+  },
+  "checkpoint_assets": {
+    "available_old_same_path_hash_mismatch": 3,
+    "available_exact_checkpoint": 388,
+    "missing_asset": 82
+  },
+  "known_asset_inventory": {
+    "available_old_same_path_hash_mismatch": 3,
+    "available_exact_checkpoint": 388,
+    "missing_asset": 85
+  },
+  "known_runtime_inventory": {
+    "available_old_same_path_hash_mismatch": 3,
+    "available_exact_checkpoint": 156,
+    "missing_asset": 83
+  },
+  "source_support": {
+    "available_exact_checkpoint": 16,
+    "missing_asset": 8
+  },
+  "originals": {
+    "available_old_same_path_version_unverified": 67,
+    "missing_editable_original": 10,
+    "available_exact_checkpoint": 15,
+    "missing_source_support": 17
+  },
+  "reachable_source_files": 75,
+  "raw_json_dependencies": 8,
+  "FG01_assets": 15,
+  "alternate_path_hash_matches": 0,
+  "font_missing": 99
+}

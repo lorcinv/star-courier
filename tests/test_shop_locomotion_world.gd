@@ -13,6 +13,12 @@ func check(ok:bool,label:String) -> void:
 func step(seconds:float,axis:float=0.0,enabled:bool=true) -> void:
  for i in ceili(seconds*120):
   world.set_shop_input(axis,enabled);world._process(1.0/120.0);world.assembly_feedback._process(1.0/120.0)
+func rig_parts() -> Dictionary:
+ var result:Dictionary={}
+ for name in world._clerk_motion._parts:
+  var part:Sprite2D=world._clerk_motion._parts[name]
+  result[name]={"transform":part.transform,"texture":part.texture,"visible":part.visible}
+ return result
 func run() -> void:
  viewport=SubViewport.new();viewport.size=Vector2i(1280,720);root.add_child(viewport)
  world=World.new();viewport.add_child(world);world.set_process(false);world.assembly_feedback.set_process(false)
@@ -24,20 +30,23 @@ func run() -> void:
  step(.4,1.0)
  check(world.clerk.position.x>position.x and world.clerk.position.y==486 and world.clerk.z_index==0,"short A/D walk remains occluded behind the counter")
  check(not world.is_at_shop_counter(),"acceptance guard fails away from exact counter home")
- step(1.2,1.0)
+ step(2.4,1.0)
  check(world.clerk.position.x>600 and world.clerk.position.y==496 and world.clerk.z_index==11,"held direction rounds the counter onto the authored front deck")
- check(world.shop_locomotion_snapshot().state=="run","world applies the distance-driven held-run state")
- check(world.shop_locomotion_snapshot().motion.pose=="run","run movement uses the distinct registered run artwork")
+ check(world.shop_locomotion_snapshot().state=="move","world holds the one-speed moving state")
+ check(world.shop_locomotion_snapshot().motion.pose=="walk","all held movement uses the registered single walk cycle")
  position=world.clerk.position;var distance:float=world._clerk_walk_distance
+ var frozen_rig:Dictionary=world._clerk_motion.debug_snapshot().rig.duplicate(true)
+ var frozen_parts:Dictionary=rig_parts()
  world.set_shop_input(0.0,false);step(.5,1.0,false)
  check(world.clerk.position==position and world._clerk_walk_distance==distance,"modal context freezes position and raster phase")
- check(world.shop_locomotion_snapshot().motion.pose=="idle" and world.clerk.flip_h,"modal stop settles into visibly right-facing standing art, correctly mirroring the native left-facing original")
+ check(world.shop_locomotion_snapshot().state=="idle" and world._clerk_motion.debug_snapshot().rig==frozen_rig and rig_parts()==frozen_parts,"modal owns input and freezes the exact visible rig, actual feet, head and phase without swapping neutral art")
  step(.5,1.0,true)
  check(world.clerk.position==position,"held key cannot restart after modal closes")
  step(.01,0.0);step(.1,-1.0)
  check(world.clerk.position.x<position.x,"fresh opposite press restores control")
- step(.3,0.0)
- check(world.shop_locomotion_snapshot().motion.pose=="idle" and not world.shop_locomotion_snapshot().motion.facing_right and not world.clerk.flip_h,"leftward stop preserves the actual native left-facing pixels without restarting phase")
+ step(.5,0.0)
+ var left:Dictionary=world.shop_locomotion_snapshot().motion
+ check(left.pose=="idle" and not left.facing_right and left.rig.settled and left.rig.feet.near.planted and left.rig.feet.far.planted and world._clerk_motion._parts.head.transform.x.x<0 and left.head_size_parent==Vector2(91,79.625),"left stop settles supported feet and reflects the same canonical head at unchanged scale")
  position=world.clerk.position
  for i in 10:
   world.focus("hub");world.show_design(Profile.starter_design());world.update_shop_state({"contracts":[],"active_contract_id":""})
@@ -50,7 +59,7 @@ func run() -> void:
   if arrivals.size()>0:break
  check(continuous and arrivals==["focus_counter"] and world.is_at_shop_counter() and began!=world.clerk.position,"counter click walks both route corners and emits exactly one arrival at home")
  world.focus("contracts");check(world.is_at_shop_counter(),"counter acceptance stays valid inside the counter drawer")
- world.focus("hub");step(.01);step(1.1,1.0);step(.3)
+ world.focus("hub");step(.01);step(1.1,1.0);step(.5)
  position=world.clerk.position
  check(not world.prepare_counter_interaction(),"story preparation queues a physical return from manual position")
  for i in 1800:
@@ -69,14 +78,14 @@ func run() -> void:
   step(1.0/120.0,0.0,false)
   if not world._clerk_return_requested:break
  check(world.is_at_shop_counter(),"post-flight return reaches exact counter without a vertical snap")
- step(.01);step(4.0,1.0)
- check(world.clerk.position==Vector2(864,496) and world.shop_locomotion_snapshot().state=="idle" and world.shop_locomotion_snapshot().motion.pose=="idle","running into base boundary stops short of machinery and stands instead of freezing an airborne frame")
+ step(.01);step(4.3,1.0)
+ check(world.clerk.position==Vector2(864,496) and world.shop_locomotion_snapshot().state=="idle" and world.shop_locomotion_snapshot().motion.pose=="idle","moving into base boundary stops short of machinery and settles into the neutral standing pose")
  world.request_shop_navigation("focus_counter")
  for i in 1800:
   step(1.0/120.0)
   if world.is_at_shop_counter():break
  for tier in [1,2]:
-  world.set_workshop_tier(tier);world.focus("hub");step(.01);step(11.0,1.0)
+  world.set_workshop_tier(tier);world.focus("hub");step(.01);step(20.0,1.0)
   var snap:Dictionary=world.shop_locomotion_snapshot()
   check(world.clerk.position.x>2000 and world.clerk.position.y==496 and world.clerk.position.x<=world.workshop_exit_x()-96,"tier "+str(tier)+" reaches its real expanded bay and stops before launch machinery")
   check(world.target_zoom==1.0 and absf(world.target_center.x-world.clerk.position.x)<600,"tier "+str(tier)+" follows the clerk at readable scale")

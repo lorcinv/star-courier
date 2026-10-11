@@ -10,6 +10,21 @@ func _initialize() -> void:run.call_deferred()
 func check(ok:bool,label:String) -> void:
  if ok:passed+=1;print("PASS ",label)
  else:failed+=1;push_error("FAIL "+label)
+func bounded_layers(node:Sprite2D) -> bool:
+ var accessory:Sprite2D=node.get_node_or_null("CompatibleAccessory")
+ var arm:Sprite2D=node.get_node_or_null("NeutralFrontArm")
+ var rig:Node2D=node.get_node_or_null("HumanRigidCutouts")
+ var count:int=int(accessory!=null)+int(arm!=null)+int(rig!=null)
+ if node.get_child_count()!=count or count>3:return false
+ if rig!=null:
+  if node.species!="human" or rig.get_child_count()!=15:return false
+  for part in rig.get_children():
+   if not part is Sprite2D or part.z_index!=0:return false
+ if arm!=null and accessory==null:return false
+ if accessory!=null and accessory.z_index!=1:return false
+ if arm!=null and (arm.get_index()<=accessory.get_index() or arm.z_index!=2 or arm.scale!=Vector2.ONE):return false
+ return true
+
 func point(v:Array) -> Vector2:return Vector2(float(v[0]),float(v[1]))
 func distance_for_frame(data:Dictionary,index:int,height:float) -> float:
  var sequence:Array=data.get("walk_sequence",[])
@@ -95,8 +110,14 @@ func test_npcs(records:Dictionary) -> void:
    for i in data.walk.size():
     for right in [false,true]:
      check(actor.set_walk(distance_for_frame(data,i,Npc.DEFAULT_HEIGHT),right),"NPC actual walk applies: "+id+"/"+accessory+"/"+str(i)+"/"+str(right))
-     var snap:Dictionary=actor.debug_snapshot();seen[actor.texture.resource_path]=true
-     check(snap.motion.frame_index==i and snap.foot_point.is_equal_approx(actor.position),"NPC exact cadence and semantic foot pivot")
+     var snap:Dictionary=actor.debug_snapshot()
+     if id=="human_courier":
+      seen[snap.motion.head_texture]=true
+      check(actor.texture==null and snap.motion.rigid_active and snap.motion.frame_index==-1 and snap.foot_point.is_equal_approx(actor.position),"human uses the measured cutout rig and semantic root")
+      check(snap.motion.head_size_parent.distance_to(Vector2(99,80)*215.0/240.0)<.001 and not snap.motion.rig.travelling,"distance labels without actual displacement cannot invent gait or resize human head")
+     else:
+      seen[actor.texture.resource_path]=true
+      check(snap.motion.frame_index==i and snap.foot_point.is_equal_approx(actor.position),"NPC exact cadence and semantic foot pivot")
      check(not actor.pose_contains_parcel(),"walk never claims painted handoff parcel")
      check(actor.parcel_point().is_equal_approx(original.parcel),"motion preserves original handoff transfer-point semantics")
      check(actor.binding_snapshot()==saved and JSON.stringify(saved)==original_saved,"motion never mutates identity/accessory/seed/binding")
@@ -108,20 +129,26 @@ func test_npcs(records:Dictionary) -> void:
       var anchor_local:Vector2=Vector2(float(child.texture.get_width())-local.x if child.flip_h else local.x,local.y)+child.offset
       check(child.visible and child.flip_h==(not right) and child.position.is_equal_approx(expected),"compatible accessory uses per-frame hip with consistent mirror")
       check(anchor_local.is_equal_approx(Vector2.ZERO) and child.scale==Vector2.ONE,"accessory local attachment remains registered without scaling head/body")
-      check(child.get_instance_id()==child_id and actor.get_child_count()==1,"every motion frame reuses original sole accessory child")
-   check(seen.size()==data.walk.size(),"customer walk textures are genuinely distinct: "+id)
+      check(child.get_instance_id()==child_id and bounded_layers(actor) and actor.get_child_count()==2 and not actor.get_node("NeutralFrontArm").visible and actor.get_node("NeutralFrontArm").texture==null,"every motion frame reuses the named accessory and clears the neutral front-arm layer")
+   if id=="human_courier":check(seen.size()==1 and bounded_layers(actor),"human reuses one exact canonical head and bounded parts")
+   else:check(seen.size()==data.walk.size(),"customer walk textures are genuinely distinct: "+id)
    for right in [true,false]:
     check(actor.set_gesture("farewell",right),"NPC real farewell applies: "+id)
     check(not actor.pose_contains_parcel() and actor.pose=="farewell","farewell has no handoff parcel semantic")
     check(actor.debug_snapshot().foot_point.is_equal_approx(actor.position),"farewell mirrors around registered feet")
    actor.set_pose(false)
-   check(actor.texture==original.texture and actor.offset==original.offset and actor.scale==original.scale and not actor.flip_h and actor.debug_snapshot().foot_anchor==original.foot,"reversed farewell restores exact original idle registration")
+   if id=="human_courier":
+    check(actor.texture==null and actor.scale==Vector2.ONE and actor.offset==Vector2.ZERO and actor.debug_snapshot().motion.rigid_active,"human farewell restores its retained rigid neutral without a second body")
+   else:check(actor.texture==original.texture and actor.offset==original.offset and actor.scale==original.scale and not actor.flip_h and actor.debug_snapshot().foot_anchor==original.foot,"reversed farewell restores exact original idle registration")
    actor.set_walk(35,false);actor.set_pose(true)
    check(actor.pose=="handoff" and not actor.flip_h and actor.debug_snapshot().foot_anchor==original.foot,"reversed walk restores original handoff registration")
    check(actor.pose_contains_parcel()==(id!="human_courier"),"only original nonhuman handoff owns parcel pixels")
    actor.set_pose(false)
    actor.hide();var before:Texture2D=actor.texture
-   check(not actor.set_walk(84,false) and actor.texture==before and not actor.visible,"hidden NPC motion is frozen")
+   var before_hidden:Dictionary=actor.debug_snapshot().motion
+   var applied:bool=actor.set_walk(84,false)
+   if id=="human_courier":check(actor.texture==before and not actor.visible and actor.debug_snapshot().motion==before_hidden,"hidden human root, parts and cadence remain exactly frozen")
+   else:check(not applied and actor.texture==before and not actor.visible,"hidden NPC motion is frozen")
    actor.show()
  # No global RNG consumption: animation leaves the next simulation random draw.
  actor.configure({"appearance_id":"elf_archivist","accessory_id":"map_case"})
@@ -134,9 +161,9 @@ func test_npcs(records:Dictionary) -> void:
   var ids:Array=ACCESSORIES.keys();var id:String=ids[i%4]
   actor.configure({"appearance_id":id,"accessory_id":ACCESSORIES[id][i%ACCESSORIES[id].size()],"appearance_seed":i})
   actor.set_walk(float(i%120),i%2==0);actor.set_pose(i%3==0)
-  bounded=bounded and actor.get_child_count()<=1 and actor.debug_snapshot().foot_point.is_equal_approx(actor.position)
+  bounded=bounded and bounded_layers(actor) and actor.get_child_count()==(3 if id=="human_courier" else 2) and actor.debug_snapshot().foot_point.is_equal_approx(actor.position)
  var after:Dictionary=actor.debug_snapshot().motion
- check(bounded,"1200 reconfigure/walk/cancel cycles keep at most one accessory and no foot drift")
+ check(bounded,"1200 reconfigure/walk/cancel cycles retain bounded species-owned layers and no foot drift")
  check(warmed.get("texture_load_count")==after.get("texture_load_count") and warmed.get("texture_cache_size")==after.get("texture_cache_size"),"canceled/reconfigured NPC cycles do not grow shared cache")
  check(int(after.get("manifest_load_count",0))==2 and int(after.get("texture_cache_size",999))<=Motion.MAX_CACHE_TEXTURES,"motion manifests load once each and cache has explicit hard bound")
  actor.free()

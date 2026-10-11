@@ -51,8 +51,9 @@ func test_continuity() -> void:
  step(1.0)
  check(world._parcel_phase=="waiting_customer" and not world.is_loading() and visible_parcels()==1,"unread dialogue retains one customer parcel without starting delivery")
  check(world.customers.continuous.node.position==Vector2(148,488) and world.clerk.position==Vector2(276,486),"idle feet remain on their registered floor")
- var clerk_angle:float=world.clerk.rotation;step(.5)
- check(clerk_angle!=world.clerk.rotation and world.clerk.scale==Vector2.ONE*210.0/240.0,"subtle clerk idle changes angle without deforming or scaling the body")
+ var idle_before:Dictionary=world._clerk_motion.debug_snapshot();step(.5)
+ var idle_after:Dictionary=world._clerk_motion.debug_snapshot()
+ check(world.clerk.rotation==0 and world.clerk.scale==Vector2.ONE and idle_before.rig.shoulder_offset!=idle_after.rig.shoulder_offset and idle_before.rig.feet==idle_after.rig.feet and idle_after.head_size_parent==Vector2(91,79.625),"local shoulder idle changes while actual planted feet and canonical head scale remain fixed")
  update(contract("continuous",true))
  var seen:Array[String]=[];var single:bool=true;var connected:bool=true;var floor_ok:bool=true;var elapsed:float=0.0
  for i in 1400:
@@ -208,22 +209,50 @@ func test_repeat_order_return() -> void:
  check(world.assembly_feedback.transport_current_x()==World.AssemblyFeedback.DOCK_X and world.assembly_feedback.robot_state=="idle" and not world._robot_return_pending,"uncancelled empty return terminates at dock once after the clerk is clear")
 func test_actor_choreography() -> void:
  reset("cooperation");update(contract("cooperation",true))
- var instance:int=world.parcel.get_instance_id();var clerk_frames:Dictionary={};var npc_frames:Dictionary={}
+ var instance:int=world.parcel.get_instance_id();var clerk_frames:Dictionary={};var npc_frames:Dictionary={};var clerk_supports:Dictionary={};var previous_rig:Dictionary={};var actual_boots_grounded:bool=true;var support_locked:bool=true
  var behind_path:bool=true;var floor:bool=true;var escort:bool=true;var camera_follows:bool=true
  var farewell_seen:bool=false;var exit_seen:bool=false;var help_seen:Array[String]=[]
+ var empty_approach:bool=true;var neutral_join_seen:bool=false
+ var tablet_seen:bool=false;var tablet_at_workstation:bool=true;var tablet_continuous:bool=true
  var prior_clerk:Vector2=world.clerk.position;var prior_npc:Vector2=world.customers.cooperation.node.position
+ var cadence_translation_checked:bool=false
  var max_clerk_step:float=0.0;var max_npc_step:float=0.0
  for i in 1600:
   var snap:Dictionary=world.loading_snapshot()
+  var tablet_pose:bool=str(snap.clerk_motion.pose) in ["reach","align","ready"]
+  if snap.phase in ["robot_fetch","robot_pickup","robot_turn","clerk_round_counter","clerk_join","robot_carry"]:
+   empty_approach=empty_approach and not tablet_pose
+  if snap.phase=="clerk_join" and is_equal_approx(world._clerk_leg_from_x,world._clerk_leg_to_x):
+   neutral_join_seen=neutral_join_seen or str(snap.clerk_motion.pose)=="idle"
+  if tablet_pose and not tablet_seen:
+   tablet_at_workstation=tablet_at_workstation and snap.phase=="robot_insert" and is_equal_approx(world.clerk.position.x,world._clerk_loaded_x())
+   tablet_seen=true
+  if tablet_seen:tablet_continuous=tablet_continuous and tablet_pose
   if snap.customer_departure=="farewell":farewell_seen=true
   if snap.customer_departure=="exiting":
    exit_seen=true
    var motion:Dictionary=snap.customer_motion.get("motion",{})
-   npc_frames[str(motion.get("frame_index",-1))]=true
-   check_motion_foot(motion,Vector2(snap.customer_position.x,488))
+   npc_frames[npc_motion_key(world.customers.cooperation.node,motion)]=true
+   if bool(motion.get("rigid_active",false)) and not cadence_translation_checked:
+    var actor:Sprite2D=world.customers.cooperation.node
+    var original_position:Vector2=actor.position;var before_key:String=npc_motion_key(actor,motion)
+    actor.position.x+=17.0
+    check(npc_motion_key(actor,motion)==before_key,"root translation alone cannot count as human limb cadence")
+    actor.position=original_position;cadence_translation_checked=true
+   check_motion_foot(world.customers.cooperation.node,motion,Vector2(snap.customer_position.x,488))
   if snap.phase in ["clerk_round_counter","clerk_join","robot_carry"] and str(snap.clerk_motion.pose)=="walk":
-   clerk_frames[str(snap.clerk_motion.get("frame_index",-1))]=true
-   floor=floor and snap.clerk_motion.get("foot_point",Vector2.ZERO).distance_to(world.clerk.position)<.01
+   var rig:Dictionary=snap.clerk_motion.rig
+   clerk_frames[str(rig.joints)]=true;clerk_supports[str(rig.support)]=true
+   for side in ["near","far"]:
+    var foot:Dictionary=rig.feet[side]
+    var spec:Dictionary=world._clerk_motion._rig_data.parts[side+"_boot"]
+    var boot:Sprite2D=world._clerk_motion._parts[side+"_boot"]
+    var actual:Vector2=boot.transform*Vector2(spec.sole[0],spec.sole[1])+world.clerk.position
+    actual_boots_grounded=actual_boots_grounded and actual.distance_to(foot.position)<.001
+    if not previous_rig.is_empty() and previous_rig.feet[side].planted and foot.planted and previous_rig.feet[side].landing_id==foot.landing_id:
+     support_locked=support_locked and previous_rig.feet[side].position.distance_to(foot.position)<.001
+   previous_rig=rig.duplicate(true)
+   floor=floor and snap.clerk_motion.get("foot_point",Vector2.ZERO).distance_to(world.clerk.position)<.01 and (rig.feet.near.planted or rig.feet.far.planted)
   if snap.phase=="clerk_round_counter":behind_path=behind_path and world.clerk.z_index==0 and world.clerk.position.x<=World.COUNTER_EDGE_X
   if snap.phase in ["clerk_join","robot_carry","robot_insert","clerk_align","clerk_confirm","loaded"]:
    behind_path=behind_path and world.clerk.z_index==8 and world.clerk.position.x>=World.COUNTER_EDGE_X
@@ -238,10 +267,14 @@ func test_actor_choreography() -> void:
   step(1.0/120.0)
  check(world.loading_snapshot().motion_failures.is_empty() and world._clerk_motion.debug_snapshot().diagnostics.is_empty(),"every visible choreography motion call has valid generated art")
  check(farewell_seen and exit_seen and world.customers.cooperation.departure=="departed" and not world.customers.cooperation.node.visible,"customer visibly says farewell, walks off left, and remains departed")
- check(clerk_frames.size()>=3 and not clerk_frames.has("-1") and npc_frames.size()>=3 and not npc_frames.has("-1"),"generated clerk/NPC foot cadence uses distinct authored walk frames")
+ check(clerk_frames.size()>=3 and clerk_supports.has("near") and clerk_supports.has("far") and actual_boots_grounded and support_locked,"rigid clerk cadence changes actual joints, alternates support and locks the rendered supporting boot")
+ check(npc_frames.size()>=3 and not npc_frames.has("-1"),"NPC cadence advances rendered human joints or the other species authored walk frames")
  check(behind_path and floor and escort,"clerk clears the counter right edge before near-aisle occlusion and walks beside the robot on registered feet")
  check(max_clerk_step<2 and max_npc_step<2,"cooperative actor travel has no frame teleports or idle-sprite gliding")
  check(camera_follows and help_seen==["reach","align","ready"],"camera follows the actual group and clerk performs reach, align and confirmation")
+ check(empty_approach and neutral_join_seen,"counter-edge pause and escort keep empty hands with an actual neutral waiting pose")
+ check(tablet_seen and tablet_at_workstation,"tablet first appears only after the clerk reaches the actual cargo workstation")
+ check(tablet_continuous,"tablet stays present through read, tap and confirmation without an intermediate prop pop")
  var final:Dictionary=world.loading_snapshot();step(2.0)
  check(world.loading_snapshot().clerk_position==final.clerk_position and world.assembly_feedback.robot_root.position.x==final.robot.robot_x and world.assembly_feedback.robot_state=="idle" and world.assembly_feedback.debug_snapshot().transport_owner.is_empty(),"loaded actors rest beside actual cargo without a queued robot return")
  for i in 100:update(contract("cooperation",true))
@@ -266,9 +299,48 @@ func test_actor_choreography() -> void:
  check(world.loading_snapshot().clerk_position==frozen.clerk_position and world._parcel_phase=="waiting_clerk","waiting-clerk return freezes on focus loss")
  world.set_focus_active(true);step(12.0)
  check(world.is_parcel_loaded("return-replacement") and signal_count("return-replacement")==1,"new-order return finishes one complete fresh chain")
-func check_motion_foot(motion:Dictionary,expected:Vector2) -> void:
- # Fold cadence registration into the aggregate assertion without thousands of log lines.
- if motion.get("foot_point",Vector2.ZERO).distance_to(expected)>.01:failed+=1;push_error("NPC motion foot registration")
+func npc_motion_key(node:Sprite2D,motion:Dictionary) -> String:
+ # Count actual owner-local limb transforms, not parent/world-space joints:
+ # root translation alone must never masquerade as an animated gait.
+ if bool(motion.get("rigid_active",false)):
+  var transforms:Array=[]
+  for key in ["near_thigh","near_shin","near_boot","far_thigh","far_shin","far_boot"]:
+   if not node._motion._parts.has(key):return "-1"
+   transforms.append(node._motion._parts[key].transform)
+  return "rig:"+str(transforms)
+ return str(motion.get("frame_index",-1))
+
+func check_motion_foot(node:Sprite2D,motion:Dictionary,expected:Vector2) -> void:
+ # Inspect the actual rendered boot sole transforms, not an invented legacy
+ # frame number or a root-only foot marker. Other species retain their original
+ # authored whole-frame registration assertion.
+ var valid:bool=true
+ if node.has_rigid_motion():
+  valid=bool(motion.get("rigid_active",false)) and node.position.distance_to(expected)<.01
+  var rig:Dictionary=motion.get("rig",{})
+  valid=valid and rig.get("origin",Vector2(INF,INF)).distance_to(expected)<.01
+  var planted:int=0
+  for side in ["near","far"]:
+   if not rig.get("feet",{}).has(side):valid=false;continue
+   var foot:Dictionary=rig.feet[side]
+   var spec:Dictionary=node._motion._rig_data.parts[side+"_boot"]
+   var boot:Sprite2D=node._motion._parts[side+"_boot"]
+   if not spec.get("sole_contact") is Array or spec.sole_contact.size()!=2:valid=false;continue
+   var sole:Vector2=Vector2(float(spec.sole_contact[0]),float(spec.sole_contact[1]))
+   var actual:Vector2=boot.global_transform*sole
+   var claimed:Vector2=node.get_parent().to_global(foot.position)
+   valid=valid and boot.visible and not boot.centered and boot.offset==Vector2.ZERO and not boot.flip_h and not boot.flip_v and actual.distance_to(claimed)<.001
+   if bool(foot.planted):
+    planted+=1
+    # Preserve the two shoe tracks from the accepted source, including
+    # their small authored perspective offsets from the semantic floor root.
+    var floor_offset:float=float(node._motion._rig_data.legs[side].floor_offset)*node._height/float(node._motion._rig_data.reference_height)
+    var floor_point:Vector2=node.get_parent().to_global(Vector2(foot.position.x,expected.y+floor_offset))
+    valid=valid and actual.distance_to(floor_point)<.001
+    valid=valid and motion.support_points_world.has(side) and actual.distance_to(motion.support_points_world.get(side,Vector2(INF,INF)))<.001
+  valid=valid and planted>=1 and node.texture==null and node._motion._rig.visible
+ else:valid=motion.get("foot_point",Vector2.ZERO).distance_to(expected)<.01
+ if not valid:failed+=1;push_error("NPC rendered foot registration")
 
 func test_customer_walk_easing() -> void:
  reset("npc-ramp")
@@ -297,10 +369,11 @@ func test_species_departure_and_hidden_skip() -> void:
    single=single and visible_parcels()==1
    if world.customers[id].departure=="exiting":
     var motion:Dictionary=world.customers[id].node.debug_snapshot().motion
-    frames[str(motion.frame_index)]=true
+    frames[npc_motion_key(world.customers[id].node,motion)]=true
+    check_motion_foot(world.customers[id].node,motion,Vector2(world.customers[id].node.position.x,488))
    if world.is_parcel_loaded():break
    step(1.0/120.0)
-  check(world.is_parcel_loaded() and single and frames.size()>=3 and not frames.has("-1") and world.customers[id].node.binding_snapshot()==identity and not world.customers[id].node.visible,"species "+str(pair[0])+" keeps its identity, one parcel and authored departing walk")
+  check(world.is_parcel_loaded() and single and frames.size()>=3 and not frames.has("-1") and world.customers[id].node.binding_snapshot()==identity and not world.customers[id].node.visible,"species "+str(pair[0])+" keeps its identity, one parcel and registered departing movement")
  for phase in PHASES.slice(0,PHASES.size()-1):
   var id:String="hidden-skip/"+phase;reach(phase,id)
   world.hide();world.set_focus_active(false);world.fastforward_loading()

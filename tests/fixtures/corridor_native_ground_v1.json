@@ -1,0 +1,428 @@
+{
+  "snapshot": {
+    "control_version": "pilot-v3",
+    "design": [
+      {
+        "id": 1,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 100.0,
+        "rot": 0,
+        "target": -1,
+        "type": "cargo",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": 2,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 32.0,
+        "rot": 0,
+        "target": -1,
+        "type": "beam",
+        "x": 1,
+        "y": -1
+      },
+      {
+        "id": 3,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 300.0,
+        "rot": 0,
+        "target": -1,
+        "type": "battery",
+        "x": -1,
+        "y": 0
+      },
+      {
+        "id": 4,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 28.0,
+        "rot": 0,
+        "target": -1,
+        "type": "thruster",
+        "x": 0,
+        "y": -1
+      },
+      {
+        "id": 5,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 150.0,
+        "rot": 0,
+        "target": -1,
+        "type": "armor",
+        "x": 1,
+        "y": 0
+      },
+      {
+        "id": 6,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 28.0,
+        "rot": 0,
+        "target": -1,
+        "type": "thruster",
+        "x": 0,
+        "y": 1
+      },
+      {
+        "id": 7,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 32.0,
+        "rot": 0,
+        "target": -1,
+        "type": "beam",
+        "x": 1,
+        "y": 1
+      },
+      {
+        "id": 8,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 0.0,
+        "rot": 0,
+        "target": -1,
+        "type": "coupler",
+        "x": -1,
+        "y": 1
+      }
+    ],
+    "elapsed": 23.408333333332646,
+    "input_commands": [
+      {
+        "active": false,
+        "axis_q": -1000,
+        "boost": false,
+        "tick": 0
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 105
+      },
+      {
+        "active": false,
+        "axis_q": 1000,
+        "boost": false,
+        "tick": 505
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 627
+      },
+      {
+        "active": false,
+        "axis_q": 1000,
+        "boost": false,
+        "tick": 705
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 742
+      },
+      {
+        "active": false,
+        "axis_q": -1000,
+        "boost": false,
+        "tick": 820
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 912
+      },
+      {
+        "active": false,
+        "axis_q": 1000,
+        "boost": false,
+        "tick": 926
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 1047
+      },
+      {
+        "active": false,
+        "axis_q": 1000,
+        "boost": false,
+        "tick": 1122
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 1188
+      }
+    ],
+    "launcher": [
+      {
+        "id": 1001,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 20.0,
+        "rot": 0,
+        "target": -1,
+        "type": "spring",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": 1002,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 300.0,
+        "rot": 0,
+        "target": -1,
+        "type": "battery",
+        "x": -1,
+        "y": 0
+      },
+      {
+        "id": 1003,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 32.0,
+        "rot": 0,
+        "target": -1,
+        "type": "beam",
+        "x": 1,
+        "y": 0
+      }
+    ],
+    "route": {
+      "accepted_day": 2.0,
+      "accessory_id": "seed_pod",
+      "appearance_id": "alien_botanist",
+      "appearance_seed": 1627670080,
+      "background_ground_y_m": 0.0,
+      "background_route": "city",
+      "battery_capacity_multiplier": 1.0,
+      "boundary_y": 45.0,
+      "cargo": "一盆会打盹的幼苗",
+      "cargo_loaded": true,
+      "client": "绒团",
+      "contract_id": "D2-A",
+      "control_version": "pilot-v3",
+      "deadline": 38.0,
+      "delivery_radius": 7.0,
+      "destination_name": "屋顶收件台",
+      "destination_y": -10.0,
+      "distance": 384.0,
+      "generation": {
+        "base_id": 0.0,
+        "base_rep": 0.0,
+        "base_reward": 165.0,
+        "base_weight": 1.0,
+        "clearance": {
+          "craft_radius": 2.0,
+          "exit_clear_until_x": 408.0,
+          "margin": 1.0,
+          "minimum_preview_seconds": 3.5,
+          "minimum_remaining_energy": 600.0,
+          "preview_speed": 18.0,
+          "receiver_clear_from_x": 344.0,
+          "reference": "starter-eight-modules-v3",
+          "spawn_clear_until_x": 30.0,
+          "witness_points": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              90.0,
+              -8.4169921875
+            ],
+            [
+              187.0,
+              -5.0
+            ],
+            [
+              285.0,
+              -13.0
+            ],
+            [
+              384.0,
+              -10.0
+            ]
+          ]
+        },
+        "day": 2.0,
+        "dialogue": {
+          "accept_lines": [
+            {
+              "expression": "neutral",
+              "speaker": "npc",
+              "text": "送到屋顶收件台就好。幼苗还在睡，箱盖上留了透气孔。"
+            },
+            {
+              "expression": "warm_smile",
+              "speaker": "clerk",
+              "text": "地址核对好了。我先把箱子固定稳。"
+            }
+          ],
+          "appearance_id": "alien_botanist",
+          "cargo": "一盆会打盹的幼苗",
+          "destination_name": "屋顶收件台",
+          "id": "alien_botanist-address-1",
+          "story_id": "sunny_side_of_a_pot"
+        },
+        "dialogue_seed": 2054868650.0,
+        "fallback": false,
+        "fallback_reason": "",
+        "kind": "ground",
+        "layout_seed": 312264603.0,
+        "layout_template": "roof-long-approach",
+        "seed": 1705135797.0,
+        "slot": 0.0,
+        "task_seed": 1613651742.0,
+        "task_template": "standard-careful",
+        "version": "seeded-offers-v1",
+        "weight_delta": 0.125,
+        "world_seed": 42.0
+      },
+      "gravity": 0.0,
+      "hazards": [
+        {
+          "gate_index": 0.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 90.0,
+          "y": -22.4169921875
+        },
+        {
+          "gate_index": 0.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 90.0,
+          "y": 5.5830078125
+        },
+        {
+          "gate_index": 1.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 187.0,
+          "y": -18.0
+        },
+        {
+          "gate_index": 1.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 187.0,
+          "y": 8.0
+        },
+        {
+          "gate_index": 2.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 285.0,
+          "y": -26.0
+        },
+        {
+          "gate_index": 2.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 285.0,
+          "y": 0.0
+        }
+      ],
+      "id": 0.0,
+      "lookahead_seconds": 3.5,
+      "max_delivery_speed": 24.0,
+      "mode": "pilot",
+      "name": "城市货站 → 屋顶收件台",
+      "pilot_altitude": 10.0,
+      "pilot_battery_multiplier": 20.0,
+      "pilot_boost_speed": 22.0,
+      "pilot_climb_end": 175.0,
+      "pilot_climb_start": 35.0,
+      "pilot_cruise_speed": 18.0,
+      "pilot_drag": 0.025,
+      "pilot_energy_tariff": 0.025,
+      "pilot_gates": [
+        {
+          "half_gap": 9.0,
+          "heading": -0.1015625,
+          "index": 0.0,
+          "lane_offset": -5.0,
+          "x": 90.0,
+          "y": -8.4169921875
+        },
+        {
+          "half_gap": 8.0,
+          "heading": 0.0,
+          "index": 1.0,
+          "lane_offset": 5.0,
+          "x": 187.0,
+          "y": -5.0
+        },
+        {
+          "half_gap": 8.0,
+          "heading": 0.0,
+          "index": 2.0,
+          "lane_offset": -3.0,
+          "x": 285.0,
+          "y": -13.0
+        }
+      ],
+      "pilot_net_force_limit": 30.0,
+      "pilot_overdrive": "mounted-output",
+      "pilot_profile": "pilot-v3",
+      "pilot_vertical_speed": 5.0,
+      "rep": 0.0,
+      "required": 90.0,
+      "reward": 180.0,
+      "risk": "低空货站通道 · 上下避让实体障碍 · 收件限速 24 m/s",
+      "route_kind": "ground",
+      "route_profile": "ground-city-v1",
+      "seed": 200,
+      "species": "alien",
+      "status": "accepted",
+      "story": "送到屋顶收件台就好。幼苗还在睡，箱盖上留了透气孔。",
+      "story_id": "sunny_side_of_a_pot",
+      "story_node": 0,
+      "time_limit": 54.0,
+      "variant": "标准件",
+      "variation": 0.0,
+      "weight": 1.125,
+      "wind": [
+        0.0,
+        0.0
+      ]
+    },
+    "seed": 200,
+    "ticks": 1405
+  },
+  "source": "source_art/2d_v5/routes/runtime_validation_staging/evidence/native-ground-01/generated-ground-trial-terminal.json",
+  "source_sha256": "a1cf5204d124aefdceb8c630da7f96eec1b0532d7e12c0f5c914c23d2fc83920",
+  "method": "Original actual OS input, no human fairness certification"
+}

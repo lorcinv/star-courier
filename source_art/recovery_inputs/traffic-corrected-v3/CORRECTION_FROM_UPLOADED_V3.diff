@@ -1,0 +1,17 @@
+--- a/ground_traffic_actor_v1.gd
++++ b/ground_traffic_actor_v1.gd
+@@ -374,8 +374,12 @@
+ 		previous = decision
+ 	if patrol.hp > previous_hp:
+ 		return V.fail("current_actor_healed_after_decision")
+-	if patrol.revision > previous.motion.revision and patrol.last_commit.tick < previous.tick:
+-		return V.fail("latest_commit_hidden_from_decision")
++	if patrol.revision > previous.motion.revision:
++		if patrol.last_commit.tick < previous.tick:
++			return V.fail("latest_commit_hidden_from_decision")
++		if previous.kind == "actor_destroyed" and patrol.last_commit.tick == previous.tick \
++			and patrol.last_commit.fraction < previous.fraction:
++			return V.fail("latest_commit_precedes_terminal_damage")
+ 	return {"ok": true}
+ 
+ static func _commits_equal(a: Variant, b: Variant) -> bool:

@@ -1,0 +1,9 @@
+{
+	"energy_binary64_le": "3cb0df4e28c2a640",
+	"hp_binary64_le": "0000000000002040",
+	"physics_revision": "protected-bird-v5-ray-fix-v1",
+	"report_sha256": "f82ecfd4b943ac84fd567a1dd97628bd31c0d72acb19317d82902a8c653d7f95",
+	"schema": "protected-bird-numeric-witness-v2",
+	"simulator_sha256": "9f6f304aa59e45c893622da22d4d4b1a9518774de10642e1c99565e6d63a0586",
+	"sweep_sha256": "c091012c078d26e77f756a1e13322184f767ec82eb5591d739d413fb44dece4f"
+}

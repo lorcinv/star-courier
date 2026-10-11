@@ -1,0 +1,9 @@
+; Isolated logic test harness. Not registered with the game or any pilot protocol.
+config_version=5
+
+[application]
+config/name="StarCourier Ground Traffic Staging QA"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+
+[rendering]
+renderer/rendering_method="gl_compatibility"

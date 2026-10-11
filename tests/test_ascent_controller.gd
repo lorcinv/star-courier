@@ -41,6 +41,9 @@ func fresh(erase: bool = true) -> void:
 	await settle()
 	if is_instance_valid(root.gui_get_focus_owner()): root.gui_get_focus_owner().release_focus()
 
+func recovery_only() -> bool:
+	return game.economy.review_load_blocked and game.world == null and game.hud == null and game.sim == null and game.courier_input == null and game.get_child_count() == 1 and game.get_child(0) is Label and not game.is_processing_input() and not game.is_processing_unhandled_key_input()
+
 func saved() -> Dictionary:
 	return JSON.parse_string(FileAccess.get_file_as_string("user://savegame.json"))
 
@@ -321,7 +324,7 @@ func test_conflicting_version() -> void:
 	write_fixture(conflict)
 	var original_bytes = FileAccess.get_file_as_bytes("user://savegame.json")
 	await fresh(false)
-	check(game.pilot_resume_blocked, "supported but conflicting v1 simulation/v2 control markers fail closed")
+	check(recovery_only(), "supported but conflicting v1 simulation/v2 control markers fail closed")
 	var money: int = game.economy.credits; var jobs: int = game.economy.jobs_today
 	game._set_paused(false); game._process(2.0); game.abort_flight()
 	check(not game.save_game() and FileAccess.get_file_as_bytes("user://savegame.json") == original_bytes, "conflicting supported-version snapshot keeps exact original disk bytes")

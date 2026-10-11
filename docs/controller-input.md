@@ -9,7 +9,7 @@ version, price, or energy tariff has changed.
 
 | Context | Controller | Keyboard / mouse |
 | --- | --- | --- |
-| Shop | Left stick / D-pad move; keep direction to run. A nearby interaction. Menu enters menu navigation. | A / D move; keep direction to run. E / Enter nearby interaction. Tab enters menus. |
+| Shop | Left stick / D-pad move at one speed, with acceleration and inertial stopping. A nearby interaction. Menu enters menu navigation. | A / D move at one speed; release to decelerate and stop. E / Enter nearby interaction. Tab enters menus. |
 | Menus | Left stick / D-pad choose; A activate; B back. Right stick scrolls. Left / right adjusts sliders, numbers and choices. | Existing native focus, clicks and scrolling. Fresh A / D closes a nonmodal drawer and walks, except when a text field owns typing. |
 | Workbench menus | X enters grid mode. Palette, inspector, craft / launcher, and trial / dispatch remain normal focused UI. | Existing clicks, drag, wheel, middle-button pan and editing shortcuts. |
 | Workbench grid | Direction moves cursor; A selects or places a stocked part. Y picks up an installed part; A commits at destination. X rotates. LB removes. RB undoes. R3 fits. L3 cycles installed parts, including retained out-of-tier parts. Right stick pans. B cancels pickup first, then returns to menu navigation. | Existing editor controls. A fresh A / D returns to the shop. |

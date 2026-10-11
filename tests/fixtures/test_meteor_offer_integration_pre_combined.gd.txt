@@ -1,0 +1,123 @@
+extends SceneTree
+const Econ=preload("res://scripts/economy.gd")
+const Policy=preload("res://scripts/offer_authoring_policy.gd")
+const Meteor=preload("res://scripts/orbital_meteor_offers.gd")
+const Catalog=preload("res://scripts/orbital_meteor_catalog.gd")
+const Seeded=preload("res://scripts/seeded_offer_catalog.gd")
+const Stories=preload("res://scripts/courier_stories.gd")
+const Profile=preload("res://scripts/pilot_extreme_profile.gd")
+const Observer=preload("res://scripts/orbital_meteor_observer.gd")
+var passed=0
+var failed=0
+class FailedAuthor:
+ extends Econ
+ func ensure_contracts() -> void:
+  if day>1:load_notice="Explicit fixture authoring failure";return
+  super.ensure_contracts()
+func _initialize():run.call_deferred()
+func check(value:bool,label:String):
+ if value:passed+=1
+ else:failed+=1;push_error("FAIL "+label)
+func exact(a,b):return JSON.stringify(JSON.parse_string(JSON.stringify(a,"",true,true)),"",true,true)==JSON.stringify(JSON.parse_string(JSON.stringify(b,"",true,true)),"",true,true)
+func snap(e):
+ var out={}
+ for key in ["day","phase","jobs_today","contracts","active_contract_id","last_trials","story_state","review_state","offer_generation_state","load_notice"]:
+  var v=e.get(key);out[key]=v.duplicate(true) if v is Dictionary or v is Array else v
+ return out
+func clean():
+ for path in ["user://savegame.json","user://savegame.backup.json","user://savegame.tmp"]:
+  if FileAccess.file_exists(path) or DirAccess.dir_exists_absolute(path):DirAccess.remove_absolute(path)
+func new_shop(seed_value=42,e=Econ.new()):
+ e.enable_extreme_mode();e.story_state=Stories.initial_state(seed_value);e.enable_story_mode();e.enable_seeded_offers(seed_value);return e
+func raw():return JSON.parse_string(FileAccess.get_file_as_string("user://savegame.json"))
+func run():
+ clean();var e=new_shop();var before=e.contracts.duplicate(true)
+ e.enable_seeded_offers(99);check(exact(e.contracts,before) and e.offer_generation_state.version==Seeded.VERSION,"no enabling migration or first-day meteor")
+ var fresh:Array=e._autonomous_routes();var root_state={"version":Policy.VERSION,"world_seed":42}
+ for bad in [-1,0.5,2147483647,NAN,INF,"42",null,true]:
+  var state={"version":Policy.VERSION,"world_seed":bad}
+  check(not Policy.next_day_root(state).ok,"raw root seed rejected before cast "+str(bad))
+  check(not Meteor.create_new_offer(fresh[1],state,2,0,Stories.IDS[2]).ok,"raw meteor root seed rejected "+str(bad))
+ for bad_day in [1,1.9,"2",null]:check(not Meteor.create_new_offer(fresh[1],root_state,bad_day,0,Stories.IDS[2]).ok,"invalid future day rejected")
+ var selected=0;var fixture={};var fixture_seed=-1
+ for seed_value in range(256):
+  var state={"version":Policy.VERSION,"world_seed":seed_value}
+  for day_value in [2,3,4,5]:
+   var id=1+day_value%2;var catalog=Profile.route(fresh[id]);var actor=Stories.IDS[posmod((day_value-1)*2,4)]
+   var offer=Policy.author(catalog,fresh[id],state,day_value,0,"ascent",actor)
+   check(offer.ok,"author explicit standard offer")
+   if not offer.ok:continue
+   if offer.offer.generation.version==Meteor.VERSION:
+    selected+=1
+    check(Meteor.validation_error(offer.offer).is_empty(),"registered meteor validator")
+    check(offer.offer.weight==fresh[id].weight and offer.offer.reward==fresh[id].reward,"original finite commercial weights")
+    check(exact(offer,Policy.author(catalog,fresh[id],state,day_value,0,"ascent",actor)),"deterministic authoring")
+    check(Meteor.validation_error(JSON.parse_string(JSON.stringify(offer.offer,"",true,true))).is_empty(),"JSON meteor restore")
+    if fixture.is_empty() and day_value==2:fixture=offer.offer.duplicate(true);fixture_seed=seed_value
+   else:
+    var old=Seeded.create_new_offer(catalog,{"version":Seeded.VERSION,"world_seed":seed_value},day_value,0,"ascent",actor)
+    check(exact(offer,old),"non-event v1 result byte-semantic unchanged")
+   var heavy=Policy.author(catalog,fresh[id],state,day_value,1,"ascent",Stories.IDS[posmod((day_value-1)*2+1,4)])
+   var old_heavy=Seeded.create_new_offer(catalog,{"version":Seeded.VERSION,"world_seed":seed_value},day_value,1,"ascent",Stories.IDS[posmod((day_value-1)*2+1,4)])
+   check(exact(heavy,old_heavy) and heavy.offer.generation.version==Seeded.VERSION,"slot B unchanged")
+  check(not Policy.selects_meteor(state,1,0,1) and not Policy.selects_meteor(state,2,0,0) and not Policy.selects_meteor(state,2,0,3) and not Policy.selects_meteor(state,2,1,1),"eligibility guards")
+ check(selected>=220 and selected<=290,"fixed 1-in-4 selection aggregate")
+ check(not fixture.is_empty(),"deterministic guaranteed test fixture found")
+ if fixture.is_empty():quit(1);return
+ var ff=FileAccess.open("user://fixture-offer.json",FileAccess.WRITE)
+ check(ff!=null,"QA fixture output opens inside the isolated user directory")
+ if ff==null:quit(1);return
+ ff.store_string(JSON.stringify({"fixture_only":true,"world_seed":fixture_seed,"day":2,"offer":fixture},"  ",true,true));ff.close()
+ for field in ["world_seed","seed","selection_seed","day","slot"]:
+  var bad=fixture.duplicate(true);bad.generation[field]=0.5;check(not Meteor.validation_error(bad).is_empty(),"raw provenance numeric mutation rejected "+field)
+ for pair in [["client","other"],["cargo","other"],["story","other"],["weight",2.325],["variant","重货件"],["route_profile","orbital-meteor-v999"],["control_version","pilot-v999"]]:
+  var bad=fixture.duplicate(true);bad[pair[0]]=pair[1];check(not Econ.route_validation_error(bad).is_empty(),"known markers cannot use opaque bypass "+pair[0])
+ var bad=fixture.duplicate(true);bad.generation.version="future-v999";check(not Econ.route_validation_error(bad).is_empty(),"partial known content markers fail closed")
+ for key in ["position","tracking","conductive","damage","range","strength","fire_interval","last_target_id","future_mechanic"]:
+  var bad_hazard=fixture.duplicate(true)
+  bad_hazard.hazards[8][key]=[0.0,0.0] if key=="position" else true if key in ["tracking","conductive"] else 1000000.0
+  check(not Econ.route_validation_error(bad_hazard).is_empty(),"closed registered meteor rejects mechanic override "+key)
+ var bad_sprite=fixture.duplicate(true);bad_sprite.hazards[8].meteor_sprite="other";check(not Econ.route_validation_error(bad_sprite).is_empty(),"hazard raster registration cannot disagree with event")
+ var heavy_base=fresh[1].duplicate(true);heavy_base.weight*=1.55;check(not Catalog.author(heavy_base,42).ok,"heavy prototype guard unchanged")
+ clean();var fail=new_shop(42,FailedAuthor.new());fail.phase="night";var previous=snap(fail)
+ check(not fail.next_day().ok and exact(previous,snap(fail)),"direct authoring failure restores root and every morning field")
+ check(not fail.next_day_and_save([],[],{}).ok and exact(previous,snap(fail)),"wrapped authoring failure restores root")
+ clean();e=new_shop(fixture_seed);e.reputation=2;e.phase="night";check(e.save_state([],[],{}),"save old-root night")
+ previous=snap(e);var disk=FileAccess.get_file_as_string("user://savegame.json")
+ DirAccess.make_dir_absolute("user://savegame.tmp")
+ check(not e.next_day_and_save([],[],{}).ok and exact(previous,snap(e)),"persistence failure restores upgraded root/date/offers/story/reviews")
+ check(FileAccess.get_file_as_string("user://savegame.json")==disk,"failed persistence keeps disk bytes")
+ DirAccess.remove_absolute("user://savegame.tmp")
+ check(e.next_day_and_save([],[],{}).ok and e.offer_generation_state.version==Policy.VERSION,"next-day atomic supported root transition")
+ check(e.contracts[0].generation.version==Meteor.VERSION and e.contracts[1].generation.version==Seeded.VERSION,"live selection standard meteor plus seeded heavy")
+ var morning=snap(e);var load=Econ.new();load.load_state();load.enable_extreme_mode();load.enable_story_mode();load.enable_seeded_offers(99)
+ check(exact(morning,snap(load)),"actual restart preserves morning root/offers/story/reviews")
+ var id=e.contracts[0].contract_id;check(e.accept_contract(id).ok,"registered meteor acceptance")
+ var conv=e.story_conversation(id,"accept");check(not conv.is_empty() and conv.lines[0].text==Meteor.OPENING,"meteor saved opening plus existing recurring story")
+ check(e.story_actor(id).appearance_id==e.contracts[0].generation.dialogue.appearance_id,"actual existing NPC identity")
+ var state=e.story_state.duplicate(true);e.story_conversation(id,"accept");check(exact(state,e.story_state),"dialogue read does not advance arc")
+ var trial=e.trial_route();e.mark_cargo_loaded(id);var dispatch=e.begin_dispatch(Profile.starter_design(),Profile.starter_launcher())
+ check(dispatch.ok and exact(trial.orbital_event,dispatch.snapshot.route.orbital_event) and exact(trial.generation,dispatch.snapshot.route.generation),"trial/formal exact event and generation snapshot")
+ check(e.save_state(Profile.starter_design(),Profile.starter_launcher(),{}),"actual meteor dispatch save")
+ var inflight=Econ.new();inflight.load_state();check(exact(inflight.in_flight,e.in_flight),"in-flight restart exact")
+ var full=raw()
+ for version in [Seeded.VERSION,Policy.VERSION,"future-root-v999"]:
+  var mismatch=full.duplicate(true);mismatch.offer_generation_state.version=version;mismatch.offer_generation_state.world_seed+=1;mismatch.settings.erase("offer_authoring_policy")
+  check(not e._valid_save(mismatch),"known meteor root-seed mismatch rejected across "+version)
+ var poison=full.duplicate(true);poison.in_flight.route.hazards[8].position=[0.0,0.0];check(not e._valid_save(poison),"save validation refuses poisoned in-flight position override")
+ poison=full.duplicate(true);poison.contracts[0].hazards[8].conductive=false;check(not e._valid_save(poison),"save validation refuses changed live hazard conductivity")
+ var partial=full.duplicate(true);partial.contracts[0].erase("generation");check(not e._valid_save(partial),"partial known event without generation fails save validation")
+ var only_seeded=full.duplicate(true);only_seeded.contracts=[full.contracts[1]];only_seeded.in_flight={}
+ for version in [Seeded.VERSION,Policy.VERSION,"future-root-v999"]:
+  var mismatch=only_seeded.duplicate(true);mismatch.offer_generation_state.version=version;mismatch.offer_generation_state.world_seed+=1;mismatch.settings.erase("offer_authoring_policy")
+  check(not e._valid_save(mismatch),"known v1 root-seed mismatch rejected across "+version)
+ var downgrade=full.duplicate(true);downgrade.offer_generation_state.version=Seeded.VERSION;check(not e._valid_save(downgrade),"same-save policy marker rejects known writer downgrade")
+ check(e.settle_contract_and_save(id,{"integrity":1.0,"energy_used":120.0,"ammo_cost":0.0,"repair_cost":0.0,"lost_cost":0.0},62.675,true,[],[],{}).ok,"actual meteor late receipt saves")
+ check(e.review_state.pending.size()==1 and e.review_state.pending[id].client==e.contracts[0].client,"review retains saved customer")
+ e.close_day();check(e.next_day_and_save([],[],{}).ok and e.customer_reviews().size()==1,"meteor review publishes next day once")
+ check(e.customer_reviews()[0].category=="late","actual late outcome retained without ecology penalty")
+ clean();e=new_shop();e.phase="night";e.offer_generation_state.version="future-root-v999";check(e.save_state([],[],{}),"opaque future root persisted unchanged")
+ previous=snap(e);disk=FileAccess.get_file_as_string("user://savegame.json")
+ check(not e.next_day().ok and exact(previous,snap(e)),"unknown direct next-day remains unchanged")
+ check(not e.next_day_and_save([],[],{}).ok and exact(previous,snap(e)) and FileAccess.get_file_as_string("user://savegame.json")==disk,"unknown wrapped next-day cannot downgrade")
+ clean();print("METEOR_OFFER_INTEGRATION passed=%d failed=%d selected=%d fixture_world_seed=%d"%[passed,failed,selected,fixture_seed]);quit(1 if failed else 0)

@@ -16,6 +16,7 @@ func cancel() -> void:
  camera.cancel();_press_snapshot.clear();_press_mode="";_press_type="";controller_cancel()
 
 func enabled() -> bool:
+ if is_instance_valid(host) and host.has_method("_review_phone_is_open") and host._review_phone_is_open():return false
  return is_instance_valid(host) and host.page=="workshop" and not host.closing and not host._dialogue_is_open() and not (host.has_method("_loading_scene_active") and host._loading_scene_active()) and is_instance_valid(host.hud) and not host.hud.is_blocking_modal()
 
 func _allowed_screen(screen:Vector2) -> bool:

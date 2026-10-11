@@ -1,8 +1,8 @@
 # pilot-v3: bounded extreme-build slice
 
-Status: integrated development slice. New production runs select v3 in the controller, economy, world and HUD. Genuine committed v1/v2 snapshots still select their frozen simulators and saved route/fees. The six legacy simulation/profile/parts sources remain byte-for-byte unchanged. Actual-keyboard extreme-build comparison is still being validated.
+Status: integrated development slice. New production runs select v3 in the controller, economy, world and HUD; new wormhole content selects its separate v4 protocol. Genuine committed v1/v2 snapshots still select their frozen simulators and saved route/fees. The six legacy simulation/profile/parts sources remain byte-for-byte unchanged. Actual-keyboard extreme-build comparisons passed 85 checks; see the dated evidence in `docs/qa/v5/extreme-native/README.md` and the current [QA summary](QA-v5-pilot.md). Controlled test builds are not a naturally earned full-power delivery claim.
 
-This slice establishes assembly consequences, real overdrive, a contact drill and finite impact shielding. It retains the existing ascent-to-orbital-dock route. It does not implement additional ground, wormhole or otherworld routes, an export, or a delivery-balanced extreme route.
+This document records the original bounded propulsion/contact slice: assembly consequences, real overdrive, a contact drill and finite impact shielding on the ascent-to-orbital-dock rules. Later ground and wormhole/otherworld integrations are documented separately in [ground QA](QA-v5-ground.md) and [wormhole QA](QA-v5-wormhole.md). The original measurements below are not a general promise that arbitrary full-power designs can finish every route.
 
 ## Version and files
 

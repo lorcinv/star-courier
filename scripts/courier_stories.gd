@@ -5,6 +5,9 @@ extends RefCounted
 const VERSION:int=1
 const MAX_PENDING_RETURNS:int=8
 const GROUND_ROUTE_PROFILE:String="ground-city-v1"
+const OTHERWORLD_ROUTE_PROFILE:String="wormhole-otherworld-v1"
+const PROTECTED_BIRD_ROUTE_PROFILE:String="mosslight-protected-bird-v1"
+const MOON_ROUTE_PROFILE:String="moon-surface-v1"
 const IDS:Array[String]=["human_courier","elf_archivist","alien_botanist","robot_machinist"]
 const PROFILES:Dictionary={
  "human_courier":{"name":"小禾","species":"human","story_id":"spoon_at_the_station","cargo":"包好的一把小勺","accessories":["none"],"voice_pitch":1.12},
@@ -133,8 +136,16 @@ static func conversation_for(raw:Dictionary,contract:Dictionary,beat:String,succ
   success=bool(state.committed_contract_ids[cid].get("success",false))
   context=state.committed_contract_ids[cid].get("route_context",{})
  var ground:bool=str(context.get("route_profile",""))==GROUND_ROUTE_PROFILE
+ var otherworld:bool=str(context.get("route_profile","")) in [OTHERWORLD_ROUTE_PROFILE,PROTECTED_BIRD_ROUTE_PROFILE]
+ var moon:bool=str(context.get("route_profile",""))==MOON_ROUTE_PROFILE
  var title:String="柜台来信" if beat=="accept" else (("货站回执" if ground else "星港回执") if beat=="result" else "又见面了")
  var lines:Array=_ground_lines(str(binding.appearance_id),beat,success,int(binding.get("story_node",0)),str(context.get("destination_name",""))) if ground else _lines(str(binding.appearance_id),beat,success,int(binding.get("story_node",0)))
+ if otherworld:
+  if beat=="result":title="异界回执"
+  lines=_otherworld_lines(str(binding.appearance_id),beat,success,int(binding.get("story_node",0)),str(context.get("destination_name","")))
+ if moon:
+  if beat=="result":title="月面回执"
+  lines=_moon_lines(str(binding.appearance_id),beat,success,int(binding.get("story_node",0)),str(context.get("destination_name","")))
  return {"id":did,"dialogue_id":did,"contract_id":cid,"beat":beat,"title":title,"route_hint":str(context.get("route_name","晨星社区 → 星港中转站")),"lines":lines,"actor":actor}
 
 static func _normalize_route_context(raw:Variant) -> Dictionary:
@@ -143,14 +154,22 @@ static func _normalize_route_context(raw:Variant) -> Dictionary:
  for key in ["route_profile","route_name","destination_name"]:
   if not raw.get(key) is String:return {}
   if str(raw[key]).length()>160 or str(raw[key]).contains("\n") or str(raw[key]).contains("\r"):return {}
- if not raw.route_profile in ["",GROUND_ROUTE_PROFILE]:return {}
+ if not raw.route_profile in ["",GROUND_ROUTE_PROFILE,OTHERWORLD_ROUTE_PROFILE,PROTECTED_BIRD_ROUTE_PROFILE,MOON_ROUTE_PROFILE]:return {}
  if str(raw.route_name).strip_edges().is_empty() or str(raw.destination_name).strip_edges().is_empty():return {}
- return {"route_profile":raw.route_profile,"route_name":raw.route_name,"destination_name":raw.destination_name}
+ var context:Dictionary={"route_profile":raw.route_profile,"route_name":raw.route_name,"destination_name":raw.destination_name}
+ if raw.route_profile==MOON_ROUTE_PROFILE:
+  if not raw.get("route_kind") is String or not raw.get("destination_id") is String:return {}
+  if raw.route_kind!="moon" or raw.destination_id!="moon-regolith-airlock":return {}
+  context.route_kind=raw.route_kind;context.destination_id=raw.destination_id
+ return context
 
 static func _contract_route_context(contract:Dictionary) -> Dictionary:
  # Missing route_profile deliberately means the old ascent/starport semantics.
  # No coordinate/altitude heuristic may reclassify an old saved v3 contract.
- return _normalize_route_context({"route_profile":contract.get("route_profile",""),"route_name":contract.get("name",""),"destination_name":contract.get("destination_name","星港中转站")})
+ var context:Dictionary={"route_profile":contract.get("route_profile",""),"route_name":contract.get("name",""),"destination_name":contract.get("destination_name","星港中转站")}
+ if context.route_profile==MOON_ROUTE_PROFILE:
+  context.route_kind=contract.get("route_kind");context.destination_id=contract.get("destination_id")
+ return _normalize_route_context(context)
 
 static func commit_settlement(raw:Dictionary,contract:Dictionary,report:Dictionary,is_trial:bool=false) -> Dictionary:
  var state:=normalize_state(raw)
@@ -202,6 +221,32 @@ static func _ground_lines(id:String,beat:String,success:bool,story_node:int,dest
   "robot_machinist/return":return [_line("npc","他给我留了一个杯子。下次休息，我去%s喝茶。"%destination,"pleased"),_line("clerk","这回自己送一趟点心，正好配茶。","warm_smile")]
  return []
 
+static func _otherworld_lines(id:String,beat:String,success:bool,story_node:int,destination:String) -> Array:
+ if beat=="result" and not success:
+  return [_line("npc","%s那边还没收到。箱子先放一放，你平安回来就好。"%destination,"concerned"),_line("clerk","嗯。下次过洞前，多检查一遍。","concerned")]
+ if beat=="return" and not success:
+  return [_line("npc","%s回信了，说不急。我也来看看你。"%destination,"neutral"),_line("clerk","谢谢。今天先把装置修好。","warm_smile")]
+ if beat=="accept" and story_node>0:
+  match id:
+   "human_courier":return [_line("npc","又来送勺子了。这回去虫洞那边的%s，朋友说那里的粥会发光。"%destination,"pleased"),_line("clerk","到了也得趁热喝。我给他送去。","warm_smile")]
+   "elf_archivist":return [_line("npc","这枚书签要过虫洞，送到%s。那里的书页自己翻，总把结尾翻出来。"%destination,"pleased"),_line("clerk","这回替她把结尾压住。","warm_smile")]
+   "alien_botanist":return [_line("npc","幼苗这回住%s，要过虫洞。那边有两个月亮，它还没想好朝哪边睡。"%destination,"pleased"),_line("clerk","先垫稳，到窗边再慢慢挑。","warm_smile")]
+   "robot_machinist":return [_line("npc","这回哨片要过虫洞，送到%s。室友的杯子已经拿好了。"%destination,"pleased"),_line("clerk","那就别让他的茶等太久。","warm_smile")]
+ match id+"/"+beat:
+  "human_courier/accept":return [_line("npc","小勺要送到虫洞那边的%s。朋友说那里的粥会发光。"%destination,"neutral"),_line("clerk","吃早饭还省一盏灯？","curious"),_line("npc","他说先别问，勺子比较急。","pleased")]
+  "human_courier/result":return [_line("npc","%s签收了。粥确实发光，勺子还是普通勺子。"%destination,"pleased"),_line("clerk","那就能安心吃了。","warm_smile")]
+  "human_courier/return":return [_line("npc","%s寄来一张早餐照。只看见粥，朋友被照得闭了眼。"%destination,"pleased"),_line("clerk","下回给他捎个灯罩？","curious")]
+  "elf_archivist/accept":return [_line("npc","这枚书签送到虫洞那边的%s。那里入夜以后，书页会自己翻。"%destination,"neutral"),_line("clerk","书签压得住吗？","curious"),_line("npc","先试试。她已经被剧透三次了。","concerned")]
+  "elf_archivist/result":return [_line("npc","%s说书签压住了最后一章。今晚总算能从头看。"%destination,"pleased"),_line("clerk","这趟替她保住一个结尾。","pleased")]
+  "elf_archivist/return":return [_line("npc","%s来信了。书不乱翻了，她倒忍不住自己偷看结尾。"%destination,"pleased"),_line("clerk","这个可怪不到风头上。","warm_smile")]
+  "alien_botanist/accept":return [_line("npc","幼苗要过虫洞，住进%s。那边有两个月亮，它想选一扇窗。"%destination,"neutral"),_line("clerk","选朝哪边的？","curious"),_line("npc","它还在睡。醒来再选。","pleased")]
+  "alien_botanist/result":return [_line("npc","%s把它放上窗台了。它醒了一下，两边都看了看。"%destination,"pleased"),_line("clerk","选好了吗？","curious"),_line("npc","没有。又睡了。","neutral")]
+  "alien_botanist/return":return [_line("npc","%s给它换了个带轮子的花盆。现在两个月亮都看得到。"%destination,"pleased"),_line("clerk","它这回不用自己挪了。","warm_smile")]
+  "robot_machinist/accept":return [_line("npc","哨片送去虫洞另一头的%s。室友说，那边烧开的水没有声音。"%destination,"neutral"),_line("clerk","那还认得旧哨片的两声吗？","curious"),_line("npc","认得。他一直留着杯子。","pleased")]
+  "robot_machinist/result":return [_line("npc","%s接上了旧哨片。第一声响的时候，他已经拿好了杯子。"%destination,"pleased"),_line("clerk","这次没让水等他。","warm_smile")]
+  "robot_machinist/return":return [_line("npc","%s说还空着一个杯子。下次休息，我也想过洞看看。"%destination,"pleased"),_line("clerk","记得带点心。那边也有人等你。","warm_smile")]
+ return []
+
 static func _lines(id:String,beat:String,success:bool,story_node:int) -> Array:
  if beat=="accept" and story_node>0:
   return [_line("npc","又来麻烦你了。还是送去星港中转站，这回我把地址写大了。","pleased"),_line("clerk","看见了。老规矩，先把箱子垫稳。","warm_smile")]
@@ -222,4 +267,31 @@ static func _lines(id:String,beat:String,success:bool,story_node:int) -> Array:
   "robot_machinist/accept":return [_line("npc","这片旧水壶哨片，寄给星港的室友。新水壶叫得太准时了。","neutral"),_line("clerk","准时也有问题？","curious"),_line("npc","旧的会先哼两声。正好够他慢慢找杯子。","pleased")]
   "robot_machinist/result":return [_line("npc","哨片装好了。刚才他发来消息：杯子找到了。","pleased"),_line("clerk","水也开了？","curious"),_line("npc","还没有。还是熟悉的两声。","pleased")]
   "robot_machinist/return":return [_line("npc","他给我留了一个杯子。下次休息，我去星港喝茶。","pleased"),_line("clerk","这回你自己去，记得带上回程票。","warm_smile")]
+ return []
+
+
+static func _moon_lines(id:String,beat:String,success:bool,story_node:int,destination:String) -> Array:
+ if beat=="result" and not success:
+  return [_line("npc","%s还没收到。月面那边会等，你先把装置修好。"%destination,"concerned"),_line("clerk","这趟的问题记下了。再出发前，我会先试飞。","concerned")]
+ if beat=="return" and not success:
+  return [_line("npc","%s说不急。今天来看看你，包裹下次再送。"%destination,"neutral"),_line("clerk","嗯，先把电和进舱的路线算清楚。","warm_smile")]
+ if beat=="accept" and story_node>0:
+  match id:
+   "human_courier":return [_line("npc","又来送小勺了，这回去%s。朋友把看地球的窗边留作餐桌了。"%destination,"pleased"),_line("clerk","先给他把餐具送齐。","warm_smile")]
+   "elf_archivist":return [_line("npc","书签这回去%s。她一看地球就忘了读到哪页。"%destination,"pleased"),_line("clerk","给她留住那一页。","warm_smile")]
+   "alien_botanist":return [_line("npc","幼苗这回去%s。月面窗边已经空出一个花盆的位置。"%destination,"pleased"),_line("clerk","还是垫稳，慢慢送到门里。","warm_smile")]
+   "robot_machinist":return [_line("npc","又来寄旧哨片，送去%s。室友搬到月面，杯子也带去了。"%destination,"pleased"),_line("clerk","这次让熟悉的声音也跟过去。","warm_smile")]
+ match id+"/"+beat:
+  "human_courier/accept":return [_line("npc","这把小勺送去%s。朋友在月面值班，吃饭的窗正对着地球。"%destination,"neutral"),_line("clerk","风景挺好。餐具带齐了吗？","curious"),_line("npc","又只带了叉子。","concerned")]
+  "human_courier/result":return [_line("npc","%s签收了。他说地球还没转出窗框，粥已经喝完了。"%destination,"pleased"),_line("clerk","这回没耽误早饭。","warm_smile")]
+  "human_courier/return":return [_line("npc","%s寄来一张窗边早餐照。小勺和地球都在里面。"%destination,"pleased"),_line("clerk","拍完再吃，别又把粥放凉了。","warm_smile")]
+  "elf_archivist/accept":return [_line("npc","压花书签送去%s。她在月面读书，总忍不住抬头看地球。"%destination,"neutral"),_line("clerk","再低头，就找不到那一行？","curious"),_line("npc","已经把第一页读了五遍。","concerned")]
+  "elf_archivist/result":return [_line("npc","%s收到书签了。今天终于读到第二页。"%destination,"pleased"),_line("clerk","地球没把她留在第一页就好。","warm_smile")]
+  "elf_archivist/return":return [_line("npc","%s来信说，书签那朵花像从地球带去的一小片颜色。"%destination,"pleased"),_line("clerk","那就多夹一会儿，花不急着回来。","warm_smile")]
+  "alien_botanist/accept":return [_line("npc","幼苗送去%s的密封温室。它还没见过月面的窗。"%destination,"neutral"),_line("clerk","花盆安顿好了？","curious"),_line("npc","好了。窗外的灰石头不能吃，我也写在箱子上了。","concerned")]
+  "alien_botanist/result":return [_line("npc","%s把它放进温室了。它朝地球那边伸了一片叶子。"%destination,"pleased"),_line("clerk","刚住下，就开始认窗外的路了。","warm_smile")]
+  "alien_botanist/return":return [_line("npc","%s说它每天朝同一扇窗伸叶子。没去碰灰石头。"%destination,"pleased"),_line("clerk","看来箱子上的字没白写。","pleased")]
+  "robot_machinist/accept":return [_line("npc","旧水壶哨片送去%s。室友搬到月面后，烧水时总盯着表。"%destination,"neutral"),_line("clerk","还惦记原来那两声？","curious"),_line("npc","嗯。他说表不会哼。","concerned")]
+  "robot_machinist/result":return [_line("npc","%s装好了哨片。密封舱里又能听到那两声了。"%destination,"pleased"),_line("clerk","现在可以放下表，慢慢找杯子了。","warm_smile")]
+  "robot_machinist/return":return [_line("npc","%s的室友给我留了一个杯子。月面的茶，我还没喝过。"%destination,"pleased"),_line("clerk","等休息了，去窗边一起喝。","warm_smile")]
  return []

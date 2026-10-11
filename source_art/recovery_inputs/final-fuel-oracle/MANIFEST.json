@@ -1,0 +1,107 @@
+{
+  "kind": "test_only_final_fuel_tick_intent_oracle_supplement",
+  "created_at_utc": "2026-10-11T06:24:43.332027+00:00",
+  "parent_library_id": "libfile_d8b383953a108191bb43b8900d2e0aa4",
+  "runtime_modified": false,
+  "native_result": {
+    "call_count": 8,
+    "failures": [],
+    "oracle_hash": "960b8f91303e203206e8e463d45881580a0321d5d9f84ffd95f4d13892d81d41",
+    "passed": true,
+    "runtime_modified": false,
+    "solver_implemented": false,
+    "suite": "final-fuel-tick-explicit-intent-oracle"
+  },
+  "source_manifest": {
+    "ground_patrol_warning_v1.gd": {
+      "size": 5662,
+      "sha256": "7ef3472b57569b55460f8fa5441bb19c603c8f1d1951473202a5eead65970fb5"
+    },
+    "ground_traffic_actor_v1.gd": {
+      "size": 19990,
+      "sha256": "d00aec1b65d49159f7b95ab0e73939d2d049d3aa85867425a87b66aae7f66455"
+    },
+    "ground_traffic_bundle_v1.gd": {
+      "size": 7554,
+      "sha256": "145f7140b6f23ca0b912b8fb798cdc88cc7e0975ee8e83c861c203ee9391a64f"
+    },
+    "ground_traffic_value_v1.gd": {
+      "size": 5791,
+      "sha256": "0ac41ea98ec5acdab833a400d6da2cd0f750a05b2ac59e7c6b27afc0dfa233ab"
+    },
+    "project.godot": {
+      "size": 286,
+      "sha256": "ff864a4d06ebf8523723c04cc7c91c7fea235bc4d5c5845823f5b9733dfc0554"
+    },
+    "final_fuel_oracle/test_final_fuel_tick.gd": {
+      "size": 7350,
+      "sha256": "e8134f62d562564ea73f2013642beff5055528b0e6e4eb69ae9227b1e01141f2"
+    }
+  },
+  "files": {
+    "README.md": {
+      "size": 3233,
+      "sha256": "68bea29cbf350654bd33d29309f4a30e93dbccb16af9835035151419e588f680"
+    },
+    "evidence/AFTER_EARLIER_DEATH.json": {
+      "size": 18033,
+      "sha256": "4b82225d4c1c5383b071f4c333f7e489ee9a4d89edfcaf767f73b3d3aecc5e9b"
+    },
+    "evidence/AFTER_PAID_TICK.json": {
+      "size": 17708,
+      "sha256": "1a462c2359812a2e52ff164dbb1b979c61b1a503978447cc9d2073f7afd8a6e7"
+    },
+    "evidence/ORACLE.json": {
+      "size": 11408,
+      "sha256": "bccf8b51d4ef3e819228da9c712afe71d013c188c4e3b5ac018bd37929ced39f"
+    },
+    "evidence/ORACLE_TYPED.json": {
+      "size": 12755,
+      "sha256": "93a4c336744083b776f491b71823a558f822b9374cd3dc54fa6ee320c16f8f9d"
+    },
+    "evidence/RESULT.json": {
+      "size": 1776,
+      "sha256": "37702be0da2664500c5ef80ea795ff67a37bfada2381e8f09f0c16e7b2517f63"
+    },
+    "evidence/SOURCE_MANIFEST.json": {
+      "size": 835,
+      "sha256": "ababaabba943fd48db528e323dcb20162850fbc6ce4a9a5edecadde587b353d7"
+    },
+    "evidence/engine.log": {
+      "size": 5149,
+      "sha256": "afdb17fa4cc3844925ef96199ed27353a4006d540a1c286ee8dc6ef7ba72ef92"
+    },
+    "evidence/stderr.log": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/stdout.log": {
+      "size": 5160,
+      "sha256": "6919adeacc0ed4d651c7a5fca7e55499bcb3d511a7765bf0c2e539a7d0d6806e"
+    },
+    "source/final_fuel_oracle/test_final_fuel_tick.gd": {
+      "size": 7350,
+      "sha256": "e8134f62d562564ea73f2013642beff5055528b0e6e4eb69ae9227b1e01141f2"
+    },
+    "source/ground_patrol_warning_v1.gd": {
+      "size": 5662,
+      "sha256": "7ef3472b57569b55460f8fa5441bb19c603c8f1d1951473202a5eead65970fb5"
+    },
+    "source/ground_traffic_actor_v1.gd": {
+      "size": 19990,
+      "sha256": "d00aec1b65d49159f7b95ab0e73939d2d049d3aa85867425a87b66aae7f66455"
+    },
+    "source/ground_traffic_bundle_v1.gd": {
+      "size": 7554,
+      "sha256": "145f7140b6f23ca0b912b8fb798cdc88cc7e0975ee8e83c861c203ee9391a64f"
+    },
+    "source/ground_traffic_value_v1.gd": {
+      "size": 5791,
+      "sha256": "0ac41ea98ec5acdab833a400d6da2cd0f750a05b2ac59e7c6b27afc0dfa233ab"
+    },
+    "source/project.godot": {
+      "size": 286,
+      "sha256": "ff864a4d06ebf8523723c04cc7c91c7fea235bc4d5c5845823f5b9733dfc0554"
+    }
+  }
+}

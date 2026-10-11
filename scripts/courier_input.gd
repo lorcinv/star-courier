@@ -15,6 +15,7 @@ var active_device:int=-1
 var deadzone:float=.22
 var _buttons:Dictionary={}
 var _keys:Dictionary={}
+var _mouse:Dictionary={}
 var _axes:Dictionary={}
 var _blocked:Dictionary={}
 var _clock:float=0.0
@@ -57,6 +58,8 @@ func desired_context() -> String:
  if host._loading_scene_active():return "loading"
  if host.hud.is_blocking_modal():return "modal"
  if host.page=="flight":return "flight_paused" if host.paused else "flight"
+ if host.has_method("_review_phone_is_open") and host._review_phone_is_open():return "phone"
+ if host.has_method("_investigation_is_open") and host._investigation_is_open():return "investigation"
  if host.page=="hub":return "ui" if _hub_ui else "shop"
  if host.page=="workshop" and _grid:return "grid"
  return "ui"
@@ -71,9 +74,10 @@ func synchronize() -> void:
  if next==context and not page_changed:return
  context=next;quarantine()
  if context!="grid":host.workshop_input.controller_cancel()
- if controller_navigation and context in ["ui","modal","dialogue","flight_paused"]:ensure_focus()
+ if controller_navigation and context in ["ui","modal","dialogue","flight_paused","phone","investigation"]:ensure_focus()
 
 func quarantine() -> void:
+ for token in _mouse:_blocked[token]=true
  for token in _keys:_blocked[token]=true
  for token in _buttons:_blocked[token]=true
  for token in _axes:
@@ -86,7 +90,7 @@ func set_focus_active(value:bool) -> void:
  if not focused:controller_navigation=false
  quarantine();synchronize()
  # A key released outside the application may never send its release here.
- _keys.clear();_buttons.clear();_axes.clear()
+ _keys.clear();_buttons.clear();_axes.clear();_mouse.clear()
 
 func _joy_connection_changed(device:int,connected:bool) -> void:
  if connected:return
@@ -103,6 +107,7 @@ func _set_device(value:bool) -> void:
  if value==gamepad:return
  if _clock-_prompt_changed<PROMPT_HYSTERESIS:return
  gamepad=value;_prompt_changed=_clock
+ if host.has_method("_investigation_is_open") and is_instance_valid(host.investigation):host.investigation.set_input_device(gamepad)
  if is_instance_valid(host.dialogue):host.dialogue.set_input_device(gamepad)
  if is_instance_valid(host.loading_overlay):host.loading_overlay.set_input_device(gamepad)
  if is_instance_valid(host.hud):host.hud.set_input_device(gamepad)
@@ -113,17 +118,33 @@ func _input(event:InputEvent) -> void:
  if event is InputEventJoypadButton or event is InputEventJoypadMotion:
   get_viewport().set_input_as_handled()
   observe_joy(event);return
+ if event is InputEventMouseButton and event.button_index in [MOUSE_BUTTON_LEFT,MOUSE_BUTTON_RIGHT,MOUSE_BUTTON_MIDDLE,MOUSE_BUTTON_XBUTTON1,MOUSE_BUTTON_XBUTTON2]:
+  var mouse_token:String="m:%d"%event.button_index
+  if not event.pressed:
+   _mouse.erase(mouse_token)
+   if _blocked.has(mouse_token):_blocked.erase(mouse_token);get_viewport().set_input_as_handled();return
+  else:
+   _mouse[mouse_token]=true
+   if not focused:_blocked[mouse_token]=true
+   if _blocked.has(mouse_token):get_viewport().set_input_as_handled();return
  if event is InputEventKey:
   var code:int=event.physical_keycode if event.physical_keycode!=0 else event.keycode
   var token:String="k:%d"%code
+  if context=="investigation":get_viewport().set_input_as_handled()
   if not event.pressed:_keys.erase(token);_blocked.erase(token);return
   if not focused:_blocked[token]=true;get_viewport().set_input_as_handled();return
   if event.echo or _keys.has(token):
-   if _blocked.has(token):get_viewport().set_input_as_handled()
+   if _blocked.has(token) or context=="phone":get_viewport().set_input_as_handled()
    return
   _keys[token]=true
   if _blocked.has(token):get_viewport().set_input_as_handled();return
   controller_navigation=false;_set_device(false)
+  if context=="phone":
+   get_viewport().set_input_as_handled();_phone_key(code,event.shift_pressed);return
+  if context=="investigation":
+   if code in [KEY_E,KEY_ENTER,KEY_KP_ENTER,KEY_SPACE,KEY_ESCAPE]:host.investigation.close()
+   elif code==KEY_TAB:ensure_focus()
+   return
   var editing:Control=get_viewport().gui_get_focus_owner()
   if code in [KEY_A,KEY_D] and context in ["ui","grid"] and not editing is LineEdit and not editing is TextEdit:
    if host.page!="hub":host.navigate("hub")
@@ -134,7 +155,7 @@ func _input(event:InputEvent) -> void:
    get_viewport().set_input_as_handled()
    if code in [KEY_E,KEY_ENTER,KEY_KP_ENTER]:_interact()
   elif context=="shop" and code==KEY_TAB:
-   _hub_ui=true;synchronize()
+   _hub_ui=true;synchronize();ensure_focus();get_viewport().set_input_as_handled()
   elif context=="ui" and host.page=="hub" and code==KEY_ESCAPE:
    _hub_ui=false;synchronize();get_viewport().set_input_as_handled()
  elif event is InputEventMouse and not focused:
@@ -200,7 +221,7 @@ func pilot_state() -> Dictionary:
 func tick(delta:float) -> void:
  _clock+=maxf(0.0,delta);synchronize()
  if host.world.has_method("set_shop_input"):host.world.set_shop_input(shop_axis(),context=="shop")
- if context in ["ui","modal","dialogue","flight_paused","grid"]:
+ if context in ["ui","modal","dialogue","flight_paused","grid","phone","investigation"]:
   var direction:=Vector2i(int(button(JOY_BUTTON_DPAD_RIGHT))-int(button(JOY_BUTTON_DPAD_LEFT)),int(button(JOY_BUTTON_DPAD_DOWN))-int(button(JOY_BUTTON_DPAD_UP)))
   if direction==Vector2i.ZERO:
    var stick:=Vector2(axis(JOY_AXIS_LEFT_X),axis(JOY_AXIS_LEFT_Y))
@@ -212,10 +233,29 @@ func tick(delta:float) -> void:
    _repeat_left-=minf(delta,.10)
    if _repeat_left<=0:_repeat_left+=REPEAT_INTERVAL;_navigate(direction)
   if context=="grid":host.workshop_input.controller_pan(Vector2(axis(JOY_AXIS_RIGHT_X),axis(JOY_AXIS_RIGHT_Y))*minf(delta,.1))
-  elif context in ["ui","modal"]:_scroll_ui(axis(JOY_AXIS_RIGHT_Y)*minf(delta,.1)*650.0)
+  elif context in ["ui","modal","phone"]:_scroll_ui(axis(JOY_AXIS_RIGHT_Y)*minf(delta,.1)*650.0)
  _update_hint()
 
+func _phone_key(code:int,shift:bool=false) -> void:
+ match code:
+  KEY_ESCAPE:host._close_review_phone()
+  KEY_ENTER,KEY_KP_ENTER,KEY_SPACE:activate_focus(host.review_phone.focus_root())
+  KEY_UP:_navigate(Vector2i.UP)
+  KEY_DOWN:_navigate(Vector2i.DOWN)
+  KEY_LEFT:_navigate(Vector2i.LEFT)
+  KEY_RIGHT:_navigate(Vector2i.RIGHT)
+  KEY_PAGEUP:host.review_phone.scroll_by(-260.0)
+  KEY_PAGEDOWN:host.review_phone.scroll_by(260.0)
+  KEY_HOME:host.review_phone.scroll_to_edge(false)
+  KEY_END:host.review_phone.scroll_to_edge(true)
+  KEY_TAB:
+   var candidates:Array[Control]=_focusables(_focus_root())
+   if not candidates.is_empty():
+    var current:Control=ensure_focus()
+    _focus(candidates[posmod(candidates.find(current)+(-1 if shift else 1),candidates.size())])
+
 func _scroll_ui(amount:float) -> void:
+ if context=="phone":host.review_phone.scroll_by(amount);return
  if absf(amount)<.01:return
  var owner:Control=get_viewport().gui_get_focus_owner()
  var parent:Node=owner
@@ -227,6 +267,11 @@ func _scroll_ui(amount:float) -> void:
 
 func _dispatch(action:String) -> void:
  match context:
+  "investigation":
+   if action in ["confirm","back"]:host.investigation.close()
+  "phone":
+   if action=="back":host._close_review_phone()
+   elif action=="confirm":activate_focus(host.review_phone.focus_root())
   "dialogue":
    if action=="confirm":activate_focus(host.dialogue._root)
    elif action=="back":host.dialogue.skip_conversation()
@@ -272,6 +317,8 @@ func _interact() -> void:
  if not target.is_empty() and bool(target.get("enabled",true)):host._action(str(target.id),null)
 
 func _focus_root() -> Control:
+ if context=="investigation":return host.investigation._root
+ if context=="phone":return host.review_phone.focus_root()
  if context=="dialogue":return host.dialogue._root
  if context=="modal":
   for node in host.hud.content.get_children():
@@ -291,7 +338,7 @@ func _focusables(root:Node) -> Array[Control]:
   if child is BaseButton and child.disabled:continue
   if child is LineEdit and child.get_parent() is SpinBox:
    if not result.has(child.get_parent()):result.append(child.get_parent())
-  elif child is BaseButton or child is Range or child is LineEdit:result.append(child)
+  elif child is BaseButton or child is Range or child is LineEdit or (context=="phone" and child.has_meta("phone_review")):result.append(child)
  return result
 
 func ensure_focus() -> Control:

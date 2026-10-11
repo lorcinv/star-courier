@@ -1,0 +1,1024 @@
+[
+  {
+    "manifest": "assets/2d_v5/actors/actor-manifest.json",
+    "field": "actors.customer.poses.idle.runtime",
+    "target": "assets/2d_v5/actors/customer-idle-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/actor-manifest.json",
+    "field": "actors.customer.poses.handoff.runtime",
+    "target": "assets/2d_v5/actors/customer-handoff-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/actor-manifest.json",
+    "field": "actors.clerk.poses.idle.runtime",
+    "target": "assets/2d_v5/actors/clerk-idle-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/actor-manifest.json",
+    "field": "actors.clerk.poses.handoff.runtime",
+    "target": "assets/2d_v5/actors/clerk-handoff-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.elf_archivist.world.idle",
+    "target": "assets/2d_v5/npcs/elf_archivist/idle-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.elf_archivist.world.handoff",
+    "target": "assets/2d_v5/npcs/elf_archivist/handoff-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.elf_archivist.poses.idle.runtime",
+    "target": "assets/2d_v5/npcs/elf_archivist/idle-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.elf_archivist.poses.handoff.runtime",
+    "target": "assets/2d_v5/npcs/elf_archivist/handoff-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.elf_archivist.accessory_options.book_pouch.runtime",
+    "target": "assets/2d_v5/npcs/elf_archivist/accessories/book_pouch-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.elf_archivist.accessory_options.map_case.runtime",
+    "target": "assets/2d_v5/npcs/elf_archivist/accessories/map_case-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.elf_archivist.portraits.neutral",
+    "target": "assets/2d_v5/npcs/elf_archivist/portraits/neutral.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.elf_archivist.portraits.pleased",
+    "target": "assets/2d_v5/npcs/elf_archivist/portraits/pleased.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.elf_archivist.portraits.concerned",
+    "target": "assets/2d_v5/npcs/elf_archivist/portraits/concerned.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.elf_archivist.portrait_metadata.neutral.runtime",
+    "target": "assets/2d_v5/npcs/elf_archivist/portraits/neutral.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.elf_archivist.portrait_metadata.pleased.runtime",
+    "target": "assets/2d_v5/npcs/elf_archivist/portraits/pleased.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.elf_archivist.portrait_metadata.concerned.runtime",
+    "target": "assets/2d_v5/npcs/elf_archivist/portraits/concerned.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.alien_botanist.world.idle",
+    "target": "assets/2d_v5/npcs/alien_botanist/idle-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.alien_botanist.world.handoff",
+    "target": "assets/2d_v5/npcs/alien_botanist/handoff-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.alien_botanist.poses.idle.runtime",
+    "target": "assets/2d_v5/npcs/alien_botanist/idle-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.alien_botanist.poses.handoff.runtime",
+    "target": "assets/2d_v5/npcs/alien_botanist/handoff-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.alien_botanist.accessory_options.seed_pod.runtime",
+    "target": "assets/2d_v5/npcs/alien_botanist/accessories/seed_pod-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.alien_botanist.accessory_options.field_vial.runtime",
+    "target": "assets/2d_v5/npcs/alien_botanist/accessories/field_vial-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.alien_botanist.portraits.neutral",
+    "target": "assets/2d_v5/npcs/alien_botanist/portraits/neutral.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.alien_botanist.portraits.pleased",
+    "target": "assets/2d_v5/npcs/alien_botanist/portraits/pleased.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.alien_botanist.portraits.concerned",
+    "target": "assets/2d_v5/npcs/alien_botanist/portraits/concerned.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.alien_botanist.portrait_metadata.neutral.runtime",
+    "target": "assets/2d_v5/npcs/alien_botanist/portraits/neutral.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.alien_botanist.portrait_metadata.pleased.runtime",
+    "target": "assets/2d_v5/npcs/alien_botanist/portraits/pleased.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.alien_botanist.portrait_metadata.concerned.runtime",
+    "target": "assets/2d_v5/npcs/alien_botanist/portraits/concerned.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.robot_machinist.world.idle",
+    "target": "assets/2d_v5/npcs/robot_machinist/idle-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.robot_machinist.world.handoff",
+    "target": "assets/2d_v5/npcs/robot_machinist/handoff-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.robot_machinist.poses.idle.runtime",
+    "target": "assets/2d_v5/npcs/robot_machinist/idle-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.robot_machinist.poses.handoff.runtime",
+    "target": "assets/2d_v5/npcs/robot_machinist/handoff-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.robot_machinist.accessory_options.tool_pack.runtime",
+    "target": "assets/2d_v5/npcs/robot_machinist/accessories/tool_pack-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.robot_machinist.accessory_options.power_cell.runtime",
+    "target": "assets/2d_v5/npcs/robot_machinist/accessories/power_cell-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.robot_machinist.portraits.neutral",
+    "target": "assets/2d_v5/npcs/robot_machinist/portraits/neutral.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.robot_machinist.portraits.pleased",
+    "target": "assets/2d_v5/npcs/robot_machinist/portraits/pleased.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.robot_machinist.portraits.concerned",
+    "target": "assets/2d_v5/npcs/robot_machinist/portraits/concerned.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.robot_machinist.portrait_metadata.neutral.runtime",
+    "target": "assets/2d_v5/npcs/robot_machinist/portraits/neutral.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.robot_machinist.portrait_metadata.pleased.runtime",
+    "target": "assets/2d_v5/npcs/robot_machinist/portraits/pleased.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "appearances.robot_machinist.portrait_metadata.concerned.runtime",
+    "target": "assets/2d_v5/npcs/robot_machinist/portraits/concerned.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/npc-manifest.json",
+    "field": "customer_parcel_transfer.runtime",
+    "target": "assets/2d_v5/npcs/shared/customer-parcel-neutral-pixel.png",
+    "readable_manifest_status": "available_old_same_path_hash_mismatch",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.0.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-00-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.1.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-01-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.2.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-02-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.3.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-03-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.4.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-04-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.5.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-05-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.6.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-06-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.7.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-07-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.8.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-08-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.9.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-09-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.10.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-10-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.11.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-11-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.12.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-12-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.13.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-13-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.14.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-14-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.15.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-15-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.16.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-16-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.17.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-17-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.18.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-18-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.19.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-19-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.20.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-20-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.21.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-21-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.22.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-22-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.23.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-23-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.24.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-24-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.25.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-25-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.26.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-26-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.27.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-27-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.28.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-28-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.29.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-29-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.30.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-30-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.walk.31.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-walk-rig-31-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.gestures.reach.runtime",
+    "target": "assets/2d_v5/actors/cooperative/clerk-tablet-read-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.gestures.align.runtime",
+    "target": "assets/2d_v5/actors/cooperative/clerk-tablet-tap-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.gestures.ready.runtime",
+    "target": "assets/2d_v5/actors/cooperative/clerk-tablet-check-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.0.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-00-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.1.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-01-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.2.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-02-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.3.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-03-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.4.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-04-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.5.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-05-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.6.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-06-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.7.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-07-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.8.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-08-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.9.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-09-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.10.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-10-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.11.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-11-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.12.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-12-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.13.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-13-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.14.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-14-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.15.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-15-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.16.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-16-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.17.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-17-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.18.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-18-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.19.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-19-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.20.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-20-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.21.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-21-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.22.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-22-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.23.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-23-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.24.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-24-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.25.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-25-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.26.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-26-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.27.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-27-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.28.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-28-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.29.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-29-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.30.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-30-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+    "field": "actors.clerk.run.31.runtime",
+    "target": "assets/2d_v5/actors/locomotion_v2/clerk-run-rig-31-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": true
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.human_courier.walk.0.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/human_courier/walk-contact-a-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.human_courier.walk.1.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/human_courier/walk-down-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.human_courier.walk.2.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/human_courier/walk-pass-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.human_courier.walk.3.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/human_courier/walk-contact-b-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.human_courier.gestures.farewell.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/human_courier/farewell-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.human_courier.gestures.neutral.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/human_courier/neutral-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.elf_archivist.walk.0.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/elf_archivist/walk-contact-a-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.elf_archivist.walk.1.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/elf_archivist/walk-down-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.elf_archivist.walk.2.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/elf_archivist/walk-pass-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.elf_archivist.walk.3.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/elf_archivist/walk-contact-b-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.elf_archivist.gestures.farewell.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/elf_archivist/farewell-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.elf_archivist.gestures.neutral.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/elf_archivist/neutral-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.alien_botanist.walk.0.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/alien_botanist/walk-contact-a-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.alien_botanist.walk.1.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/alien_botanist/walk-down-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.alien_botanist.walk.2.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/alien_botanist/walk-pass-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.alien_botanist.walk.3.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/alien_botanist/walk-contact-b-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.alien_botanist.gestures.farewell.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/alien_botanist/farewell-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.alien_botanist.gestures.neutral.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/alien_botanist/neutral-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.robot_machinist.walk.0.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/robot_machinist/walk-contact-a-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.robot_machinist.walk.1.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/robot_machinist/walk-down-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.robot_machinist.walk.2.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/robot_machinist/walk-pass-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.robot_machinist.walk.3.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/robot_machinist/walk-contact-b-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.robot_machinist.gestures.farewell.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/robot_machinist/farewell-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "field": "actors.robot_machinist.gestures.neutral.runtime",
+    "target": "assets/2d_v5/npcs/walk_exit/robot_machinist/neutral-pixel.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+    "field": "parts.far_thigh.path",
+    "target": "assets/2d_v5/actors/rig_motion_v1/far_thigh.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+    "field": "parts.far_shin.path",
+    "target": "assets/2d_v5/actors/rig_motion_v1/far_shin.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+    "field": "parts.far_boot.path",
+    "target": "assets/2d_v5/actors/rig_motion_v1/far_boot.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+    "field": "parts.near_thigh.path",
+    "target": "assets/2d_v5/actors/rig_motion_v1/near_thigh.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+    "field": "parts.near_shin.path",
+    "target": "assets/2d_v5/actors/rig_motion_v1/near_shin.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+    "field": "parts.near_boot.path",
+    "target": "assets/2d_v5/actors/rig_motion_v1/near_boot.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+    "field": "parts.torso.path",
+    "target": "assets/2d_v5/actors/rig_motion_v1/torso.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+    "field": "parts.pelvis.path",
+    "target": "assets/2d_v5/actors/rig_motion_v1/pelvis.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+    "field": "parts.far_arm.path",
+    "target": "assets/2d_v5/actors/rig_motion_v1/far_arm.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+    "field": "parts.near_arm.path",
+    "target": "assets/2d_v5/actors/rig_motion_v1/near_arm.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+    "field": "parts.head.path",
+    "target": "assets/2d_v5/actors/rig_motion_v1/head.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+    "field": "parts.head_half.path",
+    "target": "assets/2d_v5/actors/rig_motion_v1/head_half.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+    "field": "parts.head_closed.path",
+    "target": "assets/2d_v5/actors/rig_motion_v1/head_closed.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  },
+  {
+    "manifest": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+    "field": "parts.head_gaze.path",
+    "target": "assets/2d_v5/actors/rig_motion_v1/head_gaze.png",
+    "readable_manifest_status": "available_exact_checkpoint",
+    "current_clerk_override_excludes": false
+  }
+]

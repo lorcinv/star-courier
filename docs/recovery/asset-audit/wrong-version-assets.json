@@ -1,0 +1,70 @@
+[
+  {
+    "path": "assets/2d_v5/actors/actor-manifest.json",
+    "status": "available_old_same_path_hash_mismatch",
+    "expected_sha256": "335fc74666b202ba0f1d01891fbd010328310657f2ff669babf05a44e461de86",
+    "copies": [
+      {
+        "input": "old_baseline",
+        "path": "recovery/git-e6121c0/assets/2d_v5/actors/actor-manifest.json",
+        "sha256": "40ddcee6d8870822ff827f118ec48e6ecb8e4de4e6b1ca43784e9b712ca5d4cb",
+        "bytes": 9706
+      }
+    ],
+    "evidence": [
+      "docs/checkpoints/seeded-meteor-human-20261010.json#/source_sha256/assets/2d_v5/actors/actor-manifest.json"
+    ],
+    "runtime_reasons": [
+      "literal:scripts/npc_sprite_2d.gd",
+      "runtime raw JSON read"
+    ]
+  },
+  {
+    "path": "assets/2d_v5/npcs/npc-manifest.json",
+    "status": "available_old_same_path_hash_mismatch",
+    "expected_sha256": "99d5d1887a66129308223f1d90998b0625f0b3f9f99c20c7015b5bdb899e3bf8",
+    "copies": [
+      {
+        "input": "old_baseline",
+        "path": "recovery/git-e6121c0/assets/2d_v5/npcs/npc-manifest.json",
+        "sha256": "08b8838bbc2e64f72f245d1e6cbf10eeb75ea701a2c08a975bfd30a8eba1b6df",
+        "bytes": 34527
+      }
+    ],
+    "evidence": [
+      "docs/checkpoints/seeded-meteor-human-20261010.json#/source_sha256/assets/2d_v5/npcs/npc-manifest.json"
+    ],
+    "runtime_reasons": [
+      "literal:scripts/npc_sprite_2d.gd",
+      "runtime raw JSON read"
+    ]
+  },
+  {
+    "path": "assets/fonts/ChineseSans.otf",
+    "status": "available_old_same_path_hash_mismatch",
+    "expected_sha256": "2e52e5f796468e0b2d3774f9a6654cc7dc990bf26ba5ceacd4715068b4ab39d6",
+    "copies": [
+      {
+        "input": "old_baseline",
+        "path": "recovery/git-e6121c0/assets/fonts/ChineseSans.otf",
+        "sha256": "b27f311f329aa765c3f88acbbe6c421b41a54bd978d89eae6b89898fd66a3b48",
+        "bytes": 441608
+      }
+    ],
+    "evidence": [
+      "docs/checkpoints/seeded-meteor-human-20261010.json#/source_sha256/assets/fonts/ChineseSans.otf"
+    ],
+    "runtime_reasons": [
+      "literal:scripts/main.gd",
+      "literal:scripts/courier_input.gd",
+      "literal:scripts/shop_investigation.gd",
+      "literal:scripts/loading_scene_overlay.gd",
+      "literal:scripts/dialogue_panel.gd",
+      "literal:scripts/game_hud.gd",
+      "literal:scripts/world_view_2d.gd",
+      "literal:scripts/orbital_meteor_presentation.gd",
+      "literal:scripts/protected_bird_presentation_2d.gd",
+      "literal:scripts/moon_presentation_2d.gd"
+    ]
+  }
+]

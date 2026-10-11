@@ -50,6 +50,14 @@ func fresh(clear_save:bool=true) -> void:
  game.economy.enable_ascent_mode();game.render()
  await settle(4)
  if is_instance_valid(root.gui_get_focus_owner()):root.gui_get_focus_owner().release_focus()
+func blocked_recovery(kind:String) -> bool:
+ if kind in ["unknown control version","conflicting route control version","conflicting explicit legacy version"]:
+  return game.economy.review_load_blocked and game.world==null and game.hud==null and game.sim==null and game.courier_input==null and game.get_child_count()==1 and game.get_child(0) is Label and not game.is_processing_input() and not game.is_processing_unhandled_key_input()
+ if kind=="fractional completed ticks":
+  return game.pilot_resume_blocked and game.sim==null and is_instance_valid(game.world)
+ # Known v2 routes configure before timeline validation. A rejected command
+ # history may retain that paused solver, but must never replay any tick.
+ return game.pilot_resume_blocked and game.paused and is_instance_valid(game.world) and game.sim!=null and game.sim.get_script()==preload("res://scripts/pilot_ascent_simulation.gd") and game.pilot_completed_ticks==0 and game.sim.pilot_tick==0 and game.sim.elapsed==0.0
 func accept() -> void:
  check(game.economy.accept_contract(str(game.economy.available_contracts()[0].contract_id)).ok,"fixture accepts available contract")
  # Complete non-flight dialogue setup before testing exact held-key lifecycles.
@@ -197,12 +205,12 @@ func test_invalid_and_legacy() -> void:
  for pair in bads:
   write_fixture(pair[1]);var original:String=FileAccess.get_file_as_string("user://savegame.json");await fresh(false)
   var money:int=game.economy.credits;var jobs:int=game.economy.jobs_today;var flight_snapshot:Dictionary=game.economy.in_flight.duplicate(true)
-  check(game.pilot_resume_blocked,"fails closed on "+str(pair[0]))
+  check(blocked_recovery(str(pair[0])),"fails closed at the expected recovery boundary on "+str(pair[0]))
   game._set_paused(false);game.abort_flight();game._process(2);game._process(2)
   check(not game.save_game() and FileAccess.get_file_as_string("user://savegame.json")==original,"preserves original bytes for "+str(pair[0]))
   check(game.economy.credits==money and game.economy.jobs_today==jobs and game.economy.in_flight==flight_snapshot,"does not settle or mutate broken dispatch for "+str(pair[0]))
   game.navigate("workshop");game.start_flight(true);game.abort_flight()
-  check(game.pilot_resume_blocked and not game.save_game() and FileAccess.get_file_as_string("user://savegame.json")==original and game.economy.in_flight==flight_snapshot,"trial/retry cannot bypass recovery block or overwrite "+str(pair[0]))
+  check(blocked_recovery(str(pair[0])) and not game.save_game() and FileAccess.get_file_as_string("user://savegame.json")==original and game.economy.in_flight==flight_snapshot,"trial/retry cannot bypass recovery block or overwrite "+str(pair[0]))
   await dispose()
  # Genuine legacy route has no pilot fields; its controller and physics remain old.
  var legacy=Econ.new();var custom:Array=Profile.starter_design();custom[2].x=-2;custom[2].y=-1

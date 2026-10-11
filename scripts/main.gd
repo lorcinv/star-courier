@@ -7,8 +7,17 @@ const AscentSimulator=preload("res://scripts/pilot_ascent_simulation.gd")
 const AscentProfile=preload("res://scripts/pilot_ascent_profile.gd")
 const ExtremeSimulator=preload("res://scripts/pilot_extreme_simulation.gd")
 const ExtremeProfile=preload("res://scripts/pilot_extreme_profile.gd")
-const PILOT_VERSIONS:Array=[PilotProfile.CONTROL_VERSION,AscentProfile.CONTROL_VERSION,ExtremeProfile.CONTROL_VERSION]
-const ASCENT_VERSIONS:Array=[AscentProfile.CONTROL_VERSION,ExtremeProfile.CONTROL_VERSION]
+const WormholeSimulator=preload("res://scripts/pilot_wormhole_simulation.gd")
+const WormholeProfile=preload("res://scripts/pilot_wormhole_profile.gd")
+const BirdSimulator=preload("res://scripts/pilot_protected_bird_simulation.gd")
+const BirdProfile=preload("res://scripts/pilot_protected_bird_profile.gd")
+const BirdOffer=preload("res://scripts/protected_bird_offer_v1.gd")
+const BirdDesign=preload("res://scripts/protected_bird_design_v1.gd")
+const BirdSettlement=preload("res://scripts/protected_bird_settlement_v1.gd")
+const FlightReceipt=preload("res://scripts/flight_receipt.gd")
+const PILOT_VERSIONS:Array=[PilotProfile.CONTROL_VERSION,AscentProfile.CONTROL_VERSION,ExtremeProfile.CONTROL_VERSION,WormholeProfile.CONTROL_VERSION,BirdProfile.CONTROL_VERSION]
+const ASCENT_VERSIONS:Array=[AscentProfile.CONTROL_VERSION,ExtremeProfile.CONTROL_VERSION,WormholeProfile.CONTROL_VERSION,BirdProfile.CONTROL_VERSION]
+const EXTREME_VERSIONS:Array=[ExtremeProfile.CONTROL_VERSION,WormholeProfile.CONTROL_VERSION,BirdProfile.CONTROL_VERSION]
 const PilotTimeline=preload("res://scripts/pilot_timeline.gd")
 const EconomyDB=preload("res://scripts/economy.gd")
 const WorldView=preload("res://scripts/world_view_2d.gd")
@@ -16,10 +25,15 @@ const GameHUD=preload("res://scripts/game_hud.gd")
 const PixelStage=preload("res://scripts/pixel_stage.gd")
 const DialoguePanel=preload("res://scripts/dialogue_panel.gd")
 const LoadingSceneOverlay=preload("res://scripts/loading_scene_overlay.gd")
+const CustomerReviewPhone=preload("res://scripts/customer_review_phone.gd")
+const ShopInvestigation=preload("res://scripts/shop_investigation.gd")
 const CourierInput=preload("res://scripts/courier_input.gd")
 const WorkshopInput=preload("res://scripts/workshop_input_2d.gd")
 const WorkshopProfile=preload("res://scripts/workshop_profile.gd")
 var courier_input
+var investigation
+var review_phone
+var _review_phone_owner:int=0
 var _shop_navigation_arriving:bool=false
 var economy=EconomyDB.new()
 var catalog:Dictionary={}
@@ -80,12 +94,26 @@ func _ready() -> void:
  get_window().close_requested.connect(_quit_cleanly)
  catalog=PartsDB.catalog();catalog.cargo=PartsDB.cargo_spec();_starter()
  var loaded=economy.load_state()
+ if economy.review_load_blocked:
+  _show_save_recovery();return
  if not loaded.is_empty():
   design=loaded.get("design",design);launcher=loaded.get("launcher",launcher);settings.merge(loaded.get("settings",{}),true)
  else:economy.enable_extreme_mode();economy.starter_stock(design,launcher)
  economy.enable_extreme_mode()
  economy.enable_story_mode()
+ if not economy.review_load_blocked:
+  var seeded:Dictionary=economy.enable_seeded_offers(economy.story_state.get("world_seed"))
+  if not seeded.ok:
+   economy.review_load_blocked=true;economy.load_notice="航线记录暂时无法读取，原进度已保留。"
+   _show_save_recovery();return
  _validate_designs();_allocate_ids()
+ # Startup can author a seed or fill a genuinely empty offer boundary. Commit
+ # those bytes before any world, UI, input owner or dialogue exposes them.
+ # Existing in-flight files must first pass the established resume checks;
+ # never rotate their valid backup while an unsafe replay is still unvalidated.
+ if economy.in_flight.is_empty() and not economy.review_load_blocked and not save_game():
+  economy.review_load_blocked=true;economy.load_notice="进度暂时无法保存，原文件已保留。请检查存储空间后重新打开。"
+  _show_save_recovery();return
  if bool(settings.fullscreen):DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
  _build_ui();_apply_quality()
  music=AudioStreamPlayer.new();add_child(music);sfx=AudioStreamPlayer.new();add_child(sfx)
@@ -94,10 +122,16 @@ func _ready() -> void:
  if _outside_workshop_count(design)+_outside_workshop_count(launcher)>0:
   load_message+=("\n" if not load_message.is_empty() else "")+"旧方案的超出工位部分已保留。可以移回开放格，或收工后扩建。"
  if not load_message.is_empty():notify(load_message)
+ if economy.review_load_blocked:return
  if not economy.in_flight.is_empty():_resume_dispatch.call_deferred()
- elif save_game():_restore_story_dialogue.call_deferred()
+ else:_restore_story_dialogue.call_deferred()
  if "--smoke-test" in OS.get_cmdline_user_args():_smoke_test.call_deferred()
  if "--visual-test" in OS.get_cmdline_user_args():_visual_test.call_deferred()
+
+func _show_save_recovery() -> void:
+ var recovery:=Label.new();recovery.text=economy.load_notice;recovery.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;recovery.vertical_alignment=VERTICAL_ALIGNMENT_CENTER;recovery.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+ recovery.add_theme_font_override("font",preload("res://assets/fonts/ChineseSans.otf"));recovery.add_theme_font_size_override("font_size",22);add_child(recovery);recovery.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+ set_process(false);set_process_input(false);set_process_unhandled_input(false);set_process_unhandled_key_input(false)
 
 func _starter() -> void:
  design=ExtremeProfile.starter_design();launcher=ExtremeProfile.starter_launcher()
@@ -144,6 +178,7 @@ func _build_ui() -> void:
  if world.has_signal("shop_navigation_arrived"):world.shop_navigation_arrived.connect(_on_shop_navigation_arrived)
  view_container.display.gui_input.connect(_viewport_input)
  hud=GameHUD.new();add_child(hud);hud.action_requested.connect(_action)
+ world.protected_bird_hud_root=hud.root
  dialogue=DialoguePanel.new();add_child(dialogue)
  dialogue.finished.connect(_on_dialogue_finished)
  dialogue.modal_changed.connect(_on_dialogue_modal_changed)
@@ -153,15 +188,73 @@ func _build_ui() -> void:
  view_container.art_frame_changed.connect(_on_art_frame_changed)
  workshop_input.bind(self)
  _on_art_frame_changed(view_container.display_rect)
+ review_phone=CustomerReviewPhone.new();add_child(review_phone)
+ review_phone.set_existing_theme(hud.root.theme)
+ review_phone.modal_changed.connect(_on_review_phone_modal_changed)
+ _layout_review_phone()
+ investigation=ShopInvestigation.new();add_child(investigation);investigation.bind(self)
  courier_input=CourierInput.new();add_child(courier_input);courier_input.bind(self)
 
 func _on_art_frame_changed(rect:Rect2) -> void:
+ if (_review_phone_is_open() or _investigation_is_open()) and is_instance_valid(courier_input):courier_input.quarantine()
+ _layout_review_phone(rect)
  workshop_input.cancel()
  if is_instance_valid(loading_overlay):loading_overlay.set_art_frame(rect)
  if is_instance_valid(hud) and hud.has_method("set_art_frame"):
   hud.set_art_frame(rect)
   if not hud.state.is_empty():hud.render(hud.state)
  if workshop_input.host!=null:workshop_input.after_render()
+
+func _investigation_is_open() -> bool:
+ return is_instance_valid(investigation) and investigation.is_open()
+
+func _close_investigation() -> void:
+ if is_instance_valid(investigation):investigation.close()
+
+func _review_phone_is_open() -> bool:
+ return _review_phone_owner!=0 and is_instance_valid(review_phone) and review_phone.is_open()
+
+func _can_open_review_phone() -> bool:
+ return not _investigation_is_open() and not economy.review_load_blocked and not closing and page=="hub" and is_instance_valid(courier_input) and courier_input.focused and is_instance_valid(hud) and not hud.is_blocking_modal() and not _dialogue_is_open() and not _loading_scene_active() and _pending_story.is_empty() and is_instance_valid(world) and world.can_open_review_phone()
+
+func _can_keep_review_phone() -> bool:
+ return not _investigation_is_open() and not economy.review_load_blocked and not closing and page=="hub" and is_instance_valid(courier_input) and courier_input.focused and not hud.is_blocking_modal() and not _dialogue_is_open() and not _loading_scene_active() and _pending_story.is_empty() and world.review_phone_owned_by(_review_phone_owner)
+
+func _layout_review_phone(rect:Rect2=Rect2()) -> void:
+ if not is_instance_valid(review_phone) or not is_instance_valid(view_container):return
+ var frame:Rect2=rect if rect.has_area() else view_container.display_rect
+ var clerk_screen:Vector2=world._screen_point(world.clerk.position) if is_instance_valid(world) else frame.get_center()
+ review_phone.set_art_frame(frame,clerk_screen)
+
+func _open_review_phone() -> bool:
+ if _review_phone_owner!=0 or not _can_open_review_phone():return false
+ var owner:int=review_phone.get_instance_id()
+ # Acquire the clerk before exposing any focusable phone control. No source
+ # receipt, pending fact, or raw review-state dictionary reaches the view.
+ if not world.acquire_review_phone(owner):return false
+ _review_phone_owner=owner
+ workshop_input.cancel();courier_input.quarantine();_clear_pilot_input()
+ _layout_review_phone()
+ if not review_phone.open_from_player(economy.customer_reviews(),economy.day):
+  _release_review_phone();return false
+ courier_input.synchronize()
+ return true
+
+func _close_review_phone() -> void:
+ if is_instance_valid(review_phone) and review_phone.is_open():review_phone.close_phone()
+ else:_release_review_phone()
+
+func _on_review_phone_modal_changed(open:bool) -> void:
+ if not open:_release_review_phone()
+
+func _release_review_phone() -> void:
+ if _review_phone_owner==0:return
+ var owner:int=_review_phone_owner;_review_phone_owner=0
+ if is_instance_valid(world):world.release_review_phone(owner)
+ workshop_input.cancel();_clear_pilot_input()
+ if is_instance_valid(courier_input):
+  courier_input.quarantine()
+  if courier_input.is_inside_tree():courier_input.synchronize()
 
 func active_design() -> Array:return design if assembly_mode=="craft" else launcher
 func selected_part() -> Dictionary:
@@ -172,24 +265,26 @@ func _installed_count(type:String) -> int:
  return (design+launcher).filter(func(p):return str(p.type)==type).size()
 
 func render() -> void:
+ if economy.review_load_blocked and not is_instance_valid(world):return
  world.set_workshop_tier(economy.workshop_tier)
  world.reduced_motion=bool(settings.get("reduced_motion",false))
  world.motion_blur_enabled=bool(settings.get("motion_blur",true))
  var order=economy.active_contract().duplicate(true)
  if page=="flight":order=flight_order.duplicate(true)
  if not order.is_empty():order.accepted=order.get("status","")=="accepted"
+ var presentation_version:String=str(order.get("control_version",economy.flight_mode))
  var specs:Dictionary={};var stock:Dictionary={}
- var capacity_scale:float=AscentProfile.BATTERY_MULTIPLIER if economy.flight_mode in ASCENT_VERSIONS else 1.0
+ var capacity_scale:float=AscentProfile.BATTERY_MULTIPLIER if presentation_version in ASCENT_VERSIONS else 1.0
  for type in catalog:
   if type=="cargo":continue
   specs[type]=catalog[type].duplicate(true);specs[type].launcher_compatible=type in PartsDB.launcher_types()
   if type=="battery":specs[type].energy=float(specs[type].energy)*capacity_scale
-  if type=="shield" and economy.flight_mode==ExtremeProfile.CONTROL_VERSION:specs[type].description="可防御攻击，也可吸收最多 65% 撞击损伤。每个护盾每步最多吸收 24 HP，每 HP 消耗 1.5 J；撞击动量仍会传入结构。"
+  if type=="shield" and presentation_version in EXTREME_VERSIONS:specs[type].description="可防御攻击，也可吸收最多 65% 撞击损伤。每个护盾每步最多吸收 24 HP，每 HP 消耗 1.5 J；撞击动量仍会传入结构。"
   stock[type]=int(economy.inventory.get(type,0))-_installed_count(type) if page=="workshop" else int(economy.inventory.get(type,0))
  var chosen=selected_part().duplicate(true)
  if not chosen.is_empty():
   chosen.spec=specs.get(chosen.type,catalog[chosen.type]);chosen.schema=PartsDB.parameter_schema(chosen.type);chosen.controls=PartsDB.controls(chosen.type);chosen.default_behavior=chosen.controls.default_behavior
-  if chosen.type=="shield" and economy.flight_mode==ExtremeProfile.CONTROL_VERSION:chosen.default_behavior="未接线自动保护同一存活结构；撞击吸收需要实际余电，不会阻止翻转或结构过载。"
+  if chosen.type=="shield" and presentation_version in EXTREME_VERSIONS:chosen.default_behavior="未接线自动保护同一存活结构；撞击吸收需要实际余电，不会阻止翻转或结构过载。"
   if chosen.type=="battery" and capacity_scale>1:
    var capacity:float=float(catalog.battery.energy)*capacity_scale*(1.0+.15*economy.research)
    chosen.default_behavior="电芯容量 %.0f J；向同一结构供电。"%capacity
@@ -199,23 +294,63 @@ func render() -> void:
   if p.type=="battery":energy+=float(catalog[p.type].get("energy",0))*capacity_scale*(1.0+.15*economy.research)
  var hint="柜台前有客人。先听听他们要寄什么，再接下适合今天的一单。"
  if not order.is_empty():hint="委托已确认。去工位装好货，免费试飞之后再正式配送。"
- if economy.phase=="night":hint="收工了。用今天的回信和试飞记录，决定明天最需要哪件零件。"
- if economy.jobs_today>0 and order.is_empty():hint="回信已经到了。还可以接下一位客人，或者收工准备明天。"
+ if economy.phase=="night":hint="收工了。对照今天的账单和试飞记录，准备明天的零件。"
+ if economy.jobs_today>0 and order.is_empty():hint="这单已经完成。还可以接下一位客人，或者收工准备明天。"
  if page!="flight":
   world.leave_flight();world.focus(page);world.show_design(active_design() if page=="workshop" else design,selected_id if page=="workshop" else -1)
   world.update_shop_state({"phase":economy.phase,"day":economy.day,"contracts":economy.contracts,"active_contract_id":economy.active_contract_id,"research":economy.research,"inventory":economy.inventory,"installed":design+launcher,"cargo_loaded":economy.is_cargo_loaded(),"handoff_released":_cargo_handoff_released()})
- var data={"mode":page,"day":economy.day,"credits":economy.credits,"reputation":economy.reputation,"phase":economy.phase,"hint":hint,"activeorder":order,"contracts":economy.available_contracts(),"catalog":specs,"inventory":stock,"chosen_type":chosen_type,"assembly_mode":assembly_mode,"selectedpart":chosen,"parts":active_design(),"ship_stats":{"parts":active_design().size(),"mass":mass,"energy":energy},"settings":settings,"trial":trial,"report":report,"hotspots":world.hotspot_positions(),"cancel_warning":"退回已接委托会失去 1 点声望；这份委托今天不会重新出现。","upgrades":[{"id":"battery","name":"校准充电台 · 储能 +15%","cost":economy.research_cost(),"disabled":economy.research>=3 or economy.credits<economy.research_cost()}]}
+ var data={"daily_reviews_enabled":true,"mode":page,"day":economy.day,"credits":economy.credits,"reputation":economy.reputation,"phase":economy.phase,"hint":hint,"activeorder":order,"contracts":economy.available_contracts(),"catalog":specs,"inventory":stock,"chosen_type":chosen_type,"assembly_mode":assembly_mode,"selectedpart":chosen,"parts":active_design(),"ship_stats":{"parts":active_design().size(),"mass":mass,"energy":energy},"settings":settings,"trial":trial,"report":report,"hotspots":world.hotspot_positions(),"cancel_warning":"退回已接委托会失去 1 点声望；这份委托今天不会重新出现。","upgrades":[{"id":"battery","name":"校准充电台 · 储能 +15%","cost":economy.research_cost(),"disabled":economy.research>=3 or economy.credits<economy.research_cost()}]}
  var next_tier:int=WorkshopProfile.next_tier(economy.workshop_tier)
  data.workshop={"tier":economy.workshop_tier,"size":WorkshopProfile.grid_size(economy.workshop_tier),"next_tier":next_tier,"next_size":WorkshopProfile.grid_size(next_tier),"cost":economy.workshop_upgrade_cost()}
  var outside:int=_outside_workshop_count(active_design())
  if outside>0:data.ship_stats.warning="已保留 %d 个旧方案格。移回开放区，或收工后扩建。"%outside
- data.control_version=str(flight_order.get("control_version","")) if page=="flight" else economy.flight_mode
+ data.control_version=presentation_version
  data.energy_tariff=economy.energy_tariff(order if not order.is_empty() else {"control_version":economy.flight_mode})
+ data.wormhole_preflight=_wormhole_preflight(order)
  hud.render(data)
  _sync_loading_scene_ui()
  workshop_input.after_render()
 
+func _wormhole_preflight(route:Dictionary) -> Dictionary:
+ var version:String=str(route.get("control_version",""))
+ if not version in [WormholeProfile.CONTROL_VERSION,BirdProfile.CONTROL_VERSION] or not economy.route_validation_error(route).is_empty():return {}
+ if not _bird_design_error(route,design,launcher).is_empty():return {}
+ if design.filter(func(p):return str(p.type)=="cargo").size()!=1:return {}
+ # The launch graph joins orthogonally adjacent installed cells. Count that
+ # exact starting graph; a later split can change the actual transit bill.
+ var remaining:Dictionary={};var total_mass:float=0.0
+ for p in design:
+  var kind:String=str(p.type)
+  var mass:float=float(catalog[kind].mass)*(maxf(.1,float(route.get("weight",1.0))) if kind=="cargo" else 1.0)
+  remaining[Vector2i(int(p.x),int(p.y))]={"mass":mass,"type":kind};total_mass+=mass
+ var bodies:int=0;var largest:float=0.0
+ while not remaining.is_empty():
+  var start:Vector2i=remaining.keys()[0];var queue:Array[Vector2i]=[start];var component:Dictionary={}
+  component[start]=remaining[start];remaining.erase(start);bodies+=1
+  while not queue.is_empty():
+   var at:Vector2i=queue.pop_back()
+   for direction in [Vector2i.LEFT,Vector2i.RIGHT,Vector2i.UP,Vector2i.DOWN]:
+    var neighbor:Vector2i=at+direction
+    if remaining.has(neighbor):component[neighbor]=remaining[neighbor];remaining.erase(neighbor);queue.append(neighbor)
+  var mass:float=0.0;var center:Vector2=Vector2.ZERO
+  for cell in component:
+   mass+=float(component[cell].mass);center+=Vector2(cell)*float(component[cell].mass)
+  if mass>0.0:center/=mass
+  for cell in component:largest=maxf(largest,Vector2(cell).distance_to(center)+(.48 if str(component[cell].type)=="drill" else .43))
+ if bodies==0:return {}
+ var quote:Dictionary=BirdProfile.transit_quote(BirdOffer.canonical_route(route),total_mass,bodies) if version==BirdProfile.CONTROL_VERSION else WormholeProfile.transit_quote(route,total_mass,bodies)
+ if bool(quote.get("ok",false)):
+  quote.starting_body_diameter_m=largest*2.0
+  quote.fits_starting_outline=largest*2.0<=float(quote.max_centered_body_diameter_m)
+ return quote
+
 func _action(action:String,payload:Variant) -> void:
+ if _review_phone_is_open() or _investigation_is_open():return
+ if action==ShopInvestigation.ACTION:
+  if is_instance_valid(investigation):investigation.begin()
+  return
+ if action=="customer_reviews":_open_review_phone();return
+ if economy.review_load_blocked:notify(economy.load_notice);return
  workshop_input.cancel()
  if _dialogue_is_open():return
  if action=="skip_loading_scene":_skip_loading_scene();return
@@ -267,7 +402,7 @@ func _action(action:String,payload:Variant) -> void:
   "close_day","finish_day":
    if _result_ok(economy.close_day()):save_game();navigate("supply")
   "next_day":
-   if _result_ok(economy.next_day()):save_game();navigate("hub")
+   if _result_ok(economy.next_day_and_save(design,launcher,settings)):navigate("hub")
   "buy":
    if catalog.has(str(payload)) and _result_ok(economy.buy_part(str(payload),catalog[str(payload)])):save_game();render();notify("零件已放到货架上。")
   "upgrade":
@@ -298,6 +433,9 @@ func _result_ok(result:Dictionary) -> bool:
  return bool(result.get("ok",false))
 func notify(message:String) -> void:if is_instance_valid(hud):hud.toast(message)
 func navigate(target:String) -> void:
+ _close_investigation()
+ _close_review_phone()
+ if economy.review_load_blocked:return
  workshop_input.cancel()
  if world.has_method("cancel_shop_navigation"):world.cancel_shop_navigation()
  if page=="flight":return
@@ -343,7 +481,7 @@ func _request_story(contract_id:String,beat:String) -> void:
  _try_pending_story()
 
 func _try_pending_story() -> void:
- if _pending_story.is_empty() or _dialogue_is_open() or _loading_scene_active() or page=="flight" or pilot_resume_blocked or closing:return
+ if _review_phone_is_open() or _pending_story.is_empty() or _dialogue_is_open() or _loading_scene_active() or page=="flight" or pilot_resume_blocked or closing:return
  if is_instance_valid(hud) and hud.is_blocking_modal():return
  var cid:String=str(_pending_story.contract_id);var beat:String=str(_pending_story.beat)
  if beat=="accept" and (economy.active_contract_id!=cid or str(economy.active_contract().get("status",""))!="accepted"):
@@ -420,19 +558,24 @@ func _ensure_cargo_loaded_for_launch() -> bool:
  return _commit_cargo_loading(cid)
 
 func _on_dialogue_modal_changed(open:bool) -> void:
+ if open:_close_investigation();_close_review_phone()
+ if is_instance_valid(world):world.set_dialogue_active(open,str(_active_story.get("contract_id","")))
  if open:_clear_pilot_input();workshop_input.cancel()
 
 func _on_dialogue_audio_settings(volume:float,muted:bool) -> void:
  settings.dialogue_volume=clampf(volume,0.0,1.0);settings.dialogue_muted=muted;save_game()
 
 func _viewport_input(event:InputEvent) -> void:
+ if _review_phone_is_open() or _investigation_is_open():return
  workshop_input.handle(event)
 func rotate_part() -> void:
+ if _review_phone_is_open() or _investigation_is_open():return
  workshop_input.cancel()
  if _loading_scene_active():return
  var p=selected_part()
  if not p.is_empty():_remember_assembly();p.rot=(int(p.rot)+1)%4;render();save_game();world.committed_edit("rotate",p)
 func remove_part() -> void:
+ if _review_phone_is_open() or _investigation_is_open():return
  workshop_input.cancel()
  if _loading_scene_active():return
  var p=selected_part()
@@ -458,11 +601,22 @@ func load_blueprint() -> void:
   notify("缺少零件："+"、".join(names));return
  _remember_assembly();design=blueprint.design.duplicate(true);launcher=blueprint.launcher.duplicate(true);_validate_designs();_allocate_ids();selected_id=-1;save_game();render()
 
+func _bird_design_error(route:Dictionary,craft:Array,pad:Array) -> String:
+ if str(route.get("control_version",""))==BirdProfile.CONTROL_VERSION and not BirdDesign.validation_error(craft,pad).is_empty():
+  return "这份装配记录不完整，暂时无法出发。"
+ return ""
+
 func start_flight(is_trial:bool) -> void:
+ if _review_phone_is_open() or _investigation_is_open():return
+ if economy.review_load_blocked:return
  if _dialogue_is_open():return
  if pilot_resume_blocked:notify("此配送记录无法安全恢复，原记录已保留。");return
  if page=="flight":return
  if economy.active_contract().is_empty():notify("先去柜台确认一份委托。试飞也会使用这份货物的重量。 ");return
+ var route_error:String=economy.route_validation_error(economy.active_contract())
+ if not route_error.is_empty():notify(route_error);return
+ var design_error:String=_bird_design_error(economy.active_contract(),design,launcher)
+ if not design_error.is_empty():notify(design_error);return
  if design.filter(func(p):return str(p.type)=="cargo").size()!=1:notify("飞行器必须带上这一件客户货物。");return
  if not economy.missing_parts(design,launcher).is_empty():notify("方案超过了实际库存，请先调整。");return
  if not _ensure_cargo_loaded_for_launch():return
@@ -476,37 +630,61 @@ func start_flight(is_trial:bool) -> void:
  _configure_flight(is_trial,design,launcher,route)
 
 func _configure_flight(is_trial:bool,craft:Array,pad:Array,route:Dictionary,resuming:bool=false) -> void:
+ var route_error:String=economy.route_validation_error(route)
+ if not route_error.is_empty():
+  if resuming:pilot_resume_blocked=true
+  notify(route_error);return
+ var design_error:String=_bird_design_error(route,craft,pad)
+ if not design_error.is_empty():
+  if resuming:pilot_resume_blocked=true
+  notify(design_error);return
+ var version:String=str(route.get("control_version",""))
+ var next_sim=_simulation_for_version(version)
+ if next_sim==null:
+  if resuming:pilot_resume_blocked=true
+  notify("此配送记录暂时无法继续，原记录已保留。");return
+ var physics_route:Dictionary=BirdOffer.canonical_route(route) if version==BirdProfile.CONTROL_VERSION else route
  world.set_workshop_tier(economy.workshop_tier)
  trial=is_trial;flight_order=route.duplicate(true);pilot_timeline.reset();pilot_completed_ticks=0;pilot_resume_blocked=false;_clear_pilot_input()
- var version:String=str(route.get("control_version",""))
- sim=_simulation_for_version(version)
- sim.configure(craft.duplicate(true),pad.duplicate(true),route,int(route.get("seed",economy.day*100)))
+ sim=next_sim
+ sim.configure(craft.duplicate(true),pad.duplicate(true),physics_route,int(route.get("seed",economy.day*100)))
  world.route_distance=float(route.distance);world.route_radius=float(route.get("delivery_radius",5));world.launcher_design=pad.duplicate(true);world.start_flight(sim,resuming);launch_transfer_remaining=0.0 if resuming else world.launch_transfer_duration();page="flight";paused=false;speed=1;frame_accum=0;checkpoint=0;launch_countdown=0 if resuming else launch_transfer_remaining+.7;launch_age=1.35 if resuming else 0;launch_sfx_played=resuming;slow_simulation=false;completion_countdown=-1;render();_play_music(true)
 
 func _simulation_for_version(version:String):
  match version:
+  BirdProfile.CONTROL_VERSION:return BirdSimulator.new()
+  WormholeProfile.CONTROL_VERSION:return WormholeSimulator.new()
   ExtremeProfile.CONTROL_VERSION:return ExtremeSimulator.new()
   AscentProfile.CONTROL_VERSION:return AscentSimulator.new()
   PilotProfile.CONTROL_VERSION:return PilotSimulator.new()
- return Simulator.new()
+  "":return Simulator.new()
+ return null
 
 func _resume_dispatch() -> void:
+ if economy.review_load_blocked:return
  var snapshot=economy.in_flight.duplicate(true)
  if not snapshot.get("route") is Dictionary or not snapshot.get("design") is Array or not snapshot.get("launcher") is Array:
   pilot_resume_blocked=true;notify("配送存档不完整，无法继续。原始记录已保留。");return
- var raw_ticks:Variant=snapshot.get("ticks",roundi(float(snapshot.get("elapsed",0))*60.0))
- if not (raw_ticks is int or raw_ticks is float) or not is_finite(float(raw_ticks)) or float(raw_ticks)!=float(int(raw_ticks)) or int(raw_ticks)<0 or int(raw_ticks)>PilotTimeline.MAX_TICKS:
+ # Check protocol before touching seed/time payloads; future versions are opaque.
+ var protocol_error:String=economy.replay_protocol_error(snapshot)
+ if not protocol_error.is_empty():pilot_resume_blocked=true;notify(protocol_error);return
+ var seed_error:String=economy.replay_seed_error(snapshot)
+ if not seed_error.is_empty():pilot_resume_blocked=true;notify(seed_error);return
+ var raw_ticks:Variant=snapshot.get("ticks")
+ if not snapshot.has("ticks"):
+  var raw_elapsed:Variant=snapshot.get("elapsed",0)
+  if not (raw_elapsed is int or raw_elapsed is float) or not is_finite(float(raw_elapsed)) or float(raw_elapsed)<0 or float(raw_elapsed)>float(PilotTimeline.MAX_TICKS)/60.0:
+   pilot_resume_blocked=true;notify("配送存档损坏，无法继续。原始记录已保留。");return
+  raw_ticks=roundi(float(raw_elapsed)*60.0)
+ if not (raw_ticks is int or raw_ticks is float) or not is_finite(float(raw_ticks)) or float(raw_ticks)!=floor(float(raw_ticks)) or float(raw_ticks)<0 or float(raw_ticks)>PilotTimeline.MAX_TICKS:
   pilot_resume_blocked=true;notify("配送存档损坏，无法继续。原始记录已保留。");return
  var route:Dictionary=snapshot.route;route.seed=int(snapshot.get("seed",economy.day*100))
- var control_version:String=str(snapshot.get("control_version",route.get("control_version","")))
- var route_version:String=str(route.get("control_version",""))
- var simulation_version:String=str(snapshot.get("simulation_version",""))
- var versions_conflict:bool=(not route_version.is_empty() and snapshot.has("control_version") and route_version!=control_version) or (simulation_version=="autonomous-v5" and control_version in PILOT_VERSIONS) or (simulation_version in PILOT_VERSIONS and simulation_version!=control_version) or (str(route.get("mode",""))=="pilot" and control_version.is_empty())
- if versions_conflict or not control_version in ([""]+PILOT_VERSIONS) or not route_version in ([""]+PILOT_VERSIONS) or not simulation_version in (["","autonomous-v5"]+PILOT_VERSIONS):
-  notify("此配送存档暂时无法继续。原始记录已保留，请勿覆盖。");pilot_resume_blocked=true;return
+ var control_version:String=snapshot.get("control_version",route.get("control_version",""))
  if control_version in PILOT_VERSIONS:route.control_version=control_version
+ var route_error:String=economy.route_validation_error(route)
+ if not route_error.is_empty():pilot_resume_blocked=true;notify(route_error+" 原始记录已保留。");return
  _configure_flight(false,snapshot.design,snapshot.launcher,route,true)
- var elapsed:float=float(snapshot.get("elapsed",0))
+ if pilot_resume_blocked or sim==null:return
  var ticks:int=int(raw_ticks)
  if _is_pilot_flight() and not pilot_timeline.restore(snapshot.get("input_commands",null),ticks):
   pilot_resume_blocked=true;_set_paused(true);notify(pilot_timeline.error);return
@@ -532,21 +710,31 @@ func finish_flight() -> void:
  _clear_pilot_input()
  sim.finalize_settlement()
  var integrity:float=float(sim.telemetry.get("integrity",0))*100
- report={"success":sim.status=="success","trial":trial,"elapsed":sim.elapsed,"integrity":integrity,"events":sim.events.duplicate(),"cause":_diagnosis(),"energy":float(sim.telemetry.get("energy_used",0))}
+ report={"success":sim.status=="success","trial":trial,"elapsed":sim.elapsed,"integrity":integrity,"events":_flight_report_events(),"cause":_diagnosis(),"energy":float(sim.telemetry.get("energy_used",0))}
  if not sim.incidents.is_empty():report.incident_id=int(sim.incidents[0].id)
  if trial:
   var stored:Dictionary=economy.last_trials.get(str(flight_order.contract_id),{})
   var previous:Dictionary=stored.get("latest",stored)
-  report.energy_j=report.energy;report.estimated_profit=economy.estimate_delivery(flight_order,sim.telemetry,float(sim.elapsed),sim.status=="success").profit
+  var quote:Dictionary=economy.estimate_delivery(flight_order,sim.telemetry,float(sim.elapsed),sim.status=="success")
+  report.energy_j=report.energy;report.estimated_profit=quote.profit;report.control_version=str(flight_order.get("control_version",""))
+  for key in ["wormhole_energy_j","wormhole_transits","wormhole_station_remaining"]:
+   if quote.has(key):report[key]=quote[key]
   report.design_snapshot=design.duplicate(true);report.launcher_snapshot=launcher.duplicate(true)
   if not previous.is_empty():
    report.comparison={"航时":"%+.2f 秒"%(sim.elapsed-float(previous.elapsed)),"耗能":"%+.1f J"%(snappedf(report.energy_j-float(previous.get("energy_j",previous.energy)),.01)),"完整度":"%+.1f%%"%(integrity-float(previous.integrity)),"预计净收益":"¥ %+d"%(int(report.estimated_profit)-int(previous.get("estimated_profit",0))),"本次改动":_design_changes(previous)}
   economy.last_trials[str(flight_order.contract_id)]={"latest":report.duplicate(true),"previous":previous.duplicate(true)}
  else:
-  var result=economy.settle_contract(str(flight_order.contract_id),sim.telemetry,float(sim.elapsed),sim.status=="success")
+  # Bind evidence to the completed live command boundary, including a terminal
+  # first substep and a zero-tick abort. This checkpoint does no I/O or replay.
+  _checkpoint_flight()
+  var completion:Dictionary=BirdSettlement.from_simulator(sim,economy.in_flight) if str(flight_order.get("control_version",""))==BirdProfile.CONTROL_VERSION else {}
+  var result=economy.settle_contract_and_save(str(flight_order.contract_id),sim.telemetry,float(sim.elapsed),sim.status=="success",design,launcher,settings,completion)
   if result.get("ok",false):report.merge(result.report,true)
-  else:notify(str(result.get("message","结算未完成。")))
- var persisted:bool=save_game()
+  else:
+   # The ledger and pending review were rolled back together. Stay on the
+   # finished flight, then retry after a delay; never show an unpaid receipt.
+   _set_paused(true);completion_countdown=3.0;notify(str(result.get("message","结算未完成。")));return
+ var persisted:bool=save_game() if trial else true
  page="report";render();_play_music(false);_sound("delivery_success" if sim.status=="success" else "warning")
  if not trial and persisted:_request_story(str(flight_order.contract_id),"result")
 
@@ -569,12 +757,22 @@ func _remember_assembly() -> void:
  undo_history.append({"design":design.duplicate(true),"launcher":launcher.duplicate(true),"selected":selected_id})
  if undo_history.size()>32:undo_history.pop_front()
 func undo_assembly() -> void:
+ if _review_phone_is_open() or _investigation_is_open():return
  workshop_input.cancel()
  if _loading_scene_active():return
  if page!="workshop" or undo_history.is_empty():return
  var previous:Dictionary=undo_history.pop_back();design=previous.design;launcher=previous.launcher;selected_id=int(previous.selected);_allocate_ids();save_game();render();notify("已撤销上一步装配修改。")
 
+func _flight_report_events() -> Array:
+ var result:Array=sim.events.duplicate()
+ if str(flight_order.get("control_version",""))==BirdProfile.CONTROL_VERSION:
+  for i in result.size():result[i]=FlightReceipt.player_event(str(result[i]),BirdProfile.CONTROL_VERSION)
+ return result
+
 func _diagnosis() -> String:
+ if str(flight_order.get("control_version",""))==BirdProfile.CONTROL_VERSION:
+  for event in sim.events:
+   if FlightReceipt.player_event(str(event),BirdProfile.CONTROL_VERSION)!=str(event):return FlightReceipt.BIRD_FAILURE_COPY
  if not sim.incidents.is_empty():
   var hit:Dictionary=sim.incidents[0]
   var cause:String={"collision":"碰撞","stress":"结构过载","attack":"外部攻击"}.get(str(hit.source),str(hit.source))
@@ -582,11 +780,11 @@ func _diagnosis() -> String:
   return "首次受损：%.2f 秒，#%d %s受到%s，损伤 %.2f HP。%s"%[float(hit.elapsed),int(hit.id),catalog.get(str(hit.type),{}).get("name",str(hit.type)),cause,float(hit.amount),advice]
  if sim.status=="success":return "货物已签收。"
  for event in sim.events:
-  var message=str(event)
+  var message=FlightReceipt.player_event(str(event),str(flight_order.get("control_version","")))
   if "碰撞" in message or "断裂" in message or "损毁" in message or "耗尽" in message:return message+"。回工位检查相关零件的位置、连接或供能。"
  if sim.cargo_position().x<0:return "货物飞向了起点后方。检查喷口朝向；朝后的推力会抵消发射冲量。"
  if float(sim.telemetry.get("energy_remaining",0))<1:return "储能已耗尽，仍未送达。可减轻装置、降低无效耗能，或增加连接到动力组件的电芯。"
- return str(sim.events.back()) if not sim.events.is_empty() else "未进入收件区。检查推进方向、货舱连接和收件速度要求。"
+ return FlightReceipt.player_event(str(sim.events.back()),str(flight_order.get("control_version",""))) if not sim.events.is_empty() else "未进入收件区。检查推进方向、货舱连接和收件速度要求。"
 
 func _is_pilot_flight() -> bool:
  return sim!=null and sim.has_method("set_pilot_input") and str(flight_order.get("control_version","")) in PILOT_VERSIONS
@@ -610,6 +808,8 @@ func _set_paused(value:bool) -> void:
  if is_instance_valid(courier_input):courier_input.synchronize()
 
 func _on_focus_exited() -> void:
+ _close_investigation()
+ _close_review_phone()
  if is_instance_valid(courier_input):courier_input.set_focus_active(false)
  workshop_input.cancel()
  if is_instance_valid(loading_overlay):loading_overlay.set_focus_active(false)
@@ -642,6 +842,8 @@ func _step_flight() -> void:
  sim.step(1.0/60.0);pilot_completed_ticks+=1
 
 func _process(delta:float) -> void:
+ if _investigation_is_open() and not investigation._available():_close_investigation()
+ if _review_phone_is_open() and not _can_keep_review_phone():_close_review_phone()
  if is_instance_valid(courier_input):courier_input.tick(delta)
  workshop_input.tick()
  _sync_loading_scene_ui()
@@ -682,6 +884,9 @@ func _process(delta:float) -> void:
  var flight_data:Dictionary=sim.telemetry.duplicate(true)
  flight_data.merge({"elapsed":sim.elapsed,"distance":sim.cargo_position().x,"total_distance":world.route_distance,"integrity":sim.telemetry.get("integrity",1),"energy_used":sim.telemetry.get("energy_used",0),"events":[] if launch_countdown>0 else sim.events,"charging":launch_countdown>0,"paused":paused,"simulation_rate":speed,"phase":("收件确认" if sim.status=="success" else "航行结束") if sim.status!="running" else (("移送到地面发射位" if launch_transfer_remaining>0.0 else "发射台蓄能中") if launch_countdown>0 else ("运行较慢" if slow_simulation else ("手动驾驶" if _is_pilot_flight() else "自动航行")))},true)
  if not _is_pilot_flight():flight_data.speed=speed
+ # Presentation-only, already tick-sampled by world.show_flight above.
+ if flight_order.get("control_version","")==BirdProfile.CONTROL_VERSION and world.flight_nodes.has("protected_bird"):
+  flight_data.protected_bird_advice=world.flight_nodes.protected_bird.advisory_state()
  hud.update_flight(flight_data)
  if not trial and sim.elapsed-checkpoint>=1.0:checkpoint=sim.elapsed;_checkpoint_flight();save_game()
  if sim.status!="running":
@@ -689,12 +894,15 @@ func _process(delta:float) -> void:
   else:completion_countdown-=delta
   if completion_countdown<=0:finish_flight()
 func _input(event:InputEvent) -> void:
+ if _review_phone_is_open() or _investigation_is_open():return
  workshop_input.observe(event)
  # Releases must be observed even when a focused UI control consumes key presses.
  if event is InputEventKey and not event.pressed:
   pilot_keys.erase(event.keycode);pilot_keys.erase(event.physical_keycode)
 
 func _unhandled_key_input(event:InputEvent) -> void:
+ if _review_phone_is_open() or _investigation_is_open():return
+ if economy.review_load_blocked:return
  if is_instance_valid(courier_input) and not courier_input.focused:return
  if not event is InputEventKey or not event.pressed or event.echo:return
  if _dialogue_is_open():return
@@ -751,6 +959,8 @@ func _notification(what:int) -> void:
 func _quit_cleanly(exit_code:int=0) -> void:
  if closing:return
  closing=true
+ _close_investigation()
+ _close_review_phone()
  if is_instance_valid(dialogue):dialogue.cancel(false)
  if is_instance_valid(loading_overlay):loading_overlay.close()
  _active_story.clear();_pending_story.clear()
@@ -809,3 +1019,7 @@ func _visual_test() -> void:
  finish_flight();await get_tree().create_timer(1).timeout;await _capture("v2-07-return")
  _action("close_day",null);await get_tree().create_timer(1).timeout;await _capture("v2-08-night")
  print("VISUAL_TEST_COMPLETE");await _quit_cleanly()
+
+func _exit_tree() -> void:
+ _close_investigation()
+ _close_review_phone()

@@ -11,7 +11,8 @@ from fontTools import subset
 from fontTools.ttLib import TTFont
 root=Path(__file__).resolve().parents[1]
 source=Path(sys.argv[1])
-font=TTFont(source,fontNumber=2 if source.suffix.lower()=='.ttc' else -1)
+# Preserve source timestamps so identical text/source bytes give identical subsets.
+font=TTFont(source,fontNumber=2 if source.suffix.lower()=='.ttc' else -1,recalcTimestamp=False)
 codepoints=set(range(0x20,0x7F))
 for first,last in [(0x2000,0x2070),(0x2190,0x2300),(0x25A0,0x2600),(0x3000,0x3040),(0xFF00,0xFFF0)]:
  codepoints.update(range(first,last))

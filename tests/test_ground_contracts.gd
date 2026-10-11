@@ -4,6 +4,7 @@ extends SceneTree
 const Econ=preload("res://scripts/economy.gd")
 const Stories=preload("res://scripts/courier_stories.gd")
 const Ground=preload("res://scripts/pilot_ground_profile.gd")
+const Wormhole=preload("res://scripts/pilot_wormhole_profile.gd")
 const Extreme=preload("res://scripts/pilot_extreme_profile.gd")
 const Ascent=preload("res://scripts/pilot_ascent_profile.gd")
 var passed:int=0
@@ -73,7 +74,10 @@ func test_new_contract_boundary() -> void:
  for rep in [2,4,7,10]:
   var unlocked=shop(rep,false)
   check(unlocked.contracts[1].id>0 and unlocked.contracts[1].rep<=rep,"existing reputation gate selects a higher route at rep %d"%rep)
-  check(not Ground.is_ground_route(unlocked.contracts[1]) and unlocked.contracts[1].distance==520.0 and unlocked.contracts[1].destination_y==-150.0,"unlocked higher route retains original ascent at rep %d"%rep)
+  if rep==7:
+   check(unlocked.contracts[1].control_version==Wormhole.CONTROL_VERSION and unlocked.contracts[1].route_profile==Wormhole.ROUTE_PROFILE,"only new rep-7 offers open the explicit wormhole route")
+  else:
+   check(not Ground.is_ground_route(unlocked.contracts[1]) and unlocked.contracts[1].distance==520.0 and unlocked.contracts[1].destination_y==-150.0,"other unlocked routes retain original ascent at rep %d"%rep)
  for mode in ["autonomous-v5","pilot-v1","pilot-v2"]:
   var old=Econ.new();old.flight_mode=mode;old.ensure_contracts()
   check(not old.contracts[0].has("route_profile"),"ground authoring does not touch older mode "+mode)

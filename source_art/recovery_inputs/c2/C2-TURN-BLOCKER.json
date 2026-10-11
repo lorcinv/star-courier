@@ -1,0 +1,435 @@
+{
+  "status": "CURRENT_IMMEDIATE_REST_TURN_FRAME_EXCEEDS_HIP_BOUND",
+  "scope": "Exact sampled frame and its two existing contact anchors, current pelvis orientation and frozen bone/boot/socket geometry. This does not prove all anticipatory turn algorithms impossible.",
+  "required_bound_native": 2.0,
+  "retaining_either_original_contact": {
+    "near": {
+      "lower_bound_native": 6.67952131146531,
+      "fixed_sole": [
+        1970.70458984375,
+        496.0
+      ],
+      "new_reach_center_world": [
+        1961.5737001640346,
+        469.8199999984101
+      ],
+      "radius_outer_native": 64.43418180842865,
+      "radius_inner_native": 24.329163419204587
+    },
+    "far": {
+      "lower_bound_native": 11.453921493170794,
+      "fixed_sole": [
+        2010.9110107421875,
+        496.0
+      ],
+      "new_reach_center_world": [
+        2026.4873808489492,
+        470.66700000108875
+      ],
+      "radius_outer_native": 64.54840232133714,
+      "radius_inner_native": 24.488291238116208
+    }
+  },
+  "observed_hip_residual_native": 11.641354373809252,
+  "hip_without_extra_body_displacement_world": [
+    1990.5135498046875,
+    414.73486328125
+  ],
+  "owner_event": [
+    {
+      "owner_tick": 120,
+      "from_right": true,
+      "to_right": false,
+      "velocity_before": 0.0,
+      "velocity_after": -5.833333333333333,
+      "authorized": true,
+      "reason": "from_rest"
+    }
+  ],
+  "reflection_exemption": "Only analytic neck/shoulder attachment reflection. The hip receives no exemption.",
+  "next_decision": "Cloud owner must define a support preparation/turn presentation phase or permit facing consumption after preparation. No hidden anchor slides, near/far swaps or bone stretching implemented.",
+  "example": {
+    "measurement": {
+      "metric": "hip_residual_native",
+      "worst": {
+        "tick": 120,
+        "clock": 1.0,
+        "value": 11.641354373809252,
+        "context": {
+          "world_delta_parent": [
+            4.008056640625,
+            9.35406494140625
+          ],
+          "root_delta_parent": [
+            -0.0242919921875,
+            0.0
+          ],
+          "mirrored": true,
+          "authorized_reflection": true,
+          "expected_reflection_parent": [
+            0.0,
+            0.0
+          ],
+          "raw_residual_native": 11.641354373809252,
+          "previous_tick": 118
+        }
+      },
+      "violations": {
+        "continuity_hip": 1,
+        "continuity_neck": 1,
+        "continuity_near_shoulder": 1,
+        "continuity_far_shoulder": 1
+      }
+    },
+    "previous": {
+      "case": "R/rest_turn/0",
+      "tick": 118,
+      "clock": 0.9833333333333333,
+      "height": 210.0,
+      "stride": 46.0,
+      "version": "C2",
+      "root": {
+        "position": [
+          2000.0,
+          496.0
+        ],
+        "velocity": 0.0,
+        "distance": 0.0,
+        "stop_age": 0.0,
+        "state": "idle",
+        "facing_right": true,
+        "coordinate": 1814.0,
+        "route_length": 99814.0,
+        "right_bound": 100000.0,
+        "rear_lane": false,
+        "joining": false,
+        "enabled": true,
+        "active": true,
+        "needs_neutral": false,
+        "axis": 0.0,
+        "navigating": false,
+        "navigation_paused": false,
+        "goal": -1.0,
+        "arrived": false,
+        "blocked": false
+      },
+      "pose": {
+        "state": "idle",
+        "origin": [
+          2000.0,
+          496.0
+        ],
+        "feet": {
+          "far": {
+            "position": [
+              2010.9110107421875,
+              496.0
+            ],
+            "planted": true,
+            "landing_id": 0
+          },
+          "near": {
+            "position": [
+              1970.70458984375,
+              496.0
+            ],
+            "planted": true,
+            "landing_id": 0
+          }
+        },
+        "joints": {
+          "far": {
+            "hip": [
+              1999.9542236328125,
+              414.73486328125
+            ],
+            "knee": [
+              2006.133056640625,
+              453.1952819824219
+            ],
+            "ankle": [
+              2004.7509765625,
+              470.6669921875
+            ],
+            "sole": [
+              2010.9110107421875,
+              496.0
+            ]
+          },
+          "near": {
+            "hip": [
+              1976.7869873046875,
+              414.73486328125
+            ],
+            "knee": [
+              1971.8743896484375,
+              453.2568664550781
+            ],
+            "ankle": [
+              1966.0845947265625,
+              469.82000732421875
+            ],
+            "sole": [
+              1970.70458984375,
+              496.0
+            ]
+          }
+        },
+        "hip": [
+          1990.537841796875,
+          414.73486328125
+        ],
+        "support": "far",
+        "swing": "near",
+        "step_fraction": 0.0,
+        "step_distance": 0.0,
+        "travelling": false,
+        "settling": false,
+        "settled": true,
+        "facing_right": true,
+        "pose_time": 0.9833333333333333,
+        "arm_angle": 0.0,
+        "shoulder_offset": [
+          0.0,
+          0.20172756910324097
+        ],
+        "head_angle": 0.0,
+        "eye_state": "open",
+        "distance_rebases": 0,
+        "max_reach_error": 0.0,
+        "relaxed_extension_weight": 1.0,
+        "upper_body": {
+          "pelvis_world_angle": 0.0,
+          "torso_world_angle": 0.0,
+          "torso_pivot_world": [
+            1990.537841796875,
+            414.93658447265625
+          ],
+          "neck_world": [
+            1983.537841796875,
+            367.2164001464844
+          ],
+          "shoulder_world": {
+            "far": [
+              2004.537841796875,
+              380.3414001464844
+            ],
+            "near": [
+              1962.537841796875,
+              382.9664001464844
+            ]
+          },
+          "arm_world_angle": {
+            "far": 0.0,
+            "near": 0.0
+          },
+          "head_world_angle": 0.0,
+          "head_scale": 0.875,
+          "gaze_semantic": "idle",
+          "orientation_space": "world",
+          "facing_changed": false
+        },
+        "reach_feasible": true,
+        "flight_reach_correction_native": 0.0,
+        "support_transfer": "",
+        "rest_goal_local": [
+          -9.462158203125,
+          -81.26513671875
+        ],
+        "rest_comfort_feasible": true,
+        "candidate": "FG01-C2",
+        "half_step_native": 46.0,
+        "current_step_parent": 1.0,
+        "walk_hip_drop_native": 5.5,
+        "rest_knee_min_degrees": 12.0,
+        "swing_max_knee_degrees": 85.0,
+        "swing_lift_native": 6.0
+      },
+      "extra": {
+        "hidden": false,
+        "freeze_exact": true,
+        "owner_orientation_events": []
+      }
+    },
+    "current": {
+      "case": "R/rest_turn/0",
+      "tick": 120,
+      "clock": 1.0,
+      "height": 210.0,
+      "stride": 46.0,
+      "version": "C2",
+      "root": {
+        "position": [
+          1999.9757080078125,
+          496.0
+        ],
+        "velocity": -5.833333333333333,
+        "distance": 0.02430555555565661,
+        "stop_age": 0.0,
+        "state": "start",
+        "facing_right": false,
+        "coordinate": 1813.9756944444443,
+        "route_length": 99814.0,
+        "right_bound": 100000.0,
+        "rear_lane": false,
+        "joining": false,
+        "enabled": true,
+        "active": true,
+        "needs_neutral": false,
+        "axis": -1.0,
+        "navigating": false,
+        "navigation_paused": false,
+        "goal": -1.0,
+        "arrived": false,
+        "blocked": false
+      },
+      "pose": {
+        "state": "start",
+        "origin": [
+          1999.9757080078125,
+          496.0
+        ],
+        "feet": {
+          "far": {
+            "position": [
+              2010.9110107421875,
+              496.0
+            ],
+            "planted": true,
+            "landing_id": 0
+          },
+          "near": {
+            "position": [
+              1970.70458984375,
+              496.0
+            ],
+            "planted": true,
+            "landing_id": 0
+          }
+        },
+        "joints": {
+          "far": {
+            "hip": [
+              1985.1295166015625,
+              424.08892822265625
+            ],
+            "knee": [
+              2006.99072265625,
+              456.32977294921875
+            ],
+            "ankle": [
+              2017.071044921875,
+              470.6669921875
+            ],
+            "sole": [
+              2010.9110107421875,
+              496.0
+            ]
+          },
+          "near": {
+            "hip": [
+              2008.2967529296875,
+              424.08892822265625
+            ],
+            "knee": [
+              1985.4180908203125,
+              455.4679260253906
+            ],
+            "ankle": [
+              1975.3245849609375,
+              469.82000732421875
+            ],
+            "sole": [
+              1970.70458984375,
+              496.0
+            ]
+          }
+        },
+        "hip": [
+          1994.5458984375,
+          424.08892822265625
+        ],
+        "support": "near",
+        "swing": "far",
+        "step_fraction": 0.0006035277562111801,
+        "step_distance": 0.0242919921875,
+        "travelling": true,
+        "settling": false,
+        "settled": false,
+        "facing_right": false,
+        "pose_time": 1.0,
+        "arm_angle": -1.1562196295699618e-09,
+        "shoulder_offset": [
+          0.0,
+          0.20172668993473053
+        ],
+        "head_angle": 2.081195333225931e-11,
+        "eye_state": "open",
+        "distance_rebases": 0,
+        "max_reach_error": 0.0,
+        "relaxed_extension_weight": 1.0,
+        "upper_body": {
+          "pelvis_world_angle": 1.156219629569962e-10,
+          "torso_world_angle": -1.7343294443549426e-10,
+          "torso_pivot_world": [
+            1994.5458984375,
+            424.2906494140625
+          ],
+          "neck_world": [
+            2001.5458984375,
+            376.5704650878906
+          ],
+          "shoulder_world": {
+            "far": [
+              1980.5458984375,
+              389.6954650878906
+            ],
+            "near": [
+              2022.5458984375,
+              392.3204650878906
+            ]
+          },
+          "arm_world_angle": {
+            "far": -1.329652574005456e-09,
+            "near": 9.827866851344676e-10
+          },
+          "head_world_angle": -2.081195333225931e-11,
+          "head_scale": 0.875,
+          "gaze_semantic": "forward",
+          "orientation_space": "world",
+          "facing_changed": true
+        },
+        "reach_feasible": true,
+        "flight_reach_correction_native": 0.0,
+        "support_transfer": "",
+        "rest_goal_local": [
+          -9.462158203125,
+          -81.26513671875
+        ],
+        "rest_comfort_feasible": true,
+        "candidate": "FG01-C2",
+        "half_step_native": 46.0,
+        "current_step_parent": 40.25,
+        "walk_hip_drop_native": 5.5,
+        "rest_knee_min_degrees": 12.0,
+        "swing_max_knee_degrees": 85.0,
+        "swing_lift_native": 6.0
+      },
+      "extra": {
+        "hidden": false,
+        "freeze_exact": true,
+        "owner_orientation_events": [
+          {
+            "owner_tick": 120,
+            "from_right": true,
+            "to_right": false,
+            "velocity_before": 0.0,
+            "velocity_after": -5.833333333333333,
+            "authorized": true,
+            "reason": "from_rest"
+          }
+        ]
+      }
+    }
+  }
+}

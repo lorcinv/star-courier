@@ -1,0 +1,89 @@
+{
+  "schema": "star-courier-durable-recovery-inputs-v1",
+  "baseline": {
+    "repository": "https://github.com/lorcinv/star-courier",
+    "branch": "main",
+    "commit": "9fd856ab33b3a53838887849eb0a2a2e7858981f",
+    "tree": "0e29974828fbbd102731329d8473361af3bdae97",
+    "files": 1882,
+    "bytes": 394661626
+  },
+  "library_inputs": [
+    {
+      "filename": "StarCourier-491aaff-ground-traffic-code.zip",
+      "library_file_id": "libfile_b06fe7838cfc8191941fcdf200e3408d",
+      "bytes": 1592743,
+      "sha256": "45adf7cd038898d4743792684594b382686442f57d6492f96312ee59be704f5f",
+      "status": "MATERIALIZED_AND_HASH_VERIFIED"
+    },
+    {
+      "filename": "StarCourier-clerk-fullbody-FG01-source.zip",
+      "library_file_id": "libfile_46b39c6d64b481919b759b9a0e5be867",
+      "bytes": 333005,
+      "sha256": "bb84bc3e73b6be4db0eb2793c41b7df97c9f65f5f1678c06ac65c0b94d2dce25",
+      "status": "MATERIALIZED_AND_HASH_VERIFIED"
+    },
+    {
+      "filename": "StarCourier-Clerk-FG01-C2-small-review.zip",
+      "library_file_id": "libfile_19f84f616e588191870125a4c6e8dd9d",
+      "bytes": 2114565,
+      "sha256": "490f7ff3c80c4f871a819172a2739036180b3b3af0b1b9af1eebee5f9bc563da",
+      "status": "MATERIALIZED_AND_HASH_VERIFIED"
+    },
+    {
+      "filename": "StarCourier-Clerk-FG01-C1r1-mechanics-blocker-review.zip",
+      "library_file_id": "libfile_2e9f4bc10d20819189faea95fb82d908",
+      "bytes": 36911333,
+      "sha256": "63efce3f56d581387f5f1ba791952b2dbcefaabb3be4364c5f4c04e65c0d3117",
+      "status": "MATERIALIZED_AND_HASH_VERIFIED"
+    },
+    {
+      "filename": "StarCourier-ground-corrected-v3-integration-reference.zip",
+      "library_file_id": "libfile_d8b383953a108191bb43b8900d2e0aa4",
+      "bytes": 183639,
+      "sha256": "bb80aef8ba1f6ac48c1da7a46fa2288c761230b6d2cbd612c8ba284101e96d0a",
+      "status": "MATERIALIZED_AND_HASH_VERIFIED"
+    },
+    {
+      "filename": "StarCourier-final-fuel-tick-intent-oracle.zip",
+      "library_file_id": "libfile_2a283612dadc81918aef3fb077c9a886",
+      "bytes": 28692,
+      "sha256": "608f06e5dd92f888533f2276ed8777edfbed06edf2ba6a8a7b4ff661b0fd59f7",
+      "status": "MATERIALIZED_AND_HASH_VERIFIED"
+    },
+    {
+      "filename": "StarCourier-ground-traffic-candidate-v3-source-Windows-evidence.zip",
+      "library_file_id": "libfile_b990a85e246881918cbaa40afdde1e02",
+      "bytes": 333589,
+      "sha256": "9dd2d656630452a2771b4f28020d0682342d3a58839aa3d78498a9c19f7942ec",
+      "status": "MATERIALIZED_AND_HASH_VERIFIED"
+    },
+    {
+      "filename": "StarCourier-v3-post-upload-motion-audit-and-fraction-fix.zip",
+      "library_file_id": "libfile_b4957b6398ec819191b3a3a2e2ce925d",
+      "bytes": 94509,
+      "sha256": "33f9327ebef31213c9291670205160e407c120564e5a2ddc39818b647bc26497",
+      "status": "MATERIALIZED_AND_HASH_VERIFIED"
+    },
+    {
+      "filename": "StarCourier-Windows-WIP-TEST-1335935.zip",
+      "library_file_id": "libfile_d93d38bfe08081918ee8dc4e8c89d298",
+      "bytes": 45011385,
+      "sha256": "9a139416cc270e0b9fec0a08c30137445c1825aad5e8e732d298ed9c2a2f7144",
+      "status": "MATERIALIZED_AND_HASH_VERIFIED"
+    }
+  ],
+  "initial_consolidated_delta": {
+    "library_file_id": "libfile_b845e3408e1881918bc60f70e0e5fba0",
+    "bytes": 2039373,
+    "sha256": "0ae0b2ffc8afe4cd44548629f4266c718fa3f4c37243ea0fbf85c4500d8f5bc4",
+    "file_count": 2259,
+    "delta_files": 411,
+    "result_tree": "9662e222c598e129f783bf9b954352e894ba2d9f",
+    "verified_result_files": 2259,
+    "status": "RECOVERED_WIP_NOT_RUNNABLE_MISSING_ASSETS",
+    "filename": "StarCourier-Recovery-WIP-20261011T1358Z-delta.zip",
+    "roundtrip_sha256_verified": true
+  },
+  "scope": "All recovered inputs are exact preserved files. C1r1/C2 remain failed/review-only candidates, traffic not integrated; historical logs are not fresh execution. The initial delta requires the exact baseline and predates this additional index and backup mechanism."
+}

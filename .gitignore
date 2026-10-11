@@ -29,3 +29,11 @@ source_art/2d_v5/npc_debranding/before-runtime-directory/
 source_art/modules_v4/archive/**/*.zip
 source_art/modules_v4/joint_validation_project/cache/
 source_art/modules_v4/joint_validation_project/data/
+
+# Re-created isolated validation projects and their saved state are not sources.
+source_art/2d_v5/wormhole/economy_staging/test_cache/
+source_art/2d_v5/wormhole/economy_staging/test_fixture/
+source_art/2d_v5/wormhole/economy_staging/test_state/
+source_art/2d_v5/wormhole/physics_staging/fixture/
+source_art/2d_v5/otherworld/presentation_staging/fixture/
+source_art/2d_v5/otherworld/presentation_staging/xdg/

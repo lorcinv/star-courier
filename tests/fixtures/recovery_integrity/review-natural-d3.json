@@ -1,0 +1,1114 @@
+{
+  "active_contract_id": "",
+  "contracts": [
+    {
+      "accepted_day": 3.0,
+      "accessory_id": "none",
+      "appearance_id": "human_courier",
+      "appearance_seed": 427536579,
+      "boundary_y": 230.0,
+      "cargo": "包好的一把小勺",
+      "client": "小禾",
+      "contract_id": "D3-A",
+      "control_version": "pilot-v3",
+      "deadline": 50.0,
+      "delivery_radius": 9.0,
+      "destination_name": "晨星轨道站",
+      "destination_y": -150.0,
+      "distance": 524.0,
+      "generation": {
+        "base_id": 2.0,
+        "base_rep": 4.0,
+        "base_reward": 280.0,
+        "base_weight": 2.0,
+        "clearance": {
+          "craft_radius": 2.0,
+          "exit_clear_until_x": 548.0,
+          "margin": 1.0,
+          "minimum_preview_seconds": 3.5,
+          "minimum_remaining_energy": 600.0,
+          "preview_speed": 18.0,
+          "receiver_clear_from_x": 484.0,
+          "reference": "starter-eight-modules-v3",
+          "spawn_clear_until_x": 30.0,
+          "witness_points": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              105.0,
+              -21.728515625
+            ],
+            [
+              220.0,
+              -68.5
+            ],
+            [
+              327.0,
+              -136.2080078125
+            ],
+            [
+              468.0,
+              -150.0
+            ],
+            [
+              524.0,
+              -150.0
+            ]
+          ]
+        },
+        "day": 3.0,
+        "dialogue": {
+          "accept_lines": [
+            {
+              "expression": "neutral",
+              "speaker": "npc",
+              "text": "还是那把小勺，地址写的是晨星轨道站。我把勺柄也包好了。"
+            },
+            {
+              "expression": "warm_smile",
+              "speaker": "clerk",
+              "text": "地址核对好了。我先把箱子固定稳。"
+            }
+          ],
+          "appearance_id": "human_courier",
+          "cargo": "包好的一把小勺",
+          "destination_name": "晨星轨道站",
+          "id": "human_courier-address-1",
+          "story_id": "spoon_at_the_station"
+        },
+        "dialogue_seed": 568140291.0,
+        "fallback": false,
+        "fallback_reason": "",
+        "kind": "ascent",
+        "layout_seed": 1711003502.0,
+        "layout_template": "orbit-zigzag",
+        "seed": 1226919728.0,
+        "slot": 0.0,
+        "task_seed": 1664235608.0,
+        "task_template": "standard-steady",
+        "version": "seeded-offers-v1",
+        "weight_delta": -0.125,
+        "world_seed": 993371368.0
+      },
+      "gravity": 0.0,
+      "hazards": [
+        {
+          "gate_index": 0.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 105.0,
+          "y": -36.728515625
+        },
+        {
+          "gate_index": 0.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 105.0,
+          "y": -6.728515625
+        },
+        {
+          "gate_index": 1.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 220.0,
+          "y": -83.5
+        },
+        {
+          "gate_index": 1.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 220.0,
+          "y": -53.5
+        },
+        {
+          "gate_index": 2.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 327.0,
+          "y": -151.7080078125
+        },
+        {
+          "gate_index": 2.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 327.0,
+          "y": -120.7080078125
+        },
+        {
+          "gate_index": 3.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 468.0,
+          "y": -165.5
+        },
+        {
+          "gate_index": 3.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 468.0,
+          "y": -134.5
+        }
+      ],
+      "id": 2.0,
+      "lookahead_seconds": 3.5,
+      "max_delivery_speed": 24.0,
+      "mode": "pilot",
+      "name": "城市升空 → 晨星轨道站",
+      "pilot_altitude": 150.0,
+      "pilot_battery_multiplier": 20.0,
+      "pilot_boost_speed": 22.0,
+      "pilot_climb_end": 410.0,
+      "pilot_climb_start": 35.0,
+      "pilot_cruise_speed": 18.0,
+      "pilot_drag": 0.025,
+      "pilot_energy_tariff": 0.025,
+      "pilot_gates": [
+        {
+          "half_gap": 10.0,
+          "heading": -0.349609375,
+          "index": 0.0,
+          "lane_offset": -8.0,
+          "x": 105.0,
+          "y": -21.728515625
+        },
+        {
+          "half_gap": 10.0,
+          "heading": -0.5400390625,
+          "index": 1.0,
+          "lane_offset": 5.0,
+          "x": 220.0,
+          "y": -68.5
+        },
+        {
+          "half_gap": 10.5,
+          "heading": -0.392578125,
+          "index": 2.0,
+          "lane_offset": -5.0,
+          "x": 327.0,
+          "y": -136.2080078125
+        },
+        {
+          "half_gap": 10.5,
+          "heading": 0.0,
+          "index": 3.0,
+          "lane_offset": 0.0,
+          "x": 468.0,
+          "y": -150.0
+        }
+      ],
+      "pilot_net_force_limit": 30.0,
+      "pilot_overdrive": "mounted-output",
+      "pilot_profile": "pilot-v3",
+      "pilot_vertical_speed": 5.0,
+      "rep": 4.0,
+      "required": 85.0,
+      "reward": 275.0,
+      "risk": "信号追踪海盗 · 普通炮台",
+      "species": "human",
+      "status": "available",
+      "story": "还是那把小勺，地址写的是晨星轨道站。我把勺柄也包好了。",
+      "story_id": "spoon_at_the_station",
+      "story_node": 1,
+      "time_limit": 74.0,
+      "variant": "标准件",
+      "variation": 0.0,
+      "weight": 1.875,
+      "wind": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "accepted_day": 3.0,
+      "accessory_id": "book_pouch",
+      "appearance_id": "elf_archivist",
+      "appearance_seed": 986312486,
+      "boundary_y": 230.0,
+      "cargo": "加急补货 · 压花书签",
+      "client": "叶笺",
+      "contract_id": "D3-B",
+      "control_version": "pilot-v3",
+      "deadline": 55.0,
+      "delivery_radius": 9.0,
+      "destination_name": "晨星轨道站",
+      "destination_y": -138.0,
+      "distance": 526.0,
+      "generation": {
+        "base_id": 2.0,
+        "base_rep": 4.0,
+        "base_reward": 280.0,
+        "base_weight": 2.0,
+        "clearance": {
+          "craft_radius": 2.0,
+          "exit_clear_until_x": 550.0,
+          "margin": 1.0,
+          "minimum_preview_seconds": 3.5,
+          "minimum_remaining_energy": 600.0,
+          "preview_speed": 18.0,
+          "receiver_clear_from_x": 486.0,
+          "reference": "starter-eight-modules-v3",
+          "spawn_clear_until_x": 30.0,
+          "witness_points": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              108.0,
+              -22.3515625
+            ],
+            [
+              223.0,
+              -68.1181640625
+            ],
+            [
+              335.0,
+              -132.4296875
+            ],
+            [
+              472.0,
+              -138.0
+            ],
+            [
+              526.0,
+              -138.0
+            ]
+          ]
+        },
+        "day": 3.0,
+        "dialogue": {
+          "accept_lines": [
+            {
+              "expression": "neutral",
+              "speaker": "npc",
+              "text": "书签送到晨星轨道站。借书条放在外袋，别和它一起夹进去。"
+            },
+            {
+              "expression": "warm_smile",
+              "speaker": "clerk",
+              "text": "地址核对好了。我先把箱子固定稳。"
+            }
+          ],
+          "appearance_id": "elf_archivist",
+          "cargo": "压花书签",
+          "destination_name": "晨星轨道站",
+          "id": "elf_archivist-address-0",
+          "story_id": "a_bookmark_on_leave"
+        },
+        "dialogue_seed": 1251014232.0,
+        "fallback": false,
+        "fallback_reason": "",
+        "kind": "ascent",
+        "layout_seed": 1989679414.0,
+        "layout_template": "orbit-early-level",
+        "seed": 2081342859.0,
+        "slot": 1.0,
+        "task_seed": 1625051956.0,
+        "task_template": "bulk-careful",
+        "version": "seeded-offers-v1",
+        "weight_delta": 0.0,
+        "world_seed": 993371368.0
+      },
+      "gravity": 0.0,
+      "hazards": [
+        {
+          "gate_index": 0.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 108.0,
+          "y": -37.3515625
+        },
+        {
+          "gate_index": 0.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 108.0,
+          "y": -7.3515625
+        },
+        {
+          "gate_index": 1.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 223.0,
+          "y": -83.1181640625
+        },
+        {
+          "gate_index": 1.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 223.0,
+          "y": -53.1181640625
+        },
+        {
+          "gate_index": 2.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 335.0,
+          "y": -147.9296875
+        },
+        {
+          "gate_index": 2.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 335.0,
+          "y": -116.9296875
+        },
+        {
+          "gate_index": 3.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 472.0,
+          "y": -153.5
+        },
+        {
+          "gate_index": 3.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 472.0,
+          "y": -122.5
+        }
+      ],
+      "id": 2.0,
+      "lookahead_seconds": 3.5,
+      "max_delivery_speed": 24.0,
+      "mode": "pilot",
+      "name": "城市升空 → 晨星轨道站",
+      "pilot_altitude": 138.0,
+      "pilot_battery_multiplier": 20.0,
+      "pilot_boost_speed": 22.0,
+      "pilot_climb_end": 400.0,
+      "pilot_climb_start": 35.0,
+      "pilot_cruise_speed": 18.0,
+      "pilot_drag": 0.025,
+      "pilot_energy_tariff": 0.025,
+      "pilot_gates": [
+        {
+          "half_gap": 10.0,
+          "heading": -0.3486328125,
+          "index": 0.0,
+          "lane_offset": -8.0,
+          "x": 108.0,
+          "y": -22.3515625
+        },
+        {
+          "half_gap": 10.0,
+          "heading": -0.515625,
+          "index": 1.0,
+          "lane_offset": 4.0,
+          "x": 223.0,
+          "y": -68.1181640625
+        },
+        {
+          "half_gap": 10.5,
+          "heading": -0.3203125,
+          "index": 2.0,
+          "lane_offset": -6.0,
+          "x": 335.0,
+          "y": -132.4296875
+        },
+        {
+          "half_gap": 10.5,
+          "heading": 0.0,
+          "index": 3.0,
+          "lane_offset": 0.0,
+          "x": 472.0,
+          "y": -138.0
+        }
+      ],
+      "pilot_net_force_limit": 30.0,
+      "pilot_overdrive": "mounted-output",
+      "pilot_profile": "pilot-v3",
+      "pilot_vertical_speed": 5.0,
+      "rep": 4.0,
+      "required": 90.0,
+      "reward": 345.0,
+      "risk": "信号追踪海盗 · 普通炮台",
+      "species": "elf",
+      "status": "available",
+      "story": "书签送到晨星轨道站。借书条放在外袋，别和它一起夹进去。",
+      "story_id": "a_bookmark_on_leave",
+      "story_node": 1,
+      "time_limit": 74.0,
+      "variant": "重货件",
+      "variation": 0.0,
+      "weight": 3.125,
+      "wind": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "credits": 542,
+  "day": 3,
+  "deliveries": 3,
+  "design": [
+    {
+      "id": 1,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 100.0,
+      "rot": 0,
+      "target": -1,
+      "type": "cargo",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 2,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 32.0,
+      "rot": 0,
+      "target": -1,
+      "type": "beam",
+      "x": 1,
+      "y": -1
+    },
+    {
+      "id": 3,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 300.0,
+      "rot": 0,
+      "target": -1,
+      "type": "battery",
+      "x": -1,
+      "y": 0
+    },
+    {
+      "id": 4,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 28.0,
+      "rot": 0,
+      "target": -1,
+      "type": "thruster",
+      "x": 0,
+      "y": -1
+    },
+    {
+      "id": 5,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 150.0,
+      "rot": 0,
+      "target": -1,
+      "type": "armor",
+      "x": 1,
+      "y": 0
+    },
+    {
+      "id": 6,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 28.0,
+      "rot": 0,
+      "target": -1,
+      "type": "thruster",
+      "x": 0,
+      "y": 1
+    },
+    {
+      "id": 7,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 32.0,
+      "rot": 0,
+      "target": -1,
+      "type": "beam",
+      "x": 1,
+      "y": 1
+    },
+    {
+      "id": 8,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 0.0,
+      "rot": 0,
+      "target": -1,
+      "type": "coupler",
+      "x": -1,
+      "y": 1
+    }
+  ],
+  "designs": {
+    "workbench": {
+      "design": [
+        {
+          "id": 1.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 100.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "cargo",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "id": 2.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 32.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "beam",
+          "x": 1.0,
+          "y": -1.0
+        },
+        {
+          "id": 3.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 300.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "battery",
+          "x": -1.0,
+          "y": 0.0
+        },
+        {
+          "id": 4.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 28.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "thruster",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "id": 5.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 150.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "armor",
+          "x": 1.0,
+          "y": 0.0
+        },
+        {
+          "id": 6.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 28.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "thruster",
+          "x": 0.0,
+          "y": 1.0
+        },
+        {
+          "id": 7.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 32.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "beam",
+          "x": 1.0,
+          "y": 1.0
+        },
+        {
+          "id": 8.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 0.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "coupler",
+          "x": -1.0,
+          "y": 1.0
+        }
+      ],
+      "launcher": [
+        {
+          "id": 1001.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 20.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "spring",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "id": 1002.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 300.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "battery",
+          "x": -1.0,
+          "y": 0.0
+        },
+        {
+          "id": 1003.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 32.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "beam",
+          "x": 1.0,
+          "y": 0.0
+        }
+      ]
+    }
+  },
+  "flight_mode": "pilot-v3",
+  "history": [
+    {
+      "ammo": 0.0,
+      "base_income": 340.0,
+      "client": "铆钉",
+      "contract_id": "D2-B",
+      "day": 2.0,
+      "deadline": 55.0,
+      "elapsed": 35.75833333333195,
+      "energy": 92.0,
+      "energy_tariff": 0.025,
+      "income": 340.0,
+      "income_adjustment": 0.0,
+      "integrity": 100.0,
+      "lost": 0.0,
+      "profit": 248.0,
+      "repairs": 0.0,
+      "replenishment": "费用含自动补件与维修，装置已恢复为发射前方案。",
+      "reputation": 2.0,
+      "required": 90.0,
+      "restored": true,
+      "review": "准时，包装也完整。谢谢你把这份心意送到了。",
+      "route": "城市升空 → 晨星轨道站",
+      "success": true
+    },
+    {
+      "ammo": 0.0,
+      "base_income": 220.0,
+      "client": "叶笺",
+      "contract_id": "D1-B",
+      "day": 1.0,
+      "deadline": 35.0,
+      "elapsed": 23.016666666666,
+      "energy": 67.0,
+      "energy_tariff": 0.025,
+      "income": 220.0,
+      "income_adjustment": 0.0,
+      "integrity": 100.0,
+      "lost": 0.0,
+      "profit": 153.0,
+      "repairs": 0.0,
+      "replenishment": "费用含自动补件与维修，装置已恢复为发射前方案。",
+      "reputation": 2.0,
+      "required": 85.0,
+      "restored": true,
+      "review": "准时，包装也完整。谢谢你把这份心意送到了。",
+      "route": "城市货站 → 屋顶收件台",
+      "success": true
+    },
+    {
+      "ammo": 0.0,
+      "base_income": 165.0,
+      "client": "小禾",
+      "contract_id": "D1-A",
+      "day": 1.0,
+      "deadline": 32.0,
+      "elapsed": 22.416666666666035,
+      "energy": 59.0,
+      "energy_tariff": 0.025,
+      "income": 165.0,
+      "income_adjustment": 0.0,
+      "integrity": 100.0,
+      "lost": 0.0,
+      "profit": 106.0,
+      "repairs": 0.0,
+      "replenishment": "费用含自动补件与维修，装置已恢复为发射前方案。",
+      "reputation": 2.0,
+      "required": 85.0,
+      "restored": true,
+      "review": "准时，包装也完整。谢谢你把这份心意送到了。",
+      "route": "城市货站 → 屋顶收件台",
+      "success": true
+    }
+  ],
+  "in_flight": {},
+  "inventory": {
+    "armor": 1.0,
+    "battery": 4.0,
+    "beam": 4.0,
+    "cargo": 1.0,
+    "coupler": 1.0,
+    "not_gate": 1.0,
+    "spring": 1.0,
+    "thruster": 2.0
+  },
+  "jobs_today": 0,
+  "last_settlement": {
+    "ammo": 0.0,
+    "base_income": 340.0,
+    "client": "铆钉",
+    "contract_id": "D2-B",
+    "day": 2.0,
+    "deadline": 55.0,
+    "elapsed": 35.75833333333195,
+    "energy": 92.0,
+    "energy_tariff": 0.025,
+    "income": 340.0,
+    "income_adjustment": 0.0,
+    "integrity": 100.0,
+    "lost": 0.0,
+    "profit": 248.0,
+    "repairs": 0.0,
+    "replenishment": "费用含自动补件与维修，装置已恢复为发射前方案。",
+    "reputation": 2.0,
+    "required": 90.0,
+    "restored": true,
+    "review": "准时，包装也完整。谢谢你把这份心意送到了。",
+    "route": "城市升空 → 晨星轨道站",
+    "success": true
+  },
+  "last_trials": {},
+  "launcher": [
+    {
+      "id": 1001,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 20.0,
+      "rot": 0,
+      "target": -1,
+      "type": "spring",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 1002,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 300.0,
+      "rot": 0,
+      "target": -1,
+      "type": "battery",
+      "x": -1,
+      "y": 0
+    },
+    {
+      "id": 1003,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 32.0,
+      "rot": 0,
+      "target": -1,
+      "type": "beam",
+      "x": 1,
+      "y": 0
+    }
+  ],
+  "offer_generation_state": {
+    "version": "seeded-offers-v1",
+    "world_seed": 993371368.0
+  },
+  "phase": "morning",
+  "reputation": 6,
+  "research": 0,
+  "review_state": {
+    "pending": {},
+    "published": [
+      {
+        "appearance_id": "robot_machinist",
+        "body": "晨星轨道站已收件。时限内到达，货物完整。辛苦了。",
+        "category": "complete",
+        "client": "铆钉",
+        "deadline": 55.0,
+        "delivery_day": 2,
+        "destination_name": "晨星轨道站",
+        "elapsed": 35.75833333333195,
+        "integrity": 100.0,
+        "published_day": 3,
+        "rating": 5,
+        "required": 90.0,
+        "route_name": "城市升空 → 晨星轨道站",
+        "settlement_id": "D2-B",
+        "success": true
+      }
+    ],
+    "published_through_day": 2,
+    "start_day": 1,
+    "template_version": 1,
+    "version": 1
+  },
+  "settings": {
+    "controller_deadzone": 0.22,
+    "customer_reviews_schema": 1,
+    "dialogue_muted": false,
+    "dialogue_volume": 0.55,
+    "fullscreen": false,
+    "motion_blur": true,
+    "offer_generation_schema": 1,
+    "pixel_density": "auto",
+    "quality": "auto",
+    "reduced_motion": false,
+    "volume": 0.55
+  },
+  "settled_ids": {
+    "D1-A": {
+      "ammo": 0.0,
+      "base_income": 165.0,
+      "client": "小禾",
+      "contract_id": "D1-A",
+      "day": 1.0,
+      "deadline": 32.0,
+      "elapsed": 22.416666666666035,
+      "energy": 59.0,
+      "energy_tariff": 0.025,
+      "income": 165.0,
+      "income_adjustment": 0.0,
+      "integrity": 100.0,
+      "lost": 0.0,
+      "profit": 106.0,
+      "repairs": 0.0,
+      "replenishment": "费用含自动补件与维修，装置已恢复为发射前方案。",
+      "reputation": 2.0,
+      "required": 85.0,
+      "restored": true,
+      "review": "准时，包装也完整。谢谢你把这份心意送到了。",
+      "route": "城市货站 → 屋顶收件台",
+      "success": true
+    },
+    "D1-B": {
+      "ammo": 0.0,
+      "base_income": 220.0,
+      "client": "叶笺",
+      "contract_id": "D1-B",
+      "day": 1.0,
+      "deadline": 35.0,
+      "elapsed": 23.016666666666,
+      "energy": 67.0,
+      "energy_tariff": 0.025,
+      "income": 220.0,
+      "income_adjustment": 0.0,
+      "integrity": 100.0,
+      "lost": 0.0,
+      "profit": 153.0,
+      "repairs": 0.0,
+      "replenishment": "费用含自动补件与维修，装置已恢复为发射前方案。",
+      "reputation": 2.0,
+      "required": 85.0,
+      "restored": true,
+      "review": "准时，包装也完整。谢谢你把这份心意送到了。",
+      "route": "城市货站 → 屋顶收件台",
+      "success": true
+    },
+    "D2-B": {
+      "ammo": 0.0,
+      "base_income": 340.0,
+      "client": "铆钉",
+      "contract_id": "D2-B",
+      "day": 2.0,
+      "deadline": 55.0,
+      "elapsed": 35.75833333333195,
+      "energy": 92.0,
+      "energy_tariff": 0.025,
+      "income": 340.0,
+      "income_adjustment": 0.0,
+      "integrity": 100.0,
+      "lost": 0.0,
+      "profit": 248.0,
+      "repairs": 0.0,
+      "replenishment": "费用含自动补件与维修，装置已恢复为发射前方案。",
+      "reputation": 2.0,
+      "required": 90.0,
+      "restored": true,
+      "review": "准时，包装也完整。谢谢你把这份心意送到了。",
+      "route": "城市升空 → 晨星轨道站",
+      "success": true
+    }
+  },
+  "story_state": {
+    "committed_contract_ids": {
+      "D1-A": {
+        "route_context": {
+          "destination_name": "屋顶收件台",
+          "route_name": "城市货站 → 屋顶收件台",
+          "route_profile": "ground-city-v1"
+        },
+        "success": true
+      },
+      "D1-B": {
+        "route_context": {
+          "destination_name": "屋顶收件台",
+          "route_name": "城市货站 → 屋顶收件台",
+          "route_profile": "ground-city-v1"
+        },
+        "success": true
+      },
+      "D2-B": {
+        "route_context": {
+          "destination_name": "晨星轨道站",
+          "route_name": "城市升空 → 晨星轨道站",
+          "route_profile": ""
+        },
+        "success": true
+      }
+    },
+    "contract_bindings": {
+      "D1-A": {
+        "accessory_id": "none",
+        "appearance_id": "human_courier",
+        "appearance_seed": 427536579,
+        "species": "human",
+        "story_id": "spoon_at_the_station",
+        "story_node": 0
+      },
+      "D1-B": {
+        "accessory_id": "book_pouch",
+        "appearance_id": "elf_archivist",
+        "appearance_seed": 986312486,
+        "species": "elf",
+        "story_id": "a_bookmark_on_leave",
+        "story_node": 0
+      },
+      "D2-A": {
+        "accessory_id": "field_vial",
+        "appearance_id": "alien_botanist",
+        "appearance_seed": 1441084735,
+        "species": "alien",
+        "story_id": "sunny_side_of_a_pot",
+        "story_node": 0
+      },
+      "D2-B": {
+        "accessory_id": "power_cell",
+        "appearance_id": "robot_machinist",
+        "appearance_seed": 1998703995,
+        "species": "robot",
+        "story_id": "a_kettle_for_two",
+        "story_node": 0
+      },
+      "D3-A": {
+        "accessory_id": "none",
+        "appearance_id": "human_courier",
+        "appearance_seed": 427536579,
+        "species": "human",
+        "story_id": "spoon_at_the_station",
+        "story_node": 1
+      },
+      "D3-B": {
+        "accessory_id": "book_pouch",
+        "appearance_id": "elf_archivist",
+        "appearance_seed": 986312486,
+        "species": "elf",
+        "story_id": "a_bookmark_on_leave",
+        "story_node": 1
+      }
+    },
+    "pending_returns": [],
+    "roster": {
+      "alien_botanist": {
+        "accessory_id": "field_vial",
+        "appearance_id": "alien_botanist",
+        "appearance_seed": 1441084735,
+        "species": "alien",
+        "story_id": "sunny_side_of_a_pot",
+        "story_node": 0
+      },
+      "elf_archivist": {
+        "accessory_id": "book_pouch",
+        "appearance_id": "elf_archivist",
+        "appearance_seed": 986312486,
+        "species": "elf",
+        "story_id": "a_bookmark_on_leave",
+        "story_node": 1
+      },
+      "human_courier": {
+        "accessory_id": "none",
+        "appearance_id": "human_courier",
+        "appearance_seed": 427536579,
+        "species": "human",
+        "story_id": "spoon_at_the_station",
+        "story_node": 1
+      },
+      "robot_machinist": {
+        "accessory_id": "power_cell",
+        "appearance_id": "robot_machinist",
+        "appearance_seed": 1998703995,
+        "species": "robot",
+        "story_id": "a_kettle_for_two",
+        "story_node": 1
+      }
+    },
+    "seen_dialogue_ids": {
+      "D1-A": {
+        "D1-A/accept": true,
+        "D1-A/result": true,
+        "D1-A/return": true
+      },
+      "D1-B": {
+        "D1-B/accept": true,
+        "D1-B/result": true,
+        "D1-B/return": true
+      },
+      "D2-B": {
+        "D2-B/accept": true,
+        "D2-B/result": true,
+        "D2-B/return": true
+      }
+    },
+    "version": 1,
+    "world_seed": 993371368
+  },
+  "version": 5,
+  "workshop_tier": 1
+}

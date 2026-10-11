@@ -1,0 +1,12 @@
+[
+  {
+    "manifest": "recovery/unpacked/StarCourier-491aaff-ground-traffic-code/SOURCE-MANIFEST.json",
+    "files": 568,
+    "failures": []
+  },
+  {
+    "manifest": "recovery/unpacked/StarCourier-clerk-fullbody-FG01-source/SOURCE-MANIFEST.json",
+    "files": 32,
+    "failures": []
+  }
+]

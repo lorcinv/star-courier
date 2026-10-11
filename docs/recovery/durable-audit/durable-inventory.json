@@ -1,0 +1,419 @@
+{
+  "audit_time_utc": "2026-10-11T13:55:40Z",
+  "scope": "Read-only supported GitHub and native Library metadata. No repository or Library mutations, downloads, engines, art generation, desktop access, session or credential reads.",
+  "github": [
+    {
+      "url": "https://api.github.com/repos/lorcinv/star-courier/branches?per_page=100",
+      "isError": false,
+      "data": [
+        {
+          "name": "main",
+          "commit": {
+            "sha": "9fd856ab33b3a53838887849eb0a2a2e7858981f",
+            "url": "https://api.github.com/repos/lorcinv/star-courier/commits/9fd856ab33b3a53838887849eb0a2a2e7858981f"
+          },
+          "protected": false
+        }
+      ]
+    },
+    {
+      "url": "https://api.github.com/repos/lorcinv/star-courier/tags?per_page=100",
+      "isError": true,
+      "error": "HTTPError: 400: GitHub Fetch URL is not an allowed public GitHub repository or search endpoint. (Response: None)"
+    },
+    {
+      "url": "https://api.github.com/repos/lorcinv/star-courier/releases?per_page=100",
+      "isError": false,
+      "data": []
+    },
+    {
+      "url": "https://api.github.com/repos/lorcinv/star-courier/git/refs?per_page=100",
+      "isError": false,
+      "data": [
+        {
+          "ref": "refs/heads/main",
+          "node_id": "REF_kwDOVDbQeK9yZWZzL2hlYWRzL21haW4",
+          "url": "https://api.github.com/repos/lorcinv/star-courier/git/refs/heads/main",
+          "object": {
+            "sha": "9fd856ab33b3a53838887849eb0a2a2e7858981f",
+            "type": "commit",
+            "url": "https://api.github.com/repos/lorcinv/star-courier/git/commits/9fd856ab33b3a53838887849eb0a2a2e7858981f"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://api.github.com/repos/lorcinv/star-courier/pulls?state=all&per_page=100",
+      "isError": false,
+      "data": []
+    },
+    {
+      "url": "https://api.github.com/repos/lorcinv/star-courier/actions/runs?per_page=100",
+      "isError": false,
+      "data": {
+        "total_count": 0,
+        "workflow_runs": []
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/lorcinv/star-courier/commits/9fd856ab33b3a53838887849eb0a2a2e7858981f",
+      "result": {
+        "sha": "9fd856ab33b3a53838887849eb0a2a2e7858981f",
+        "tree": {
+          "sha": "0e29974828fbbd102731329d8473361af3bdae97",
+          "url": "https://api.github.com/repos/lorcinv/star-courier/git/trees/0e29974828fbbd102731329d8473361af3bdae97"
+        },
+        "parents": [
+          "05766d93a88f5d21fbfea9f7fa9030dfb4261b45"
+        ],
+        "message": "Archive tested ground-delivery checkpoint\n\nSource snapshot: e6121c0ea91ccf4c3a256ccadd778cd93b2b3d58\nExact source tree: 0e29974828fbbd102731329d8473361af3bdae97\n\nDevelopment checkpoint. See README.md and docs/QA-v5-ground.md for verified coverage and remaining work.",
+        "author_date": "2026-10-10T20:57:46Z",
+        "committer_date": "2026-10-10T20:57:46Z",
+        "file_count": 300,
+        "url": "https://github.com/lorcinv/star-courier/commit/9fd856ab33b3a53838887849eb0a2a2e7858981f"
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/lorcinv/star-courier/commits/ef0d5d6",
+      "result": {
+        "isError": true,
+        "error": "GitHub API error 422: {\"message\":\"No commit found for SHA: ef0d5d6\",\"documentation_url\":\"https://docs.github.com/rest/commits/commits#get-a-commit\",\"status\":\"422\"}"
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/lorcinv/star-courier/commits/63b4855",
+      "result": {
+        "isError": true,
+        "error": "GitHub API error 422: {\"message\":\"No commit found for SHA: 63b4855\",\"documentation_url\":\"https://docs.github.com/rest/commits/commits#get-a-commit\",\"status\":\"422\"}"
+      }
+    }
+  ],
+  "library": {
+    "recent_modified_request": {
+      "surface": "library",
+      "recursive": true,
+      "include_generated": true,
+      "include_folders": false,
+      "filters": {
+        "modified_after": "2026-10-09T00:00:00Z"
+      },
+      "limit": 200,
+      "sort": "modified_at",
+      "sort_order": "desc"
+    },
+    "total_recent_items": 62,
+    "recent_next_cursor": null,
+    "recent_warnings": [],
+    "all_zip_inventory_count": 18,
+    "project_zip_count": 14,
+    "zip_next_cursor": null,
+    "project_archives": [
+      {
+        "id": "file_00000000436c8209b153c7230e5615d2",
+        "kind": "file",
+        "name": "StarCourier-Clerk-FG01-C2-small-review.zip",
+        "path": "/StarCourier-Clerk-FG01-C2-small-review.zip",
+        "file_id": "file_00000000436c8209b153c7230e5615d2",
+        "library_file_id": "libfile_19f84f616e588191870125a4c6e8dd9d",
+        "library_artifact_type": "other",
+        "version_id": null,
+        "mime_type": "application/zip",
+        "size_bytes": 2114565,
+        "created_at": "2026-10-11T09:08:56.550206Z",
+        "modified_at": "2026-10-11T09:08:56.550206Z",
+        "model_generated": true,
+        "surface": "library"
+      },
+      {
+        "id": "file_00000000bd4c8206b3f6661cc5af4774",
+        "kind": "file",
+        "name": "StarCourier-Clerk-FG01-C1r1-mechanics-blocker-review.zip",
+        "path": "/StarCourier-Clerk-FG01-C1r1-mechanics-blocker-review.zip",
+        "file_id": "file_00000000bd4c8206b3f6661cc5af4774",
+        "library_file_id": "libfile_2e9f4bc10d20819189faea95fb82d908",
+        "library_artifact_type": "other",
+        "version_id": null,
+        "mime_type": "application/zip",
+        "size_bytes": 36911333,
+        "created_at": "2026-10-11T08:18:06.001692Z",
+        "modified_at": "2026-10-11T08:18:06.001692Z",
+        "model_generated": true,
+        "surface": "library"
+      },
+      {
+        "id": "file_00000000dcb48209885509d714315db6",
+        "kind": "file",
+        "name": "StarCourier-clerk-fullbody-FG01-source.zip",
+        "path": "/StarCourier-clerk-fullbody-FG01-source.zip",
+        "file_id": "file_00000000dcb48209885509d714315db6",
+        "library_file_id": "libfile_46b39c6d64b481919b759b9a0e5be867",
+        "library_artifact_type": "other",
+        "version_id": null,
+        "mime_type": "application/zip",
+        "size_bytes": 333005,
+        "created_at": "2026-10-11T07:34:08.472362Z",
+        "modified_at": "2026-10-11T07:34:08.472362Z",
+        "model_generated": true,
+        "surface": "library"
+      },
+      {
+        "id": "file_0000000051f88209b2dd797374fc813c",
+        "kind": "file",
+        "name": "StarCourier-final-fuel-tick-intent-oracle.zip",
+        "path": "/StarCourier-final-fuel-tick-intent-oracle.zip",
+        "file_id": "file_0000000051f88209b2dd797374fc813c",
+        "library_file_id": "libfile_2a283612dadc81918aef3fb077c9a886",
+        "library_artifact_type": "other",
+        "version_id": null,
+        "mime_type": "application/zip",
+        "size_bytes": 28692,
+        "created_at": "2026-10-11T06:25:12.387554Z",
+        "modified_at": "2026-10-11T06:25:12.387554Z",
+        "model_generated": true,
+        "surface": "library"
+      },
+      {
+        "id": "file_00000000c4ac8209818aae5f01ee9332",
+        "kind": "file",
+        "name": "StarCourier-ground-corrected-v3-integration-reference.zip",
+        "path": "/StarCourier-ground-corrected-v3-integration-reference.zip",
+        "file_id": "file_00000000c4ac8209818aae5f01ee9332",
+        "library_file_id": "libfile_d8b383953a108191bb43b8900d2e0aa4",
+        "library_artifact_type": "other",
+        "version_id": null,
+        "mime_type": "application/zip",
+        "size_bytes": 183639,
+        "created_at": "2026-10-11T06:06:14.227674Z",
+        "modified_at": "2026-10-11T06:06:14.227674Z",
+        "model_generated": true,
+        "surface": "library"
+      },
+      {
+        "id": "file_000000003fe48209b8b7915d376bb4de",
+        "kind": "file",
+        "name": "StarCourier-v3-post-upload-motion-audit-and-fraction-fix.zip",
+        "path": "/StarCourier-v3-post-upload-motion-audit-and-fraction-fix.zip",
+        "file_id": "file_000000003fe48209b8b7915d376bb4de",
+        "library_file_id": "libfile_b4957b6398ec819191b3a3a2e2ce925d",
+        "library_artifact_type": "other",
+        "version_id": null,
+        "mime_type": "application/zip",
+        "size_bytes": 94509,
+        "created_at": "2026-10-11T05:43:11.850061Z",
+        "modified_at": "2026-10-11T05:43:11.850061Z",
+        "model_generated": true,
+        "surface": "library"
+      },
+      {
+        "id": "file_00000000e4688209859f5cd8d0fe3f15",
+        "kind": "file",
+        "name": "StarCourier-ground-traffic-candidate-v3-source-Windows-evidence.zip",
+        "path": "/StarCourier-ground-traffic-candidate-v3-source-Windows-evidence.zip",
+        "file_id": "file_00000000e4688209859f5cd8d0fe3f15",
+        "library_file_id": "libfile_b990a85e246881918cbaa40afdde1e02",
+        "library_artifact_type": "other",
+        "version_id": null,
+        "mime_type": "application/zip",
+        "size_bytes": 333589,
+        "created_at": "2026-10-11T05:32:58.686975Z",
+        "modified_at": "2026-10-11T05:32:58.686975Z",
+        "model_generated": true,
+        "surface": "library"
+      },
+      {
+        "id": "file_00000000588c82099e60fd7c84cd1e1c",
+        "kind": "file",
+        "name": "StarCourier-ground-traffic-foundation-v2-source-Windows-QA.zip",
+        "path": "/StarCourier-ground-traffic-foundation-v2-source-Windows-QA.zip",
+        "file_id": "file_00000000588c82099e60fd7c84cd1e1c",
+        "library_file_id": "libfile_da0835b70fb08191b31ae9c58838367e",
+        "library_artifact_type": "other",
+        "version_id": null,
+        "mime_type": "application/zip",
+        "size_bytes": 86224,
+        "created_at": "2026-10-11T04:48:39.080295Z",
+        "modified_at": "2026-10-11T04:48:39.080295Z",
+        "model_generated": true,
+        "surface": "library"
+      },
+      {
+        "id": "file_00000000049c820996f8e19a0b5f1329",
+        "kind": "file",
+        "name": "StarCourier-ground-traffic-staging-v1-Windows-QA.zip",
+        "path": "/StarCourier-ground-traffic-staging-v1-Windows-QA.zip",
+        "file_id": "file_00000000049c820996f8e19a0b5f1329",
+        "library_file_id": "libfile_0bd564db29d48191a570b062a87aa6dc",
+        "library_artifact_type": "other",
+        "version_id": null,
+        "mime_type": "application/zip",
+        "size_bytes": 32241,
+        "created_at": "2026-10-11T04:15:51.856284Z",
+        "modified_at": "2026-10-11T04:15:51.856284Z",
+        "model_generated": true,
+        "surface": "library"
+      },
+      {
+        "id": "file_00000000c630820998e09e5249f9511e",
+        "kind": "file",
+        "name": "StarCourier-491aaff-ground-traffic-code.zip",
+        "path": "/StarCourier-491aaff-ground-traffic-code.zip",
+        "file_id": "file_00000000c630820998e09e5249f9511e",
+        "library_file_id": "libfile_b06fe7838cfc8191941fcdf200e3408d",
+        "library_artifact_type": "other",
+        "version_id": null,
+        "mime_type": "application/zip",
+        "size_bytes": 1592743,
+        "created_at": "2026-10-11T04:03:44.930172Z",
+        "modified_at": "2026-10-11T04:03:44.930172Z",
+        "model_generated": true,
+        "surface": "library"
+      },
+      {
+        "id": "file_00000000a0008209af70c5678db9d2cc",
+        "kind": "file",
+        "name": "StarCourier-Windows-WIP-TEST-1335935.zip",
+        "path": "/StarCourier-Windows-WIP-TEST-1335935.zip",
+        "file_id": "file_00000000a0008209af70c5678db9d2cc",
+        "library_file_id": "libfile_d93d38bfe08081918ee8dc4e8c89d298",
+        "library_artifact_type": "other",
+        "version_id": null,
+        "mime_type": "application/zip",
+        "size_bytes": 45011385,
+        "created_at": "2026-10-10T15:36:01.335485Z",
+        "modified_at": "2026-10-10T15:36:01.335485Z",
+        "model_generated": true,
+        "surface": "library"
+      },
+      {
+        "id": "file_000000002e7081fdb021fc4ac87790ff",
+        "kind": "file",
+        "name": "StarCourier-v0.1.0-Linux-x64.zip",
+        "path": "/StarCourier-v0.1.0-Linux-x64.zip",
+        "file_id": "file_000000002e7081fdb021fc4ac87790ff",
+        "library_file_id": "libfile_aae0bd910a6c81919eaae21834af905e",
+        "library_artifact_type": "other",
+        "version_id": "1",
+        "mime_type": "application/zip",
+        "size_bytes": 29059904,
+        "created_at": "2026-10-10T05:30:05.645523Z",
+        "modified_at": "2026-10-10T05:35:06.777093Z",
+        "model_generated": true,
+        "surface": "library"
+      },
+      {
+        "id": "file_00000000f4b081fda473f3bf2a51f41b",
+        "kind": "file",
+        "name": "StarCourier-v0.1.0-Windows-x64.zip",
+        "path": "/StarCourier-v0.1.0-Windows-x64.zip",
+        "file_id": "file_00000000f4b081fda473f3bf2a51f41b",
+        "library_file_id": "libfile_475a370c536c81918365f664959e4c67",
+        "library_artifact_type": "other",
+        "version_id": "1",
+        "mime_type": "application/zip",
+        "size_bytes": 37829680,
+        "created_at": "2026-10-10T05:30:05.658061Z",
+        "modified_at": "2026-10-10T05:35:06.760920Z",
+        "model_generated": true,
+        "surface": "library"
+      },
+      {
+        "id": "file_0000000026f481fdac24b9f307952118",
+        "kind": "file",
+        "name": "StarCourier-v0.1.0-Complete-Source.zip",
+        "path": "/StarCourier-v0.1.0-Complete-Source.zip",
+        "file_id": "file_0000000026f481fdac24b9f307952118",
+        "library_file_id": "libfile_e40b27a4315c81919ea3e3ef27a965f7",
+        "library_artifact_type": "other",
+        "version_id": "1",
+        "mime_type": "application/zip",
+        "size_bytes": 41799763,
+        "created_at": "2026-10-10T05:30:05.634695Z",
+        "modified_at": "2026-10-10T05:35:06.747366Z",
+        "model_generated": true,
+        "surface": "library"
+      }
+    ],
+    "project_design_documents": [
+      {
+        "id": "file_00000000526c81fba163af564bb2463d",
+        "kind": "file",
+        "name": "星际快递_25种零件.docx",
+        "path": "/星际快递_25种零件.docx",
+        "file_id": "file_00000000526c81fba163af564bb2463d",
+        "library_file_id": "libfile_7900e57fd13c8191837bf2964a9093d2",
+        "library_artifact_type": null,
+        "version_id": null,
+        "mime_type": "application/octet-stream",
+        "size_bytes": 33737,
+        "created_at": "2026-10-10T05:02:26.543889Z",
+        "modified_at": "2026-10-10T05:02:26.543889Z",
+        "model_generated": false,
+        "surface": "library"
+      },
+      {
+        "id": "file_00000000fc5081fbbb4187755d8d4911",
+        "kind": "file",
+        "name": "星际快递-立项简述.docx",
+        "path": "/星际快递-立项简述.docx",
+        "file_id": "file_00000000fc5081fbbb4187755d8d4911",
+        "library_file_id": "libfile_531f9a773a5c8191bef60004a9e7b9d0",
+        "library_artifact_type": null,
+        "version_id": null,
+        "mime_type": "application/octet-stream",
+        "size_bytes": 17786,
+        "created_at": "2026-10-10T05:02:24.344343Z",
+        "modified_at": "2026-10-10T05:02:24.344343Z",
+        "model_generated": false,
+        "surface": "library"
+      }
+    ],
+    "exact_missing_size_matches": [],
+    "explicitly_browsed_folders": [
+      {
+        "path": "/编程",
+        "total_items": 1,
+        "next_cursor": null,
+        "project_candidates": []
+      },
+      {
+        "path": "/繁星",
+        "total_items": 1,
+        "next_cursor": null,
+        "project_candidates": []
+      }
+    ],
+    "folder_inventory": {
+      "native_named_folder_count": 6,
+      "recursive_folder_next_cursor": null,
+      "warnings": [
+        "Recursive Google Drive Library listing is not supported yet."
+      ]
+    }
+  },
+  "missing_targets": [
+    {
+      "name": "ef0d5d6 full archive",
+      "size_bytes": 359408220,
+      "sha256": "6cda6267c2f2b13a7ae6f84e148bc65e7cefa56eb91e2eb54dcc7911b64112d5"
+    },
+    {
+      "name": "63b4855 incremental ZIP",
+      "size_bytes": 715996,
+      "sha256": "5570e17fb707d0370941e9211ebbcdd4cd0e2d82aa088f4c38fcd643620609f0"
+    },
+    {
+      "name": "Git bundle",
+      "size_bytes": 687618,
+      "sha256": "ca49d5b96a3ddeed52a4edd614019aed7d3705e6910ee2051bc836392435d790"
+    }
+  ],
+  "limits": [
+    "This inventory establishes current connected metadata and known commit-ref lookup results, not impossibility of recovery elsewhere.",
+    "The separate repository tags endpoint is not supported; successful full git/refs listing returned only refs/heads/main, with no tag refs.",
+    "GitHub collection requests used per_page=100; returned collections contained 0 or 1 item. The connector did not expose Link headers.",
+    "Native Library current listing includes generated files. No new archive bytes were downloaded or hashed; no target size matches existed.",
+    "Library historical version enumeration is not exposed by the available read/list schema. Null version_id does not prove a file has never had versions.",
+    "Library trash and mounted Google Drive content were not inspected. Recursive folder inventory reports Google Drive recursion unsupported.",
+    "No filesystem guesses, raw backing-storage probes, or credential/session reads were used."
+  ]
+}

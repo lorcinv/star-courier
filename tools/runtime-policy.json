@@ -3,9 +3,11 @@
     "assets/2d_v5/actors/actor-manifest.json",
     "assets/2d_v5/actors/cooperative/motion-manifest.json",
     "assets/2d_v5/npcs/npc-manifest.json",
-    "assets/2d_v5/npcs/walk_exit/motion-manifest.json"
+    "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+    "assets/2d_v5/actors/single_walk_v1/single-walk-registration.json",
+    "assets/2d_v5/actors/rig_motion_v1/rig-registration.json"
   ],
-  "include_filter": "assets/2d_v5/actors/actor-manifest.json,assets/2d_v5/actors/cooperative/motion-manifest.json,assets/2d_v5/npcs/npc-manifest.json,assets/2d_v5/npcs/walk_exit/motion-manifest.json,licenses/*,assets/fonts/NOTICE.txt",
+  "include_filter": "assets/2d_v5/actors/actor-manifest.json,assets/2d_v5/actors/cooperative/motion-manifest.json,assets/2d_v5/actors/single_walk_v1/single-walk-registration.json,assets/2d_v5/actors/rig_motion_v1/rig-registration.json,assets/2d_v5/npcs/npc-manifest.json,assets/2d_v5/npcs/walk_exit/motion-manifest.json,licenses/*,assets/fonts/NOTICE.txt",
   "exclude_filters": [
     "source_art/*",
     "assets/source/*",

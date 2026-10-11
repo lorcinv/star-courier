@@ -8,7 +8,7 @@ const Backdrop=preload("res://scripts/ascent_backdrop_2d.gd")
 const World=preload("res://scripts/world_view_2d.gd")
 const HUD=preload("res://scripts/game_hud.gd")
 const Timeline=preload("res://scripts/pilot_timeline.gd")
-const EXPECTED_CHECKS:int=71
+const EXPECTED_CHECKS:int=72
 var passed:int=0
 var failed:int=0
 func _initialize() -> void:run.call_deferred()
@@ -145,6 +145,8 @@ func hud_checks() -> void:
  var live:Dictionary=telemetry();live.flight_phase="approach";hud.update_flight(live)
  check(hud.flight_labels.status.text.ends_with("低空配送"),"an early solver approach phase does not hide the remaining ground gates")
  live.next_gate_index=-1;live.next_gate_time=-1;hud.update_flight(live)
+ check(hud.flight_labels.status.text.ends_with("低空配送") and hud.flight_labels.gate.text.is_empty(),"210 m to go remains cruise even after the last reported gate")
+ live.distance=310.0;hud.update_flight(live) # 50 m from the actual 360 m receiver.
  check(hud.flight_labels.status.text.ends_with("接近收件台") and hud.flight_labels.gate.text=="接近屋顶收件台" and hud.flight_labels.gate_detail.text=="收件限速 24 m/s","clear final approach names the actual roof receiver and speed limit")
  live.paused=true;hud.update_flight(live)
  check(hud.flight_labels.status.text=="已暂停" and hud.flight_labels.gate_detail.text=="已暂停 · 收件限速 24 m/s","paused ground approach retains the real receiving constraint")

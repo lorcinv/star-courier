@@ -1,5 +1,8 @@
 extends CanvasLayer
+const CorridorFraming=preload("res://scripts/corridor_framing_2d.gd")
+const MoonProfile=preload("res://scripts/pilot_moon_profile.gd")
 const GroundProfile=preload("res://scripts/pilot_ground_profile.gd")
+const FlightReceipt=preload("res://scripts/flight_receipt.gd")
 ## Scene-first presentation. Domain state lives in main; this layer emits intent only.
 ## Every full-viewport container ignores mouse events. Only visible controls capture them.
 signal action_requested(action: String, payload: Variant)
@@ -29,6 +32,7 @@ var palette_category: String = "现有库存"
 var report_costs_open: bool = false
 var settings_open: bool = false
 var flight_labels: Dictionary = {}
+var _flight_receipt=FlightReceipt.new()
 var progress_bar: ProgressBar
 var _pause_button: WeakRef
 var _size: Vector2 = Vector2(1440, 900)
@@ -166,7 +170,16 @@ func _on_resize() -> void:
 
 func render(data: Dictionary) -> void:
  var preserved:=_capture_ui_state() if _built and str(data.get("mode","hub"))==mode else {}
+ # A resize/settings rebuild owns no new flight. Retain its latest snapshot
+ # when the controller sends layout state without telemetry. A real mode,
+ # contract, protocol, trial change or elapsed rewind starts a clean receipt.
+ var same_flight:bool=mode=="flight" and str(data.get("mode","hub"))=="flight" and _flight_identity(state)==_flight_identity(data)
+ var previous_flight:Dictionary=state.get("flight",{}).duplicate(true) if same_flight else {}
  state = data.duplicate(true)
+ if same_flight and not state.has("flight"):state.flight=previous_flight
+ if not same_flight:
+  _flight_receipt.reset()
+  _impact_absorbed=0;_impact_energy=0;_impact_cue_until=-1;_extreme_elapsed=0
  if not is_inside_tree():return
  _render_generation+=1
  _build_root()
@@ -184,7 +197,6 @@ func render(data: Dictionary) -> void:
  for child in content.get_children():content.remove_child(child);child.queue_free()
  flight_labels.clear();progress_bar = null;_pause_button=null
  _ascent_cue=null;_ascent_telemetry.clear()
- _impact_absorbed=0;_impact_energy=0;_impact_cue_until=-1;_extreme_elapsed=0
  if mode == "flight":
   _flight()
  else:
@@ -379,6 +391,7 @@ func _shop_status() -> void:
  var settings:=_button(util,"≡","_settings",null,PANEL,36);settings.custom_minimum_size.x=36;settings.tooltip_text="设置"
  settings.pressed.disconnect(settings.pressed.get_connections()[0].callable)
  settings.pressed.connect(func():settings_open=not settings_open;toast_panel.hide();toast_timer=0;render(state))
+ if mode=="hub":_button(util,"客户留言","customer_reviews",null,PANEL,36)
  if mode!="hub":
   var back:=_button(content,"‹  返回店铺","close_drawer",null,PANEL,36);back.position=Vector2(20,76);back.size=Vector2(136,36)
 
@@ -402,7 +415,8 @@ func _ticket() -> void:
   return
  var r:=_row(b,4);_label(r,"ORDER / 本趟委托",11,BLUE);_spacer(r)
  if _has_accepted():_cancel_button(r,order,24)
- _label(b,str(order.name),19)
+ var ticket_name:=_label(b,str(order.get("destination_name",order.name)) if _wormhole_mode() else str(order.name),19)
+ if _wormhole_mode():ticket_name.text_overrun_behavior=TextServer.OVERRUN_TRIM_ELLIPSIS;ticket_name.tooltip_text=str(order.name)
  _label(b,"%s · %s m"%[str(order.get("cargo","")),str(order.distance)],12,MUTED)
  var bottom:=_row(b,4)
  if order.has("required"):_label(bottom,"完整度 ≥ %s%%"%str(order.required),11,BLUE)
@@ -728,47 +742,65 @@ func _supply() -> void:
  _rule(b)
  _button(b,"开门，迎接第 %d 天  →"%(int(state.get("day",1))+1),"next_day",null,BLUE,49).add_theme_color_override("font_color",WHITE)
 
+func _flight_identity(data: Dictionary) -> Array:
+ var order:Dictionary=data.get("activeorder",{})
+ return [str(order.get("contract_id",order.get("id",""))),str(data.get("control_version",order.get("control_version",""))),bool(data.get("trial",false))]
+
 func _pilot_mode() -> bool:
- return str(state.get("control_version",state.get("activeorder",{}).get("control_version",""))) in ["pilot-v1","pilot-v2","pilot-v3"]
+ return str(state.get("control_version",state.get("activeorder",{}).get("control_version",""))) in ["pilot-v1","pilot-v2","pilot-v3","pilot-v4-wormhole","pilot-v5-protected-bird"]
 
 func _ascent_mode() -> bool:
- return str(state.get("control_version",state.get("activeorder",{}).get("control_version",""))) in ["pilot-v2","pilot-v3"]
+ return str(state.get("control_version",state.get("activeorder",{}).get("control_version",""))) in ["pilot-v2","pilot-v3","pilot-v4-wormhole","pilot-v5-protected-bird"]
 
 func _ground_mode() -> bool:
  return GroundProfile.is_ground_route(state.get("activeorder",{}))
 
 func _extreme_mode() -> bool:
- return str(state.get("control_version",state.get("activeorder",{}).get("control_version","")))=="pilot-v3"
+ return str(state.get("control_version",state.get("activeorder",{}).get("control_version",""))) in ["pilot-v3","pilot-v4-wormhole","pilot-v5-protected-bird"]
+
+func _wormhole_mode() -> bool:
+ return str(state.get("control_version",state.get("activeorder",{}).get("control_version",""))) in ["pilot-v4-wormhole","pilot-v5-protected-bird"]
+
+func _moon_mode() -> bool:
+ var route:Dictionary=state.get("activeorder",{})
+ return MoonProfile.is_moon_route(route) and str(route.get("control_version",""))=="pilot-v3" and str(route.get("route_kind",""))=="moon" and str(route.get("destination_id",""))=="moon-regolith-airlock" and route.get("moon_schema")==1 and route.get("moon_receiver") is Dictionary
+
+func _corridor_mode() -> bool:
+ return CorridorFraming.applies(state.get("activeorder",{}))
 
 func _flight() -> void:
- var pilot:=_pilot_mode();var ascent:=_ascent_mode();var extreme:=_extreme_mode()
- var top:=_panel(Rect2(20,20,260,76),PANEL,null,8);var b:=_box(top,2)
+ var pilot:=_pilot_mode();var ascent:=_ascent_mode();var extreme:=_extreme_mode();var corridor:=_corridor_mode();var compact:=_moon_mode() or corridor
+ var top:=_panel(Rect2(300 if compact else 20,20,260,76),PANEL,null,8);var b:=_box(top,2)
  _label(b,"免费试飞" if bool(state.get("trial",false)) else "配送中",11,YELLOW)
  var order:Dictionary=state.get("activeorder",{})
- var name:=_label(b,str(order.get("destination_name","收件台")) if _ground_mode() else str(order.get("name","正在飞向目的地")),18,WHITE);name.text_overrun_behavior=TextServer.OVERRUN_TRIM_ELLIPSIS
+ var name:=_label(b,str(order.get("destination_name","收件台")) if _ground_mode() or _wormhole_mode() or _moon_mode() or corridor else str(order.get("name","正在飞向目的地")),18,WHITE);name.text_overrun_behavior=TextServer.OVERRUN_TRIM_ELLIPSIS;flight_labels["destination"]=name
  flight_labels["status"]=_label(b,"驾驶准备" if pilot else "自动航行 · 1×",12,TEAL)
  if ascent:
   # A quiet, non-interactive cue band leaves the ship and launch ribbon clear.
   # Distances are fictional route-space measures, never real orbital altitude.
-  _ascent_cue=_panel(Rect2(20,108,260,78),PANEL,null,8);_ascent_cue.name="AscentCue";_ascent_cue.mouse_filter=Control.MOUSE_FILTER_IGNORE
+  _ascent_cue=_panel(Rect2(20,20.0 if compact else 108,260,78),PANEL,null,8);_ascent_cue.name="AscentCue";_ascent_cue.mouse_filter=Control.MOUSE_FILTER_IGNORE
   var cue:=_box(_ascent_cue,2)
   flight_labels["altitude"]=_label(cue,"高度 0 / 150 m",12,DIM)
   flight_labels["gate"]=_label(cue,"",14,TEAL)
   flight_labels["gate_detail"]=_label(cue,"",11,DIM)
- var width:=_size.x-608
- var route:=_panel(Rect2(292,20,width,76),PANEL,null,8);var rb:=_box(route,3)
+ var width:=_size.x-(888 if compact else 608)
+ var route:=_panel(Rect2(572 if compact else 292,20,width,76),PANEL,null,8);var rb:=_box(route,3)
  var r:=_row(rb);_label(r,"航线进度",12,DIM);_spacer(r);flight_labels["distance"]=_label(r,"0 / 0 m",14,WHITE)
  progress_bar=ProgressBar.new();progress_bar.custom_minimum_size.y=8;progress_bar.show_percentage=false;rb.add_child(progress_bar)
  var times:=_row(rb);flight_labels["elapsed"]=_label(times,"航时 0.0 s",12,DIM);_spacer(times);flight_labels["deadline"]=_label(times,"目标 60 s",12,DIM)
  # The ascent approach enters from the upper right. Keep its silhouettes clear
  # by stacking resources below the cue, outside the central flight band.
  var resource_rect:=Rect2(20,198,260,112 if extreme else 96) if ascent else Rect2(_size.x-304,20,284,96 if pilot else 76)
+ if _moon_mode():resource_rect=Rect2(_size.x-304,20,284,112)
+ elif corridor:resource_rect=Rect2(_size.x-304,20,284,96)
  var resources:=_panel(resource_rect,PANEL,null,8);resources.name="FlightResources";var ib:=_box(resources,1)
  var row:=_row(ib);_label(row,"货物完整度",13,DIM);_spacer(row);flight_labels["integrity"]=_label(row,"100%",20 if extreme else 24,YELLOW)
  flight_labels["energy"]=_label(ib,"电量 0 J" if pilot else "消耗 0 J · 信号正常",12,DIM)
- if extreme:flight_labels["thrust"]=_label(ib,"推力 — N",11,TEAL)
- if pilot:flight_labels["pilot_signal"]=_label(ib,"Space 回路 · 待命",11,TEAL)
- var events:=_panel(Rect2(20,_size.y-134,444,42) if ascent else Rect2(20,_size.y-184,444,84),PANEL,null,5 if ascent else 8);events.name="FlightEventReceipt";var eb:=_box(events,1 if ascent else 3)
+ var signals:Control=_row(ib) if corridor else ib
+ if extreme:flight_labels["thrust"]=_label(signals,"推力 — N",11,TEAL)
+ if corridor and extreme:_spacer(signals)
+ if pilot:flight_labels["pilot_signal"]=_label(signals,"Space 回路 · 待命",11,TEAL)
+ var events:=_panel(Rect2(_size.x-464 if corridor else 20,_size.y-134,444,42) if ascent else Rect2(20,_size.y-184,444,84),PANEL,null,5 if ascent else 8);events.name="FlightEventReceipt";var eb:=_box(events,1 if ascent else 3)
  if extreme:flight_labels["impact"]=_label(eb,"",11,DIM)
  else:_label(eb,"飞行记录",11,TEAL)
  if ascent:
@@ -788,6 +820,7 @@ func _flight() -> void:
 
 func update_flight(data: Dictionary) -> void:
  if mode!="flight" or flight_labels.is_empty():return
+ state["flight"]=data.duplicate(true)
  var elapsed:=float(data.get("elapsed",0));var distance:=float(data.get("distance",data.get("progress",0)));var total:=float(data.get("total_distance",state.get("activeorder",{}).get("distance",100)))
  var integrity:=float(data.get("integrity",100));if integrity<=1.0:integrity*=100
  var pilot:=_pilot_mode()
@@ -799,6 +832,9 @@ func update_flight(data: Dictionary) -> void:
    var phase:=str(data.get("flight_phase","city"))
    var phase_text:=str({"city":"城市","climb":"爬升","approach":"接站"}.get(phase,"航行"))
    if _ground_mode():phase_text="接近收件台" if phase=="approach" and int(data.get("next_gate_index",-1))<0 else "低空配送"
+   if _corridor_mode() and phase=="approach":phase_text="接近收件台" if _ordinary_receiver_near(data) and int(data.get("next_gate_index",-1))<0 else ("低空配送" if _ground_mode() else "轨道巡航")
+   if _moon_mode():phase_text="月面进场" if distance>=float(state.activeorder.moon_approach_start) else "升空"
+   if _wormhole_mode():phase_text=str({"ascent":"升空","space":"太空","otherworld":"异世界"}.get(str(data.get("wormhole_phase","")),"航行"))
    flight_labels.status.text="已暂停" if bool(data.get("paused",false)) else str(data.get("phase","发射准备")) if bool(data.get("charging",false)) else "速度 %.1f m/s · %s"%[_flight_number(data,"speed",0),phase_text]
    _ascent_telemetry=data.duplicate()
    _update_ascent_cue()
@@ -826,14 +862,15 @@ func update_flight(data: Dictionary) -> void:
    flight_labels.pilot_signal.add_theme_color_override("font_color",YELLOW if bool(data.get("pilot_active",false)) else TEAL)
  else:
   flight_labels.energy.text="消耗 %.1f J%s"%[float(data.get("energy",data.get("energy_used",0)))," · %d 路信号"%signals.size() if signals is Array and not signals.is_empty() else ""]
- var events:Variant=data.get("events",[])
- if events is Array:
-  var lines:Array[String]=[]
-  for event in events.slice(maxi(0,events.size()-(2 if _ascent_mode() else 3))):lines.append(str(event))
-  flight_labels.events.tooltip_text="\n".join(lines)
-  if _ascent_mode():lines.reverse()
-  flight_labels.events.text=("  ·  " if _ascent_mode() else "\n").join(lines) if not lines.is_empty() else ""
- else:flight_labels.events.text=str(events)
+ var receipt_data:Dictionary=data.duplicate()
+ # Some legacy controller snapshots keep the protocol on the order only.
+ receipt_data.control_version=str(state.get("control_version",state.get("activeorder",{}).get("control_version","")))
+ var items:Array[Dictionary]=_flight_receipt.update(receipt_data,2 if _ascent_mode() else 3)
+ var lines:Array[String]=[];var sources:Array[String]=[]
+ if _ascent_mode():items.reverse()
+ for item in items:lines.append(item.text);sources.append(item.source)
+ flight_labels.events.text=("  ·  " if _ascent_mode() else "\n").join(lines)
+ flight_labels.events.tooltip_text="\n".join(sources)
  var receipt:Control=content.get_node_or_null("FlightEventReceipt")
  if receipt!=null:receipt.visible=not flight_labels.events.text.is_empty() or (flight_labels.has("impact") and not flight_labels.impact.text.is_empty())
 
@@ -868,22 +905,36 @@ func _flight_energy(value: float) -> String:
  if not is_finite(value):return "—"
  return "%.2f kJ"%(value/1000.0) if absf(value)>=1000.0 else "%.0f J"%value
 
+func _ordinary_receiver_near(data:Dictionary) -> bool:
+ # Presentation-only proximity; the saved capture geometry still decides receipt.
+ var total:float=_flight_number(data,"total_distance",_flight_number(state.get("activeorder",{}),"distance",NAN))
+ var progress:float=_flight_number(data,"distance",NAN)
+ return is_finite(total) and is_finite(progress) and absf(total-progress)<=60.0
+
 func _update_ascent_cue() -> void:
  if not is_instance_valid(_ascent_cue):return
  var data:=_ascent_telemetry
  _ascent_cue.visible=not bool(data.get("charging",false)) and _launch_phase not in ["move","charge","ignition"]
  flight_labels.altitude.text="高度 %.0f / %.0f m"%[_flight_number(data,"altitude",0),_flight_number(data,"target_altitude",float(state.get("activeorder",{}).get("pilot_altitude",150)))]
+ if _moon_mode() and _flight_number(data,"distance",0)>=float(state.activeorder.moon_approach_start):
+  flight_labels.altitude.text="高度 %.0f m · 入口 %.1f m"%[_flight_number(data,"altitude",0),-float(state.activeorder.moon_receiver.ingress_center_y)]
  var paused:=bool(data.get("paused",false))
+ if (_wormhole_mode() or _moon_mode()) and data.get("delivered",false) is bool and data.get("delivered",false):
+  flight_labels.gate.text="货物已签收";flight_labels.gate.add_theme_color_override("font_color",TEAL)
+  flight_labels.gate_detail.text=str(state.get("activeorder",{}).get("destination_name","收件台"))
+  return
  var gate:=int(data.get("next_gate_index",-1))
  var seconds:=_flight_number(data,"next_gate_time",-1)
  var ready:=gate>=0 and seconds>=0
  var warning:=ready and seconds<=_flight_number(data,"lookahead_seconds",3.5) and not paused
  flight_labels.gate.add_theme_color_override("font_color",DIM if paused else YELLOW if warning else TEAL)
  if not ready:
-  var approach:=str(data.get("flight_phase",""))=="approach"
-  flight_labels.gate.text=("接近"+str(state.get("activeorder",{}).get("destination_name","收件台")) if _ground_mode() else "接近收件区") if approach else ""
+  var approach:=str(data.get("wormhole_phase",""))=="otherworld" if _wormhole_mode() else str(data.get("flight_phase",""))=="approach"
+  if _corridor_mode():approach=approach and _ordinary_receiver_near(data)
+  flight_labels.gate.text=("接近"+str(state.get("activeorder",{}).get("destination_name","收件台")) if _ground_mode() or _wormhole_mode() or _moon_mode() else "接近收件区") if approach else ""
+  if _wormhole_mode():flight_labels.gate.text_overrun_behavior=TextServer.OVERRUN_TRIM_ELLIPSIS
   flight_labels.gate_detail.text="已暂停" if paused else ""
-  if _ground_mode() and approach:
+  if (_ground_mode() or _wormhole_mode() or _moon_mode()) and approach:
    var limit:=_flight_number(state.get("activeorder",{}),"max_delivery_speed",NAN)
    if is_finite(limit):flight_labels.gate_detail.text=("已暂停 · " if paused else "")+"收件限速 %.0f m/s"%limit
   return
@@ -891,6 +942,60 @@ func _update_ascent_cue() -> void:
  var cue:="↑ 向上" if direction<0 else "↓ 向下" if direction>0 else "→ 保持"
  flight_labels.gate.text="%s · %.1f s 后过门"%[cue,seconds]
  flight_labels.gate_detail.text=("已暂停 · " if paused else "")+"第 %d 门 · 门高 %.0f m"%[gate+1,_flight_number(data,"next_gate_altitude",0)]
+ if _wormhole_mode() and str(data.get("wormhole_phase","")) in ["ascent","space"] and _is_wormhole_entry_gate(gate):
+  flight_labels.gate.text="虫洞入口 · "+cue
+  flight_labels.gate_detail.text=("已暂停 · " if paused else "")+"约 %.1f s · 门高 %.0f m"%[seconds,_flight_number(data,"next_gate_altitude",0)]
+
+
+func _is_wormhole_entry_gate(index: int) -> bool:
+ # Saved routes may change portal geometry and gate numbering. Only the
+ # upcoming gate's explicit route marker can name it as the portal entrance.
+ var gates:Variant=state.get("activeorder",{}).get("pilot_gates",[])
+ if not gates is Array:return false
+ var matches:=0
+ var entrance:=false
+ for gate in gates:
+  if not gate is Dictionary:continue
+  var gate_index:=_wormhole_number(gate,"index")
+  if not is_finite(gate_index) or gate_index!=float(index):continue
+  matches+=1
+  entrance=gate.get("wormhole_entry",false) is bool and gate.get("wormhole_entry",false)
+ return matches==1 and entrance
+
+func _wormhole_number(data: Dictionary, key: String) -> float:
+ var value:Variant=data.get(key)
+ if not (value is int or value is float):return NAN
+ return float(value) if is_finite(float(value)) else NAN
+
+func _wormhole_preflight_lines() -> Array[String]:
+ var value:Variant=state.get("wormhole_preflight",{})
+ var quote:Dictionary=value if value is Dictionary else {}
+ var estimate:=_wormhole_number(quote,"estimated_j")
+ var capacity:=_wormhole_number(quote,"station_capacity_j")
+ var bodies:=_wormhole_number(quote,"estimated_bodies")
+ var valid:bool=quote.get("ok",false) is bool and quote.get("ok",false) and is_finite(estimate) and estimate>=0 and is_finite(capacity) and capacity>=0 and is_finite(bodies) and bodies>=1 and bodies==floorf(bodies)
+ var energy:="预计通行 %.1f J，驿站储能 %s；合并计入能耗。分离后按实际计费。"%[estimate,_flight_energy(capacity)] if valid else "虫洞通行使用驿站储能，合并计入能耗；当前预估不可用。"
+ if valid and estimate>capacity:energy+="储能不足。"
+ var aperture:=_wormhole_number(quote,"max_centered_body_diameter_m")
+ var outline:=_wormhole_number(quote,"starting_body_diameter_m")
+ var aperture_text:="%.2f m"%aperture if is_finite(aperture) and aperture>0 else "—"
+ var outline_text:="%.2f m"%outline if is_finite(outline) and outline>0 else "—"
+ var warning:=""
+ if is_finite(aperture) and aperture>0 and is_finite(outline) and outline>0 and (outline>aperture or (quote.get("fits_starting_outline") is bool and not quote.fits_starting_outline)):warning=" · 轮廓偏大"
+ return [energy,"净口径 %s · 当前轮廓 %s%s"%[aperture_text,outline_text,warning]]
+
+func _wormhole_report_receipt(parent: Node, report: Dictionary, trial: bool) -> void:
+ if not str(report.get("control_version","")) in ["pilot-v4-wormhole","pilot-v5-protected-bird"]:return
+ var energy:=_wormhole_number(report,"wormhole_energy_j")
+ var total:=_wormhole_number(report,"energy_j")
+ var transits:=_wormhole_number(report,"wormhole_transits")
+ # This is a measured subtotal of the already-combined normal energy bill.
+ # Incomplete or inconsistent reports must not manufacture a second debit.
+ if not is_finite(energy) or energy<0 or not is_finite(total) or total<energy or not is_finite(transits) or transits<0 or transits!=floorf(transits):return
+ var receipt:=_para(parent,"其中虫洞通行 %s · %d 个组件（已含在%s中）"%[_flight_energy(energy),int(transits),"本次耗能" if trial else "能源消耗"],13,BLUE)
+ receipt.name="WormholeEnergySubtotal"
+ var remaining:=_wormhole_number(report,"wormhole_station_remaining")
+ if is_finite(remaining) and remaining>=0:_para(parent,"驿站余能 "+_flight_energy(remaining),12,MUTED)
 
 func _report() -> void:
  var report:Dictionary=state.get("report",{})
@@ -912,6 +1017,7 @@ func _report() -> void:
   var m:=_box(metrics,1);m.size_flags_horizontal=Control.SIZE_EXPAND_FILL;_label(m,str(pair[0]),12,MUTED);_label(m,str(pair[1]),25,BLUE)
  if trial:_label(b,"试飞估算，未计费；正式结果以配送为准。",13,BLUE)
  var body:=_scroll(b)
+ _wormhole_report_receipt(body,report,trial)
  var comparison:Variant=report.get("comparison","")
  if not str(comparison).is_empty():
   _label(body,"和上一次相比",16,BLUE)
@@ -927,7 +1033,7 @@ func _report() -> void:
   if report_costs_open:
    for item in [["订单收入","income",1],["能源消耗","energy",-1],["弹药消耗","ammo",-1],["维修费用","repairs",-1],["零件损失","lost",-1]]:
     var row:=_row(body);_label(row,str(item[0]),14);_spacer(row);_label(row,"¥ %+d"%(int(report.get(item[1],0))*int(item[2])),14)
-  if report.has("review"):_para(body,"客户回信：“"+str(report.review)+"”",15,BLUE)
+  if not bool(state.get("daily_reviews_enabled",false)) and report.has("review"):_para(body,"客户回信：“"+str(report.review)+"”",15,BLUE)
   if report.has("replenishment"):_para(body,"整备说明："+str(report.replenishment),13,MUTED)
  else:_para(body,"试飞不扣资金、不改变声望。",14,MUTED)
  _rule(b)
@@ -955,8 +1061,8 @@ func _help() -> void:
   sections.append(["05  全功率推进","按住 Shift 全功率推进。推力受接线、电量、阀门和喷口方向影响；加装引擎也会增加质量与耗电。松开后不会立即停下。"])
   sections.append(["06  钻头与碰撞护盾","钻头前端接触可破坏的障碍才会切削，空转也耗电，不能钻穿障碍门。护盾仅用实际电量吸收部分碰撞伤害，仍会受损、反弹；不能免除结构过载，高速撞击仍可能损坏装置。"])
  sections=sections.duplicate(true)
- sections.append(["店内操作","A / D 移动，持续按住后跑动；E 与附近柜台或工位交互。Tab 打开菜单。非弹窗界面按 A / D 返回店内移动。"])
- sections.append(["手柄操作","左摇杆 / 十字键移动，持续朝同一方向后跑动；A 与附近目标交互，Menu 进入菜单。菜单中方向选择、A 确认、B 返回，右摇杆滚动。工位按 X 切换网格：A 选择或放置，Y 拿起零件，移动后 A 落下，X 旋转，LB 拆除，RB 撤销，R3 全景，L3 切换已装零件，右摇杆平移。B 先取消搬动，再返回菜单。飞行中左摇杆 / 十字键升降，RB 全功率，A 触发回路，Menu 暂停。摇杆死区可在设置中调整。"])
+ sections.append(["店内操作","A / D 移动；E 与附近柜台或工位交互。Tab 打开菜单。非弹窗界面按 A / D 返回店内移动。"])
+ sections.append(["手柄操作","左摇杆 / 十字键移动；A 与附近目标交互，Menu 进入菜单。菜单中方向选择、A 确认、B 返回，右摇杆滚动。工位按 X 切换网格：A 选择或放置，Y 拿起零件，移动后 A 落下，X 旋转，LB 拆除，RB 撤销，R3 全景，L3 切换已装零件，右摇杆平移。B 先取消搬动，再返回菜单。飞行中左摇杆 / 十字键升降，RB 全功率，A 触发回路，Menu 暂停。摇杆死区可在设置中调整。"])
  for section in sections:
   if section is Array and section.size()>=2:_label(body,str(section[0]),21,BLUE);_para(body,str(section[1]),16);_rule(body)
   elif section is Dictionary:_label(body,str(section.get("title","")),21,BLUE);_para(body,str(section.get("text","")),16)
@@ -969,23 +1075,29 @@ func _dispatch_confirmation() -> void:
  if current_id!=_dispatch_contract_id:
   dispatch_confirmation_open=false;return
  var dim:=ColorRect.new();dim.color=Color(.04,.08,.2,.5);dim.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);content.add_child(dim)
- var panel:=_panel(Rect2((_size.x-640)/2,(_size.y-530)/2,640,530),CREAM,null,21);panel.set_meta("modal_panel",true)
+ var height:=minf(644,_size.y-40) if _wormhole_mode() else 530.0
+ var panel:=_panel(Rect2((_size.x-640)/2,(_size.y-height)/2,640,height),CREAM,null,21);panel.set_meta("modal_panel",true)
  var b:=_box(panel,10);var heading:=_row(b);var title:=_box(heading,1);title.size_flags_horizontal=Control.SIZE_EXPAND_FILL
  _label(title,"DISPATCH CHECK / 发货前确认",12,BLUE);_label(title,"这一趟，要带上真货了。",27)
  var close:=Button.new();close.text="×";close.custom_minimum_size=Vector2(38,38);heading.add_child(close);close.pressed.connect(_dismiss_dispatch)
  _rule(b)
- var order_row:=_row(b);_label(order_row,str(order.name),22);_spacer(order_row);_label(order_row,"基础运费  ¥ %s"%str(order.get("reward","—")),20,BLUE)
- _para(b,"%s  ·  %.1f kg  ·  %s m"%[str(order.get("cargo","客户货物")),float(order.get("weight",1.0))*3.0,str(order.distance)],16)
- _para(b,"奖励时限 %s s  /  强制结束 %s s  /  完整度 ≥ %s%%"%[str(order.get("deadline","—")),str(order.get("time_limit","—")),str(order.get("required","—"))],14,BLUE)
- _para(b,"投递半径 %s m  ·  到达速度 ≤ %s m/s"%[str(order.get("delivery_radius","—")),str(order.get("max_delivery_speed","—"))],13,MUTED)
- var policy:=PanelContainer.new();policy.add_theme_stylebox_override("panel",_style(WHITE,2,12,false));b.add_child(policy)
+ var review:=_scroll(b) if _wormhole_mode() else b
+ var order_row:=_row(review);var order_name:=_label(order_row,str(order.name),22);_spacer(order_row);_label(order_row,"基础运费  ¥ %s"%str(order.get("reward","—")),20,BLUE)
+ if _wormhole_mode():order_name.size_flags_horizontal=Control.SIZE_EXPAND_FILL;order_name.text_overrun_behavior=TextServer.OVERRUN_TRIM_ELLIPSIS;order_name.tooltip_text=str(order.name)
+ _para(review,"%s  ·  %.1f kg  ·  %s m"%[str(order.get("cargo","客户货物")),float(order.get("weight",1.0))*3.0,str(order.distance)],16)
+ _para(review,"奖励时限 %s s  /  强制结束 %s s  /  完整度 ≥ %s%%"%[str(order.get("deadline","—")),str(order.get("time_limit","—")),str(order.get("required","—"))],14,BLUE)
+ _para(review,"投递半径 %s m  ·  到达速度 ≤ %s m/s"%[str(order.get("delivery_radius","—")),str(order.get("max_delivery_speed","—"))],13,MUTED)
+ var policy:=PanelContainer.new();policy.add_theme_stylebox_override("panel",_style(WHITE,2,12,false));review.add_child(policy)
  var pb:=_box(policy,5);_label(pb,"本趟按实际消耗结算",16,BLUE)
  var tariff_text:String=String.num(float(state.get("energy_tariff",.18)),5)
  var default_policy:String="能源 ¥%s / J，向上取整；耗用弹药与遗失零件按原价补齐，回收零件按损伤维修。成功送达后收取运费，晚到或破损会减少收入；失败也会扣除实际费用。"%tariff_text
  _para(pb,str(state.get("dispatch_fee_policy",default_policy)),14)
  _para(pb,"费用包含自动补件与维修，结算后恢复为发射前方案。",12,MUTED)
- _para(b,"这份委托只会正式配送一次。想先验证装置，可以返回工位免费试飞。",13,MUTED)
- var rest:=Control.new();rest.size_flags_vertical=Control.SIZE_EXPAND_FILL;rest.mouse_filter=Control.MOUSE_FILTER_IGNORE;b.add_child(rest)
+ if _wormhole_mode():
+  for line in _wormhole_preflight_lines():_para(pb,line,13,BLUE)
+ _para(review,"这份委托只会正式配送一次。想先验证装置，可以返回工位免费试飞。",13,MUTED)
+ if not _wormhole_mode():
+  var rest:=Control.new();rest.size_flags_vertical=Control.SIZE_EXPAND_FILL;rest.mouse_filter=Control.MOUSE_FILTER_IGNORE;b.add_child(rest)
  var actions:=_row(b,10)
  var cancel:=Button.new();cancel.set_meta("view_key","dispatch:cancel");cancel.set_meta("safe_modal_default",true);cancel.text="再检查一下";cancel.custom_minimum_size.y=49;cancel.size_flags_horizontal=Control.SIZE_EXPAND_FILL;actions.add_child(cancel);cancel.pressed.connect(_dismiss_dispatch)
  var launch:=Button.new();launch.set_meta("view_key","dispatch:confirm");launch.text="确认发射配送  ↗";launch.custom_minimum_size.y=49;launch.size_flags_horizontal=Control.SIZE_EXPAND_FILL;launch.add_theme_stylebox_override("normal",_style(YELLOW,3,12));launch.add_theme_color_override("font_color",INK);actions.add_child(launch)

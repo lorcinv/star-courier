@@ -1,0 +1,1033 @@
+{
+  "clip": ".runtime/elf-farewell-native-takes/saved-dialogue-take-01-evidence/normal-time.mkv",
+  "clip_sha256": "60466ea5582e4d98bd3a23b14e8977ab28486bdda005eb413ddf03dcf3f2ae90",
+  "user_outcomes": [
+    {
+      "message_id": "Sentinel_cac27dc6f4088191bc5df0bfcc4242ff",
+      "outcome": "Neutral eye-level head and clear movement-forward gaze; stable head size."
+    },
+    {
+      "message_id": "Sentinel_921fcf4e50048191837b25a0d27b82d1",
+      "outcome": "Correct leg/pelvis attachment, proportions and weight balance; remove anterior-pelvis-tilt impression."
+    },
+    {
+      "message_id": "Sentinel_84c66d267540819184e0b378ff10e750",
+      "outcome": "Coherent moving pelvis, torso, shoulders and arms with stabilized forward-looking head; upper body cannot be locked."
+    }
+  ],
+  "source_evidence": [
+    {
+      "path": "scripts/clerk_rigid_pose_2d.gd",
+      "sha256": "abf6d55f6ad4d2e45096697d09c521728acd8f6449e14a4e776440ad98fbc6b7"
+    },
+    {
+      "path": "scripts/clerk_rigid_motion_2d.gd",
+      "sha256": "c0751ad6477281412ab8a29e30f612516147a286a587933130f5a234ff9bb498"
+    },
+    {
+      "path": "scripts/shop_locomotion_2d.gd",
+      "sha256": "816975477a895a7eef8333c355fc3e52adb92cf00df3eb67186148fadee40cc7"
+    },
+    {
+      "path": "scripts/world_view_2d.gd",
+      "sha256": "a6939a1ad3e700024f65fea064ba14bc33d7f9ba92eeec254ee6cf040cfd9fbd"
+    },
+    {
+      "path": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+      "sha256": "9cab9d476b660487426f246eb55394a4432ca960a0a323a1d30e4b17e1c10b77"
+    },
+    {
+      "path": "assets/2d_v5/actors/single_walk_v1/single-walk-registration.json",
+      "sha256": "34b4f269e317f0f38107a7f013d84073f6b4adc97d49a1db5bd9fe6cfec62f47"
+    }
+  ],
+  "observations": [
+    {
+      "seconds_from_record_request": 5.528603553771973,
+      "state": "counter",
+      "pose": "idle",
+      "facing_right": false,
+      "head_size_parent": [
+        91.0,
+        79.625
+      ],
+      "rig": {
+        "arm_angle": 0.0,
+        "distance_rebases": 0,
+        "eye_state": "gaze",
+        "facing_right": false,
+        "feet": {
+          "far": {
+            "landing_id": 0,
+            "planted": true,
+            "position": [
+              291.75,
+              486.0
+            ]
+          },
+          "near": {
+            "landing_id": 0,
+            "planted": true,
+            "position": [
+              260.25,
+              486.0
+            ]
+          }
+        },
+        "head_angle": 0.0,
+        "hip": [
+          282.8460388183594,
+          405.84539794921875
+        ],
+        "joints": {
+          "far": {
+            "ankle": [
+              297.9100036621094,
+              460.6669921875
+            ],
+            "hip": [
+              285.4710388183594,
+              405.84539794921875
+            ],
+            "knee": [
+              291.60986328125,
+              444.3121643066406
+            ],
+            "sole": [
+              291.75,
+              486.0
+            ]
+          },
+          "near": {
+            "ankle": [
+              264.8699951171875,
+              459.82000732421875
+            ],
+            "hip": [
+              280.2210388183594,
+              405.84539794921875
+            ],
+            "knee": [
+              267.191650390625,
+              442.4283447265625
+            ],
+            "sole": [
+              260.25,
+              486.0
+            ]
+          }
+        },
+        "max_reach_error": 0.0,
+        "origin": [
+          276.0,
+          486.0
+        ],
+        "pose_time": 0.29362130158729993,
+        "relaxed_extension_weight": 1.0,
+        "settled": true,
+        "settling": false,
+        "shoulder_offset": [
+          0.0,
+          0.3777201771736145
+        ],
+        "state": "idle",
+        "step_distance": 0.0,
+        "step_fraction": 0.0,
+        "support": "near",
+        "swing": "far",
+        "travelling": false
+      }
+    },
+    {
+      "seconds_from_record_request": 5.876922607421875,
+      "state": "round_counter",
+      "pose": "walk",
+      "facing_right": true,
+      "head_size_parent": [
+        91.0,
+        79.625
+      ],
+      "rig": {
+        "arm_angle": 0.0009302608910378421,
+        "distance_rebases": 0,
+        "eye_state": "open",
+        "facing_right": true,
+        "feet": {
+          "far": {
+            "landing_id": 0,
+            "planted": true,
+            "position": [
+              291.75,
+              486.0
+            ]
+          },
+          "near": {
+            "landing_id": 0,
+            "planted": true,
+            "position": [
+              260.25,
+              486.0
+            ]
+          }
+        },
+        "head_angle": 0.0,
+        "hip": [
+          272.1315002441406,
+          407.0160827636719
+        ],
+        "joints": {
+          "far": {
+            "ankle": [
+              285.5899963378906,
+              460.6669921875
+            ],
+            "hip": [
+              269.5065002441406,
+              407.0160827636719
+            ],
+            "knee": [
+              283.8682556152344,
+              443.2254638671875
+            ],
+            "sole": [
+              291.75,
+              486.0
+            ]
+          },
+          "near": {
+            "ankle": [
+              255.6300048828125,
+              459.82000732421875
+            ],
+            "hip": [
+              274.7565002441406,
+              407.0160827636719
+            ],
+            "knee": [
+              263.71258544921875,
+              444.24658203125
+            ],
+            "sole": [
+              260.25,
+              486.0
+            ]
+          }
+        },
+        "max_reach_error": 0.0,
+        "origin": [
+          277.6007080078125,
+          486.0
+        ],
+        "pose_time": 0.6487343015872993,
+        "relaxed_extension_weight": 0.9321349110525234,
+        "settled": false,
+        "settling": false,
+        "shoulder_offset": [
+          0.0,
+          0.3593156933784485
+        ],
+        "state": "move",
+        "step_distance": 1.6007080078125,
+        "step_fraction": 0.03976914305124224,
+        "support": "far",
+        "swing": "near",
+        "travelling": true
+      }
+    },
+    {
+      "seconds_from_record_request": 6.310333490371704,
+      "state": "round_counter",
+      "pose": "walk",
+      "facing_right": true,
+      "head_size_parent": [
+        91.0,
+        79.625
+      ],
+      "rig": {
+        "arm_angle": -0.02048537438487569,
+        "distance_rebases": 0,
+        "eye_state": "open",
+        "facing_right": true,
+        "feet": {
+          "far": {
+            "landing_id": 1,
+            "planted": true,
+            "position": [
+              370.5,
+              486.0
+            ]
+          },
+          "near": {
+            "landing_id": 1,
+            "planted": true,
+            "position": [
+              330.25,
+              486.0
+            ]
+          }
+        },
+        "head_angle": 0.0,
+        "hip": [
+          354.1000061035156,
+          413.052734375
+        ],
+        "joints": {
+          "far": {
+            "ankle": [
+              364.3399963378906,
+              460.6669921875
+            ],
+            "hip": [
+              351.4750061035156,
+              413.052734375
+            ],
+            "knee": [
+              373.07220458984375,
+              445.470947265625
+            ],
+            "sole": [
+              370.5,
+              486.0
+            ]
+          },
+          "near": {
+            "ankle": [
+              325.6300048828125,
+              459.82000732421875
+            ],
+            "hip": [
+              356.7250061035156,
+              413.052734375
+            ],
+            "knee": [
+              337.17291259765625,
+              446.6055603027344
+            ],
+            "sole": [
+              330.25,
+              486.0
+            ]
+          }
+        },
+        "max_reach_error": 0.0,
+        "origin": [
+          354.1000061035156,
+          486.0
+        ],
+        "pose_time": 1.09203352380952,
+        "relaxed_extension_weight": 0.0,
+        "settled": false,
+        "settling": false,
+        "shoulder_offset": [
+          0.0,
+          0.0
+        ],
+        "state": "move",
+        "step_distance": 37.850006103515625,
+        "step_fraction": 0.9403728224475931,
+        "support": "near",
+        "swing": "far",
+        "travelling": true
+      }
+    },
+    {
+      "seconds_from_record_request": 7.0351784229278564,
+      "state": "join",
+      "pose": "idle",
+      "facing_right": true,
+      "head_size_parent": [
+        91.0,
+        79.625
+      ],
+      "rig": {
+        "arm_angle": 0.06611531061561114,
+        "distance_rebases": 0,
+        "eye_state": "open",
+        "facing_right": true,
+        "feet": {
+          "far": {
+            "landing_id": 2,
+            "planted": true,
+            "position": [
+              451.0,
+              486.0
+            ]
+          },
+          "near": {
+            "landing_id": 2,
+            "planted": false,
+            "position": [
+              446.9705505371094,
+              477.4261779785156
+            ]
+          }
+        },
+        "head_angle": 0.0,
+        "hip": [
+          452.5593566894531,
+          406.0812683105469
+        ],
+        "joints": {
+          "far": {
+            "ankle": [
+              444.8399963378906,
+              460.6669921875
+            ],
+            "hip": [
+              449.9343566894531,
+              406.0812683105469
+            ],
+            "knee": [
+              452.58447265625,
+              444.944580078125
+            ],
+            "sole": [
+              451.0,
+              486.0
+            ]
+          },
+          "near": {
+            "ankle": [
+              442.3505554199219,
+              451.2461853027344
+            ],
+            "hip": [
+              455.1843566894531,
+              406.0812683105469
+            ],
+            "knee": [
+              458.6535949707031,
+              444.75994873046875
+            ],
+            "sole": [
+              446.9705505371094,
+              477.4261779785156
+            ]
+          }
+        },
+        "max_reach_error": 0.0,
+        "origin": [
+          452.0,
+          486.0
+        ],
+        "pose_time": 1.8241432207792156,
+        "relaxed_extension_weight": 0.3474346822797293,
+        "settled": false,
+        "settling": true,
+        "shoulder_offset": [
+          0.0,
+          -0.08476391434669495
+        ],
+        "state": "idle",
+        "step_distance": 15.0,
+        "step_fraction": 0.37267080745341613,
+        "support": "far",
+        "swing": "near",
+        "travelling": false
+      }
+    },
+    {
+      "seconds_from_record_request": 7.17918848991394,
+      "state": "join",
+      "pose": "idle",
+      "facing_right": true,
+      "head_size_parent": [
+        91.0,
+        79.625
+      ],
+      "rig": {
+        "arm_angle": 0.005629408522018917,
+        "distance_rebases": 0,
+        "eye_state": "open",
+        "facing_right": true,
+        "feet": {
+          "far": {
+            "landing_id": 2,
+            "planted": true,
+            "position": [
+              451.0,
+              486.0
+            ]
+          },
+          "near": {
+            "landing_id": 2,
+            "planted": false,
+            "position": [
+              465.980712890625,
+              484.0315856933594
+            ]
+          }
+        },
+        "head_angle": 0.0,
+        "hip": [
+          440.69580078125,
+          404.8567199707031
+        ],
+        "joints": {
+          "far": {
+            "ankle": [
+              444.8399963378906,
+              460.6669921875
+            ],
+            "hip": [
+              438.07080078125,
+              404.8567199707031
+            ],
+            "knee": [
+              445.2381286621094,
+              443.1452331542969
+            ],
+            "sole": [
+              451.0,
+              486.0
+            ]
+          },
+          "near": {
+            "ankle": [
+              461.3607177734375,
+              457.8515930175781
+            ],
+            "hip": [
+              443.32080078125,
+              404.8567199707031
+            ],
+            "knee": [
+              458.7253112792969,
+              440.50469970703125
+            ],
+            "sole": [
+              465.980712890625,
+              484.0315856933594
+            ]
+          }
+        },
+        "max_reach_error": 0.0,
+        "origin": [
+          452.0,
+          486.0
+        ],
+        "pose_time": 1.95296763492063,
+        "relaxed_extension_weight": 0.9444371246759132,
+        "settled": false,
+        "settling": true,
+        "shoulder_offset": [
+          0.0,
+          -0.28680670261383057
+        ],
+        "state": "idle",
+        "step_distance": 15.0,
+        "step_fraction": 0.37267080745341613,
+        "support": "far",
+        "swing": "near",
+        "travelling": false
+      }
+    },
+    {
+      "seconds_from_record_request": 8.000820398330688,
+      "state": "escort",
+      "pose": "walk",
+      "facing_right": true,
+      "head_size_parent": [
+        91.0,
+        79.625
+      ],
+      "rig": {
+        "arm_angle": -0.09071490178500236,
+        "distance_rebases": 0,
+        "eye_state": "open",
+        "facing_right": true,
+        "feet": {
+          "far": {
+            "landing_id": 3,
+            "planted": false,
+            "position": [
+              563.4844970703125,
+              478.9861755371094
+            ]
+          },
+          "near": {
+            "landing_id": 4,
+            "planted": true,
+            "position": [
+              586.75,
+              486.0
+            ]
+          }
+        },
+        "head_angle": 0.0,
+        "hip": [
+          585.1729736328125,
+          403.9455871582031
+        ],
+        "joints": {
+          "far": {
+            "ankle": [
+              557.3245239257812,
+              453.6531677246094
+            ],
+            "hip": [
+              582.5479736328125,
+              403.9455871582031
+            ],
+            "knee": [
+              568.7718505859375,
+              440.3818359375
+            ],
+            "sole": [
+              563.4844970703125,
+              478.9861755371094
+            ]
+          },
+          "near": {
+            "ankle": [
+              582.1300048828125,
+              459.82000732421875
+            ],
+            "hip": [
+              587.7979736328125,
+              403.9455871582031
+            ],
+            "knee": [
+              586.1694946289062,
+              442.7453918457031
+            ],
+            "sole": [
+              586.75,
+              486.0
+            ]
+          }
+        },
+        "max_reach_error": 0.0,
+        "origin": [
+          585.1729736328125,
+          486.0
+        ],
+        "pose_time": 2.765772301587294,
+        "relaxed_extension_weight": 0.0,
+        "settled": false,
+        "settling": false,
+        "shoulder_offset": [
+          0.0,
+          0.0
+        ],
+        "state": "move",
+        "step_distance": 12.4229736328125,
+        "step_fraction": 0.3086453076475155,
+        "support": "near",
+        "swing": "far",
+        "travelling": true
+      }
+    },
+    {
+      "seconds_from_record_request": 9.030700445175171,
+      "state": "escort",
+      "pose": "walk",
+      "facing_right": true,
+      "head_size_parent": [
+        91.0,
+        79.625
+      ],
+      "rig": {
+        "arm_angle": -0.010287909926790862,
+        "distance_rebases": 0,
+        "eye_state": "open",
+        "facing_right": true,
+        "feet": {
+          "far": {
+            "landing_id": 6,
+            "planted": true,
+            "position": [
+              788.0,
+              486.0
+            ]
+          },
+          "near": {
+            "landing_id": 6,
+            "planted": true,
+            "position": [
+              747.75,
+              486.0
+            ]
+          }
+        },
+        "head_angle": 0.0,
+        "hip": [
+          772.7999877929688,
+          413.8731994628906
+        ],
+        "joints": {
+          "far": {
+            "ankle": [
+              781.8400268554688,
+              460.6669921875
+            ],
+            "hip": [
+              770.1749877929688,
+              413.8731994628906
+            ],
+            "knee": [
+              791.8198852539062,
+              446.25958251953125
+            ],
+            "sole": [
+              788.0,
+              486.0
+            ]
+          },
+          "near": {
+            "ankle": [
+              743.1300048828125,
+              459.82000732421875
+            ],
+            "hip": [
+              775.4249877929688,
+              413.8731994628906
+            ],
+            "knee": [
+              755.0111694335938,
+              446.9088134765625
+            ],
+            "sole": [
+              747.75,
+              486.0
+            ]
+          }
+        },
+        "max_reach_error": 0.0,
+        "origin": [
+          772.7999877929688,
+          486.0
+        ],
+        "pose_time": 3.8081446349206374,
+        "relaxed_extension_weight": 0.0,
+        "settled": false,
+        "settling": false,
+        "shoulder_offset": [
+          0.0,
+          0.0
+        ],
+        "state": "move",
+        "step_distance": 39.04998779296875,
+        "step_fraction": 0.9701860321234472,
+        "support": "near",
+        "swing": "far",
+        "travelling": true
+      }
+    },
+    {
+      "seconds_from_record_request": 12.290926456451416,
+      "state": "escort",
+      "pose": "walk",
+      "facing_right": true,
+      "head_size_parent": [
+        91.0,
+        79.625
+      ],
+      "rig": {
+        "arm_angle": 0.10498419342826051,
+        "distance_rebases": 0,
+        "eye_state": "gaze",
+        "facing_right": true,
+        "feet": {
+          "far": {
+            "landing_id": 13,
+            "planted": true,
+            "position": [
+              1351.5,
+              486.0
+            ]
+          },
+          "near": {
+            "landing_id": 13,
+            "planted": false,
+            "position": [
+              1367.816650390625,
+              478.06744384765625
+            ]
+          }
+        },
+        "head_angle": 0.0,
+        "hip": [
+          1361.5089111328125,
+          406.0604553222656
+        ],
+        "joints": {
+          "far": {
+            "ankle": [
+              1345.3399658203125,
+              460.6669921875
+            ],
+            "hip": [
+              1358.8839111328125,
+              406.0604553222656
+            ],
+            "knee": [
+              1351.751220703125,
+              444.35540771484375
+            ],
+            "sole": [
+              1351.5,
+              486.0
+            ]
+          },
+          "near": {
+            "ankle": [
+              1363.1966552734375,
+              451.887451171875
+            ],
+            "hip": [
+              1364.1339111328125,
+              406.0604553222656
+            ],
+            "knee": [
+              1377.9310302734375,
+              442.3608093261719
+            ],
+            "sole": [
+              1367.816650390625,
+              478.06744384765625
+            ]
+          }
+        },
+        "max_reach_error": 0.0,
+        "origin": [
+          1361.5089111328125,
+          486.0
+        ],
+        "pose_time": 7.078749968253973,
+        "relaxed_extension_weight": 0.0,
+        "settled": false,
+        "settling": false,
+        "shoulder_offset": [
+          0.0,
+          0.0
+        ],
+        "state": "move",
+        "step_distance": 24.0089111328125,
+        "step_fraction": 0.5964946865295031,
+        "support": "far",
+        "swing": "near",
+        "travelling": true
+      }
+    },
+    {
+      "seconds_from_record_request": 12.990888595581055,
+      "state": "escort",
+      "pose": "walk",
+      "facing_right": true,
+      "head_size_parent": [
+        91.0,
+        79.625
+      ],
+      "rig": {
+        "arm_angle": -0.09750583283618226,
+        "distance_rebases": 0,
+        "eye_state": "open",
+        "facing_right": true,
+        "feet": {
+          "far": {
+            "landing_id": 14,
+            "planted": false,
+            "position": [
+              1495.734619140625,
+              479.0221862792969
+            ]
+          },
+          "near": {
+            "landing_id": 15,
+            "planted": true,
+            "position": [
+              1472.25,
+              486.0
+            ]
+          }
+        },
+        "head_angle": 0.0,
+        "hip": [
+          1484.540771484375,
+          407.1661376953125
+        ],
+        "joints": {
+          "far": {
+            "ankle": [
+              1489.5745849609375,
+              453.6891784667969
+            ],
+            "hip": [
+              1481.915771484375,
+              407.1661376953125
+            ],
+            "knee": [
+              1501.495361328125,
+              440.8413391113281
+            ],
+            "sole": [
+              1495.734619140625,
+              479.0221862792969
+            ]
+          },
+          "near": {
+            "ankle": [
+              1467.6300048828125,
+              459.82000732421875
+            ],
+            "hip": [
+              1487.165771484375,
+              407.1661376953125
+            ],
+            "knee": [
+              1475.833251953125,
+              444.3097839355469
+            ],
+            "sole": [
+              1472.25,
+              486.0
+            ]
+          }
+        },
+        "max_reach_error": 0.0,
+        "origin": [
+          1484.540771484375,
+          486.0
+        ],
+        "pose_time": 7.762260028860034,
+        "relaxed_extension_weight": 0.0,
+        "settled": false,
+        "settling": false,
+        "shoulder_offset": [
+          0.0,
+          0.0
+        ],
+        "state": "move",
+        "step_distance": 26.290771484375,
+        "step_fraction": 0.6531868691770186,
+        "support": "near",
+        "swing": "far",
+        "travelling": true
+      }
+    },
+    {
+      "seconds_from_record_request": 15.621604442596436,
+      "state": "escort",
+      "pose": "walk",
+      "facing_right": true,
+      "head_size_parent": [
+        91.0,
+        79.625
+      ],
+      "rig": {
+        "arm_angle": -0.10931349669112086,
+        "distance_rebases": 0,
+        "eye_state": "open",
+        "facing_right": true,
+        "feet": {
+          "far": {
+            "landing_id": 20,
+            "planted": false,
+            "position": [
+              1953.01123046875,
+              477.2648620605469
+            ]
+          },
+          "near": {
+            "landing_id": 21,
+            "planted": true,
+            "position": [
+              1955.25,
+              486.0
+            ]
+          }
+        },
+        "head_angle": 0.0,
+        "hip": [
+          1959.94287109375,
+          404.9422912597656
+        ],
+        "joints": {
+          "far": {
+            "ankle": [
+              1946.8511962890625,
+              451.9318542480469
+            ],
+            "hip": [
+              1957.31787109375,
+              404.9422912597656
+            ],
+            "knee": [
+              1962.2601318359375,
+              443.5810546875
+            ],
+            "sole": [
+              1953.01123046875,
+              477.2648620605469
+            ]
+          },
+          "near": {
+            "ankle": [
+              1950.6300048828125,
+              459.82000732421875
+            ],
+            "hip": [
+              1962.56787109375,
+              404.9422912597656
+            ],
+            "knee": [
+              1956.5709228515625,
+              443.3103942871094
+            ],
+            "sole": [
+              1955.25,
+              486.0
+            ]
+          }
+        },
+        "max_reach_error": 0.0,
+        "origin": [
+          1959.94287109375,
+          486.0
+        ],
+        "pose_time": 10.403382730158736,
+        "relaxed_extension_weight": 0.0,
+        "settled": false,
+        "settling": false,
+        "shoulder_offset": [
+          0.0,
+          0.0
+        ],
+        "state": "move",
+        "step_distance": 18.69287109375,
+        "step_fraction": 0.4644191576086957,
+        "support": "near",
+        "swing": "far",
+        "travelling": true
+      }
+    },
+    {
+      "seconds_from_record_request": 15.921887397766113,
+      "state": "reach",
+      "pose": "reach",
+      "facing_right": true,
+      "head_size_parent": [
+        95.375,
+        79.625
+      ],
+      "rig": null
+    },
+    {
+      "seconds_from_record_request": 16.607378482818604,
+      "state": "align",
+      "pose": "align",
+      "facing_right": true,
+      "head_size_parent": [
+        92.75,
+        80.5
+      ],
+      "rig": null
+    }
+  ],
+  "limitations": [
+    "Supplied saved-dialogue clip has counter-facing-left idle/dialogue and rightward walking/join/tablet. It does not contain leftward moving or user-controlled braking. Those remain proposed pure-math tests, not visually verified states.",
+    "Existing observer unix times relative recorder request differ slightly from video PTS because recorder startup is asynchronous. Raw sample timing is not claimed to be exact frame sync.",
+    "No engine, GUI, native rerun, full transcode or production change was performed."
+  ]
+}

@@ -19,6 +19,21 @@ func check(condition:bool,label:String) -> void:
  if condition:passed+=1;print("PASS ",label)
  else:failed+=1;push_error("FAIL "+label)
 
+func bounded_layers(node:Sprite2D) -> bool:
+ var accessory:Sprite2D=node.get_node_or_null("CompatibleAccessory")
+ var arm:Sprite2D=node.get_node_or_null("NeutralFrontArm")
+ var rig:Node2D=node.get_node_or_null("HumanRigidCutouts")
+ var count:int=int(accessory!=null)+int(arm!=null)+int(rig!=null)
+ if node.get_child_count()!=count or count>3:return false
+ if rig!=null:
+  if node.species!="human" or rig.get_child_count()!=15:return false
+  for part in rig.get_children():
+   if not part is Sprite2D or part.z_index!=0:return false
+ if arm!=null and accessory==null:return false
+ if accessory!=null and accessory.z_index!=1:return false
+ if arm!=null and (arm.get_index()<=accessory.get_index() or arm.z_index!=2 or arm.scale!=Vector2.ONE):return false
+ return true
+
 func binding(id:String,accessory:String="none") -> Dictionary:
  return {"appearance_id":id,"species":CASES[id].species,"appearance_seed":11937,"accessory_id":accessory,"contract_id":"test-order"}
 
@@ -35,15 +50,22 @@ func test_cast_and_accessories() -> void:
     var pose:String="handoff" if handoff else "idle"
     var label:String=id+"/"+accessory+"/"+pose
     var snapshot:Dictionary=actor.debug_snapshot()
-    var expected_path:String="res://assets/2d_v5/actors/customer-%s-pixel.png"%pose if id=="human_courier" else "res://assets/2d_v5/npcs/%s/%s-pixel.png"%[id,pose]
-    check(actor.texture!=null and actor.texture.resource_path==expected_path,"exact identity texture: "+label)
+    var file_pose:String="handoff" if handoff else "neutral-idle"
+    var expected_path:String="res://assets/2d_v5/actors/customer-%s-pixel.png"%file_pose if id=="human_courier" else "res://assets/2d_v5/npcs/%s/%s-pixel.png"%[id,file_pose]
+    var rigid_idle:bool=id=="human_courier" and not handoff
+    if rigid_idle:
+     check(actor.texture==null and snapshot.motion.rigid_active and actor._motion._rig.visible,"human neutral uses only its registered cutouts: "+label)
+    elif id=="human_courier":
+     check(actor.texture.resource_path=="res://assets/2d_v5/actors/human_rig_motion_v1/handoff-body.png" and snapshot.motion.canonical_head_overlay,"human full handoff retains its body with canonical source head: "+label)
+    else:check(actor.texture!=null and actor.texture.resource_path==expected_path,"exact identity texture: "+label)
     check(actor.get_meta("appearance_id")==id and actor.get_meta("identity")==id and actor.get_meta("species")==spec.species and actor.get_meta("pose")==pose,"identity metadata: "+label)
     check(snapshot.valid and snapshot.diagnostics.is_empty(),"clean diagnostics: "+label)
-    check(actor.scale.is_equal_approx(Vector2.ONE*215.0/240.0) and not actor.centered,"uniform logical body scale: "+label)
-    check(actor.offset.is_equal_approx(-spec.foot),"exact semantic foot registration: "+label)
+    check(actor.scale.is_equal_approx(Vector2.ONE if rigid_idle else Vector2.ONE*215.0/240.0) and not actor.centered,"uniform logical body scale: "+label)
+    check(actor.offset.is_equal_approx(Vector2.ZERO if rigid_idle else -spec.foot),"exact semantic foot registration: "+label)
     check(snapshot.foot_point.is_equal_approx(Vector2(148,488)) and actor.position==Vector2(148,488),"pose keeps feet stationary: "+label)
-    check(actor.parcel_point().is_equal_approx(actor.position+(spec.parcel-spec.foot)*actor.scale),"handoff parcel in parent coordinates: "+label)
-    check(snapshot.accessory_child_count<=1 and actor.get_child_count()<=1,"at most one accessory: "+label)
+    check(actor.parcel_point().is_equal_approx(actor.position+(spec.parcel-spec.foot)*(215.0/240.0)),"handoff parcel in parent coordinates: "+label)
+    check(bounded_layers(actor),"only one named accessory and one named front-arm layer: "+label)
+    check(snapshot.front_arm_visible==(not handoff and accessory!="none"),"front-arm layer is visible only over a neutral accessory: "+label)
     if accessory=="none":check(not snapshot.accessory_visible,"human has no mixed-species accessory: "+pose)
     else:
      var child:Sprite2D=actor.get_node("CompatibleAccessory")
@@ -136,6 +158,7 @@ func test_fallbacks_and_invalid_data() -> void:
 
 func test_bounded_switches_and_transforms() -> void:
  var original_child:Sprite2D=actor.get_node("CompatibleAccessory")
+ var original_arm:Sprite2D=actor.get_node("NeutralFrontArm")
  var baseline:Dictionary=actor.debug_snapshot()
  var stable_feet:Vector2=actor.position
  var ids:Array=CASES.keys()
@@ -145,8 +168,8 @@ func test_bounded_switches_and_transforms() -> void:
   var options:Array=CASES[id].accessories
   actor.configure(binding(id,options[(i/4)%options.size()]))
   actor.set_pose(i%2==0);actor.set_pose(i%3==0)
-  bounded=bounded and actor.get_child_count()==1 and actor.get_node("CompatibleAccessory")==original_child and actor.debug_snapshot().foot_point.is_equal_approx(stable_feet)
- check(bounded,"600 immediate reconfigures reuse one child without queue growth or foot drift")
+  bounded=bounded and bounded_layers(actor) and actor.get_child_count()==(3 if id=="human_courier" else 2) and actor.get_node("CompatibleAccessory")==original_child and actor.get_node("NeutralFrontArm")==original_arm and actor.debug_snapshot().foot_point.is_equal_approx(stable_feet)
+ check(bounded,"600 immediate reconfigures reuse accessory layers and bound the human-only rig without queue growth or foot drift")
  var after:Dictionary=actor.debug_snapshot()
  check(after.manifest_load_count==1 and baseline.manifest_load_count==after.manifest_load_count,"manifests load only once across identities")
  check(baseline.texture_cache_size==after.texture_cache_size and baseline.texture_load_count==after.texture_load_count,"rapid switches reuse cached body/accessory textures")

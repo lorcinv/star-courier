@@ -22,6 +22,22 @@ func check(condition:bool,label:String) -> void:
  if condition:passed+=1;print("PASS ",label)
  else:failed+=1;push_error("FAIL "+label)
 
+func bounded_layers(node:Sprite2D) -> bool:
+ var accessory:Sprite2D=node.get_node_or_null("CompatibleAccessory")
+ var arm:Sprite2D=node.get_node_or_null("NeutralFrontArm")
+ var rig:Node2D=node.get_node_or_null("HumanRigidCutouts")
+ var count:int=int(accessory!=null)+int(arm!=null)+int(rig!=null)
+ if node.get_child_count()!=count or count>3:return false
+ if rig!=null:
+  if node.species!="human" or rig.get_child_count()!=15:return false
+  for part in rig.get_children():
+   if not part is Sprite2D or part.z_index!=0:return false
+ if arm!=null and accessory==null:return false
+ if accessory!=null and accessory.z_index!=1:return false
+ if arm!=null and (arm.get_index()<=accessory.get_index() or arm.z_index!=2 or arm.scale!=Vector2.ONE):return false
+ return true
+
+
 func order(id:String,appearance:String="elf_archivist",accessory:String="map_case") -> Dictionary:
  return {"contract_id":id,"status":"accepted","appearance_id":appearance,"appearance_seed":18391,"species":CASES[appearance].species,"accessory_id":accessory,"story_id":Stories.PROFILES[appearance].story_id,"story_node":2}
 
@@ -46,13 +62,16 @@ func counter_parcels() -> int:
  return count
 
 func idle_poses() -> bool:
- if world.clerk.get_meta("pose","")!="idle":return false
+ # Customers relax after giving. The clerk must still support a live counter
+ # parcel, and can relax only when no contact is owned.
+ var clerk_pose:String="handoff" if world._clerk_supports_counter_parcel() else "idle"
+ if world.clerk.get_meta("pose","")!=clerk_pose:return false
  for entry in world.customers.values():
   if entry.node.pose!="idle":return false
  return true
 
 func pose_accessory_registered(actor,pose:String) -> bool:
- if actor.accessory_id=="none":return actor.get_child_count()==0 or not actor.get_child(0).visible
+ if actor.accessory_id=="none":return not actor.debug_snapshot().accessory_visible
  var data:Dictionary=manifest.appearances[actor.appearance_id].accessory_options[actor.accessory_id]
  var sprite:Sprite2D=actor.get_node("CompatibleAccessory")
  var anchor:Vector2=Vector2(data.world_anchors[pose][0],data.world_anchors[pose][1])
@@ -77,11 +96,13 @@ func test_species_and_phases() -> void:
    check(actor.z_index==10 and world.actors_root.z_index==3 and world.foreground_root.z_index==8 and world.clerk.z_index==0,"approved customer-front clerk-behind counter ordering: "+label)
    check(world._parcel_phase=="customer_handoff" and actor.pose=="handoff" and world.parcel.visible==not actor.pose_contains_parcel() and world.clerk.get_meta("pose")=="idle" and counter_parcels()==1,"customer handoff chooses one parcel from verified pose pixels: "+label)
    check(pose_accessory_registered(actor,"handoff"),"handoff accessory uses its registered anchor: "+label)
+   check(bounded_layers(actor) and not actor.debug_snapshot().front_arm_visible,"handoff has only named accessory layers with no stale neutral arm: "+label)
    var registered_origin:Vector2=actor.parcel_point()
    tween.custom_step(World.CUSTOMER_HANDOFF_DURATION+.01)
-   check(world._parcel_phase=="counter_transfer" and idle_poses() and world.parcel.visible and counter_parcels()==1,"external transfer begins only after both actors are idle: "+label)
+   check(world._parcel_phase=="counter_transfer" and actor.pose==("handoff" if appearance=="human_courier" else "idle") and world.clerk.get_meta("pose")=="handoff" and world._clerk_supports_counter_parcel() and world.parcel.visible and counter_parcels()==1,"external transfer has ready receiving hands and one parcel; human empty giving hands remain raised: "+label)
    check(world._counter_transfer_start.is_equal_approx(registered_origin) and world.parcel.position.distance_to(registered_origin)<3.0,"external parcel leaves species-specific painted hand anchor: "+label)
-   check(pose_accessory_registered(actor,"idle"),"idle accessory returns to its registered anchor: "+label)
+   check(pose_accessory_registered(actor,"handoff" if appearance=="human_courier" else "idle"),"transfer retains the correct species accessory anchor: "+label)
+   check(actor.debug_snapshot().front_arm_visible==(accessory!="none"),"idle restores the registered front-arm occluder only when needed: "+label)
    tween.custom_step(World.COUNTER_TRANSFER_DURATION)
    check(world._parcel_phase=="clerk_handoff" and actor.pose=="idle" and world.clerk.get_meta("pose")=="handoff" and world.parcel.visible and counter_parcels()==1,"empty-handed clerk receives one continuously visible external parcel: "+label)
    check(world.parcel.position.is_equal_approx(world._actor_parcel_point(world.clerk,"clerk")),"external parcel meets the clerk's registered receiving-hands anchor: "+label)
@@ -102,14 +123,14 @@ func test_repeat_updates_and_bindings() -> void:
  for i in 300:
   randi();var copy:Dictionary=JSON.parse_string(JSON.stringify(contract));copy.story_node=i%4
   update([copy],"stable")
-  stable=stable and world.customers.stable.node.get_instance_id()==original_actor and actor.get_child(0).get_instance_id()==original_child and actor.texture==original_texture and actor.pose=="handoff" and world._parcel_generation==original_generation and world._parcel_tween==tween and actor.get_child_count()==1
+  stable=stable and world.customers.stable.node.get_instance_id()==original_actor and actor.get_child(0).get_instance_id()==original_child and actor.texture==original_texture and actor.pose=="handoff" and world._parcel_generation==original_generation and world._parcel_tween==tween and bounded_layers(actor) and actor.get_child_count()==2
  check(stable,"300 JSON/status/story updates reuse body, accessory, pose, tween and saved identity without RNG drift")
  tween.custom_step(1.0)
  for i in 50:update([contract],"stable")
  check(world._parcel_phase=="counter" and world._parcel_tween==null and counter_parcels()==1,"completed transfer cannot restart on repeated renders")
  var changed:Dictionary=order("stable","alien_botanist","field_vial")
  update([changed],"stable")
- check(world.customers.stable.node.get_instance_id()==original_actor and actor.appearance_id=="alien_botanist" and actor.accessory_id=="field_vial" and actor.get_child_count()==1 and actor.get_child(0).get_instance_id()==original_child,"explicit replacement binding safely reuses one actor/accessory node")
+ check(world.customers.stable.node.get_instance_id()==original_actor and actor.appearance_id=="alien_botanist" and actor.accessory_id=="field_vial" and bounded_layers(actor) and actor.get_child_count()==2 and actor.get_child(0).get_instance_id()==original_child,"explicit replacement binding safely reuses one actor/accessory node")
  update([{"contract_id":"legacy","status":"available"}])
  check(world.customers.legacy.node.appearance_id=="human_courier" and world.customers.legacy.node.accessory_id=="none","legacy unbound order remains an explicit human fallback")
  var invalid:Dictionary=order("legacy");invalid.species="robot"
@@ -199,6 +220,21 @@ func test_reduced_motion() -> void:
  check(world._parcel_tween==null and world._parcel_phase=="loaded" and not world.parcel.visible and counter_parcels()==0,"already-reduced pack settles without creating a tween")
  world.reduced_motion=false
 
+func test_reduced_motion_all_species() -> void:
+ for appearance in CASES:
+  for phase in ["customer_handoff","counter_transfer","clerk_handoff","counter"]:
+   world.reduced_motion=false
+   var contract:Dictionary=order("immediate-reduced/"+appearance+"/"+phase,appearance,CASES[appearance].accessories[0])
+   var original:String=JSON.stringify(contract)
+   var tween:Tween=accept(contract);reach_phase(tween,phase)
+   var parcel_id:int=world.parcel.get_instance_id()
+   world.reduced_motion=true
+   # Assert immediately, without a process frame that could hide a gap after
+   # switching a nonhuman's baked parcel to the shared empty-hand parcel.
+   check(world._parcel_phase=="counter" and world._clerk_supports_counter_parcel() and world.clerk.get_meta("pose")=="handoff" and world.parcel.visible and counter_parcels()==1,"immediate reduced-motion support is visible for "+appearance+" from "+phase)
+   check(world.parcel.get_instance_id()==parcel_id and world.active_id==contract.contract_id and JSON.stringify(contract)==original,"immediate settlement keeps the same parcel, order and identity for "+appearance)
+ world.reduced_motion=false
+
 func test_bounded_lifecycle() -> void:
  update([],"");await process_frame;await process_frame
  var base_children:int=world.actors_root.get_child_count()
@@ -233,6 +269,7 @@ func run() -> void:
  test_pack_interruptions()
  test_cancel_and_reaccept()
  test_reduced_motion()
+ test_reduced_motion_all_species()
  await test_bounded_lifecycle()
  print("COUNTER_SPECIES_INTEGRATION_TESTS passed=",passed," failed=",failed)
  quit(1 if failed else 0)

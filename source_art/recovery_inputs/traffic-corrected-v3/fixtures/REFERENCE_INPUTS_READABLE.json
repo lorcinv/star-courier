@@ -1,0 +1,199 @@
+{
+  "fixture": "corrected-v3-finite-reference-inputs-v1",
+  "initial_bundle": {
+    "active_ticks": 120,
+    "actors": [
+      {
+        "fuel_mj": 0,
+        "hp": 30,
+        "id": "ground-traffic-foundation-v1/42/traffic_0",
+        "mass_kg": 80.0,
+        "radius_m": 1.5,
+        "role": "traffic_0",
+        "source_id": "ground-traffic-foundation-v1/42/traffic_0",
+        "vx": 0.0,
+        "vy": 0.0,
+        "x": 126.675,
+        "y": -8.0
+      },
+      {
+        "fuel_mj": 0,
+        "hp": 40,
+        "id": "ground-traffic-foundation-v1/42/traffic_1",
+        "mass_kg": 100.0,
+        "radius_m": 1.75,
+        "role": "traffic_1",
+        "source_id": "ground-traffic-foundation-v1/42/traffic_1",
+        "vx": 0.0,
+        "vy": 0.0,
+        "x": 134.944,
+        "y": -6.5
+      },
+      {
+        "fuel_mj": 60000,
+        "hp": 25,
+        "id": "ground-traffic-foundation-v1/42/patrol",
+        "mass_kg": 60.0,
+        "radius_m": 1.25,
+        "role": "patrol",
+        "source_id": "ground-traffic-foundation-v1/42/patrol",
+        "vx": 0.0,
+        "vy": 0.0,
+        "x": 107.779,
+        "y": -14.0
+      }
+    ],
+    "helper": "ground-traffic-foundation-v1",
+    "max_force_n": 120.0,
+    "minimum_cost_mj": 1000,
+    "patrol_enabled": true,
+    "scenario": "city-360-between-gates-85-185",
+    "seed": 42,
+    "traffic_count": 2,
+    "warning_ticks": 180
+  },
+  "initial_state_hash": "200a0d7dac99175e5cb48ef292bacb3f8069df454ff23f22056f83cd41c44e6e",
+  "operations": [
+    {
+      "label": "01 warning begins",
+      "expected_state_hash": "474d5edae5c8843b7594d4fd32380f4abe7c76015e6884782b52f75e8f541727",
+      "kind": "advance",
+      "tick": 0,
+      "command": {
+        "cancel_warning": false,
+        "warning_request": {
+          "request_id": "reference_0",
+          "target_x": 132.0,
+          "target_y": -8.0
+        }
+      }
+    },
+    {
+      "label": "02 final warning interval",
+      "expected_state_hash": "a85ceafee2dcadef73bd3b002926b418ed5938726784b80ba25cee44445ce501",
+      "kind": "advance_range",
+      "first": 1,
+      "last": 179,
+      "save_checkpoint": "warning_complete"
+    },
+    {
+      "label": "03 first finite force intent",
+      "expected_state_hash": "323c3240b93aca2bfc0bf0616d08c68630b9c5f7bee87a67a07447abd390f4b7",
+      "kind": "advance",
+      "tick": 180
+    },
+    {
+      "label": "04 supplied contact A",
+      "expected_state_hash": "0731384627765895b17f48513fcaeb810aed321c7ee4ebe7e6e1d3f8559383ec",
+      "kind": "rebase",
+      "source_id": "external/contact_A",
+      "commit": {
+        "actor_id": "ground-traffic-foundation-v1/42/patrol",
+        "fraction": 0.5,
+        "hp": 14,
+        "revision": 1,
+        "tick": 180,
+        "vx": 3.0,
+        "vy": 0.0,
+        "x": 107.779,
+        "y": -14.0
+      }
+    },
+    {
+      "label": "05 second intent uses contact A",
+      "expected_state_hash": "dc33936d45dd02e86cdabfceeb4f82347307741ed9541dd7c90fadcb4085f4d0",
+      "kind": "advance",
+      "tick": 181
+    },
+    {
+      "label": "06 supplied lethal contact B",
+      "expected_state_hash": "1ba17ba44c13c30bcc65a89391c55976853da166f527c830b863a41bcfcd4e3f",
+      "kind": "rebase",
+      "source_id": "external/contact_B",
+      "commit": {
+        "actor_id": "ground-traffic-foundation-v1/42/patrol",
+        "fraction": 0.75,
+        "hp": 0,
+        "revision": 2,
+        "tick": 181,
+        "vx": -1.5,
+        "vy": 0.25,
+        "x": 107.81025,
+        "y": -14.0
+      }
+    },
+    {
+      "label": "07 retained wreck glides",
+      "expected_state_hash": "1ba17ba44c13c30bcc65a89391c55976853da166f527c830b863a41bcfcd4e3f",
+      "kind": "segment",
+      "tick": 181,
+      "from_fraction": 0.75,
+      "to_fraction": 1.0
+    },
+    {
+      "label": "08 legal later same-tick wreck rebase",
+      "expected_state_hash": "f86e8793dedc2b02ec3f5fc71511cdc770de5301bcfc98c2079857fdd181149a",
+      "kind": "rebase",
+      "source_id": "external/same_tick_owner_checkpoint",
+      "commit": {
+        "actor_id": "ground-traffic-foundation-v1/42/patrol",
+        "fraction": 0.875,
+        "hp": 0,
+        "revision": 3,
+        "tick": 181,
+        "vx": -1.5,
+        "vy": 0.25,
+        "x": 107.80868749999999,
+        "y": -13.999739583333334
+      }
+    },
+    {
+      "label": "09 wreck survives next tick",
+      "expected_state_hash": "1df13acdd7a6b237096953bdf5733c8a102a7c18a3e567808df7b990743a2497",
+      "kind": "advance",
+      "tick": 182
+    },
+    {
+      "label": "10 snapshot restored",
+      "expected_state_hash": "1df13acdd7a6b237096953bdf5733c8a102a7c18a3e567808df7b990743a2497",
+      "kind": "round_trip"
+    },
+    {
+      "label": "11 restored continuation",
+      "expected_state_hash": "516ccb5f32bcecd557ea5a5af83386e6e76e8e0d136b612edb1f41fd19c5fe44",
+      "kind": "advance",
+      "tick": 183,
+      "capture_main_result": true
+    },
+    {
+      "label": "02 final warning interval",
+      "expected_state_hash": "a85ceafee2dcadef73bd3b002926b418ed5938726784b80ba25cee44445ce501",
+      "kind": "restore_checkpoint",
+      "checkpoint": "warning_complete"
+    },
+    {
+      "label": "B0 supplied high-speed source",
+      "expected_state_hash": "05fa2be5a0737d3a18b794e00355bde4879ce10e252e965f4f520b987202cc47",
+      "kind": "rebase",
+      "source_id": "external/denial_branch_contact",
+      "commit": {
+        "actor_id": "ground-traffic-foundation-v1/42/patrol",
+        "fraction": 1.0,
+        "hp": 25,
+        "revision": 1,
+        "tick": 179,
+        "vx": 60.0,
+        "vy": 0.0,
+        "x": 107.779,
+        "y": -14.0
+      }
+    },
+    {
+      "label": "B1 unaffordable intent refused",
+      "expected_state_hash": "20cfaa2f3793798d2777aab821f16402ac4bb82d74d33852e964a9b764283587",
+      "kind": "advance",
+      "tick": 180
+    }
+  ],
+  "scope": "integration reference only; external commits are supplied test inputs; no collision solver"
+}

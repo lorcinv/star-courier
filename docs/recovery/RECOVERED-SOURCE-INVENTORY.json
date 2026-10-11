@@ -1,0 +1,1857 @@
+{
+  "observed_utc": "2026-10-11T13:42:58.302723+00:00",
+  "git_baseline_remote_commit": "9fd856ab33b3a53838887849eb0a2a2e7858981f",
+  "code_commit": "491aaffa4241fe1e09bdbb665e5316ba08cdff63",
+  "code_tree": "2ca12fd7552cc7437685f887e8cd0d6cd1f1a838",
+  "source_comparison_counts": {
+    "changed": 34,
+    "same": 278,
+    "new": 256
+  },
+  "source_changes": [
+    {
+      "path": "README.md",
+      "sha256": "b10c142ee3b07cd18f5aad02c5e221451350208a2333877d9ab8e47f4a8d0b09",
+      "blob_sha": "9743077e6cda5d54c48b12f4abcb6c2ad198b31e",
+      "status": "changed"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "bdc8c42adf354cd4065f456d31c88a004e29b6fde3ceff3ecb77e92246da5fd0",
+      "blob_sha": "092a8b4e5508c28b900df92aaf19aa0971fea0d1",
+      "status": "changed"
+    },
+    {
+      "path": "fixtures/repro_protected_bird_world.gd",
+      "sha256": "17b7665ba0bd0bfd497fb0d1eeaee837cc38050faef5cd4254a1ce7dfcf9c1f3",
+      "blob_sha": "668a7f2cefcd91e8a824425dd6514935607f1d12",
+      "status": "new"
+    },
+    {
+      "path": "tools/capture_wormhole_native.py",
+      "sha256": "8f2266cfeaab4cf2659394384534b1ab89328c722a3f1a826128a9c21737c1c0",
+      "blob_sha": "882795a137812662805ada064efa4eaf7dd28102",
+      "status": "new"
+    },
+    {
+      "path": "tools/probe_meteor.gd",
+      "sha256": "6fba2e3589f1f7764e10c288ef9021f9116e07b9de00fbc2f835772096c2a79f",
+      "blob_sha": "129046b2b6a39935e2557a85d492902bb627e1db",
+      "status": "new"
+    },
+    {
+      "path": "tools/marble_native_observer.gd.uid",
+      "sha256": "926b53f771168a78a3a0a48d2f6559831c3301d362f53068b596bbef16164184",
+      "blob_sha": "d67684e30a0138ec97a20001b1a8c6336dc6bc00",
+      "status": "new"
+    },
+    {
+      "path": "tools/calibrate.gd",
+      "sha256": "6ed56bdd7b414e8eb3a3e07994cda35cecc4ced0403b8e93b43eef2d500ba3b1",
+      "blob_sha": "f49bb431f6c277aa76fb576b942ac4cf0fb793b2",
+      "status": "new"
+    },
+    {
+      "path": "tools/pilot_wormhole_reference.gd.uid",
+      "sha256": "22b68651942a9eed4a1860a9f706b38cc173a906d66e9a2d2f294602e10721d3",
+      "blob_sha": "b294718353aa11f586344c42e5a662afef70e252",
+      "status": "new"
+    },
+    {
+      "path": "tools/qa_marble_native.py",
+      "sha256": "b92e24aeee0dcd1eac95264f9a8cffbb91a9d133eafaee32d2968948ee9a6c78",
+      "blob_sha": "f683a9bf8758149635be6dc9d47ed8a43db5eb50",
+      "status": "new"
+    },
+    {
+      "path": "tools/customer_review_phone_observer.gd.uid",
+      "sha256": "62c690eae8c201fc17ebdc024eb935384acbdbeadf8f1a0e5972e0636a320ebb",
+      "blob_sha": "9f6e04b059a3a095b0543ef5dbb2a651f457833a",
+      "status": "new"
+    },
+    {
+      "path": "tools/qa_three_day_observer.gd.uid",
+      "sha256": "316eb35a42e156845459f9b0b191206118dd922151ffd6dd94f885423b37291a",
+      "blob_sha": "bae681a046e2b97238d30975b283ef74193070f0",
+      "status": "new"
+    },
+    {
+      "path": "tools/check_protected_bird_evidence.py",
+      "sha256": "a9df5ab35591bed92d0c7884e8a538ebb33f7ab9b77c5e841b94772302ccd4b3",
+      "blob_sha": "32f8fceab8a386fc034125cc4d34c32ef57a50e8",
+      "status": "new"
+    },
+    {
+      "path": "tools/marble_native_observer.gd",
+      "sha256": "b98bc50388f37a530a72a0c6a046324e3bd488551553d0ab8e693e5280fdc9ab",
+      "blob_sha": "c7ad36bc977c10427162d426096f25bc91a4777c",
+      "status": "new"
+    },
+    {
+      "path": "tools/combined_suite_plan.json",
+      "sha256": "6804bb62c7e1f5325e0ef5e514c9062f3d7cd509bee5f47501db418e9a93559f",
+      "blob_sha": "936643ed59e53c90349ad657e5a001231139859f",
+      "status": "new"
+    },
+    {
+      "path": "tools/qa_marble_native_session.sh",
+      "sha256": "06b9e7b72734a0fe6abecd3104821205a65ce848bf72afa25d4bd390e477b1db",
+      "blob_sha": "0aae8324ae5119b810016acf338a0c787659cd36",
+      "status": "new"
+    },
+    {
+      "path": "tools/native_meteor_integration.gd",
+      "sha256": "2426dae1bbf3a8198b36fa5b2b748b2a50d73a16704da373c1864ea879efd2ec",
+      "blob_sha": "23fb7935d9ba44074576facbc77043c39ad34382",
+      "status": "new"
+    },
+    {
+      "path": "tools/qa_wormhole_observer.gd",
+      "sha256": "934e8c5b24c11b8ecc6bdca0af58538c2553b759d88729907983e6a330f37bf0",
+      "blob_sha": "ae6eeea8e27c6533b77e7fe646446f5b980bba3d",
+      "status": "new"
+    },
+    {
+      "path": "tools/qa_single_movement_observer.gd",
+      "sha256": "b50c9e6c2978305913382652545b22b2c3ad2274fbb307e0ae08f7e33a34ed29",
+      "blob_sha": "96105df51148d5bc33459fcc2ffa046631462454",
+      "status": "new"
+    },
+    {
+      "path": "tools/capture_meteor_integration.py",
+      "sha256": "eb1175762c7b526b6a3c4b4d89d616ca4269173a2e9e2fbdb6cd6a3780561728",
+      "blob_sha": "b69f9f7ac763fc6784578bbeb601e4d1955d4c02",
+      "status": "new"
+    },
+    {
+      "path": "tools/verify_protected_bird_source.py",
+      "sha256": "e5ac0f7a86006a37f1215718333fce6fea875643ce4712844eb559421f0f25ea",
+      "blob_sha": "a0cff405c77dd18aa278777450025b5345b3b72f",
+      "status": "new"
+    },
+    {
+      "path": "tools/pilot_wormhole_reference.gd",
+      "sha256": "20b7aa9434a16bc693088ffd0bf793667c4de6d3093033391e5a39d5d764ec0f",
+      "blob_sha": "209181d733314f733d0aa7b55c0093d409538b5b",
+      "status": "new"
+    },
+    {
+      "path": "tools/qa_wormhole_observer.gd.uid",
+      "sha256": "bf3f47a7691f07d8f105cf1237dca4616092a66873e2ed948ad3f565986dace6",
+      "blob_sha": "4d7b9dde6679ac91b189b9855076906d880776de",
+      "status": "new"
+    },
+    {
+      "path": "tools/customer_review_phone_seed.gd.uid",
+      "sha256": "d2cd3dc2a99cdf76f77d707720066f8d7dd307cb82716a3963e4a1595be6e75a",
+      "blob_sha": "6d218aad6f759840292c1aa86066eeafc97ba827",
+      "status": "new"
+    },
+    {
+      "path": "tools/meteor_guidance_fixture.gd",
+      "sha256": "6ed56bdd7b414e8eb3a3e07994cda35cecc4ced0403b8e93b43eef2d500ba3b1",
+      "blob_sha": "f49bb431f6c277aa76fb576b942ac4cf0fb793b2",
+      "status": "new"
+    },
+    {
+      "path": "tools/run_protected_bird_regressions.sh",
+      "sha256": "b3c76528746202244b28ee7ac7da9fb6381f1aae17d89542fb4629cba695677a",
+      "blob_sha": "0899eedf4c4dad3ddf97913503fd4f7ca7ea348a",
+      "status": "new"
+    },
+    {
+      "path": "tools/wormhole_game_proof.gd.uid",
+      "sha256": "1b8cf1204959a8561e0857835427fbfb1591f9934d2fea6078d9c2dc2632e9c5",
+      "blob_sha": "2f9606a860d473e256310afe6897df1ff443d0be",
+      "status": "new"
+    },
+    {
+      "path": "tools/qa_three_day_observer.gd",
+      "sha256": "56f18cc07009bfe790e9970e031e96e9dba3236e992950ad934c5d98bf27763c",
+      "blob_sha": "d92b2a6d62dd70a9ce8d6554932dc780d73efde8",
+      "status": "new"
+    },
+    {
+      "path": "tools/qa_moon_observer.gd.uid",
+      "sha256": "b08db8334c998f7e9302bc504faae6d7d2a1c6f2a73b9151163d71ea2d4cd151",
+      "blob_sha": "a16b0fe3d04ec89d9bfabedcc985f90c92def6b4",
+      "status": "new"
+    },
+    {
+      "path": "tools/run_regression_gate.py",
+      "sha256": "f809d13f73e2900bdc4172bb41589bd6d9cf6484894e47fa12bd9554ac582b8a",
+      "blob_sha": "44b3b36dac170a1422904769811bf753bba93210",
+      "status": "new"
+    },
+    {
+      "path": "tools/customer_review_phone_observer.gd",
+      "sha256": "6be9bde3412cebfa9dcbc98ea011b37fd3ad1b68e6f07e84bcab68c57f49566f",
+      "blob_sha": "17fdc5a3deb91133da5379a3eaaf4be12c0373f9",
+      "status": "new"
+    },
+    {
+      "path": "tools/subset_font.py",
+      "sha256": "ce65d3df202628ee98c1d6ce82eba194d4953e31ce252121f1ee0868bc07bfe0",
+      "blob_sha": "75aa29ccf581c0bb9dcdc83c8f77d9ca30d5540f",
+      "status": "changed"
+    },
+    {
+      "path": "tools/customer_review_phone_seed.gd",
+      "sha256": "d6255c82f64834b5900653058c1285d4927e0ffc1c0068b88e81f791d7fb6788",
+      "blob_sha": "ce1f4c34681a736953d6d0192126b428d3e42202",
+      "status": "new"
+    },
+    {
+      "path": "tools/qa_single_movement_observer.gd.uid",
+      "sha256": "f346d4d7a3714179766948d7beacff5be627861bd9e61bd72c0fe5ff3ddd084b",
+      "blob_sha": "19d60be69a3fedd31fc487e31054aad10a7e2039",
+      "status": "new"
+    },
+    {
+      "path": "tools/meteor_integration_fixture.gd",
+      "sha256": "aeefca449f4f91c997b09366746e1ac8a0ea4b843a03699df570079e38db062f",
+      "blob_sha": "81355b760a558e440556873238a978ffde195f76",
+      "status": "new"
+    },
+    {
+      "path": "tools/qa_moon_observer.gd",
+      "sha256": "c4cd0c2619f6037cd84308e50edba47bb775e5b1c28f946ffd0976fba617e8c4",
+      "blob_sha": "d4120ac004496bb08843f2fc977db61655df3060",
+      "status": "new"
+    },
+    {
+      "path": "tools/pilot_wormhole_guidance.gd",
+      "sha256": "1fa673f8ad4286abb75727ebfa2476e97ec40c25b4f3d592673e088418760eda",
+      "blob_sha": "78a116c3f37f43621b0435c501b1f7c77892ace1",
+      "status": "new"
+    },
+    {
+      "path": "tools/test_species_npcs.py",
+      "sha256": "c621d6020de7df076d16281e25ca608a8429b382e59e9c80f34332ab62da1e67",
+      "blob_sha": "ad1888ee3f380a36136874959b7dc674bc1f18aa",
+      "status": "changed"
+    },
+    {
+      "path": "tools/runtime-policy.json",
+      "sha256": "e1c5e21fa3eaecd5e16709fd827fd071be8dab7357e7dab4de2cf5d081702ee4",
+      "blob_sha": "0cd2f513a2eb4a82d3f9d8375bc29395fe40b47c",
+      "status": "changed"
+    },
+    {
+      "path": "tools/test_protected_bird_suites.sh",
+      "sha256": "9666aa72359e29c3dc31ede5aad473a605182813b35c30b7af10fc55fed306c6",
+      "blob_sha": "a4eeda469967cb515a1e5b5aebdb83e63ac348f9",
+      "status": "new"
+    },
+    {
+      "path": "tools/check_protected_bird_run.py",
+      "sha256": "769011f87c04cc2d91c2713ec6eba95c1f94c0bd2838431a4d868fac2cbb9337",
+      "blob_sha": "fca99de3a0be0a2ef66f30e9688b1e8418a3dd0b",
+      "status": "new"
+    },
+    {
+      "path": "tools/moon_offline_guide.gd.uid",
+      "sha256": "ed580f4d575d180c699bcf32c3639afbfec2dcc45b18b60ebc7c6aaff4bb0207",
+      "blob_sha": "b9fe802db89e4ecb154dbd1256c86ad37a01cce3",
+      "status": "new"
+    },
+    {
+      "path": "tools/test.sh",
+      "sha256": "2adf97b4b365fd7c4138da57e7c503542e950abfaf56886bf9601d63f8a4c68d",
+      "blob_sha": "4ede9420136813341b1e107f30b17c57a2a16f0a",
+      "status": "changed"
+    },
+    {
+      "path": "tools/wormhole_game_proof.gd",
+      "sha256": "f91eff3aca622ca6016854cd5c72f9b64f97deb24595ef4aa8db201013f12b8f",
+      "blob_sha": "391a385bc9a89692c30d318cc6d2b021f14f6f74",
+      "status": "new"
+    },
+    {
+      "path": "tools/moon_offline_guide.gd",
+      "sha256": "f289dfcd06d68873b98aea3cab7f80b35d6a744d86a8b5b6cb27a0be9abff135",
+      "blob_sha": "d75c93128b0dbcce5d2746ac42b1452edd0f8c84",
+      "status": "new"
+    },
+    {
+      "path": "tools/qa_customer_review_phone_native.py",
+      "sha256": "d2a0cd9b09e8579c38572eea0f7387fe8a93db06d825411f72fb0ed5372df066",
+      "blob_sha": "de320147b2694c9047bc0d61271ea3300ae4a499",
+      "status": "new"
+    },
+    {
+      "path": "tools/aggregate_source_support.json",
+      "sha256": "39acc5b40e47523eb61261474f529d66427f60a0fbf0a3dca478f0f1dcf18e06",
+      "blob_sha": "07d053c5f032df9d24b7053913f6aab95bb17a93",
+      "status": "new"
+    },
+    {
+      "path": "tools/pilot_wormhole_guidance.gd.uid",
+      "sha256": "7fd5e605129ba5b091b1a76220acea1b851deb4b15b9f5f88a092f2cf83472f8",
+      "blob_sha": "4825a45bbe6121e25f7803bb5c14ff578f1ce691",
+      "status": "new"
+    },
+    {
+      "path": "docs/QA-v5-customer-reviews.md",
+      "sha256": "b2b0a41eb496ad5ecc19ee0a85dbcc2a9ccc3a6e219424acff40c7512527723b",
+      "blob_sha": "a9bd9b368c5e33d623e688cba02733e6f6336388",
+      "status": "new"
+    },
+    {
+      "path": "docs/controller-input.md",
+      "sha256": "f2b8ed7c5728d28da97e0b27b392d52f61a095f509cda4dcdac02d7a03d58f3e",
+      "blob_sha": "5b907e7bedd6fb38a384a48f929843bc2c918c51",
+      "status": "changed"
+    },
+    {
+      "path": "docs/extreme-build-slice.md",
+      "sha256": "f63ed6ccdbac8dc06e97e02f3342a2b0077a9780d85767a8dd02c7eefcf72f1d",
+      "blob_sha": "d1762520317bca97e9e90137b76c23e7d4c0612b",
+      "status": "changed"
+    },
+    {
+      "path": "docs/QA-v5-single-movement.md",
+      "sha256": "7242266732fb11d90c8853f3f4d908a816c798c1563b291e88ee003d03aa06a7",
+      "blob_sha": "dfcac8e29d6afad92e4aad74157751b72de5e3fb",
+      "status": "new"
+    },
+    {
+      "path": "docs/shop-locomotion.md",
+      "sha256": "c6f2693de5c5130331f6c2fae79ebe3a8552e6efd34d127875d0a888a221c7ac",
+      "blob_sha": "46c36014cf96ae9aa0700b672e49426fc49871f3",
+      "status": "changed"
+    },
+    {
+      "path": "docs/QA-v5-three-day.md",
+      "sha256": "53f00daa47d83bc792e3f6b283033c94b77ab97062f0fe2a38d3414beb8e7d71",
+      "blob_sha": "4070cfb3161d0b549f9dc49dc9d29fee7f7b0d9f",
+      "status": "new"
+    },
+    {
+      "path": "docs/QA-v5-bird-readable-checkpoint.md",
+      "sha256": "c7f3e611288842d73a1b7adc790252e7b18a4fab0a69d40d39fec13f76da5839",
+      "blob_sha": "44a60877c1bc850bb1a7d74a7698a8d9ee3710f8",
+      "status": "new"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "sha256": "6e5e9a6d1852b073f58f0f3cd847de8fb7d50381416be35854f8904c2dbc91df",
+      "blob_sha": "24620754772974df1f1a9f23f24deab87216da56",
+      "status": "changed"
+    },
+    {
+      "path": "docs/QA-v5-rigid-clerk.md",
+      "sha256": "c7c89850b4590e6e20afd4d7d5f244bbfedbb38e50b6f45bd7e9fab115d75360",
+      "blob_sha": "de5912cbd33dab919ff5d38614eae0bea15db910",
+      "status": "new"
+    },
+    {
+      "path": "docs/QA-v5-wormhole.md",
+      "sha256": "b2c1ec5f2744b3250003149cbc803885229a179e76fe3a76ff25d82e3f8140b5",
+      "blob_sha": "8efaa8e20f000e4c04b37eee26bcfda61670e0ae",
+      "status": "new"
+    },
+    {
+      "path": "docs/QA-v5-moon-marble-checkpoint.md",
+      "sha256": "3cca2fbf4f75317bc4d22a8b808fdff255736828b4df18d64eba50d869bf3ed4",
+      "blob_sha": "b4a9e703b20288e8452b87808b8fd8eb8d44744b",
+      "status": "new"
+    },
+    {
+      "path": "docs/wormhole-delivery-slice.md",
+      "sha256": "cc9024e25963fe95e0801166c4757de5a8f68540aa1fd5cc72c82eb21e7753e7",
+      "blob_sha": "e4a0ac5a0fd2e17d956c2c7ca0a53b9840fbc777",
+      "status": "new"
+    },
+    {
+      "path": "docs/QA-v5-moon.md",
+      "sha256": "eb355d0a1c733b7b4bfb503949392160a22816f0ee73a7633e866418884ba485",
+      "blob_sha": "4d1db55252bf142d109b2adfd3b0ba8e3c0dee81",
+      "status": "new"
+    },
+    {
+      "path": "docs/replayability-roadmap.md",
+      "sha256": "e8c6a81cdaa8deae89542386937b467d9d3ec77019f0df962ed5cc0f7dd2a880",
+      "blob_sha": "232ecf237defb800be9963a8dafed6c1c33ea1fb",
+      "status": "new"
+    },
+    {
+      "path": "docs/QA-v5-marble.md",
+      "sha256": "e34587dd92b4aaf5963f0f9ec47d4fa81d7458544cca0eb4d39f8d70b43fad6f",
+      "blob_sha": "823df7537f74e27a1b29782320b0fd45a8db073c",
+      "status": "new"
+    },
+    {
+      "path": "docs/QA-v5-pilot.md",
+      "sha256": "97a99f94559466fb8b43e2301563f105e7b8432a7e23333ec01d0bbb181ba963",
+      "blob_sha": "ada471dd1d1bbceeb95b15ee9f1d1f2d835a3e6c",
+      "status": "changed"
+    },
+    {
+      "path": "docs/QA-v5-seeded-meteor-human-checkpoint.md",
+      "sha256": "5972dd42783e76c4b6ea7658baf460f2863f4e31766746c59e0633c82e722614",
+      "blob_sha": "3f6fcc2f31b10b3dd3ba0eafa8ed93db2a2c74a3",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_readable_moon_lifecycle.gd.uid",
+      "sha256": "c10348aff30fb1f22f430ffe51ff2b2bd35aafea92647c6e559b6effb98a36b8",
+      "blob_sha": "614e581388f04f514efb946d8f93401ad51400a9",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_npc_sprite_2d.gd",
+      "sha256": "f58430daa4ec5713af9544e9631ffaf1f5d66680bfca7f9c42b0617c0228019b",
+      "blob_sha": "4426a1ce413ff4ac7c220d1c3065ce6d45440924",
+      "status": "changed"
+    },
+    {
+      "path": "tests/test_protected_bird_copy_context.gd",
+      "sha256": "9f991a12dd239a1a0f1149c487801ddb312c2c57681154aed87178498b79277a",
+      "blob_sha": "8f3c4a0fa023e759daec3379e591ba80deab9cfb",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_readable_moon_framing.gd.uid",
+      "sha256": "9283acebdbc3f90b174c27d9fbbc967f580d7c31b815e98a4780eda46d0ed0d1",
+      "blob_sha": "8fd97dab98a6c9654ffb3b24aaa06b18588c76ab",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_protected_bird_validator_variants.gd",
+      "sha256": "b7b82d10aa89c39be15bca5e365216a298c8e40daa1b53d1faf86ef1294c8535",
+      "blob_sha": "3d7e854d5337bbe3d7129bf36eef0293b6b44325",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_wormhole_hud.gd.uid",
+      "sha256": "9ea07ff676d4467ec0b0c11f514092d8167ed4fc231d77c67d6c60fe9a7eff50",
+      "blob_sha": "ed1e233b98d87cd5443d3c3c3ecbe2454488c071",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_review_ledger_integrity.gd",
+      "sha256": "8d65c152592b41ed5c5307a430de91bdd2d4f18ee3806c1b955a06d4f11acea3",
+      "blob_sha": "dc072bd2bbb7400b7b56ff8cfd7b251e55f2140e",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_review_hud.gd.uid",
+      "sha256": "d074f6ec876c555cd4f30a6a26ba60cde7200094f7158cc9e7830b722092f45b",
+      "blob_sha": "2206dd69540d75c4e7a846fbe2a9cb0c9c31c879",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_workshop_economy.gd",
+      "sha256": "ba693559dd7424d11b633cba9374b2a9aaca3dff961d567c24786dc1847415b3",
+      "blob_sha": "c65b3be30ff4851f041eb831a7c9e14669359d6e",
+      "status": "changed"
+    },
+    {
+      "path": "tests/test_customer_review_phone_integration.gd",
+      "sha256": "daaec9c9128a2fd1cac560bd44367d6cde342155d3b0f923a76ee8d5c2238595",
+      "blob_sha": "edfd36c7d1c534885afeb31aff4673c1f576e523",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_moon_presentation.gd",
+      "sha256": "6d05cd3fb1ca126a55581c993a85d46584d5d227f46b7ad98e6ff27952201d26",
+      "blob_sha": "f59ba6743b3f63e66d276c42f725b2a7bc034559",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_wildlife_contact_v1.gd",
+      "sha256": "01b916bcc9c726301eca4f117605f2d4fc31d11f6846ffc8600344505fac036b",
+      "blob_sha": "8f6e87df34468976bbc571aa78eb527090246ba1",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_protected_bird_fixture_io.gd",
+      "sha256": "f1ef0ca7d82b1ff518473771d16b80d30e0473c9e4598fa92f89aea0e6ec67fb",
+      "blob_sha": "fc69470ba0adddfb270c4dd234a22c5fe9af46ee",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_combined_authoring_policy.gd",
+      "sha256": "630215e39823c160940e242fb3d31587e27242c543122cc46a0779ec346ab8fe",
+      "blob_sha": "960de16f8f1853e50a9bda173dc851cb1cacb604",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_pilot_input_lifecycle.gd",
+      "sha256": "f04874a48a32c6ffb882caebf2326db797c5533932074e6e98de4ae854377094",
+      "blob_sha": "ef8de4c627492f4266b64820a13852133b6288f1",
+      "status": "changed"
+    },
+    {
+      "path": "tests/test_flight_feedback_hud.gd.uid",
+      "sha256": "e847f1ab4dbca5f940db0484db9a8bd7629c7636a5b40f18fa5af20595ad537d",
+      "blob_sha": "9415bf9f7c45f1d8520fd7ea4b03327eacb3599f",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_protected_bird_numeric_witness.gd",
+      "sha256": "5a3f79ac77926d54df9157f0b856c31b8e49498b296c33b0abca202b14572d53",
+      "blob_sha": "2a1e4beb03af6b11ce27a0b4dc5c26577eeb50c1",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_clerk_rigid_motion.gd.uid",
+      "sha256": "ed292aea90a1aabda99e6307eed705ee7f1e3dd6223ac283319967e0d3997742",
+      "blob_sha": "7387a3a235d18a124b27ba68dbe898b852415dd1",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_customer_reviews.gd",
+      "sha256": "a3cdb276f3b4f18a5bcb70514d4330a05a14c062189e4d7f9cda529d6bd5a006",
+      "blob_sha": "9c329e0504a1304bfc1d245de233050200892339",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_shop_locomotion_2d.gd",
+      "sha256": "8e7d80a6cecf2d63212910800a6c1f2ff2c3f2b7a1e1878c308892f225d56c84",
+      "blob_sha": "637b625685fbd21bcd851669623f08aaa7d73cb0",
+      "status": "changed"
+    },
+    {
+      "path": "tests/test_clerk_rigid_motion.gd",
+      "sha256": "06f24866e2bbae4a056949b36ede93609cc919e9c70d981740649371013f00fe",
+      "blob_sha": "0ec7fa389a7d0a454b1c9875bf5000068d709c68",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_meteor_variant_validation.gd",
+      "sha256": "88371b43abb89ee8fe529aec0645d2c962f23bd724020542a31102b2adaf2ef4",
+      "blob_sha": "8b3fa992c39049ed2311194131b748e6cc94cca4",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_shop_investigation.gd.uid",
+      "sha256": "5c29989f5235c8bf20011a29a814f666170ccd0217fad9a32a2574af3b2689db",
+      "blob_sha": "045bd88154745836d0829fdc28bacdf3f3e3649e",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_review_recovery_lifecycle.gd.uid",
+      "sha256": "ebf610358369d2d76cb88cdb12060153d3780088fca6fc42823f762d0e2ecba4",
+      "blob_sha": "1ea0d74d0d018af3aedefa76e543af626dbae607",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_seeded_review_transactions.gd",
+      "sha256": "3699e9301409932b9bcf0af6bb32272c049c25345864afd3b30603cf670b09f6",
+      "blob_sha": "e3f08f0aaea47035adc0f6be31bda4e6db5bcd55",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_counter_parcel_support.gd",
+      "sha256": "79247df9ad04d4f1e6d1d78068a05389d768f1c18c85a12c09e867271a7aa7e3",
+      "blob_sha": "4a71627b792497d1c4a83afe3d6af32eb9688608",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_cargo_transport_2d.gd",
+      "sha256": "2b5f61abe4f9aaa790a962a5dc4bab1ad30018c472edfae1f5338a1cab136436",
+      "blob_sha": "4bab1b2162929f289da983893426c1499497e5d0",
+      "status": "changed"
+    },
+    {
+      "path": "tests/test_flight_feedback_hud.gd",
+      "sha256": "5347ce507072e6d74a65d6a4d5ee1f90f1bef1ace1e031ead74118c73203b0b7",
+      "blob_sha": "86171fc931b238ea02c9578b5353a6289e9e8618",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_protected_bird_rays.gd",
+      "sha256": "34310775f08199586d48338fa8e68b1ca6995c9ed03a0f1ab7ee0561cad6f7d2",
+      "blob_sha": "c3ad8070741e8911f999317d6acfb6dca8fb0a40",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_moon_contracts.gd",
+      "sha256": "ba52de8380dbd237cf21ac2a1fa1bafa294bfdaf5551a8f01a701a1da24e23db",
+      "blob_sha": "2594209543d509973d541654fa2aa4634e797508",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_review_hud.gd",
+      "sha256": "25a9c5f7a4e78e2b872d73e3cda8b6c5ba8356b793976d93aeeeb006c2783e74",
+      "blob_sha": "a03a19ef7f4315c7912877a4a45fd7b9914538a8",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_seeded_offers.gd",
+      "sha256": "18a10f6c2804de45e2b185bf751d604b086cc9d3b38c6d61b435d700923ad8fe",
+      "blob_sha": "aaab366e5dfe38895cb50bb78eda08c00d7fce08",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_protected_bird_hud_bounds.gd",
+      "sha256": "ea09907816dde51d920760d853e209c110f1b49f8d0f8f35c1c6ea7f2eadb98b",
+      "blob_sha": "8d871be405a9a6069f85eb62c24e400fe38448fc",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_launch_flow.gd",
+      "sha256": "e8712629e13b6f8a93e5e2afac4a5f654ac9eae9512bbaf998c0b670419d7211",
+      "blob_sha": "9103d254b0d3dbbe631d7b717eae6ace7fc6e29d",
+      "status": "changed"
+    },
+    {
+      "path": "tests/test_wormhole_hud.gd",
+      "sha256": "fea687f1b7558ea12ca737c739ef75933f12f96452c0fdabe9204c91c46ba5fd",
+      "blob_sha": "53ca44f91ab5704ab1915ecf343b16c14c07ccab",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_protected_bird_chronology.gd",
+      "sha256": "1adf04f9e48814baa7a0f15084ee8ffa5739decfd29f4a64b389ace57d733304",
+      "blob_sha": "1d30eb4c99489aaecda92b60e3ede47067b7dc13",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_customer_reviews.gd.uid",
+      "sha256": "b385140c616c3b4f7c68d2b7c1c6e148643c7b54649b8d5a697a2db1ce26953c",
+      "blob_sha": "9620295eb88eb89639d493da3bda9fc9225605c4",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_wormhole.gd",
+      "sha256": "380a728edf1e3097c5507ec37d3ae20bd90bafcab999fba342672246f7014ca1",
+      "blob_sha": "d08da9fe60981a6048900b03fe21c2e8d21a6c3b",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_wormhole_controller.gd.uid",
+      "sha256": "94007971b2cbc5472630a807b466ab61b9f063a5216f33e5d4907e2c32786123",
+      "blob_sha": "111c43930fa57ce73db35af5495cb41c0675b755",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_neutral_actor_lifecycle.gd.uid",
+      "sha256": "bb58ec0f41b840290d42573a5eb57f7c2d4d5bea881fb8aa94b2363b4c5e3930",
+      "blob_sha": "4305efa25ba37af72342bbc4d5b2d8ee13a456f5",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_clerk_single_walk.gd",
+      "sha256": "51f6249673247021806926a66aa8f7af761f12477057236592f72e9996117d1f",
+      "blob_sha": "5874bb2d89648eedc6986fdcce6b49900fa8cfbe",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_review_recovery_lifecycle.gd",
+      "sha256": "36443dbbae715de1cd99f58106c669da62999f1602ad8649a47ef3f6ea25c91d",
+      "blob_sha": "02169b39b53e08cabd3cead38f9828cc17d28706",
+      "status": "new"
+    },
+    {
+      "path": "tests/qa_v5_native_moon.py",
+      "sha256": "c5f0ff319215f541c7cba5e5935163659721edae57727565810429df1bdcfefa",
+      "blob_sha": "a5e4bccf22660fcc4dd3d24f6ae82b97bb58f114",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_protected_bird_presentation.gd",
+      "sha256": "0bcd4a67285fdf2c6d248340cdb08b3b71093b0ea0cce348ecab50570e63d062",
+      "blob_sha": "e99c2dc4719711849bb43151c2c9a95b287cb840",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_corridor_framing_matrix.gd",
+      "sha256": "4fa01cfbd92434b8e961e4b415ab8019bb7373bed8c01ebb27e2844180c37100",
+      "blob_sha": "2cd0e022f98dd60a26c5b935562de6c06e5966e8",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_extreme_controller.gd",
+      "sha256": "ab0cfa87e768bc7e21768c9c8f41d6e90d9c164fd651035409fdce376461b25a",
+      "blob_sha": "05ce2e37ab6e63e25cf155bdf28481d0ae44597c",
+      "status": "changed"
+    },
+    {
+      "path": "tests/test_recovery_integrity_fixtures.gd",
+      "sha256": "d6a81e256f86f67cbeeba9d7c03c9a1e16f2f1d0086f61fd56dbf480bb660149",
+      "blob_sha": "1bc2fa689860bb163d48329fe05dc6014cba4778",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_wormhole.gd.uid",
+      "sha256": "058efc8fcd94f84ccfbf5662f10a21a52edc9d64cf99dbcc3a4039face8b851d",
+      "blob_sha": "4e566e986c27d9cdc5dda0342fb53383f994c34b",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_seeded_integrity_seam.gd",
+      "sha256": "bc1eb73adeb420fbb9a638b2565082329e17e792d915ec9cda6739115e4c19e4",
+      "blob_sha": "256babdad87dc312be591708ca548d09c0c27f07",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_ground_contracts.gd",
+      "sha256": "774ee0173f64efa13790d5e2821518588d2728c14d7d8d22dc90838ea604782d",
+      "blob_sha": "45f65b6bc311f8569d7208a1d2e85f5e5a87b012",
+      "status": "changed"
+    },
+    {
+      "path": "tests/test_wormhole_contracts.gd.uid",
+      "sha256": "a019ac075595c79155ed127f6ee3185abeb84bc7d46508252041011a3a74d0ea",
+      "blob_sha": "fe328174d8b8a105bf296a3e6ead4b57d2556b9d",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_flight_receipt.gd",
+      "sha256": "2583049a5007e97ce3dbd62b585a5e7163aea7217de786ac1f5871f3356e0090",
+      "blob_sha": "fb7dad625d82699e36bfda811b86ac6f6b30a5d7",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_readable_moon_ascent_lifecycle.gd",
+      "sha256": "bf9b6790edfd651154262dc6affc0dc5803dda16b48d9b820dbe81d2e1db9393",
+      "blob_sha": "fd3ce1eb8a6f015b524bfb00627f479bb8a44fa3",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_moon_route.gd",
+      "sha256": "02e85de7bda29756c58baf57ceef7c066f6c4e35be5dd92184cb0d6593d2467b",
+      "blob_sha": "25773d578e97fae4a34686309aae9b0bfb75270b",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_meteor_offer_integration.gd",
+      "sha256": "724604bc90e9be56c5e24930e3fb648a554555c93156729ccc6d0743d528a056",
+      "blob_sha": "717445df226ac739409a34bcad0778cecdcb7dd1",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_protected_bird_reviews.gd",
+      "sha256": "2b1e4f237a8780591e6dbedd4f383fd922219c842270ebf164fdb51287a44001",
+      "blob_sha": "debb018c99c2fb42015000b64d45d33119fcd508",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_seeded_startup_recovery.gd",
+      "sha256": "f8ac9b66c9b51619fb67f4bf4e3153df3000e462724f77be633aa8bb56652c9b",
+      "blob_sha": "da6e1857eabc857313d417644591230094bf29f1",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_actor_motion_2d.gd",
+      "sha256": "3d62510fe4b2f4b7d5e77c9f12b22627f5e83d9b0c8c943a78141bf1670b42d2",
+      "blob_sha": "71872e5ae89cc1ac2bdd7bbef8d6913b945f9bad",
+      "status": "changed"
+    },
+    {
+      "path": "tests/test_protected_bird_cue_lifecycle.gd",
+      "sha256": "6fd51800dadcd7996f62042ac546590a928f1bcfa304cd6079d363656716b8d3",
+      "blob_sha": "5214adfb6df491b19d62c5dd0ef070b15a4d486f",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_wormhole_contracts.gd",
+      "sha256": "aec6a3f45c1d230e10148ed2c65a49557f7e16fba2a51fb439c469f02b475750",
+      "blob_sha": "e4705f7cab38bef68521cedc1b8e8ccb982d214f",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_neutral_actor_lifecycle.gd",
+      "sha256": "6ba14ccc9e64da4ca7ff265b918645629832b1c54939307cdc70c04e30af6faa",
+      "blob_sha": "bf50c1ee2a1308bcda70f1b8b6f2ce4bd4d2ff64",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_clerk_single_walk.gd.uid",
+      "sha256": "42010639bf1c639eecc17d9c65979b289b163699061700468923162a8ca285a0",
+      "blob_sha": "1bf1f70fba2f8352e242bdc08222d96601ed8d71",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_shop_investigation.gd",
+      "sha256": "fc804fb6b639129d82334914cd980a8a993ff7420d7c6ecc73c8c35410a389df",
+      "blob_sha": "2cf80a0f19c05b35b5e1cf8b0ca6093a95ea025a",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_readable_moon_ascent_lifecycle.gd.uid",
+      "sha256": "f165f98157f044d4c0a85388d9bc772e59b2e0150c2243d4cbd62c164e055924",
+      "blob_sha": "0da96abad177a90a5c8c76fd50ba386c839e5449",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_orbital_meteor.gd",
+      "sha256": "51bd204e5eb05428830a2dd8282b11b0d1a90534283aef3f96fc14143518d862",
+      "blob_sha": "d0db8c207dd397f1068b2bb5630b788b34884622",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_review_controller.gd.uid",
+      "sha256": "25095fcf47ca643e06e1ef5373c1f8edaf1026b1395c10ce734be3909e73d02a",
+      "blob_sha": "e1d7c8817bfefb95b0ba3089cee5f9e4bd0f4522",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_readable_camera_applicability.gd",
+      "sha256": "65261a4a32c2996c51bb532e94102bcc090776ba8b789b5fc1f1be68dab2d844",
+      "blob_sha": "863760d1db5168e77f081ec7e3ed0b18d38281bc",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_three_day_progression.gd.uid",
+      "sha256": "871eef8ae8bd03b8ee3eb6a63e3f2ff75fcc51707fe83ba75ab12157a9335105",
+      "blob_sha": "4d2f43a50221399e765012e9da0dfe8b31266c64",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_customer_review_phone_publication.gd.uid",
+      "sha256": "13fee5bfee51984bd48f656801152d3ddf7cf59b09549c0915c8268e17e4a514",
+      "blob_sha": "75d9e317066e445de3de7adcb472343330dfae20",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_protected_bird_controller.gd",
+      "sha256": "10c7944c76790d3f7eb47422fd9d3133019179ad95fd115d0bf057b165dc7ce3",
+      "blob_sha": "bff89a4442b5ad2f5a9a75035424c71fcf487804",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_replay_seed_integrity.gd",
+      "sha256": "386a25a8e98ce3c81d3e18bd78159d42ca2e85a59dcf1fc2d6db51ed97253aba",
+      "blob_sha": "f4986e2b971bb5c71bb8217c1475d4def9d11b23",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_counter_species_integration.gd",
+      "sha256": "891a8856c53cc2c8219c24456df959430affd802b9d1bc736820a8eca8313d72",
+      "blob_sha": "2f2c2c59aa4d03a4b0606defd594c0ae7f60a913",
+      "status": "changed"
+    },
+    {
+      "path": "tests/test_shop_sign_2d.gd",
+      "sha256": "9c1e80a3f0a480749ba9cb4f4d50f11294a438b7821271873b7869dcd37c8b75",
+      "blob_sha": "234cb5c7b11ec6082559b80adb738cd8ad40b740",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_protected_bird_routes.gd",
+      "sha256": "d04f59559b79cc7eb3641cadf32657fb07ff7fed019b26156ce5cbf885cfe316",
+      "blob_sha": "eda9edcd34298189ad1eb9a3f7df56306c3e3822",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_wormhole_controller.gd",
+      "sha256": "18d4bd7c003ce268f88e4fb7043ab77b29c8cb047edb15f9691852788273716c",
+      "blob_sha": "47df50773f999d655cbc343e05fbd50d49e66af8",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_shop_sign_2d.gd.uid",
+      "sha256": "976d2a0a78eda08f73b91b560015d7ecc71db36c9b9c83b51a086963acd35353",
+      "blob_sha": "aef8ec0babbbf0f6cc9850358052f9e729fc6f0e",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_flight_destination_copy.gd",
+      "sha256": "e25b6f2a95d61a0157e97c2268054ada5b0cc2adc1eea6fd53323f93ddbfa154",
+      "blob_sha": "78a0f9776300a60b3dd23d5181cae9f82027badb",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_wormhole_world.gd",
+      "sha256": "5b18d1acd3dbe29be1a9c0d7bf69f68878954203000413427ff6df5e84944392",
+      "blob_sha": "cb05d9edf118a54070939a668a29d4588c65c8be",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_three_day_progression.gd",
+      "sha256": "9a2d45e2b7bcc3dcac8b69a9d1793b126b30ba7e859a75b5ea5a22df0f907364",
+      "blob_sha": "0525a3ea889201d5c84ffef9537f2b97082ae54c",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_moon_contracts.gd.uid",
+      "sha256": "2bb8e4749a9f20437aa2c71bd69832310806d2cd5fb005576d41bcdba770ea08",
+      "blob_sha": "c9b5810cb2b86a367a5be781768c43b83449f73d",
+      "status": "new"
+    },
+    {
+      "path": "tests/qa_v5_native_single_movement.py",
+      "sha256": "ffeb0be14c18d601405dd391429a3148524fabfdd92355038f374308db90054a",
+      "blob_sha": "81a7090369782bf6638cbc52665d41e97f6ee369",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_shop_locomotion_world.gd",
+      "sha256": "a0950a9d60bb3cefc271d0514188f65705f812990fb1f828e4e62026a9285e38",
+      "blob_sha": "db3acbdb76a0cc9f1cae9a0aba9472d756906824",
+      "status": "changed"
+    },
+    {
+      "path": "tests/test_readable_moon_lifecycle.gd",
+      "sha256": "b927ce4d42b59d3ee1d295a84350377bee302352c44f2cf8b80750d40ea8adc7",
+      "blob_sha": "d7cdecc128bb299d8d9f77ba9323dd1710ef381e",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_readable_offer_adapter.gd",
+      "sha256": "e235b2f631f4df0ca12768f009a5b000344a480bc8bae9707cb03e97b7f8b1b9",
+      "blob_sha": "fb71e0beaf6ec7a94478df7bb69c16c1e485ed63",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_flight_receipt.gd.uid",
+      "sha256": "c7605a0ea3a2f9a063dfb1192824aa2a53c6f1473b4c086867a48179a1ac184b",
+      "blob_sha": "8a586a38129a1df66e6b9bcd20d821aafe66b12e",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_readable_moon_framing.gd",
+      "sha256": "edb6a02703eb2310363effcd5db5b5a17d6416d0924862ae350e8a048c5643e2",
+      "blob_sha": "51052868bd4c7e6ba2327e95e1434bcc6c1d4901",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_review_controller.gd",
+      "sha256": "0b019182dc01b8284ad23e2d71b1cf5fafdd195f780018ce8c6048fbb821d5a0",
+      "blob_sha": "5d12fc6bf23523b6f2c32da38749c39df2301ced",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_moon_presentation.gd.uid",
+      "sha256": "fe1a4d364c8509b68daa0fe02d2b04c12f2261e65ed4be1c7d6218dcf45c628e",
+      "blob_sha": "5d0d9194b8638355cd3afda0a264a7ab005e6ebe",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_customer_review_phone_skin.gd",
+      "sha256": "85d2771993620f2b8d051df4253acfb4bd3d149e49fe45b3adda778fcbf5f70a",
+      "blob_sha": "2a741d9cdc707388ae5990b584116007badd221f",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_protected_bird_cue_controller.gd",
+      "sha256": "e4103a459279f34a03578cabcc17e77ab0d218469ce1fc1cd7f7be61a803e384",
+      "blob_sha": "c2cc59da55de8c626ed7ea319f6128b125d21123",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_ascent_controller.gd",
+      "sha256": "a8d5422a2ce28b720f73eecafeca4e12dad96e00a92dd71a7255eb897fd172db",
+      "blob_sha": "4aeb5f434ba46b13e84a5e348c1b7e2384b47bd6",
+      "status": "changed"
+    },
+    {
+      "path": "tests/test_corridor_framing.gd",
+      "sha256": "d34833f5055818f9a594356565a4bb03a0e11ab633d20722a7e1d2beae675130",
+      "blob_sha": "d5933d1b5a4e1188d8b0d3b5eef24ba5edd53f37",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_customer_review_phone_integration.gd.uid",
+      "sha256": "5f6c0849a808843572b218fb6178de1b9c6fb913c3fc4e68273a08781f6295c5",
+      "blob_sha": "b3bc53b4a68b49c75b2ea7ea66474d9382bf1764",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_protected_bird_commercial_routes.gd",
+      "sha256": "7ed83a677191af6346a22370d9b8474e3f8f32d191f5bd43bea3cc3942ae68ac",
+      "blob_sha": "e8dca18a25b240938ed2bda657cb487d3156361e",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_human_npc_lifecycle.gd",
+      "sha256": "6d5c163b3d8406de8e6db8b76143eb6c35ea06d54ae624c3a01dcd31d71d3006",
+      "blob_sha": "5ac435cc9056b2624aa0f706ab3a71b4d7530d5a",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_human_rigid_motion.gd",
+      "sha256": "41822c5be4a96883f81052c76e1c9c86d91a1738c91d1687f9d7b4fc093bbe72",
+      "blob_sha": "78f476a9aae50e25a4132c5ef8a8c0c592262daf",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_customer_review_phone_publication.gd",
+      "sha256": "8e85a6e3da5f9c4be60feb5658958be306c3208f6c32b12dbc8dedf6221ed553",
+      "blob_sha": "60bf4f95d16c081db58cba52eb441743777c6c63",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_wormhole_world.gd.uid",
+      "sha256": "b7595cd3172d631e01a94f9145127cc607ef93a179f5b8cd0cced06c912a57dd",
+      "blob_sha": "84245a47f18a39a32395a6361a324e555a83e99d",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_protected_bird_foundation.gd",
+      "sha256": "a107ebf31fa119699b6fd1c5b96872df43470d0e2efa1ac9cfb3aaf3e58204cf",
+      "blob_sha": "eea93d87efa119e1c86971973dba52e2a6a045cb",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_recovery_integrity_lifecycle.gd",
+      "sha256": "2007df0df52e5daff72de6a428b30b08ea6e28e2da59c8e6cd0ec94c42e51345",
+      "blob_sha": "737a387c12caa834d5ce6ef2db5494249bf491a8",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_moon_route.gd.uid",
+      "sha256": "acad08417da120c9c9a1de1371f045b0273e7c7dcd0360a944e01b00e74e1c56",
+      "blob_sha": "b75e9992f6ff8f9932f988ed61713056754a6685",
+      "status": "new"
+    },
+    {
+      "path": "tests/qa_v5_native_three_day.py",
+      "sha256": "b3cb8b3e27b4b7a208622f23598be19a41b13928a3d33af56509366e8e3bbb74",
+      "blob_sha": "9d47fcf3c08c4b080e90a297126c10b12d0d45f1",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_ground_presentation.gd",
+      "sha256": "3ea9d5cf9915fb20502a859c61401dc6b9acb96cb14378a0ed9a9555bf1491f9",
+      "blob_sha": "84f4b45ba949750bb0feb083db77a42216baf66b",
+      "status": "changed"
+    },
+    {
+      "path": "tests/test_otherworld_presentation.gd",
+      "sha256": "49e1977dead6c633992a82b21e32bcf5fbe174c331081ea332bc7e42d1a2d77c",
+      "blob_sha": "4f5deb001f23e7878b2ebc28d4cb13aebf0219f3",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_protected_bird_legacy_parity.gd",
+      "sha256": "6413fac7ec43d80cbabd14bfc5bf04e4100059f5627f4c952947358674722cf2",
+      "blob_sha": "3db3b11e695fa0365553ce08a1b8f89f957943c0",
+      "status": "new"
+    },
+    {
+      "path": "tests/test_otherworld_presentation.gd.uid",
+      "sha256": "b6c51317b2fcaa01c3c2c5d6bb5a4e6bb5393581ff0c6ce35821781fd9dff898",
+      "blob_sha": "8312246920ceb934870285da6c305c30317950af",
+      "status": "new"
+    },
+    {
+      "path": "scripts/offer_authoring_policy.gd",
+      "sha256": "d8b39a61a78e10de77b5809b62e8fd269ccf3e7bb160a262c6c4c9bd7873adb9",
+      "blob_sha": "281aa7c7532aa49e01c4b67ed520aa9d4999603e",
+      "status": "new"
+    },
+    {
+      "path": "scripts/flight_receipt.gd.uid",
+      "sha256": "8515d56ff5750ec236f5a7338af55ccf03885c9742d3daeb5bdfab687844fd09",
+      "blob_sha": "f73b90578e51cb0c9256144785bb34599c9263f9",
+      "status": "new"
+    },
+    {
+      "path": "scripts/economy.gd",
+      "sha256": "f9854e2ae2a2ce3e36b3a049e575529b676fd8124fbf58e1bf1dcd7040aa12b3",
+      "blob_sha": "afe45b43e07327136692a7e05bc267aabce720d8",
+      "status": "changed"
+    },
+    {
+      "path": "scripts/pilot_moon_profile.gd.uid",
+      "sha256": "ecac629cd7439b99f28d88193d476b6ac8e54ca4a81a8a821e07066d221615d6",
+      "blob_sha": "df7a8e63d8ecca036471775ca3b520cb3fafc6f4",
+      "status": "new"
+    },
+    {
+      "path": "scripts/customer_reviews.gd",
+      "sha256": "d5fef5d3b6a61ae232cc30afbea00a28755d69a701660c3de5b5b669f8b5c18d",
+      "blob_sha": "1dbf711e78f8c10ed90101c50844614b15a546cd",
+      "status": "new"
+    },
+    {
+      "path": "scripts/readable_offer_templates.gd",
+      "sha256": "6234c6df4a3242fe99c220773d65815163f1a0a8edb63d31f4baafaacab94f4d",
+      "blob_sha": "691700821f9980fb4ce0127b8b45e0282b3704b2",
+      "status": "new"
+    },
+    {
+      "path": "scripts/clerk_single_walk_2d.gd.uid",
+      "sha256": "aed857ef516f9b0031ea91fb43651eea81bf4d0740237d5531abea5ed48bcc9e",
+      "blob_sha": "83033a981b90a2b12106b1f17da02fba25b50019",
+      "status": "new"
+    },
+    {
+      "path": "scripts/orbital_meteor_offers.gd",
+      "sha256": "410d58593e8333e7e848ad13a43e867ccc13bd9dc7df4d9160ad1364f54c6f22",
+      "blob_sha": "958b9702b3b8a1bf603c9f33a5b7a25e9cb01d02",
+      "status": "new"
+    },
+    {
+      "path": "scripts/pilot_wormhole_simulation.gd.uid",
+      "sha256": "03863f580a1c76e8a2214eab36f1af8b2c63d60e96a96e4516edb287a3178854",
+      "blob_sha": "bc7cdbafaf4b72e966c15a1c1a3cc76697e5b56c",
+      "status": "new"
+    },
+    {
+      "path": "scripts/customer_review_phone.gd.uid",
+      "sha256": "c7b4acf477ba8038aa629671e7e629858f1b9047edf9b0b8bb3ff5997cacb922",
+      "blob_sha": "5bfdccff5ab77c6cef85f3032ba6262cdf5f8785",
+      "status": "new"
+    },
+    {
+      "path": "scripts/readable_offer_catalog.gd",
+      "sha256": "dd58aeb348a5d1d0cd64f17aa4509f8adc32860004ec3877f9d986544269613d",
+      "blob_sha": "33f8ae94d55586997b1c3c8ededeff7f6204a850",
+      "status": "new"
+    },
+    {
+      "path": "scripts/pilot_moon_profile.gd",
+      "sha256": "7d12e0377070f48d69a42ede0ff7b72361706e6a25fa8ea72a1792226695df45",
+      "blob_sha": "032c15027db078aababa0f78f26174f0776b57c5",
+      "status": "new"
+    },
+    {
+      "path": "scripts/readable_offer_guard.gd",
+      "sha256": "06c1b8f0ded036d66c6cb8b03315b55277968bdd2efde8ff6330acf9a88e6489",
+      "blob_sha": "7baa38e87a4f59e6491ccc9213175f6c734a8e5b",
+      "status": "new"
+    },
+    {
+      "path": "scripts/moon_framing_2d.gd.uid",
+      "sha256": "a760186fa38ef2b6f7a3c0a1218afb7052c2d8095782f23a0c09e819886e2670",
+      "blob_sha": "79e1cb6beef8f40831321cdcdfe727e35419ca04",
+      "status": "new"
+    },
+    {
+      "path": "scripts/orbital_meteor_catalog.gd",
+      "sha256": "791493c5a981867088422222b8a838a182131b93af3767c78ab71b6b280bb90c",
+      "blob_sha": "473c7a0a96f2865e7713399038e4e6b727a64ece",
+      "status": "new"
+    },
+    {
+      "path": "scripts/workshop_input_2d.gd",
+      "sha256": "aae59d07cbcd791e2f63e761b713cebef43bd88f4bd5f7478c075951f3a8718d",
+      "blob_sha": "fcf0347d9e1d498a1a20874b060bd10ee2f8602d",
+      "status": "changed"
+    },
+    {
+      "path": "scripts/shop_investigation.gd.uid",
+      "sha256": "15a2f23970daa3566b3fb9f174ba7344ca8f232ee8b66f66329f9995e67b356f",
+      "blob_sha": "79972580eada7ba4d92b0c7ababc8de0964cfc27",
+      "status": "new"
+    },
+    {
+      "path": "scripts/orbital_meteor_observer.gd",
+      "sha256": "79924203d93af17a552f4cefc14f416a50aece07ee4585149e32e2f6a37a3c61",
+      "blob_sha": "6401a3278f9ca1555704bb1adf53e08f18382d05",
+      "status": "new"
+    },
+    {
+      "path": "scripts/flight_receipt.gd",
+      "sha256": "2f8af61ef2558b383591633e84fed874692394a8b0225cac2d32e29c45ad588e",
+      "blob_sha": "614548394aac034cd2825d40affca708372f135c",
+      "status": "new"
+    },
+    {
+      "path": "scripts/protected_bird_offer_v1.gd",
+      "sha256": "fbe7b5104c02b95f805ee8b3b04910e807fdd52d575cfc5613c58f16e51e7b2d",
+      "blob_sha": "65345b4c3e85045b607426121fd2e7acf010162e",
+      "status": "new"
+    },
+    {
+      "path": "scripts/courier_input.gd",
+      "sha256": "9102df45c454217b679b5e760a6dae24000e6b1985e7f5406ca7aa9bb207f3da",
+      "blob_sha": "8a2fe350dfd7971c5c13f920fca091238892dbee",
+      "status": "changed"
+    },
+    {
+      "path": "scripts/clerk_rigid_motion_2d.gd",
+      "sha256": "c0751ad6477281412ab8a29e30f612516147a286a587933130f5a234ff9bb498",
+      "blob_sha": "760e46ac7b07e9658858d5314796c3957215167c",
+      "status": "new"
+    },
+    {
+      "path": "scripts/clerk_rigid_pose_2d.gd.uid",
+      "sha256": "fd73fa90323e820bcfee5639a73746744be493686ec4ae11c471ffcd137c9ba7",
+      "blob_sha": "d291ea6ca83003617c01798aa9c838b64e2e018d",
+      "status": "new"
+    },
+    {
+      "path": "scripts/shop_sign_2d.gd.uid",
+      "sha256": "30c6e45d3534f7cd8e9c296aa73f4820ce3216ef0f7aa1dd9e04c3c8612071b7",
+      "blob_sha": "f5d413d7dc72148f697c505820ef2c01b5dac639",
+      "status": "new"
+    },
+    {
+      "path": "scripts/wildlife_contact_v1.gd",
+      "sha256": "a5304c7cd34f8341c0cb1508cc6c7c1d29bb5e001ccbadf3c539524b313edd9b",
+      "blob_sha": "6b12db05388765406f76b23028e513e5f0c0747a",
+      "status": "new"
+    },
+    {
+      "path": "scripts/otherworld_presentation_2d.gd.uid",
+      "sha256": "2072beadc1fe3b1b744b8a1044c78ea26555a0fb86843a4bc243e0a4a6a5cabf",
+      "blob_sha": "fea69616da1c873266040b9ef918f5a12322d8c7",
+      "status": "new"
+    },
+    {
+      "path": "scripts/shop_sign_2d.gd",
+      "sha256": "e2fdf2496dccf44854261430a185e89885e34298965a1f72441f10ed52ca7639",
+      "blob_sha": "426b098c5d0edb7da56a71f6d69fb88800d22fdc",
+      "status": "new"
+    },
+    {
+      "path": "scripts/courier_stories.gd",
+      "sha256": "792485ee792b79b9581a6dd03de0d3226a0e114e105650f096d9ce2d733b5316",
+      "blob_sha": "ebdd84121be97136fca9c204f2786b19f501ad68",
+      "status": "changed"
+    },
+    {
+      "path": "scripts/pilot_wormhole_simulation.gd",
+      "sha256": "1feb0456d84f9d35c45bf34208deae0a39c7a1a00028105c28af672331b77557",
+      "blob_sha": "ab061e11e9aa7aa25aaed81f35b509f9035fe455",
+      "status": "new"
+    },
+    {
+      "path": "scripts/pilot_protected_bird_simulation.gd",
+      "sha256": "9f6f304aa59e45c893622da22d4d4b1a9518774de10642e1c99565e6d63a0586",
+      "blob_sha": "39a1ab01c660135fbbee2ed917fdfdf0d2c41718",
+      "status": "new"
+    },
+    {
+      "path": "scripts/protected_bird_design_v1.gd",
+      "sha256": "d6abfea950feed9a1a52f857650c0d624b2a5ab6c363c55e0fa44b637496438e",
+      "blob_sha": "e693e4751c4a33a4e63f02e3dd96c058dbeddbd4",
+      "status": "new"
+    },
+    {
+      "path": "scripts/pilot_wormhole_profile.gd",
+      "sha256": "05966c945e75dd87c59d40d2548e0cc6d6969e31ea206a85e0bf34bb87be5d2b",
+      "blob_sha": "8d379e082d9fbc4044de0764e6adf2e37a32ba63",
+      "status": "new"
+    },
+    {
+      "path": "scripts/readable_commercial_authoring_policy.gd",
+      "sha256": "22b3be257ebd4ab2ebdf3d284e5672e691fa2f353928160124295cf13ce6f1aa",
+      "blob_sha": "d900c91c0c7ac3cc9da86e0d491ce0d955610198",
+      "status": "new"
+    },
+    {
+      "path": "scripts/seeded_offer_templates.gd",
+      "sha256": "551f0528d48a664b6d4594dac5dfb5f6210410883499a6cdccad0085ef2b2511",
+      "blob_sha": "6550b085efc851613ed59e8c2689657c9266e98d",
+      "status": "new"
+    },
+    {
+      "path": "scripts/pilot_protected_bird_profile.gd",
+      "sha256": "38ed2cb35f0590d6a386fc84a2f3e4f621661c3a96c562dcafc8fcd2c9013142",
+      "blob_sha": "74e1a22534e858c7fd8a81b7baf7ad443f0d3dfe",
+      "status": "new"
+    },
+    {
+      "path": "scripts/shop_locomotion_2d.gd",
+      "sha256": "816975477a895a7eef8333c355fc3e52adb92cf00df3eb67186148fadee40cc7",
+      "blob_sha": "d960f8c9caa6b0c21611cd72e5dbc1cf48ee6927",
+      "status": "changed"
+    },
+    {
+      "path": "scripts/world_view_2d.gd",
+      "sha256": "f805f02a79a057e5bbf595d35bc0d2b85058479edb746641a51fed716b535a8a",
+      "blob_sha": "ad72c9e4ed36107121aefe2b48eb2e6e8beadc50",
+      "status": "changed"
+    },
+    {
+      "path": "scripts/game_hud.gd",
+      "sha256": "2ffbcf4e8121f1d4cfe2d53138b300b111fadbf75caaf715f7f169c3dd49d591",
+      "blob_sha": "0f2b5dc0e247d1dc625178e38cff5a5001cb70c7",
+      "status": "changed"
+    },
+    {
+      "path": "scripts/corridor_framing_2d.gd",
+      "sha256": "0a57d0ee57e441411bf78141c48eca785acbffc80b84c21463d353bd33fcd379",
+      "blob_sha": "9b43f0f7932b1306a66cbbcdef74cefb6fb0be4c",
+      "status": "new"
+    },
+    {
+      "path": "scripts/protected_bird_facts_v1.gd",
+      "sha256": "1a1b6b20018a44295253806af0ba82e6bd44c8f31c846c526b879a15d5efed92",
+      "blob_sha": "820fa0e645275e4955a1f43ec5d5e28fb37478ac",
+      "status": "new"
+    },
+    {
+      "path": "scripts/customer_review_phone.gd",
+      "sha256": "612c0d4c410ba6c4ecff513a1e62cb7e95fe3e8c69f0aec33d6a06251e0bede2",
+      "blob_sha": "e6cc2f03e8c2affadf9378bc8841024c01158e7f",
+      "status": "new"
+    },
+    {
+      "path": "scripts/main.gd",
+      "sha256": "a627bd7c27a01d0ccc8c52619956b7608eb6eef78e11768748ae7c995372a435",
+      "blob_sha": "3502628cd4a10e406eddd6acb634599e0743f2c1",
+      "status": "changed"
+    },
+    {
+      "path": "scripts/clerk_rigid_motion_2d.gd.uid",
+      "sha256": "1da00269f0e455cda466cde82a8262e082e237afef964cf3a67a5e8d33368d50",
+      "blob_sha": "54cafb02eab920236f6fa19eb5fce0ba925ee51d",
+      "status": "new"
+    },
+    {
+      "path": "scripts/protected_bird_settlement_v1.gd",
+      "sha256": "44947bad520bf84f0c8ec23156fa70cd1fa8e72785e94b3a8d0c6411075e24ee",
+      "blob_sha": "aa1d08b328e78e1fe5bfa709ec887048d61b89d5",
+      "status": "new"
+    },
+    {
+      "path": "scripts/seeded_offer_catalog.gd",
+      "sha256": "9a63c21c8d78b20933ba03c8a40a5967490d7e604cd4c3a44122c17eb54dbe48",
+      "blob_sha": "e4858f734be6e100ce4b4895e5e8eab617985618",
+      "status": "new"
+    },
+    {
+      "path": "scripts/protected_bird_presentation_2d.gd",
+      "sha256": "e6407c3cc50ce02d8eaa3acac6549c650821e14a89385323414062918850c030",
+      "blob_sha": "a2f68b19b990b2c6c19e0ea68364fdb05011370f",
+      "status": "new"
+    },
+    {
+      "path": "scripts/clerk_rigid_pose_2d.gd",
+      "sha256": "abf6d55f6ad4d2e45096697d09c521728acd8f6449e14a4e776440ad98fbc6b7",
+      "blob_sha": "4546366a7967978afe355929056f5b22d5aca3da",
+      "status": "new"
+    },
+    {
+      "path": "scripts/moon_framing_2d.gd",
+      "sha256": "354a9a996b13661024db848690bb4d95a27ff91a8dc216ad5c7655e233e62e63",
+      "blob_sha": "7eca0f3521555ed042d1b3c5953cb9be62489018",
+      "status": "new"
+    },
+    {
+      "path": "scripts/wildlife_sweep_v1.gd",
+      "sha256": "c091012c078d26e77f756a1e13322184f767ec82eb5591d739d413fb44dece4f",
+      "blob_sha": "50582d4c17142ea6cd7a64438681906ad04ad43d",
+      "status": "new"
+    },
+    {
+      "path": "scripts/customer_reviews_v2.gd",
+      "sha256": "b376c58b8f5ca7968801d571004093bcbe9632383bddb2f083224bb13ed3b50a",
+      "blob_sha": "91b28a964cb509dcdbfee09c8b04125bf47f592a",
+      "status": "new"
+    },
+    {
+      "path": "scripts/human_rigid_motion_2d.gd",
+      "sha256": "f760c232b6b3ff76149c34ba28a91f1b0d956151be71b73d6ba7f2cf24b0ecc7",
+      "blob_sha": "c88c9bb58a03acb3792fb586f46bb17e9f6629da",
+      "status": "new"
+    },
+    {
+      "path": "scripts/moon_presentation_2d.gd",
+      "sha256": "b5c5987cfd8f6f556256c9e0144cb58646a960dc7cb241e3e3a1e733090ab82e",
+      "blob_sha": "46d99abadc1fac731e9e3e84217ad9ebfbee690f",
+      "status": "new"
+    },
+    {
+      "path": "scripts/customer_reviews.gd.uid",
+      "sha256": "8947f0a65dccce617cc93ea87fd1e59e0ac0eff2b0ad24d1d34b807379554996",
+      "blob_sha": "aa0fdb73c7e815e9372a4a8a8bee87c5674b72d9",
+      "status": "new"
+    },
+    {
+      "path": "scripts/moon_presentation_2d.gd.uid",
+      "sha256": "82a6843eae457076c19b5e4b44bbe3e6da8105a1567c7ba990d957a76c59b91c",
+      "blob_sha": "0777063e2c0ae4a8b74a6c07d2f6db3997158811",
+      "status": "new"
+    },
+    {
+      "path": "scripts/protected_bird_replay_v1.gd",
+      "sha256": "ab87ab1dba781d38b35509566c21f978179c2c985f538d1914b2f77e7150ff6d",
+      "blob_sha": "ec4f9496f3a3a6c885953e888cfd1a4563c3c417",
+      "status": "new"
+    },
+    {
+      "path": "scripts/otherworld_presentation_2d.gd",
+      "sha256": "a2a0e12d2b6fba7c5c0e1b166a4b3b1898821223f0ec0a9c6e2b6fa8928399d5",
+      "blob_sha": "9f52f931a055f00cacda1155c48e0f246cea30cd",
+      "status": "new"
+    },
+    {
+      "path": "scripts/pilot_wormhole_profile.gd.uid",
+      "sha256": "507d0c07c0105c87649d96889284595c04b61798c516985d9f7214df1455224f",
+      "blob_sha": "7b825d9bd91ea4f1fbe72a50c38395857bab66b8",
+      "status": "new"
+    },
+    {
+      "path": "scripts/readable_corridor_framing_2d.gd",
+      "sha256": "2908cd9db37e831e2476f612fa66b105cc5525ebbdcb7f0529d489ac8754d66c",
+      "blob_sha": "8dcff4840d744f4ecdb72821e99fc2f70a6a8526",
+      "status": "new"
+    },
+    {
+      "path": "scripts/human_rigid_pose_2d.gd",
+      "sha256": "31856da31f3cd5f5050a4e84e070e683cdd8d66c7d757f6d4097a438b8c97cb1",
+      "blob_sha": "61bb1e549d2f1eec603360721e00791a99d6ff17",
+      "status": "new"
+    },
+    {
+      "path": "scripts/protected_bird_authoring_policy.gd",
+      "sha256": "91dfbc0bf6891af660cb8b8798b48003a188d1c4449fc76668ab99da3d5b156b",
+      "blob_sha": "dee5b17a185d3ab13a305c8e55e14b46b2bb4da4",
+      "status": "new"
+    },
+    {
+      "path": "scripts/clerk_single_walk_2d.gd",
+      "sha256": "623fa0171818c276899b025dee3090cd5dbee46832457b1ad7aaedac7404d413",
+      "blob_sha": "6d587d6820b1e2ef327b2e9ece048710d7411e72",
+      "status": "new"
+    },
+    {
+      "path": "scripts/protected_bird_advice_2d.gd",
+      "sha256": "54e3c5c8480f72f3100bbf2f06eba281f40afd3117591ab2163d057847ca4541",
+      "blob_sha": "4d062cad7d827d05deda9d172622a5a877511b14",
+      "status": "new"
+    },
+    {
+      "path": "scripts/flight_cues_2d.gd",
+      "sha256": "7889534ece3d5d829f750344414e36e520d03033afc490a71efe392e8f01fe24",
+      "blob_sha": "78577df9f8795e0d00ceb502452e68bf46875112",
+      "status": "changed"
+    },
+    {
+      "path": "scripts/orbital_meteor_presentation.gd",
+      "sha256": "86ab36ce462fbef7641ef8c455abf81477fe0be39add47a946fb6c9b6741c952",
+      "blob_sha": "63e73733c97530386dca229f77bdb61e90fe7b63",
+      "status": "new"
+    },
+    {
+      "path": "scripts/seeded_offer_guard.gd",
+      "sha256": "595e4be3b1d0384c150b790c513e44d87be3afda2c513b1abcf0637fb315790b",
+      "blob_sha": "5a1856be8f320d19beff02b23d470bd1ea905e06",
+      "status": "new"
+    },
+    {
+      "path": "scripts/shop_investigation.gd",
+      "sha256": "906703b66c059b811768e4d2481251c966b539c86bf6a72c66a30d63766fdd27",
+      "blob_sha": "2261067df1e65c57b6197eabbed5743dc14cd7a9",
+      "status": "new"
+    },
+    {
+      "path": "scripts/npc_sprite_2d.gd",
+      "sha256": "df4bacd4e4cbb27b254e12afcd871906a32962ba4cf780bc9d5a1de561295975",
+      "blob_sha": "8c073fe44593dc6bfb06f5f842a65d7df2e2d375",
+      "status": "changed"
+    },
+    {
+      "path": "scripts/combined_offer_authoring_policy.gd",
+      "sha256": "115b71292ae90782566bdb4b65b2da25124cb22899b26c4112c0639e50751e1d",
+      "blob_sha": "a3f691a964c12935050e90951c2d07df76432314",
+      "status": "new"
+    },
+    {
+      "path": "docs/checkpoints/seeded-meteor-human-20261010.json",
+      "sha256": "e4a9ec1994e153bed51df2d674316c9cc29260eb40c7105cdbdd477c6a4f4268",
+      "blob_sha": "ac3bc0d1fe465f0e0988463035af4db875405594",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/economy_pre_reviews_v5.gd",
+      "sha256": "2b54df47922a7208de6b0b579f4204a221494c8a27d27f3b1c5c0731ef497831",
+      "blob_sha": "16fdc617f96e66ceb94b5a3ae6787f1e9ab7341b",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/economy_pre_readable.gd",
+      "sha256": "20e7b0ca431126935f8c933901b6114d4fb2980c6443896044ed22fd04b51bdb",
+      "blob_sha": "fbbe65ab1c7b3207702813ab6c0b01948d89d965",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/corridor_native_candidate_v1.json",
+      "sha256": "596ddf6efc4bb40a90c2e2393338c49bb900efca7ad9d775c1b53e61ed0ec793",
+      "blob_sha": "24c311455ec7e67061f82612680ca06bdc0a6530",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/economy_pre_combined.gd.txt",
+      "sha256": "710454729b5b0b646efcd09c411c1568feb40a7521a5ef2683a69101cebe7f02",
+      "blob_sha": "f957ae91343f04a6565f022c38452bf4ce849437",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/economy_pre_reviews_v5.gd.uid",
+      "sha256": "f613ccf9cbd5d3c336ba405ca4ae60981025fe099c9451e3a26181a280bf43a4",
+      "blob_sha": "2a3004b73defcb416d3b90a12141b66e2eb536ae",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/moon_presentation_pre_framing.gd",
+      "sha256": "b85b117b63b210d2f1f3f4053a02ada00b2c9fb6d2ecc814738c2bd4f3e3086f",
+      "blob_sha": "32a8bfca65b7c54989b48bd948bb2dcfa2e7ee50",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/offer_policy_pre_readable.gd",
+      "sha256": "d8b39a61a78e10de77b5809b62e8fd269ccf3e7bb160a262c6c4c9bd7873adb9",
+      "blob_sha": "281aa7c7532aa49e01c4b67ed520aa9d4999603e",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/corridor_native_ground_v1.json",
+      "sha256": "c973ee88719e25781348604aa0ec3949024a3d8b6a1046a02ee11a22af04dd88",
+      "blob_sha": "a4adb74ebc07524246bc54ec653224c868bc61ff",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/economy_pre_combined.gd",
+      "sha256": "caa8d1d8d7270fe1dfa819b0cc005c3ea12f5fd4b750fc739c8f1aaf8eefabbe",
+      "blob_sha": "00e1249997206dbeea1f4a57e413bb4ba087923b",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/corridor_native_trial_v1.json",
+      "sha256": "58f175bc21b4013fc0b86d1db5d20d9513a1c34aa26cb6b36e1a2b5ce14985a1",
+      "blob_sha": "ea9cae905f14c0ff8928cbd443e8e4dc654c928d",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/seeded_frozen_sources_v1.json",
+      "sha256": "99f81a5e3ceb82700fb9b35f437519ae391027b78763f96630e721c71be07d83",
+      "blob_sha": "ce904afcc6272386f049ff148a340dfd60912964",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/test_meteor_offer_integration_pre_combined.gd.txt",
+      "sha256": "29c7ec08c963b6644a0ce46102e1c30c5597a671092ed0013c89a7c90227a7d6",
+      "blob_sha": "bd93a8eca93017cecaaf940f79740ca1456cb204",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/test_readable_offer_adapter_standalone.gd.txt",
+      "sha256": "a7bb898cd4fdbb402f695f93c38c7c0ea4250621f3e098f170087c1ef002b7f7",
+      "blob_sha": "9aed0572df4c0ed18819820420df64ca9df3e0ef",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/economy_pre_seed_reviews_v5.gd",
+      "sha256": "1612ce549b7d3ed8cc356f071c4bb321619c267c089e7ac4c84e961d07203388",
+      "blob_sha": "a419f9ec946ef609220c94178788e5aaa11e5b18",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/moon_presentation_pre_framing.gd.uid",
+      "sha256": "a68d27615b8e965c36e224f78bf4f47665321d016f40133c45781ae36a46ad24",
+      "blob_sha": "aa85e35790a6f91e95f48b20ae47c54dea3b32a8",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/readable_opaque_qa.json",
+      "sha256": "3e9e7af16d9d2d8b5ccf6ca3bde94dc0dd60fc38fd3cdf01b62ba2b86b8a4b04",
+      "blob_sha": "0f433b88d283d24d2528e5af6f88519381233e2d",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/corridor_native_formal_v1.json",
+      "sha256": "68b0cb59990db8c429db6761c096a8668b8d31165e58b4e3a8485dac1999a0cb",
+      "blob_sha": "a4e33aa162f59b53cf1028146f9e510f572f30d8",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/readable_camera_pre_defense.gd",
+      "sha256": "94b9cc29ffb9c7d0a66d0fc1db3ec05ff0f64c53b710edaf740aa21e09e4a295",
+      "blob_sha": "3dd9f116bb3e4889ca37956281591372730a20e0",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/moon_native_input_v1.json",
+      "sha256": "2caf37685861072ca7c5c1ff99f62da1e4c2d6aa75246023c34eecd70225352f",
+      "blob_sha": "12ca786d2809d53ca0e1bf8563bdf50245a62f28",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/moon_native_input_v1.README.md",
+      "sha256": "e8ededb3d8a39ac3977d1bc7694564597340a9d858c1687ed4339033c8abd7ad",
+      "blob_sha": "061376a7d3758ff92df47bcf931b76c1687d39a6",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/economy_pre_integrity_seeded_v5.gd",
+      "sha256": "e77cfb454e7389a6448359ae631f28b6d25051363bd0858ba18d00ed4882cf35",
+      "blob_sha": "74c501bb294248fc4fd5f95f27051555181a7772",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/README.md",
+      "sha256": "7672574ce8ce684ca142ece4a26e8d1d28ed7c4f5796547f622f32682da9216d",
+      "blob_sha": "75068016f8b14264c7e1b0de166704356f6eea31",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/numeric_witness_v2.gd",
+      "sha256": "79b118c23524da481733832c0ef35f88d88b414d2d7ece57bb38109996515d19",
+      "blob_sha": "a44d68173887d651500b370e6698b7c691f43e0f",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/fixture_io.gd",
+      "sha256": "2ca0770ff1952b363bf69fc53644b0a32a8a1401db6cd0930e62fd9d7f61e23e",
+      "blob_sha": "51376832283595f6c7ee42a2eadaea46e9f2a95f",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/source_contract.json",
+      "sha256": "7ade82ca5a9fb6cdc0ed8fd2fb4c8a0136cd71655209c22f2166fbf126f77ca6",
+      "blob_sha": "1afe93b4c902f957dd867d7c86b561332afb6250",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_controller/frozen_flight_receipt.gd",
+      "sha256": "571301fea888570c83ad1b8c70d00177948d558bae53a6be5f73a01d0c81f5c1",
+      "blob_sha": "45caf63668ca2f09ba46c7f7a46363553a956471",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_controller/frozen_courier_stories.gd.txt",
+      "sha256": "0f986be0b58e77a25bb4a076df3e4e93626717f87157108090f7c06f86356e73",
+      "blob_sha": "7faeb0a1127d073ac214ef14ae81a84d3cfb3222",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_controller/commercial-replay-safe.json",
+      "sha256": "5372f31123c374cb6e1dd900de5508a659891ce69da944a979364a51da871f82",
+      "blob_sha": "c1f07d644bb60677f54561f5c5a8eb948ddf8360",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_controller/frozen_courier_stories.gd",
+      "sha256": "4ed888104cc5d23ce8dae6cad02305c6198a4ee5b96a82f456df8d9e175e7a52",
+      "blob_sha": "675d63ed90ffbe9f79abd19baf14fd55af7d1c2c",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_controller/commercial-replay-harm.json",
+      "sha256": "47c726f2a626c643cfacb1f26911c9534ef812cd445347a2f112781ecdc30618",
+      "blob_sha": "b4da14ed1b135227ec14cf338c576192b25af53f",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/recovery_integrity/review-natural-d1.json",
+      "sha256": "dd1842d3497f487cc11268cdb0c21c5df5913cd733c0d71d4e72b968e3c33862",
+      "blob_sha": "511d563e498271ec4203e1c030c69139e694a635",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/recovery_integrity/legacy-natural-d3.json",
+      "sha256": "3ca6146396dda2eb56f0f6bc97157c3bb750cb0062e35f6cdb606cd267740fe3",
+      "blob_sha": "0fd70feeca7b4e3f2608bec435653822546b5d26",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/recovery_integrity/review-natural-d3.json",
+      "sha256": "2f7371792f47edf085505f480b3c56aec61f422642f60ce265284203f9982c28",
+      "blob_sha": "96fe5f023e345604dcbcf87d90cbd9665e6c9fa0",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/recovery_integrity/provenance.json",
+      "sha256": "2a6f49ffa6a7d31ad62ebdb7b51ac2373811ced44b37b6a3805894d991346113",
+      "blob_sha": "1d7ce7ada6e781ec70f560a9dcec2ab73c4f9bce",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/recovery_integrity/review-natural-d2.json",
+      "sha256": "34376f39d2381e85585621f8b50d0eb684162a8a806d4a85d3c71ca537f63599",
+      "blob_sha": "2ada68d3825d5439b5ba332c07a2b8243e8088fb",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/recovery_integrity/legacy-natural-d1.json",
+      "sha256": "a75a98ff026d032bc37f906702f4c2a9a7638e0986f1107456628fc6eb163aee",
+      "blob_sha": "c0b3f411337605589be0c94f0969feb2979abbc0",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/recovery_integrity/legacy-natural-d2.json",
+      "sha256": "a1c553723869a44775c4de75223d859e54017f4e4ebc131d028b0fc9707991a7",
+      "blob_sha": "29ca55d2b0ccc9b8ee39c66170b75cdf2df615b8",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/commercial_2_4/commercial-replay-safe.json",
+      "sha256": "5372f31123c374cb6e1dd900de5508a659891ce69da944a979364a51da871f82",
+      "blob_sha": "c1f07d644bb60677f54561f5c5a8eb948ddf8360",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/commercial_2_4/commercial-route-safe.json",
+      "sha256": "9f18ce43447f8cef36f46c0b96845013a7ec0391dc6b58b3a4c01139c52b1c60",
+      "blob_sha": "c2388835eba0885d377f1b227eeb4f3398cf218f",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/commercial_2_4/commercial-replay-harm.json",
+      "sha256": "47c726f2a626c643cfacb1f26911c9534ef812cd445347a2f112781ecdc30618",
+      "blob_sha": "b4da14ed1b135227ec14cf338c576192b25af53f",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/commercial_2_4/commercial-route-harm.json",
+      "sha256": "c4b68a5151cb7083b392810dc44f00fd3f53dccfe20baf8bba6ae70a9cfaa53c",
+      "blob_sha": "3bbc1355d7062dce86f48662213bf2e00429b4a4",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/rayfix_v1/legacy_1_0/route-harm.json",
+      "sha256": "a0b484c4c367f6b43fe3c80eeb1622eb953209cda8b2e0c23bae3515828001ee",
+      "blob_sha": "c1ccbee49e0905e60afc6faeb7374c5969192efa",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/rayfix_v1/legacy_1_0/replay-safe.json",
+      "sha256": "79e6b43384e00592d6fd924aee5575953b94756a6aac42a161057cbd474b84d3",
+      "blob_sha": "844507a950342a75c027f186c515cdbbdb030d1b",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/rayfix_v1/legacy_1_0/replay-harm.json",
+      "sha256": "5c516e0be03059d1100a9b144429b966c28bad4b875d8738bf952030df6d5770",
+      "blob_sha": "49070c6805aa69a332466e76182d60f20c6c68ca",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/rayfix_v1/legacy_1_0/route-safe.json",
+      "sha256": "f82ecfd4b943ac84fd567a1dd97628bd31c0d72acb19317d82902a8c653d7f95",
+      "blob_sha": "ddd94e44ca33241a440952266058ca78762b9a67",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/rayfix_v1/legacy_1_0/terminal-bits-harm.json",
+      "sha256": "5f13d895ab126f2c5bd013307fdb17be04a86d4e77caf50cfc4a674fdb4f6548",
+      "blob_sha": "39de2627736b8205aabd46b66697ee85a2abf3b5",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/rayfix_v1/legacy_1_0/terminal-bits-safe.json",
+      "sha256": "67cddd353068779c8691007ce9a583773f67e8e54db33affa16a8d9892ae6ce0",
+      "blob_sha": "0c18b923b42dfafe41e7b030f9cbde13af20bdcd",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/legacy_1_0/pre_validator_hardening/route-harm.json",
+      "sha256": "3e95523f9eb294b7c9afa7553ac28f745f23095cb5c7836df97ebd7eb265ade9",
+      "blob_sha": "1ee5cfe5e6e09c4632c22308d34c825fae40ea73",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/legacy_1_0/pre_validator_hardening/replay-safe.json",
+      "sha256": "79e6b43384e00592d6fd924aee5575953b94756a6aac42a161057cbd474b84d3",
+      "blob_sha": "844507a950342a75c027f186c515cdbbdb030d1b",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/legacy_1_0/pre_validator_hardening/replay-harm.json",
+      "sha256": "5c516e0be03059d1100a9b144429b966c28bad4b875d8738bf952030df6d5770",
+      "blob_sha": "49070c6805aa69a332466e76182d60f20c6c68ca",
+      "status": "new"
+    },
+    {
+      "path": "tests/fixtures/protected_bird_v1/legacy_1_0/pre_validator_hardening/route-safe.json",
+      "sha256": "f82ecfd4b943ac84fd567a1dd97628bd31c0d72acb19317d82902a8c653d7f95",
+      "blob_sha": "ddd94e44ca33241a440952266058ca78762b9a67",
+      "status": "new"
+    }
+  ],
+  "missing_literal_asset_references": {
+    "assets/2d_v5/events/meteor/manifest.json": [
+      "tools/probe_meteor.gd",
+      "tests/test_orbital_meteor.gd"
+    ],
+    "assets/2d_v5/actors/human_rig_motion_v1/handoff-body.png": [
+      "tests/test_npc_sprite_2d.gd"
+    ],
+    "assets/2d_v5/actors/rig_motion_v1/rig-registration.json": [
+      "tests/test_clerk_rigid_motion.gd",
+      "scripts/clerk_rigid_motion_2d.gd"
+    ],
+    "assets/2d_v5/actors/customer-neutral-idle-pixel.png": [
+      "tests/test_neutral_actor_lifecycle.gd",
+      "tests/test_human_rigid_motion.gd"
+    ],
+    "assets/2d_v5/shop-sign/hanging-sign-pixel.png": [
+      "tests/test_shop_sign_2d.gd",
+      "tests/test_shop_sign_2d.gd",
+      "scripts/shop_sign_2d.gd"
+    ],
+    "assets/2d_v5/actors/human_rig_motion_v1/rig-registration.json": [
+      "tests/test_human_rigid_motion.gd",
+      "scripts/human_rigid_motion_2d.gd"
+    ],
+    "assets/2d_v5/reviews/customer-review-phone-casing.png": [
+      "scripts/customer_review_phone.gd"
+    ],
+    "assets/2d_v5/protected_birds/mosslight-protected-bird-wings-up.png": [
+      "scripts/protected_bird_presentation_2d.gd"
+    ],
+    "assets/2d_v5/protected_birds/mosslight-protected-bird-wings-down.png": [
+      "scripts/protected_bird_presentation_2d.gd"
+    ],
+    "assets/2d_v5/protected_birds/mosslight-protected-bird-hurt.png": [
+      "scripts/protected_bird_presentation_2d.gd"
+    ],
+    "assets/2d_v5/moon/far-sky-clamped.png": [
+      "scripts/moon_presentation_2d.gd",
+      "tests/fixtures/moon_presentation_pre_framing.gd"
+    ],
+    "assets/2d_v5/moon/regolith-decorative-wrap.png": [
+      "scripts/moon_presentation_2d.gd",
+      "tests/fixtures/moon_presentation_pre_framing.gd"
+    ],
+    "assets/2d_v5/moon/airlock-pixel.png": [
+      "scripts/moon_presentation_2d.gd",
+      "tests/fixtures/moon_presentation_pre_framing.gd"
+    ],
+    "assets/2d_v5/otherworld/far-world-wrap.png": [
+      "scripts/otherworld_presentation_2d.gd"
+    ],
+    "assets/2d_v5/otherworld/decorative-island-band.png": [
+      "scripts/otherworld_presentation_2d.gd"
+    ],
+    "assets/2d_v5/wormhole/portal-energy-plane.png": [
+      "scripts/otherworld_presentation_2d.gd"
+    ],
+    "assets/2d_v5/wormhole/portal-top-cap.png": [
+      "scripts/otherworld_presentation_2d.gd"
+    ],
+    "assets/2d_v5/wormhole/portal-bottom-cap.png": [
+      "scripts/otherworld_presentation_2d.gd"
+    ],
+    "assets/2d_v5/otherworld/receiver-pixel.png": [
+      "scripts/otherworld_presentation_2d.gd"
+    ],
+    "assets/2d_v5/actors/single_walk_v1/single-walk-registration.json": [
+      "scripts/clerk_single_walk_2d.gd"
+    ]
+  },
+  "limit": "Literal static references only. Dynamic asset construction and all updated bytes at existing asset paths are not covered. No combined recovery has been constructed or executed.",
+  "package_manifest_checks": [
+    {
+      "package": "StarCourier-ground-corrected-v3-integration-reference",
+      "manifest": "DELIVERY_MANIFEST.json",
+      "checks": 68,
+      "failed": []
+    },
+    {
+      "package": "StarCourier-Clerk-FG01-C2-small-review",
+      "manifest": "DELIVERY_MANIFEST.json",
+      "checks": 38,
+      "failed": []
+    },
+    {
+      "package": "StarCourier-clerk-fullbody-FG01-source",
+      "manifest": "SOURCE-MANIFEST.json",
+      "checks": 32,
+      "failed": []
+    },
+    {
+      "package": "StarCourier-final-fuel-tick-intent-oracle",
+      "manifest": "MANIFEST.json",
+      "checks": 16,
+      "failed": []
+    },
+    {
+      "package": "StarCourier-491aaff-ground-traffic-code",
+      "manifest": "SOURCE-MANIFEST.json",
+      "checks": 568,
+      "failed": []
+    }
+  ]
+}

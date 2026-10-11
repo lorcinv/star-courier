@@ -1,0 +1,509 @@
+{
+  "snapshot": {
+    "control_version": "pilot-v3",
+    "design": [
+      {
+        "id": 1,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 100.0,
+        "rot": 0,
+        "target": -1,
+        "type": "cargo",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": 2,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 32.0,
+        "rot": 0,
+        "target": -1,
+        "type": "beam",
+        "x": 1,
+        "y": -1
+      },
+      {
+        "id": 3,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 300.0,
+        "rot": 0,
+        "target": -1,
+        "type": "battery",
+        "x": -1,
+        "y": 0
+      },
+      {
+        "id": 4,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 28.0,
+        "rot": 0,
+        "target": -1,
+        "type": "thruster",
+        "x": 0,
+        "y": -1
+      },
+      {
+        "id": 5,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 150.0,
+        "rot": 0,
+        "target": -1,
+        "type": "armor",
+        "x": 1,
+        "y": 0
+      },
+      {
+        "id": 6,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 28.0,
+        "rot": 0,
+        "target": -1,
+        "type": "thruster",
+        "x": 0,
+        "y": 1
+      },
+      {
+        "id": 7,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 32.0,
+        "rot": 0,
+        "target": -1,
+        "type": "beam",
+        "x": 1,
+        "y": 1
+      },
+      {
+        "id": 8,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 0.0,
+        "rot": 0,
+        "target": -1,
+        "type": "coupler",
+        "x": -1,
+        "y": 1
+      }
+    ],
+    "elapsed": 35.866666666665274,
+    "input_commands": [
+      {
+        "active": false,
+        "axis_q": -1000,
+        "boost": false,
+        "tick": 0
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 167
+      },
+      {
+        "active": false,
+        "axis_q": 1000,
+        "boost": false,
+        "tick": 283
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 309
+      },
+      {
+        "active": false,
+        "axis_q": 1000,
+        "boost": false,
+        "tick": 336
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 350
+      },
+      {
+        "active": false,
+        "axis_q": -1000,
+        "boost": false,
+        "tick": 465
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 586
+      },
+      {
+        "active": false,
+        "axis_q": -1000,
+        "boost": false,
+        "tick": 628
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 670
+      },
+      {
+        "active": false,
+        "axis_q": 1000,
+        "boost": false,
+        "tick": 683
+      },
+      {
+        "active": false,
+        "axis_q": -1000,
+        "boost": false,
+        "tick": 812
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 1080
+      },
+      {
+        "active": false,
+        "axis_q": -1000,
+        "boost": false,
+        "tick": 1117
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 1221
+      },
+      {
+        "active": false,
+        "axis_q": 1000,
+        "boost": false,
+        "tick": 1233
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 1498
+      },
+      {
+        "active": false,
+        "axis_q": 1000,
+        "boost": false,
+        "tick": 1548
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 1874
+      },
+      {
+        "active": false,
+        "axis_q": -1000,
+        "boost": false,
+        "tick": 1911
+      },
+      {
+        "active": false,
+        "axis_q": 0,
+        "boost": false,
+        "tick": 1937
+      }
+    ],
+    "launcher": [
+      {
+        "id": 1001,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 20.0,
+        "rot": 0,
+        "target": -1,
+        "type": "spring",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": 1002,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 300.0,
+        "rot": 0,
+        "target": -1,
+        "type": "battery",
+        "x": -1,
+        "y": 0
+      },
+      {
+        "id": 1003,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 32.0,
+        "rot": 0,
+        "target": -1,
+        "type": "beam",
+        "x": 1,
+        "y": 0
+      }
+    ],
+    "route": {
+      "accepted_day": 2.0,
+      "accessory_id": "power_cell",
+      "appearance_id": "robot_machinist",
+      "appearance_seed": 1998703995,
+      "battery_capacity_multiplier": 1.0,
+      "boundary_y": 230.0,
+      "cargo": "加急补货 · 旧水壶的哨片",
+      "cargo_loaded": true,
+      "client": "铆钉",
+      "contract_id": "D2-B",
+      "control_version": "pilot-v3",
+      "deadline": 55.0,
+      "delivery_radius": 9.0,
+      "destination_name": "晨星轨道站",
+      "destination_y": -150.0,
+      "distance": 520.0,
+      "generation": {
+        "base_id": 2.0,
+        "base_rep": 4.0,
+        "base_reward": 280.0,
+        "base_weight": 2.0,
+        "clearance": {
+          "craft_radius": 2.0,
+          "exit_clear_until_x": 544.0,
+          "margin": 1.0,
+          "minimum_preview_seconds": 3.5,
+          "minimum_remaining_energy": 600.0,
+          "preview_speed": 18.0,
+          "receiver_clear_from_x": 480.0,
+          "reference": "starter-eight-modules-v3",
+          "spawn_clear_until_x": 30.0,
+          "witness_points": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              105.0,
+              -20.728515625
+            ],
+            [
+              220.0,
+              -67.5
+            ],
+            [
+              333.0,
+              -138.6240234375
+            ],
+            [
+              468.0,
+              -150.0
+            ],
+            [
+              520.0,
+              -150.0
+            ]
+          ]
+        },
+        "day": 2.0,
+        "dialogue": {
+          "accept_lines": [
+            {
+              "expression": "neutral",
+              "speaker": "npc",
+              "text": "旧哨片送到晨星轨道站。旁边那颗螺丝是配套的，别弄丢。"
+            },
+            {
+              "expression": "warm_smile",
+              "speaker": "clerk",
+              "text": "地址核对好了。我先把箱子固定稳。"
+            }
+          ],
+          "appearance_id": "robot_machinist",
+          "cargo": "旧水壶的哨片",
+          "destination_name": "晨星轨道站",
+          "id": "robot_machinist-address-0",
+          "story_id": "a_kettle_for_two"
+        },
+        "dialogue_seed": 630634345.0,
+        "fallback": false,
+        "fallback_reason": "",
+        "kind": "ascent",
+        "layout_seed": 1306805473.0,
+        "layout_template": "orbit-zigzag",
+        "seed": 1474972351.0,
+        "slot": 1.0,
+        "task_seed": 1346376044.0,
+        "task_template": "bulk-careful",
+        "version": "seeded-offers-v1",
+        "weight_delta": -0.125,
+        "world_seed": 993371368.0
+      },
+      "gravity": 0.0,
+      "hazards": [
+        {
+          "gate_index": 0.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 105.0,
+          "y": -35.728515625
+        },
+        {
+          "gate_index": 0.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 105.0,
+          "y": -5.728515625
+        },
+        {
+          "gate_index": 1.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 220.0,
+          "y": -82.5
+        },
+        {
+          "gate_index": 1.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 220.0,
+          "y": -52.5
+        },
+        {
+          "gate_index": 2.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 333.0,
+          "y": -154.6240234375
+        },
+        {
+          "gate_index": 2.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 333.0,
+          "y": -122.6240234375
+        },
+        {
+          "gate_index": 3.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 468.0,
+          "y": -165.0
+        },
+        {
+          "gate_index": 3.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 468.0,
+          "y": -135.0
+        }
+      ],
+      "id": 2.0,
+      "lookahead_seconds": 3.5,
+      "max_delivery_speed": 24.0,
+      "mode": "pilot",
+      "name": "城市升空 → 晨星轨道站",
+      "pilot_altitude": 150.0,
+      "pilot_battery_multiplier": 20.0,
+      "pilot_boost_speed": 22.0,
+      "pilot_climb_end": 410.0,
+      "pilot_climb_start": 35.0,
+      "pilot_cruise_speed": 18.0,
+      "pilot_drag": 0.025,
+      "pilot_energy_tariff": 0.025,
+      "pilot_gates": [
+        {
+          "half_gap": 10.0,
+          "heading": -0.349609375,
+          "index": 0.0,
+          "lane_offset": -7.0,
+          "x": 105.0,
+          "y": -20.728515625
+        },
+        {
+          "half_gap": 10.0,
+          "heading": -0.5400390625,
+          "index": 1.0,
+          "lane_offset": 6.0,
+          "x": 220.0,
+          "y": -67.5
+        },
+        {
+          "half_gap": 11.0,
+          "heading": -0.373046875,
+          "index": 2.0,
+          "lane_offset": -5.0,
+          "x": 333.0,
+          "y": -138.6240234375
+        },
+        {
+          "half_gap": 10.0,
+          "heading": 0.0,
+          "index": 3.0,
+          "lane_offset": 0.0,
+          "x": 468.0,
+          "y": -150.0
+        }
+      ],
+      "pilot_net_force_limit": 30.0,
+      "pilot_overdrive": "mounted-output",
+      "pilot_profile": "pilot-v3",
+      "pilot_vertical_speed": 5.0,
+      "rep": 4.0,
+      "required": 90.0,
+      "reward": 340.0,
+      "risk": "信号追踪海盗 · 普通炮台",
+      "seed": 207,
+      "species": "robot",
+      "status": "accepted",
+      "story": "旧哨片送到晨星轨道站。旁边那颗螺丝是配套的，别弄丢。",
+      "story_id": "a_kettle_for_two",
+      "story_node": 0,
+      "time_limit": 74.0,
+      "variant": "重货件",
+      "variation": 0.0,
+      "weight": 3.0,
+      "wind": [
+        0.0,
+        0.0
+      ]
+    },
+    "seed": 207,
+    "ticks": 2152
+  },
+  "source": "source_art/2d_v5/routes/runtime_validation_staging/evidence/native-earned-01/generated-heavy-trial-terminal.json",
+  "kind": "Original native XTest timeline, immutable real generated D2-B; not a human fairness result"
+}

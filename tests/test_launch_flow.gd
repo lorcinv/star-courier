@@ -46,7 +46,7 @@ func run() -> void:
  check(game.launch_age==0 and game.world.launch_age==0,"retry resets charge and world launch phase")
  game._process(game.world.launch_transfer_duration());game._process(.72)
  check(game.sim.elapsed>0 and game.launch_sfx_played and game.launch_countdown<=0,"ignition releases physics and plays launch sound once")
- check(game.hud.flight_labels.events.text.contains("释放"),"actual launch event becomes visible at ignition")
+ check(game.sim.events.any(func(event):return str(event).contains("发射台完成压缩供能，释放")) and game.hud._launch_title.text=="点火！" and not game.hud.flight_labels.events.text.contains("发射台完成压缩供能"),"ignition uses the short launch status while the original launcher event remains in the simulation trace")
  game.abort_flight();game.navigate("workshop");game.start_flight(false)
  var fixed_geometry:Array=pad_geometry()
  for i in range(120):game.sim.step(1.0/60.0)

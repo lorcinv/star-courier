@@ -1,0 +1,442 @@
+{
+  "schema": "aggregate-immutable-source-support-v2",
+  "base_head": "4725f5b6fab7854abb2c01e1d4b15373a352b1a4",
+  "enumeration": "git ls-tree -r -z HEAD; unquoted UTF-8 paths",
+  "file_count": 24,
+  "total_bytes": 18913302,
+  "files": [
+    {
+      "path": "source_art/.gdignore",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_mode": "100644",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "head_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "Godot import",
+          "dependency_provenance": "Prevents original/editable art from being imported as runtime resources"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/actors/cooperative/clerk-tablet-original.png",
+      "bytes": 1294184,
+      "sha256": "5de8f2b4cf72ad2200aaa9a7ccd6c691b1e9388e9fded5a56f87e1bc7d5497fb",
+      "git_mode": "100644",
+      "git_blob": "e99778d095a5b8f965507e7cd23055410da60269",
+      "head_sha256": "5de8f2b4cf72ad2200aaa9a7ccd6c691b1e9388e9fded5a56f87e1bc7d5497fb",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_actor_motion_assets.py",
+          "dependency_provenance": "assets/2d_v5/actors/cooperative/motion-manifest.json / actors.clerk.gestures / source and source_sha256",
+          "consumer_expected_sha256": "5de8f2b4cf72ad2200aaa9a7ccd6c691b1e9388e9fded5a56f87e1bc7d5497fb"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/actors/locomotion_v2/clerk-walk-original.png",
+      "bytes": 2194427,
+      "sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+      "git_mode": "100644",
+      "git_blob": "d1046372d89755dba2688a07242f7f4d051f0fd8",
+      "head_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_actor_motion_assets.py",
+          "dependency_provenance": "assets/2d_v5/actors/cooperative/motion-manifest.json / actors.clerk.walk / source and source_sha256",
+          "consumer_expected_sha256": "83104c32172822cdfc040fe908bd1a47543f3a07425fb6ce66b8539bd6083ff9"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/alien_botanist-portraits-original.png",
+      "bytes": 1831380,
+      "sha256": "717158c689ede728f2ab8d530f588bab57b4d447df1b72efc002faa37a0deace",
+      "git_mode": "100644",
+      "git_blob": "215616b339fa72916a327e8606838626c836c3c8",
+      "head_sha256": "717158c689ede728f2ab8d530f588bab57b4d447df1b72efc002faa37a0deace",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.alien_botanist.sources.portraits.path / sha256",
+          "consumer_expected_sha256": "717158c689ede728f2ab8d530f588bab57b4d447df1b72efc002faa37a0deace"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/alien_botanist-portraits.prompt.txt",
+      "bytes": 1974,
+      "sha256": "897df0f29eba4079f5d4d819ecffa288628505e92d57e8dc0a87d44595ce69cb",
+      "git_mode": "100644",
+      "git_blob": "8d2653109621885f75b53d412c0dd7b2d891c2fd",
+      "head_sha256": "897df0f29eba4079f5d4d819ecffa288628505e92d57e8dc0a87d44595ce69cb",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.alien_botanist.sources.portraits.prompt; existence required"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/alien_botanist-world-original.png",
+      "bytes": 1806531,
+      "sha256": "51bb31b3f3420b5f737c33f3b2a2f48f7d83e9e4d3cba9033f1994d79be6dd03",
+      "git_mode": "100644",
+      "git_blob": "890a8e1f8874b372e15e1a9bb3ba5456f1017c3b",
+      "head_sha256": "51bb31b3f3420b5f737c33f3b2a2f48f7d83e9e4d3cba9033f1994d79be6dd03",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.alien_botanist.sources.world.path / sha256",
+          "consumer_expected_sha256": "51bb31b3f3420b5f737c33f3b2a2f48f7d83e9e4d3cba9033f1994d79be6dd03"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/alien_botanist-world.prompt.txt",
+      "bytes": 2724,
+      "sha256": "470827af3d47e685a857ea11a0f817912290f66ef2b28b083a4c6f4a62b97088",
+      "git_mode": "100644",
+      "git_blob": "faa37420789f727753b6d805233ff4076359325b",
+      "head_sha256": "470827af3d47e685a857ea11a0f817912290f66ef2b28b083a4c6f4a62b97088",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.alien_botanist.sources.world.prompt; existence required"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/elf_archivist-portraits-original.png",
+      "bytes": 1975061,
+      "sha256": "328be0d0f94ff4eaf03ecfa76cc76f1a27bc4e10a11891dacbe2d3af9624a271",
+      "git_mode": "100644",
+      "git_blob": "91dcbb41af8a37bd8357e2ed22eac04dc3ebf7fb",
+      "head_sha256": "328be0d0f94ff4eaf03ecfa76cc76f1a27bc4e10a11891dacbe2d3af9624a271",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.elf_archivist.sources.portraits.path / sha256",
+          "consumer_expected_sha256": "328be0d0f94ff4eaf03ecfa76cc76f1a27bc4e10a11891dacbe2d3af9624a271"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/elf_archivist-portraits.prompt.txt",
+      "bytes": 1773,
+      "sha256": "a8a943ea8de9913f7542d89fe0f51550d5cf126a8d881b9418b7b49b7cefa090",
+      "git_mode": "100644",
+      "git_blob": "14bfe3eb6a5268606776a21137f9aca8a4330a84",
+      "head_sha256": "a8a943ea8de9913f7542d89fe0f51550d5cf126a8d881b9418b7b49b7cefa090",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.elf_archivist.sources.portraits.prompt; existence required"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/elf_archivist-world-original.png",
+      "bytes": 1823412,
+      "sha256": "7883e30544a3df0b23c1ce984147e4d35095bbe73e0e087eb64cecef7cf28544",
+      "git_mode": "100644",
+      "git_blob": "6f8ef0124708b9447e887edc7acfab74b51dbfa7",
+      "head_sha256": "7883e30544a3df0b23c1ce984147e4d35095bbe73e0e087eb64cecef7cf28544",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.elf_archivist.sources.world.path / sha256",
+          "consumer_expected_sha256": "7883e30544a3df0b23c1ce984147e4d35095bbe73e0e087eb64cecef7cf28544"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/elf_archivist-world.prompt.txt",
+      "bytes": 2330,
+      "sha256": "7ee1f10854d50270a0d0896df863e308d5ac84676171982627401ad1f2ccf4ce",
+      "git_mode": "100644",
+      "git_blob": "9ee51287a07b04a3a9612e9eeec2797b28b701a6",
+      "head_sha256": "7ee1f10854d50270a0d0896df863e308d5ac84676171982627401ad1f2ccf4ce",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.elf_archivist.sources.world.prompt; existence required"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/neutral_idle_staging/alien_botanist-neutral-original.png",
+      "bytes": 1225300,
+      "sha256": "d970fd5dcf8b96548f80181bba5902085d8b9469a466e5aa623e785bfd86dffa",
+      "git_mode": "100644",
+      "git_blob": "7ca636feae3107f7504fb018780ea53ffaf1dedb",
+      "head_sha256": "d970fd5dcf8b96548f80181bba5902085d8b9469a466e5aa623e785bfd86dffa",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.alien_botanist.poses.idle.source_original / source_sha256",
+          "consumer_expected_sha256": "d970fd5dcf8b96548f80181bba5902085d8b9469a466e5aa623e785bfd86dffa"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/neutral_idle_staging/alien_botanist.prompt.txt",
+      "bytes": 2049,
+      "sha256": "0c5106789c8468c5957298be2fd437672279cc7504cb11fbef0e51416981fa3b",
+      "git_mode": "100644",
+      "git_blob": "c1a6b424c23cc11ce2b96f280ad2c2806e673ed3",
+      "head_sha256": "0c5106789c8468c5957298be2fd437672279cc7504cb11fbef0e51416981fa3b",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.alien_botanist.poses.idle.source_prompt; existence required"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/neutral_idle_staging/elf_archivist-neutral-original.png",
+      "bytes": 1203534,
+      "sha256": "2c0b56c051870f06e831716e13c1809b9614dc293e8c2fbd8ea7e47d3f5d6fdb",
+      "git_mode": "100644",
+      "git_blob": "9dd6c1a493a15115b925a449c20e7fd4007a370f",
+      "head_sha256": "2c0b56c051870f06e831716e13c1809b9614dc293e8c2fbd8ea7e47d3f5d6fdb",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.elf_archivist.poses.idle.source_original / source_sha256",
+          "consumer_expected_sha256": "2c0b56c051870f06e831716e13c1809b9614dc293e8c2fbd8ea7e47d3f5d6fdb"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/neutral_idle_staging/elf_archivist.prompt.txt",
+      "bytes": 2020,
+      "sha256": "9eb370c1fced86b9b46d93a4a9a45dd590a8b5dac4bf7cc894dda3392f8ff1b5",
+      "git_mode": "100644",
+      "git_blob": "bfbd93c1c475aae15a5daa1040e5bd0be46676f9",
+      "head_sha256": "9eb370c1fced86b9b46d93a4a9a45dd590a8b5dac4bf7cc894dda3392f8ff1b5",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.elf_archivist.poses.idle.source_prompt; existence required"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/neutral_idle_staging/robot_machinist-neutral-original.png",
+      "bytes": 1283713,
+      "sha256": "9045ec88e48c4554ed167887fa8e00153df10c8177a5a8833ab68afedb8e3c89",
+      "git_mode": "100644",
+      "git_blob": "602a3ec7817b825dd5d4f258d1a697179aa7634b",
+      "head_sha256": "9045ec88e48c4554ed167887fa8e00153df10c8177a5a8833ab68afedb8e3c89",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.robot_machinist.poses.idle.source_original / source_sha256",
+          "consumer_expected_sha256": "9045ec88e48c4554ed167887fa8e00153df10c8177a5a8833ab68afedb8e3c89"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/neutral_idle_staging/robot_machinist.prompt.txt",
+      "bytes": 2059,
+      "sha256": "fa4b12cd55f90a39e83e64473512d1d5cf60309e88bd9d16851b729eccaea837",
+      "git_mode": "100644",
+      "git_blob": "e9b53673d417c14aec72867b7020765e9540fe8d",
+      "head_sha256": "fa4b12cd55f90a39e83e64473512d1d5cf60309e88bd9d16851b729eccaea837",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.robot_machinist.poses.idle.source_prompt; existence required"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/robot_machinist-portraits-original.png",
+      "bytes": 1472391,
+      "sha256": "900d952e3697cedd3bf42087c01c385bdb526238fb33dc76f91535f5822af797",
+      "git_mode": "100644",
+      "git_blob": "1684f3dbd65cabba67000cdfceb217491478388b",
+      "head_sha256": "900d952e3697cedd3bf42087c01c385bdb526238fb33dc76f91535f5822af797",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.robot_machinist.sources.portraits.path / sha256",
+          "consumer_expected_sha256": "900d952e3697cedd3bf42087c01c385bdb526238fb33dc76f91535f5822af797"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/robot_machinist-portraits.prompt.txt",
+      "bytes": 2251,
+      "sha256": "a7477d766beeca03881eba75b4082fa520f0e77dbffa89df8d6563ca0fec0506",
+      "git_mode": "100644",
+      "git_blob": "610dec8725159a1c853c5c511137ee5f05998f86",
+      "head_sha256": "a7477d766beeca03881eba75b4082fa520f0e77dbffa89df8d6563ca0fec0506",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.robot_machinist.sources.portraits.prompt; existence required"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/robot_machinist-world-v2-original.png",
+      "bytes": 1855846,
+      "sha256": "503afcc729a6423bcb3ba317ab3b0997203b78ec26d49516658345f44f326e39",
+      "git_mode": "100644",
+      "git_blob": "6263b034ce3268318f47e052d587c8a56c3c094b",
+      "head_sha256": "503afcc729a6423bcb3ba317ab3b0997203b78ec26d49516658345f44f326e39",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.robot_machinist.sources.world.path / sha256",
+          "consumer_expected_sha256": "503afcc729a6423bcb3ba317ab3b0997203b78ec26d49516658345f44f326e39"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/npcs/robot_machinist-world-v2.prompt.txt",
+      "bytes": 1647,
+      "sha256": "29bdd232a93478c33019db87f0ce8e1e1cbc974af9ed240f4e6289dea7531c39",
+      "git_mode": "100644",
+      "git_blob": "b366e521b73ccaba4ffe8ec891b7e870bea3dbb1",
+      "head_sha256": "29bdd232a93478c33019db87f0ce8e1e1cbc974af9ed240f4e6289dea7531c39",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "assets/2d_v5/npcs/npc-manifest.json / appearances.robot_machinist.sources.world.prompt; existence required"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/shop-sign/hanging-sign-original.png",
+      "bytes": 923910,
+      "sha256": "7e353c979455fbb106c7325332cdb6362090c00000cddedb3e840c9b820dca16",
+      "git_mode": "100644",
+      "git_blob": "388a995bf50925c0034524561d5f0ee040cc5072",
+      "head_sha256": "7e353c979455fbb106c7325332cdb6362090c00000cddedb3e840c9b820dca16",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tests/test_shop_sign_2d.gd",
+          "dependency_provenance": "asset_checks() line 35 / SOURCE_SHA",
+          "consumer_expected_sha256": "7e353c979455fbb106c7325332cdb6362090c00000cddedb3e840c9b820dca16"
+        }
+      ]
+    },
+    {
+      "path": "source_art/2d_v5/shop-sign/manifest.json",
+      "bytes": 3065,
+      "sha256": "f1c8a18cd2324fcbcf1576399c4e10b6b313d6df9360d73be7ee4a5edc065fc9",
+      "git_mode": "100644",
+      "git_blob": "f7536e129ce0734b2ffe85ebc1794fad221c3adf",
+      "head_sha256": "f1c8a18cd2324fcbcf1576399c4e10b6b313d6df9360d73be7ee4a5edc065fc9",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "scripts/shop_sign_2d.gd",
+          "dependency_provenance": "source_manifest metadata reference; retained companion provenance"
+        }
+      ]
+    },
+    {
+      "path": "source_art/pixel_pipeline_studies/palette_96.json",
+      "bytes": 1721,
+      "sha256": "5bb6b501d7bece46b528a3c230e39c207e5f8a3aac6be15969f21683e73f2944",
+      "git_mode": "100644",
+      "git_blob": "34658330ea0de9cd7101af3ac7dffedaa089d869",
+      "head_sha256": "5bb6b501d7bece46b528a3c230e39c207e5f8a3aac6be15969f21683e73f2944",
+      "working_matches_head": true,
+      "consumers": [
+        {
+          "path": "tests/test_shop_sign_2d.gd",
+          "dependency_provenance": "asset_checks() line 38 palette reader"
+        },
+        {
+          "path": "tools/test_actor_motion_assets.py",
+          "dependency_provenance": "line 14 shared palette reader"
+        },
+        {
+          "path": "tools/test_species_npcs.py",
+          "dependency_provenance": "npc-manifest.json / palette and palette_sha256",
+          "consumer_expected_sha256": "5bb6b501d7bece46b528a3c230e39c207e5f8a3aac6be15969f21683e73f2944"
+        }
+      ]
+    }
+  ],
+  "consumer_sources": [
+    {
+      "path": "tests/test_shop_sign_2d.gd",
+      "bytes": 8996,
+      "sha256": "9c1e80a3f0a480749ba9cb4f4d50f11294a438b7821271873b7869dcd37c8b75"
+    },
+    {
+      "path": "tools/test_species_npcs.py",
+      "bytes": 7614,
+      "sha256": "c621d6020de7df076d16281e25ca608a8429b382e59e9c80f34332ab62da1e67"
+    },
+    {
+      "path": "tools/test_actor_motion_assets.py",
+      "bytes": 4953,
+      "sha256": "ba6bd38dc96733615deb0b246125db08077ab8d8edea839a6b01e49f22f75f0d"
+    },
+    {
+      "path": "scripts/shop_sign_2d.gd",
+      "bytes": 1105,
+      "sha256": "e2fdf2496dccf44854261430a185e89885e34298965a1f72441f10ed52ca7639"
+    },
+    {
+      "path": "assets/2d_v5/npcs/npc-manifest.json",
+      "bytes": 40875,
+      "sha256": "99d5d1887a66129308223f1d90998b0625f0b3f9f99c20c7015b5bdb899e3bf8"
+    },
+    {
+      "path": "assets/2d_v5/actors/cooperative/motion-manifest.json",
+      "bytes": 158189,
+      "sha256": "f226059830f7534cdb84ef930e3c9148198f7e1bf2438348e0289c12cf484043"
+    },
+    {
+      "path": "assets/2d_v5/npcs/walk_exit/motion-manifest.json",
+      "bytes": 48527,
+      "sha256": "e60dbf5510b9ef6285dba1809cd9f97b5deec0dbb0d19b82c185f94ba7daeabc"
+    }
+  ],
+  "required_empty_output_directories": [
+    "docs/qa"
+  ],
+  "allowed_generated_reports_excluded_from_immutable_source_scan": [
+    "source_art/2d_v5/npcs/asset-qa.json",
+    "source_art/2d_v5/actors/cooperative/motion-asset-qa.json"
+  ],
+  "limits": [
+    "Source/static audit only; no asset check, builder, engine, native or game test executed.",
+    "Runtime assets, script fixtures and recovery fixtures remain covered by the existing authored manifest.",
+    "Optional replay/probe arguments are not passed by the default aggregate and are not new fixture requirements.",
+    "Historical source/provenance strings in fixture JSON are not all dereferenced by the tests."
+  ],
+  "missing_source_dependencies": [],
+  "working_support_unchanged_from_head": true
+}

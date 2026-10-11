@@ -1,0 +1,91 @@
+{
+  "candidate": "FG01",
+  "baseline_commit": "63b4855bcc32818b4b3a593a15fdea80eb74ebbc",
+  "baseline_manifest": "assets/2d_v5/actors/rig_motion_v1/rig-registration.json",
+  "baseline_manifest_sha256": "9cab9d476b660487426f246eb55394a4432ca960a0a323a1d30e4b17e1c10b77",
+  "candidate_manifest_sha256": "c0a809158e529f16fab55758d0c306bc7f2b54964d3ebb94446c7e1bb7f8b15d",
+  "confirmed_unchanged": {
+    "reference_height": 240,
+    "runtime_character_height": 210,
+    "head_alpha_size": [
+      104,
+      91
+    ],
+    "head_root": [
+      55,
+      91
+    ],
+    "head_attachment_offset": [
+      -8,
+      -54.5373665480427
+    ],
+    "thigh_lengths": {
+      "near": 44.38167261381662,
+      "far": 44.51834677972667
+    },
+    "shin_to_upper_boot_mount_lengths": {
+      "near": 20.052509194612032,
+      "far": 20.030055541610462
+    },
+    "boot_mount_to_sole": {
+      "near": [
+        5.279999999999999,
+        29.919999999999998
+      ],
+      "far": [
+        7.039999999999999,
+        28.951999999999998
+      ]
+    },
+    "all_part_root_tip_and_uniform_scales": true,
+    "all_raster_sha256_unchanged": true
+  },
+  "provisional_changed": {
+    "near": {
+      "hip_offset": {
+        "before": [
+          3,
+          0
+        ],
+        "after": [
+          -15.715302491103204,
+          0
+        ]
+      },
+      "neutral_sole": {
+        "before": [
+          18.0,
+          0.0
+        ],
+        "after": [
+          -33.480427046263344,
+          0
+        ]
+      }
+    },
+    "far": {
+      "hip_offset": {
+        "before": [
+          -3,
+          0
+        ],
+        "after": [
+          10.761565836298933,
+          0
+        ]
+      },
+      "neutral_sole": {
+        "before": [
+          -18.0,
+          0.0
+        ],
+        "after": [
+          12.469750889679716,
+          0
+        ]
+      }
+    }
+  },
+  "separate_legacy_constraint": "Tablet-check/ready source paints the cream pocket on screen-right; read/tap and neutral paint it on screen-left. Keep its accepted full-body view independent for now; never mirror or relabel the walking outfit to match this legacy view. Cloud owns final gesture registration.",
+  "status": "Provisional art registration frozen for an isolated pure-pose experiment; local worker must not retune sockets/bone lengths/scales."
+}

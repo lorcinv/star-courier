@@ -1,0 +1,52 @@
+{
+	"activation_fraction": 0.49883086515978176,
+	"activation_tick": 4666,
+	"checkpoints": [
+		{
+			"phase": "active",
+			"position": [
+				1002.0663452148438,
+				-150.4781951904297
+			],
+			"result": {
+				"contract_id": "D5-A",
+				"control_version": "pilot-v5-protected-bird",
+				"entity_id": "D5-A/protected-pass/0/bird/0",
+				"event_id": "D5-A/protected-pass/0",
+				"harms": [],
+				"physics_ticks": 4666,
+				"route_profile": "mosslight-protected-bird-v1",
+				"schema": "protected-bird-harm-v1"
+			},
+			"ticks": 2333
+		}
+	],
+	"contract_id": "D5-A",
+	"elapsed": 51.2916666666644,
+	"energy_remaining": 2052.949476832229,
+	"energy_used": 4020.8505231677727,
+	"facts": {
+		"contract_id": "D5-A",
+		"control_version": "pilot-v5-protected-bird",
+		"entity_id": "D5-A/protected-pass/0/bird/0",
+		"event_id": "D5-A/protected-pass/0",
+		"harms": [],
+		"physics_ticks": 6155,
+		"route_profile": "mosslight-protected-bird-v1",
+		"schema": "protected-bird-harm-v1"
+	},
+	"initial_energy": 6000.0,
+	"integrity": 1.0,
+	"launcher_energy": 20.000002670288083,
+	"minimum_sampled_full_craft_clearance": 5.488303012847901,
+	"physics_tick": 6155,
+	"seed": 670371318,
+	"station_energy": 53.8,
+	"status": "success",
+	"ticks": 3078,
+	"weight": 2.4,
+	"wildlife_error": "",
+	"wildlife_hp": 8.0,
+	"wildlife_state": "healthy",
+	"witness": "safe"
+}

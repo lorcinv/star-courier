@@ -3,6 +3,7 @@ extends Sprite2D
 ## configure() consumes a saved identity; it never writes to the caller's binding
 ## or uses the global RNG. Empty legacy bindings retain the existing human actor.
 ## Original idle/handoff plus caller-driven whole-raster motion, not a Spine rig.
+const HumanMotion2D=preload("res://scripts/human_rigid_motion_2d.gd")
 const ActorMotion2D=preload("res://scripts/actor_motion_2d.gd")
 const NPC_MANIFEST:String="res://assets/2d_v5/npcs/npc-manifest.json"
 const ACTOR_MANIFEST:String="res://assets/2d_v5/actors/actor-manifest.json"
@@ -39,6 +40,12 @@ var _valid:bool=false
 var _issues:Array[String]=[]
 var _motion:RefCounted
 var _motion_frame:Dictionary={}
+var _conversing:bool=false
+var _front_arm:Sprite2D
+var _visual_clock:float=0.0
+var _visual_enabled:bool=true
+var _visual_reduced:bool=false
+var _rig_facing_right:bool=true
 
 static func _read_json(path:String) -> Dictionary:
  if not FileAccess.file_exists(path):return {}
@@ -78,6 +85,7 @@ func _issue(code:String) -> void:
 func _clear_art() -> void:
  texture=null;_valid=false;set_meta("art_id","")
  if is_instance_valid(_accessory):_accessory.texture=null;_accessory.hide()
+ if is_instance_valid(_front_arm):_front_arm.texture=null;_front_arm.hide()
  hide()
 
 func _publish_metadata() -> void:
@@ -88,10 +96,11 @@ func _publish_metadata() -> void:
  set_meta("npc_valid",_valid);set_meta("npc_diagnostics",_issues.duplicate())
 
 func configure(binding:Dictionary,height:float=DEFAULT_HEIGHT) -> bool:
+ if _motion!=null and _motion.has_method("dispose"):_motion.dispose()
  _ensure_manifests();_issues.clear();_clear_art();_motion=null;_motion_frame={}
  set_meta("motion_active",false);set_meta("motion_frame",-1);set_meta("motion_diagnostics",[])
  _appearance={};_accessory_data={};_foot_anchor=Vector2.ZERO;_parcel_anchor=Vector2.ZERO
- appearance_id="";species="";accessory_id="none";appearance_seed=0;pose="idle"
+ appearance_id="";species="";accessory_id="none";appearance_seed=0;pose="idle";_conversing=false
  centered=false;offset=Vector2.ZERO;scale=Vector2.ONE;flip_h=false;flip_v=false
  texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
  _height=height if is_finite(height) and height>0 else DEFAULT_HEIGHT
@@ -150,35 +159,67 @@ func _choose_accessory(binding:Dictionary,has_seed:bool) -> void:
   _issue("incompatible_accessory");return
  accessory_id=chosen;_accessory_data=data
 
+func set_conversation(active:bool) -> void:
+ if _conversing==active:return
+ var was_visible:bool=visible
+ _conversing=active
+ if pose not in ["walk","farewell","handoff"]:set_pose(false)
+ # Dialogue ownership cannot resurrect an exited or caller-hidden actor.
+ if not was_visible:hide()
+
 func set_pose(handoff:bool) -> void:
- var requested_pose:String="handoff" if handoff else "idle"
+ var requested_pose:String="handoff" if handoff else ("conversation" if _conversing else "idle")
+ if species=="human" and requested_pose=="idle" and _valid:
+  _ensure_motion()
+  _motion.apply_idle(_rig_facing_right);_accept_motion("idle");return
  if pose==requested_pose and _valid:return
  if _motion!=null:_motion.restore_original()
  _motion_frame={}
  pose=requested_pose
  if _appearance.is_empty():_clear_art();_publish_metadata();return
- var path:String=str(_appearance.get("poses",{}).get(pose,{}).get("runtime",""))
+ var pose_data:Dictionary=_appearance.get("poses",{}).get(pose,{})
+ if pose_data.is_empty() and pose=="conversation":pose_data=_appearance.get("poses",{}).get("idle",{})
+ var path:String=str(pose_data.get("runtime",""))
  if path.is_empty():path=str(_appearance.get("world",{}).get(pose,""))
  texture=_texture(path)
  if texture==null:
   _issue("missing_pose_texture:"+pose);_clear_art();_publish_metadata();return
  # A motion/reversed pose must never donate its registration to idle/handoff.
- var pose_data:Dictionary=_appearance.get("poses",{}).get(pose,{})
  _foot_anchor=_point(pose_data.get("foot_anchor"),_point(_appearance.get("foot_anchor")))
  var body_height:float=float(_appearance.get("body_height",240.0))
  offset=-_foot_anchor;scale=Vector2.ONE*_height/body_height;flip_h=false;flip_v=false
  _valid=true;show();set_meta("art_id",path)
+ if species=="human" and pose in ["conversation","handoff"]:
+  _ensure_motion();_motion.apply_full_pose(pose,true)
  _update_accessory();_publish_metadata()
+
+func _ensure_motion() -> void:
+ if _motion==null:_motion=HumanMotion2D.new(self,appearance_id,_height) if species=="human" else ActorMotion2D.new(self,appearance_id,_height)
+ if _motion.has_method("set_visual_context"):_motion.set_visual_context(_visual_clock,_visual_enabled,_visual_reduced)
+
+func has_rigid_motion() -> bool:return species=="human"
+
+func set_visual_context(clock:float,enabled:bool=true,reduced:bool=false) -> void:
+ _visual_clock=clock;_visual_enabled=enabled;_visual_reduced=reduced
+ if _motion!=null and _motion.has_method("set_visual_context"):_motion.set_visual_context(clock,enabled,reduced)
+
+func set_locomotion(state:String,distance:float,right:bool,clock:float,stop_age:float=0.0) -> bool:
+ if not _valid or species!="human":return false
+ set_visual_context(clock,_visual_enabled,_visual_reduced);_ensure_motion();_rig_facing_right=right
+ if _conversing and state in ["stop","idle"]:set_pose(false);return true
+ if not _motion.apply_npc_pose(state,distance,right,clock,stop_age):return false
+ _accept_motion("walk" if state in ["start","move","inertial_stop"] else state);return true
 
 func set_walk(distance_px:float,facing_right:bool=true) -> bool:
  if not _valid:return false
- if _motion==null:_motion=ActorMotion2D.new(self,appearance_id,_height)
+ _ensure_motion()
+ _rig_facing_right=facing_right
  if not _motion.apply_walk(distance_px,facing_right):return false
  _accept_motion("walk");return true
 
 func set_gesture(pose_id:String,facing_right:bool=true) -> bool:
  if not _valid:return false
- if _motion==null:_motion=ActorMotion2D.new(self,appearance_id,_height)
+ _ensure_motion()
  if not _motion.apply_gesture(pose_id,facing_right):return false
  _accept_motion(pose_id);return true
 
@@ -191,8 +232,10 @@ func _art_point(point:Vector2) -> Vector2:
 
 func _update_accessory() -> void:
  if is_instance_valid(_accessory):_accessory.hide();_accessory.texture=null
+ if is_instance_valid(_front_arm):_front_arm.hide();_front_arm.texture=null
  if _accessory_data.is_empty():return
  var anchors:Dictionary=_accessory_data.get("world_anchors",{})
+ if pose=="conversation" and not anchors.has(pose):anchors=anchors.duplicate();anchors.conversation=anchors.get("idle",[0,0])
  if _motion_frame.is_empty() and not anchors.has(pose):_issue("missing_accessory_anchor:"+pose);return
  var art:Texture2D=_texture(str(_accessory_data.get("runtime","")))
  if art==null:_issue("missing_accessory_texture");return
@@ -209,6 +252,22 @@ func _update_accessory() -> void:
  _accessory.offset=-Vector2(float(art.get_width())-local_anchor.x if accessory_flip else local_anchor.x,local_anchor.y)
  _accessory.position=_art_point(hip);_accessory.show()
  _accessory.set_meta("accessory_id",accessory_id);_accessory.set_meta("species",species)
+ _update_front_arm()
+
+func _update_front_arm() -> void:
+ # Exact neutral sprite pixels occlude a hip accessory with the natural hand.
+ # One cached child per actor; no runtime masks or per-frame textures.
+ if pose!="idle" or not _motion_frame.is_empty() or not is_instance_valid(_accessory) or not _accessory.visible:return
+ var frame:Dictionary=_appearance.get("poses",{}).get("idle",{})
+ var path:String=str(frame.get("front_arm_runtime",""))
+ if path.is_empty():return
+ var art:Texture2D=_texture(path)
+ if art==null:_issue("missing_front_arm_texture");return
+ if not is_instance_valid(_front_arm):
+  _front_arm=Sprite2D.new();_front_arm.name="NeutralFrontArm";_front_arm.centered=false;_front_arm.z_index=2
+  _front_arm.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;add_child(_front_arm)
+ _front_arm.texture=art;_front_arm.offset=offset;_front_arm.position=Vector2.ZERO
+ _front_arm.flip_h=flip_h;_front_arm.flip_v=flip_v;_front_arm.scale=Vector2.ONE;_front_arm.show()
 
 func pose_contains_parcel() -> bool:
  # Inspected runtime pixels: the human courier reaches with EMPTY hands;
@@ -229,4 +288,4 @@ func binding_snapshot() -> Dictionary:
  return {"appearance_id":appearance_id,"species":species,"appearance_seed":appearance_seed,"accessory_id":accessory_id}
 
 func debug_snapshot() -> Dictionary:
- return {"valid":_valid,"appearance_id":appearance_id,"identity":appearance_id,"species":species,"accessory_id":accessory_id,"appearance_seed":appearance_seed,"pose":pose,"pose_contains_parcel":pose_contains_parcel(),"height":_height,"foot_anchor":_foot_anchor,"foot_point":transform*_art_point(_foot_anchor),"parcel_anchor":_parcel_anchor,"parcel_point":parcel_point(),"parcel_anchor_source":"actor_manifest" if species=="human" else "inspected_handoff_pixels","accessory_visible":is_instance_valid(_accessory) and _accessory.visible,"accessory_child_count":1 if is_instance_valid(_accessory) else 0,"diagnostics":_issues.duplicate(),"manifest_load_count":_manifest_load_count,"texture_cache_size":_texture_cache.size(),"texture_load_count":_texture_load_count,"motion":_motion.debug_snapshot() if _motion!=null else {"active":false,"available":false}}
+ return {"valid":_valid,"appearance_id":appearance_id,"identity":appearance_id,"species":species,"accessory_id":accessory_id,"appearance_seed":appearance_seed,"pose":pose,"pose_contains_parcel":pose_contains_parcel(),"height":_height,"foot_anchor":_foot_anchor,"foot_point":transform*_art_point(_foot_anchor),"parcel_anchor":_parcel_anchor,"parcel_point":parcel_point(),"parcel_anchor_source":"actor_manifest" if species=="human" else "inspected_handoff_pixels","accessory_visible":is_instance_valid(_accessory) and _accessory.visible,"accessory_child_count":1 if is_instance_valid(_accessory) else 0,"diagnostics":_issues.duplicate(),"manifest_load_count":_manifest_load_count,"texture_cache_size":_texture_cache.size(),"texture_load_count":_texture_load_count,"conversation_active":_conversing,"front_arm_visible":is_instance_valid(_front_arm) and _front_arm.visible,"front_arm_child_count":1 if is_instance_valid(_front_arm) else 0,"motion":_motion.debug_snapshot() if _motion!=null else {"active":false,"available":false}}

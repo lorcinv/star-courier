@@ -1,0 +1,593 @@
+{
+	"commands": [
+		{
+			"active": false,
+			"axis_q": -1000,
+			"boost": false,
+			"tick": 0
+		},
+		{
+			"active": false,
+			"axis_q": 0,
+			"boost": false,
+			"tick": 156
+		},
+		{
+			"active": false,
+			"axis_q": -1000,
+			"boost": false,
+			"tick": 348
+		},
+		{
+			"active": false,
+			"axis_q": 0,
+			"boost": false,
+			"tick": 384
+		},
+		{
+			"active": false,
+			"axis_q": -1000,
+			"boost": false,
+			"tick": 396
+		},
+		{
+			"active": false,
+			"axis_q": 0,
+			"boost": false,
+			"tick": 408
+		},
+		{
+			"active": false,
+			"axis_q": -1000,
+			"boost": false,
+			"tick": 420
+		},
+		{
+			"active": false,
+			"axis_q": 0,
+			"boost": false,
+			"tick": 444
+		},
+		{
+			"active": false,
+			"axis_q": -1000,
+			"boost": false,
+			"tick": 468
+		},
+		{
+			"active": false,
+			"axis_q": 0,
+			"boost": false,
+			"tick": 492
+		},
+		{
+			"active": false,
+			"axis_q": -1000,
+			"boost": false,
+			"tick": 516
+		},
+		{
+			"active": false,
+			"axis_q": 0,
+			"boost": false,
+			"tick": 528
+		},
+		{
+			"active": false,
+			"axis_q": -1000,
+			"boost": false,
+			"tick": 540
+		},
+		{
+			"active": false,
+			"axis_q": 0,
+			"boost": false,
+			"tick": 552
+		},
+		{
+			"active": false,
+			"axis_q": 1000,
+			"boost": false,
+			"tick": 564
+		},
+		{
+			"active": false,
+			"axis_q": 0,
+			"boost": false,
+			"tick": 708
+		},
+		{
+			"active": false,
+			"axis_q": -1000,
+			"boost": false,
+			"tick": 972
+		},
+		{
+			"active": false,
+			"axis_q": 0,
+			"boost": false,
+			"tick": 1104
+		},
+		{
+			"active": false,
+			"axis_q": 1000,
+			"boost": false,
+			"tick": 1116
+		},
+		{
+			"active": false,
+			"axis_q": 0,
+			"boost": false,
+			"tick": 1284
+		},
+		{
+			"active": false,
+			"axis_q": 1000,
+			"boost": false,
+			"tick": 1380
+		},
+		{
+			"active": false,
+			"axis_q": 0,
+			"boost": false,
+			"tick": 1536
+		},
+		{
+			"active": false,
+			"axis_q": 1000,
+			"boost": false,
+			"tick": 1584
+		},
+		{
+			"active": false,
+			"axis_q": 0,
+			"boost": false,
+			"tick": 1656
+		},
+		{
+			"active": false,
+			"axis_q": 1000,
+			"boost": false,
+			"tick": 2592
+		},
+		{
+			"active": false,
+			"axis_q": -1000,
+			"boost": false,
+			"tick": 2676
+		},
+		{
+			"active": false,
+			"axis_q": 0,
+			"boost": false,
+			"tick": 2832
+		},
+		{
+			"active": false,
+			"axis_q": 1000,
+			"boost": false,
+			"tick": 2856
+		},
+		{
+			"active": false,
+			"axis_q": 0,
+			"boost": false,
+			"tick": 2904
+		}
+	],
+	"completed_command_ticks": 2956,
+	"control_version": "pilot-v5-protected-bird",
+	"design": [
+		{
+			"id": 1,
+			"input_a": -1,
+			"input_b": -1,
+			"param": 100.0,
+			"rot": 0,
+			"target": -1,
+			"type": "cargo",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"id": 2,
+			"input_a": -1,
+			"input_b": -1,
+			"param": 32.0,
+			"rot": 0,
+			"target": -1,
+			"type": "beam",
+			"x": 1,
+			"y": -1
+		},
+		{
+			"id": 3,
+			"input_a": -1,
+			"input_b": -1,
+			"param": 300.0,
+			"rot": 0,
+			"target": -1,
+			"type": "battery",
+			"x": -1,
+			"y": 0
+		},
+		{
+			"id": 4,
+			"input_a": -1,
+			"input_b": -1,
+			"param": 28.0,
+			"rot": 0,
+			"target": -1,
+			"type": "thruster",
+			"x": 0,
+			"y": -1
+		},
+		{
+			"id": 5,
+			"input_a": -1,
+			"input_b": -1,
+			"param": 150.0,
+			"rot": 0,
+			"target": -1,
+			"type": "armor",
+			"x": 1,
+			"y": 0
+		},
+		{
+			"id": 6,
+			"input_a": -1,
+			"input_b": -1,
+			"param": 28.0,
+			"rot": 0,
+			"target": -1,
+			"type": "thruster",
+			"x": 0,
+			"y": 1
+		},
+		{
+			"id": 7,
+			"input_a": -1,
+			"input_b": -1,
+			"param": 32.0,
+			"rot": 0,
+			"target": -1,
+			"type": "beam",
+			"x": 1,
+			"y": 1
+		},
+		{
+			"id": 8,
+			"input_a": -1,
+			"input_b": -1,
+			"param": 0.0,
+			"rot": 0,
+			"target": -1,
+			"type": "coupler",
+			"x": -1,
+			"y": 1
+		}
+	],
+	"launcher": [
+		{
+			"id": 1001,
+			"input_a": -1,
+			"input_b": -1,
+			"param": 20.0,
+			"rot": 0,
+			"target": -1,
+			"type": "spring",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"id": 1002,
+			"input_a": -1,
+			"input_b": -1,
+			"param": 300.0,
+			"rot": 0,
+			"target": -1,
+			"type": "battery",
+			"x": -1,
+			"y": 0
+		},
+		{
+			"id": 1003,
+			"input_a": -1,
+			"input_b": -1,
+			"param": 32.0,
+			"rot": 0,
+			"target": -1,
+			"type": "beam",
+			"x": 1,
+			"y": 0
+		}
+	],
+	"route": {
+		"background_route": "ascent",
+		"boundary_y": 260.0,
+		"contract_id": "D4-HARM",
+		"control_version": "pilot-v5-protected-bird",
+		"deadline": 72.0,
+		"delivery_radius": 9.0,
+		"destination_name": "苔光驿站",
+		"destination_y": -150.0,
+		"distance": 1240.0,
+		"ecology": {
+			"activation": "first-live-cargo-portal-transit",
+			"bounds": [
+				1015.0,
+				-165.0,
+				1160.0,
+				-125.0
+			],
+			"entity_id": "D4-HARM/protected-pass/0/bird/0",
+			"event_id": "D4-HARM/protected-pass/0",
+			"mass": 0.125,
+			"max_active_ticks": 4800,
+			"max_hp": 8.0,
+			"position": [
+				1120.0,
+				-153.0
+			],
+			"radius": 0.375,
+			"schema": "protected-bird-route-v1",
+			"seed": 42,
+			"species_id": "mosslight_leafwing",
+			"velocity": [
+				-3.0,
+				0.5
+			]
+		},
+		"ecology_generator": "protected-bird-offers-v1",
+		"ecology_schema": "protected-bird-route-v1",
+		"gravity": 0.0,
+		"hazards": [
+			{
+				"gate_index": 0,
+				"health": 1000000.0,
+				"mass": 1000000.0,
+				"pilot_gate": true,
+				"radius": 5.0,
+				"type": "rock",
+				"x": 105.0,
+				"y": -37.728515625
+			},
+			{
+				"gate_index": 0,
+				"health": 1000000.0,
+				"mass": 1000000.0,
+				"pilot_gate": true,
+				"radius": 5.0,
+				"type": "rock",
+				"x": 105.0,
+				"y": -7.728515625
+			},
+			{
+				"gate_index": 1,
+				"health": 1000000.0,
+				"mass": 1000000.0,
+				"pilot_gate": true,
+				"radius": 5.0,
+				"type": "rock",
+				"x": 220.0,
+				"y": -81.5
+			},
+			{
+				"gate_index": 1,
+				"health": 1000000.0,
+				"mass": 1000000.0,
+				"pilot_gate": true,
+				"radius": 5.0,
+				"type": "rock",
+				"x": 220.0,
+				"y": -51.5
+			},
+			{
+				"gate_index": 2,
+				"health": 1000000.0,
+				"mass": 1000000.0,
+				"pilot_gate": true,
+				"radius": 5.0,
+				"type": "rock",
+				"x": 330.0,
+				"y": -154.4326171875
+			},
+			{
+				"gate_index": 2,
+				"health": 1000000.0,
+				"mass": 1000000.0,
+				"pilot_gate": true,
+				"radius": 5.0,
+				"type": "rock",
+				"x": 330.0,
+				"y": -124.4326171875
+			},
+			{
+				"gate_index": 3,
+				"health": 1000000.0,
+				"mass": 1000000.0,
+				"pilot_gate": true,
+				"radius": 5.0,
+				"type": "rock",
+				"x": 465.0,
+				"y": -165.0
+			},
+			{
+				"gate_index": 3,
+				"health": 1000000.0,
+				"mass": 1000000.0,
+				"pilot_gate": true,
+				"radius": 5.0,
+				"type": "rock",
+				"x": 465.0,
+				"y": -135.0
+			},
+			{
+				"destructible": false,
+				"health": 1000000.0,
+				"mass": 1000000.0,
+				"pilot_gate": true,
+				"radius": 5.0,
+				"type": "rock",
+				"wormhole_hardware": true,
+				"x": 600.0,
+				"y": -168.0
+			},
+			{
+				"destructible": false,
+				"health": 1000000.0,
+				"mass": 1000000.0,
+				"pilot_gate": true,
+				"radius": 5.0,
+				"type": "rock",
+				"wormhole_hardware": true,
+				"x": 600.0,
+				"y": -132.0
+			},
+			{
+				"destructible": false,
+				"health": 1000000.0,
+				"mass": 1000000.0,
+				"pilot_gate": true,
+				"radius": 5.0,
+				"type": "rock",
+				"wormhole_hardware": true,
+				"x": 1000.0,
+				"y": -168.0
+			},
+			{
+				"destructible": false,
+				"health": 1000000.0,
+				"mass": 1000000.0,
+				"pilot_gate": true,
+				"radius": 5.0,
+				"type": "rock",
+				"wormhole_hardware": true,
+				"x": 1000.0,
+				"y": -132.0
+			},
+			{
+				"health": 1000000.0,
+				"mass": 1000000.0,
+				"otherworld": true,
+				"pilot_gate": true,
+				"radius": 5.0,
+				"type": "rock",
+				"x": 1140.0,
+				"y": -161.0
+			},
+			{
+				"health": 1000000.0,
+				"mass": 1000000.0,
+				"otherworld": true,
+				"pilot_gate": true,
+				"radius": 5.0,
+				"type": "rock",
+				"x": 1140.0,
+				"y": -131.0
+			}
+		],
+		"lookahead_seconds": 3.5,
+		"max_delivery_speed": 24.0,
+		"mode": "pilot",
+		"name": "城市货站 → 晨星虫洞 → 苔光驿站",
+		"otherworld_background": "mosslight",
+		"pilot_altitude": 150.0,
+		"pilot_battery_multiplier": 20.0,
+		"pilot_boost_speed": 22.0,
+		"pilot_climb_end": 410.0,
+		"pilot_climb_start": 35.0,
+		"pilot_cruise_speed": 18.0,
+		"pilot_drag": 0.025,
+		"pilot_energy_tariff": 0.025,
+		"pilot_gates": [
+			{
+				"half_gap": 10.0,
+				"heading": -0.34942174970958734,
+				"index": 0,
+				"lane_offset": -9.0,
+				"x": 105.0,
+				"y": -22.728515625
+			},
+			{
+				"half_gap": 10.0,
+				"heading": -0.5403410652071341,
+				"index": 1,
+				"lane_offset": 7.0,
+				"x": 220.0,
+				"y": -66.5
+			},
+			{
+				"half_gap": 10.0,
+				"heading": -0.3828948929736634,
+				"index": 2,
+				"lane_offset": -7.0,
+				"x": 330.0,
+				"y": -139.4326171875
+			},
+			{
+				"half_gap": 10.0,
+				"heading": 0.0,
+				"index": 3,
+				"lane_offset": 0.0,
+				"x": 465.0,
+				"y": -150.0
+			},
+			{
+				"half_gap": 13.0,
+				"heading": 0.0,
+				"index": 4,
+				"lane_offset": 0.0,
+				"wormhole_entry": true,
+				"x": 600.0,
+				"y": -150.0
+			},
+			{
+				"half_gap": 10.0,
+				"heading": 0.0,
+				"index": 5,
+				"lane_offset": 4.0,
+				"otherworld": true,
+				"x": 1140.0,
+				"y": -146.0
+			}
+		],
+		"pilot_net_force_limit": 30.0,
+		"pilot_overdrive": "mounted-output",
+		"pilot_profile": "pilot-v5-protected-bird",
+		"pilot_vertical_speed": 5.0,
+		"risk": "先升空，再对准虫洞；整体轮廓须装入 25.75 m 净口径。收件限速 24 m/s。 苔光保护鸟会在出口前方穿越，请从下方绕行。",
+		"route_kind": "wormhole",
+		"route_profile": "mosslight-protected-bird-v1",
+		"route_story_hook": "苔光驿站等着这箱补给。过洞后沿着亮着的收件灯走，别忘了留电。",
+		"seed": 42,
+		"time_limit": 100.0,
+		"variation": 0.0,
+		"weight": 1.0,
+		"wind": [
+			0.0,
+			0.0
+		],
+		"wormhole_hint": "通行使用驿站储能，按实际能耗计费；离洞后继续驶向收件灯。",
+		"wormhole_portal": {
+			"aperture_radius": 13.0,
+			"base_energy_j": 25.0,
+			"energy_j_per_kg": 2.0,
+			"entry": [
+				600.0,
+				-150.0
+			],
+			"exit": [
+				1000.0,
+				-150.0
+			],
+			"exit_lookahead": 0.22,
+			"id": "morning-mosslight",
+			"margin": 0.125,
+			"station_energy_j": 2000.0
+		},
+		"wormhole_schema": 1
+	},
+	"schema": "protected-bird-replay-v1",
+	"seed": 42
+}

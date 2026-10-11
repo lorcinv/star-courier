@@ -1,0 +1,38 @@
+[
+  {
+    "file": "legacy-natural-d1.json",
+    "source": "docs/qa/v5/three-day-native/natural-run-01/day-1-night-purchases-save.json",
+    "sha256": "a75a98ff026d032bc37f906702f4c2a9a7638e0986f1107456628fc6eb163aee",
+    "day": 1
+  },
+  {
+    "file": "legacy-natural-d2.json",
+    "source": "docs/qa/v5/three-day-native/natural-run-01/day-2-night-purchases-save.json",
+    "sha256": "a1c553723869a44775c4de75223d859e54017f4e4ebc131d028b0fc9707991a7",
+    "day": 2
+  },
+  {
+    "file": "legacy-natural-d3.json",
+    "source": "docs/qa/v5/three-day-native/natural-run-01/day-3-night-purchases-save.json",
+    "sha256": "3ca6146396dda2eb56f0f6bc97157c3bb750cb0062e35f6cdb606cd267740fe3",
+    "day": 3
+  },
+  {
+    "file": "review-natural-d1.json",
+    "source": "source_art/2d_v5/routes/runtime_validation_staging/evidence/native-earned-01/day-1-no-retrospective-reviews-save.json",
+    "sha256": "dd1842d3497f487cc11268cdb0c21c5df5913cd733c0d71d4e72b968e3c33862",
+    "day": 1
+  },
+  {
+    "file": "review-natural-d2.json",
+    "source": "source_art/2d_v5/routes/runtime_validation_staging/evidence/native-earned-01/day-2-review-still-hidden-save.json",
+    "sha256": "34376f39d2381e85585621f8b50d0eb684162a8a806d4a85d3c71ca537f63599",
+    "day": 2
+  },
+  {
+    "file": "review-natural-d3.json",
+    "source": "source_art/2d_v5/routes/runtime_validation_staging/evidence/native-earned-01/published-once-day-3-restored-save.json",
+    "sha256": "2f7371792f47edf085505f480b3c56aec61f422642f60ce265284203f9982c28",
+    "day": 3
+  }
+]

@@ -37,8 +37,12 @@ func write_primary(value:Dictionary) -> void:
 func craft() -> Array:return Extreme.starter_design()
 func pad() -> Array:return Extreme.starter_launcher()
 
-func economy():
- var e=Econ.new();e.enable_extreme_mode();e.starter_stock(craft(),pad())
+func economy(protocol:String="pilot-v3"):
+ var e=Econ.new()
+ if protocol=="pilot-v1":e.enable_pilot_mode()
+ elif protocol=="pilot-v2":e.enable_ascent_mode()
+ elif protocol=="pilot-v3":e.enable_extreme_mode()
+ e.starter_stock(craft(),pad())
  e.story_state=Stories.initial_state(1729);e.enable_story_mode()
  e.designs={"workbench":{"design":craft(),"launcher":pad()}}
  return e
@@ -159,10 +163,10 @@ func test_legacy_versions() -> void:
 func test_frozen_dispatches() -> void:
  for version in [2,3,4,5]:
   for protocol in ["autonomous-v5","pilot-v1","pilot-v2","pilot-v3"]:
-   clear_files();var e=economy();e.credits=1000;e.research=2
+   clear_files();var e=economy(protocol);e.credits=1000;e.research=2
    var cid:String=str(e.contracts[0].contract_id)
    e.accept_contract(cid);e.mark_cargo_loaded(cid);e.begin_dispatch(craft(),pad())
-   e.in_flight.control_version=protocol;e.in_flight.route.control_version=protocol
+   # Use an actually authored legacy protocol, never autonomous-v5 in pilot fields.
    e.in_flight.route.pilot_energy_tariff=.037123456789;e.in_flight.route.custom_marker="keep-original-route"
    e.in_flight.ticks=37;e.in_flight.elapsed=37.0/60.0
    e.in_flight.input_commands=[{"tick":0,"axis_q":0,"boost":false,"active":false},{"tick":17,"axis_q":127,"boost":true,"active":false}]
