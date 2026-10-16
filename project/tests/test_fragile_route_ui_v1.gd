@@ -1,0 +1,97 @@
+extends Node
+## Only the new content UI and its old-offer fallback. No GUI or save writes.
+const Chapter=preload("res://scripts/delivery_chapter_v3.gd")
+const Layout=preload("res://scripts/delivery_route_layout_v1.gd")
+const Preview=preload("res://scripts/delivery_route_preview_v1.gd")
+const UI=preload("res://scripts/delivery_ui_v3.gd")
+const HUD=preload("res://scripts/game_hud.gd")
+const World=preload("res://scripts/world_view_2d.gd")
+const Sim=preload("res://scripts/pilot_delivery_simulation_v8.gd")
+const Profile=preload("res://scripts/pilot_delivery_profile_v8.gd")
+var passed:int=0
+var failed:int=0
+func check(ok:bool,label:String)->void:
+ if ok:passed+=1;print("PASS ",label)
+ else:failed+=1;push_error("FAIL "+label)
+func settle()->void:
+ for tick in 5:await get_tree().process_frame
+func physical_snapshot(sim)->PackedByteArray:return var_to_bytes([sim.parts,sim.bodies,sim.obstacles,sim.links,sim.telemetry,sim.route,sim.elapsed,sim.status,sim.pilot_tick])
+func run()->void:
+ if OS.get_environment("SC_FRAGILE_UI_ISOLATED")!="1":get_tree().quit(2);return
+ get_tree().root.size=Vector2i(1280,720)
+ var order:Dictionary=Chapter.fresh_route(3)
+ check(not order.is_empty() and Layout.validation_error(order).is_empty(),"future fragile order supplies valid frozen geometry")
+ var before:PackedByteArray=var_to_bytes(order)
+ var sketch=Preview.new();sketch.size=Vector2(352,80);add_child(sketch);sketch.present(order)
+ var snapshot:Dictionary=sketch.snapshot();var geometry:Dictionary=sketch.projected_geometry()
+ check(is_equal_approx(snapshot.clearance_m,2.4) and UI.route_copy(order).contains("2.4 m"),"caption clearance is derived from authoritative circles")
+ check(geometry.circles.size()==2 and geometry.paths.size()==3,"one shared diagram presents short passage and both detour choices")
+ check(is_equal_approx(geometry.circles[0].radius,float(snapshot.circles[0].radius)*float(geometry.scale)),"route drawing uses uniform metric scale for actual circle radii")
+ var screen_gap:float=geometry.circles[0].position.distance_to(geometry.circles[1].position)-geometry.circles[0].radius-geometry.circles[1].radius
+ check(is_equal_approx(screen_gap,2.4*float(geometry.scale)),"diagram does not exaggerate physical gap")
+ check(var_to_bytes(order)==before,"preview and copy do not mutate frozen order")
+ var saved:Dictionary=order.duplicate(true);saved.distance=123.0;saved.destination_y=-22.0
+ sketch.present(saved)
+ check(sketch.snapshot().receiver==Vector2(123,-22),"preview uses supplied order destination rather than current catalogue")
+ var old:Dictionary=Profile.route();sketch.present(old)
+ check(not sketch.visible and sketch.snapshot().is_empty() and UI.route_copy(old).is_empty(),"unmarked old offers get unchanged UI fallback")
+ var invalid:Dictionary=order.duplicate(true);invalid.hazards[0].radius=6.0;sketch.present(invalid)
+ check(not sketch.visible and sketch.projected_geometry().is_empty(),"invalid marked geometry cannot produce a misleading preview")
+ var hud=HUD.new();add_child(hud)
+ var data:Dictionary={"mode":"contracts","control_version":Profile.VERSION,"activeorder":order,"contracts":[order],"assembly_mode":"craft","parts":Profile.starter_design(),"selectedpart":{},"settings":{"reduced_motion":true},"has_accepted_contract":false}
+ hud.render(data);await settle()
+ var card:Node=hud.content.find_child("Waybill1",true,false)
+ var order_sketch=card.find_child("DeliveryRouteSketch",true,false)
+ check(order_sketch!=null and order_sketch.is_visible_in_tree() and order_sketch.snapshot()==snapshot,"clearance and shared snapshot visible before acceptance without opening details")
+ check(card.find_child("RouteClearance",true,false).text==UI.route_copy(order),"order card caption shares validated metric source")
+ check(not card.find_child("RouteClearance",true,false).text.contains("自选复送"),"first-progressing chapter quote never gets optional-repeat label")
+ var repeat_order:Dictionary=Chapter.fresh_route(3,false)
+ repeat_order.name="剧情覆盖名称";repeat_order.variant="普通叙述";repeat_order.story="剧情覆盖后的故事"
+ var repeat_before:PackedByteArray=var_to_bytes(repeat_order)
+ check(UI.route_copy(repeat_order).begins_with("自选复送 · 不推进章节\n") and var_to_bytes(repeat_order)==repeat_before,"repeat label derives read-only from the quote boolean rather than name variant or story")
+ var uncertain:Dictionary=repeat_order.duplicate(true);uncertain.erase("chapter_progression")
+ check(not UI.route_copy(uncertain).contains("自选复送"),"missing progression flag is not guessed to mean repeat")
+ uncertain.chapter_progression=0
+ check(not UI.route_copy(uncertain).contains("自选复送"),"nonboolean progression value is not guessed to mean repeat")
+ var old_repeat:Dictionary=old.duplicate(true);old_repeat.chapter_progression=false
+ check(UI.route_copy(old_repeat).is_empty(),"unmarked old repeat retains prior caption fallback")
+ data.contracts=[repeat_order];data.activeorder=repeat_order;hud.render(data);await settle()
+ card=hud.content.find_child("Waybill1",true,false)
+ var repeat_heading:Label=card.find_child("RouteClearance",true,false)
+ check(repeat_heading.is_visible_in_tree() and repeat_heading.text==UI.route_copy(repeat_order) and card.find_child("DeliveryRouteSketch",true,false).snapshot()==snapshot,"preacceptance card visibly states optional repeat without opening story details")
+ data.mode="workshop";data.has_accepted_contract=true;hud.render(data);await settle()
+ var repeat_panel:Control=hud.content.find_child("WorkshopRouteSketch",true,false)
+ var repeat_sketch=repeat_panel.find_child("DeliveryRouteSketch",true,false)
+ repeat_heading=repeat_panel.find_child("RouteClearance",true,false)
+ check(repeat_heading.is_visible_in_tree() and repeat_heading.text==UI.route_copy(repeat_order) and repeat_sketch.snapshot()==snapshot,"accepted workshop repeats same quote-owned progression warning")
+ check(repeat_panel.size.y<=120.0 and repeat_panel.get_global_rect().encloses(repeat_heading.get_global_rect()) and repeat_panel.get_global_rect().encloses(repeat_sketch.get_global_rect()) and not repeat_panel.get_global_rect().intersects(hud.workshop_scene_rect()),"extra short line fits existing workshop header without covering build area")
+ data.activeorder=order;data.contracts=[order]
+ data.mode="workshop";data.has_accepted_contract=true;hud.render(data);await settle()
+ var panel:Control=hud.content.find_child("WorkshopRouteSketch",true,false)
+ var workshop_sketch=panel.find_child("DeliveryRouteSketch",true,false)
+ check(workshop_sketch.snapshot()==snapshot and workshop_sketch.is_visible_in_tree(),"workshop diagram reads same active-order snapshot")
+ check(not panel.get_global_rect().intersects(hud.workshop_scene_rect()),"fit-workshop usable rectangle excludes new compact header")
+ check(hud.content.find_child("DispatchActions",true,false)!=null and hud.content.find_child("WorkshopTools",true,false)!=null,"new header preserves trial dispatch and build tools")
+ data.activeorder=old;hud.render(data);await settle()
+ check(hud.content.find_child("WorkshopRouteSketch",true,false)==null,"navigating back to old contract removes diagram")
+ data.mode="flight";data.activeorder=order;hud.render(data);await settle()
+ check(hud.content.find_child("RouteBoundaryLegend",true,false)!=null,"flight explains solid circle contact edge")
+ var world=World.new();world.configure_clerk_pose_bootstrap(load("res://scripts/clerk_runtime_bootstrap_observed_v4.gd"));add_child(world);world.set_process(false);world.reduced_motion=true
+ var sim=Sim.new();sim.configure(Profile.starter_design(),Profile.starter_launcher(),order,42);sim.release_launcher(0,0)
+ world.start_flight(sim,true);var physical:PackedByteArray=physical_snapshot(sim);world.show_flight(sim,true)
+ var live:Dictionary=world.route_boundary_snapshot()
+ check(live.visible and live.circles.size()==2 and physical_snapshot(sim)==physical,"live full render reads two real circles without mutating physics")
+ check(live.circles[0].position==world.flight_origin+sim.obstacles[0].position*world.CELL and is_equal_approx(live.circles[0].radius,sim.obstacles[0].radius*world.CELL),"world edge has exact physical center and radius")
+ var art:Sprite2D=world.flight_nodes.h0
+ check(is_equal_approx((Vector2(art.texture.get_size())*art.scale*.5).length(),float(live.circles[0].radius)),"entire rock texture rectangle is inscribed inside true circular silhouette")
+ sim.obstacles[0].position+=Vector2(1.25,-.75);sim.obstacles[0].health=37.0;world.show_flight(sim,true);live=world.route_boundary_snapshot()
+ check(live.circles[0].position==world.flight_origin+sim.obstacles[0].position*world.CELL and art.position.distance_to(live.circles[0].position)<1.0,"damaged moving obstacle and circle remain aligned")
+ sim.obstacles[0].health=0.0;world.show_flight(sim,true);live=world.route_boundary_snapshot()
+ check(live.circles.size()==1 and live.circles[0].index==1 and not art.visible,"destroyed rock loses sprite and collision silhouette together")
+ sim.obstacles[1].health=0.0;world.show_flight(sim,true)
+ check(not world.route_boundary_snapshot().visible and world.route_boundary_snapshot().circles.is_empty(),"all destroyed rocks clear all boundary cues")
+ world.leave_flight();check(not world.route_boundary_snapshot().visible,"leaving flight clears the route overlay")
+ sim.configure(Profile.starter_design(),Profile.starter_launcher(),old,42);sim.release_launcher(0,0);world.start_flight(sim,true)
+ check(not world.route_boundary_snapshot().visible,"old live routes retain prior obstacle presentation")
+ world.leave_flight();sketch.queue_free();hud.queue_free();world.queue_free();await settle()
+ print("FRAGILE_ROUTE_UI_V1 passed=%d failed=%d native_visual=NOT_RUN"%[passed,failed]);get_tree().quit(1 if failed else 0)

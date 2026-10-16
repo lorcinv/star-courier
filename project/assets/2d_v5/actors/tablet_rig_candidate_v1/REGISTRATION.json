@@ -1,0 +1,210 @@
+{
+  "status": "upper-only technical extraction candidate; no production overlay, anatomy and overlap review pending",
+  "parts": {
+    "near_upper": {
+      "file": "near_upper.png",
+      "dimensions": [
+        33,
+        43
+      ],
+      "root": [
+        21.06,
+        12.24
+      ],
+      "tip": [
+        16.875,
+        39.15
+      ],
+      "source": "accepted near_arm.png",
+      "source_bbox": [
+        0,
+        0,
+        33,
+        43
+      ],
+      "uniform_scale": 1,
+      "sha256": "4067a93a303d9e16f0d8a1b5d77ee826806a4a35a64efe6cbb310820e89ba092"
+    },
+    "near_fore": {
+      "file": "near_fore.png",
+      "dimensions": [
+        33,
+        27
+      ],
+      "root": [
+        16.875,
+        4.149999999999999
+      ],
+      "tip": [
+        13.55,
+        25.0
+      ],
+      "source": "accepted near_arm.png",
+      "source_bbox": [
+        0,
+        35,
+        33,
+        62
+      ],
+      "uniform_scale": 1,
+      "sha256": "51a317963b370d0142fcde5d6b5f6ccc255a5b98f3a7e596366f1fd765f628d6"
+    },
+    "far_upper": {
+      "file": "far_upper.png",
+      "dimensions": [
+        32,
+        41
+      ],
+      "root": [
+        11.79,
+        11.52
+      ],
+      "tip": [
+        17.325,
+        37.845
+      ],
+      "source": "accepted far_arm.png",
+      "source_bbox": [
+        0,
+        0,
+        32,
+        41
+      ],
+      "uniform_scale": 1,
+      "sha256": "c3a44cdddd523c88ff7bcb40143a2b55bda1a6ccf722d8a1bb8e19596d8bc227"
+    },
+    "far_fore": {
+      "file": "far_fore.png",
+      "dimensions": [
+        32,
+        26
+      ],
+      "root": [
+        17.325,
+        3.844999999999999
+      ],
+      "tip": [
+        21.5,
+        24.0
+      ],
+      "source": "accepted far_arm.png",
+      "source_bbox": [
+        0,
+        34,
+        32,
+        60
+      ],
+      "uniform_scale": 1,
+      "sha256": "53095cebd5710f624db5fef2a687b4b1f9a0d7ec2a4394ece13100c3d443f653"
+    },
+    "hand_tap": {
+      "file": "hand_tap.png",
+      "dimensions": [
+        14,
+        8
+      ],
+      "root": [
+        0.7150000000000001,
+        3.705
+      ],
+      "tip": [
+        10.715,
+        3.705
+      ],
+      "source": "tablet-arm-parts-generated-original.png",
+      "source_bbox": [
+        294,
+        636,
+        516,
+        755
+      ],
+      "uniform_scale": 0.065,
+      "sha256": "d01a72f13e81dc951b4058a96d7a33139702875bd8563739638c9155ef03828e"
+    },
+    "hand_support": {
+      "file": "hand_support.png",
+      "dimensions": [
+        12,
+        10
+      ],
+      "root": [
+        0.91,
+        3.575
+      ],
+      "tip": [
+        10.91,
+        3.575
+      ],
+      "source": "tablet-arm-parts-generated-original.png",
+      "source_bbox": [
+        784,
+        651,
+        975,
+        805
+      ],
+      "uniform_scale": 0.065,
+      "sha256": "2b16560ad807fd9a43eacfb8efe75602f8868519c3d2b17e47a9ed8e4f9f9eaa"
+    },
+    "hand_hold": {
+      "file": "hand_hold.png",
+      "dimensions": [
+        11,
+        10
+      ],
+      "root": [
+        0.78,
+        3.77
+      ],
+      "tip": [
+        10.78,
+        3.77
+      ],
+      "source": "tablet-arm-parts-generated-original.png",
+      "source_bbox": [
+        1558,
+        646,
+        1734,
+        795
+      ],
+      "uniform_scale": 0.065,
+      "sha256": "228acc749e868e72ee22cdcda3884d7e083f90d9360df83544515552bf74e93f"
+    },
+    "tablet": {
+      "file": "tablet.png",
+      "dimensions": [
+        40,
+        29
+      ],
+      "root": [
+        20.020000000000003,
+        14.700000000000001
+      ],
+      "tip": [
+        30.020000000000003,
+        14.700000000000001
+      ],
+      "source": "tablet-arm-parts-generated-original.png",
+      "source_bbox": [
+        1017,
+        597,
+        1303,
+        807
+      ],
+      "uniform_scale": 0.14,
+      "sha256": "224932f3c67f82c4888a3bd09beeff1a91530da30ddedba6c2aad89a546d2f1f"
+    }
+  },
+  "generated_original_sha256": "3ced394289c3334104103e16f187715a2bc704a0ee2a46c9ca3e86f02aa53bc0",
+  "unchanged_body_files": [
+    "torso",
+    "pelvis",
+    "near_thigh",
+    "far_thigh",
+    "near_shin",
+    "far_shin",
+    "near_boot",
+    "far_boot",
+    "head"
+  ],
+  "policy": "No painted pixels, no wholebody scale. Original sleeve crops preserve their pixel values; new hands/tablet nearest-neighbor shared96 from sealed imagegen original."
+}

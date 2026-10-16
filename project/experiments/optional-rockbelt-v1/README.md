@@ -1,0 +1,9 @@
+# Optional rockbelt fixed feasibility sample
+
+Four samples only, unchanged dev36 production PCK d4ddf1818289ea139d1dc92eb44fab9eb782c2801b33d5cfc430642c82231cc0. Source-external ordinary contract geometry prototype: nonprogression level3, remove prior two-rock layout tag and replace ordinary hazard array. Not a released quote or native play. DESIGN-FROZEN SHA b571149769f0117bbdc01b3057eb805846c6fce703e5d0f52502299e94e1b063, before all physics, unchanged after.
+
+Existing r7/100HP/m70 rocks at x48 and y -38,-24,-10,4,18; all destructible, no immunity, unchanged delivery95,-10 and90% requirement. Same dev35 seven-piece475-capital craft, default205 launcher, controller unchanged. Central cutting route21.525s94.8611%521.600J, quoted fee37; cuts97.518HP, remaining2.482HP by collision; no lost parts. Same craft top bypass30.0833s100%401.898J, fee11. Removing only65-price/1.8kg drill gives410-capital bypass30.05s100%326.363J, fee9. Saves8.525s/28.37% versus cheaper bypass but costs28 more, loses5.139HP: speed versus safety/money, not universally better.
+
+Same straight input with drill off remains running at120s,93.7319%,4188.106J; central rock93.834HP. Observation cutoff is not formal failure. No geometry/controller search or further sample repetitions. Capital object in raw output describes the shared baseline; drill_omitted=true identifies410 alternative, not475. No actual inventory, contract, chapter, cash or save changed by this script.
+
+To reproduce only if requested: copy these3files to an isolated writable directory, use pinned Godot4.6.3 with exact dev36 PCK and scriptcompare.gd, isolated HOME/allXDG. Results/trace/input JSON write beside script; exclude them from source and player. Prototype is feasibility evidence. New distinct production layout must pass normal authoring/save/UI/native acceptance separately. Research scripts must never enter runtime PCK.

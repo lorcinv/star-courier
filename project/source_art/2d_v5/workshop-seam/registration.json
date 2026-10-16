@@ -1,0 +1,65 @@
+{
+  "status": "isolated source candidate; CPU composition only; native acceptance pending",
+  "method": "Imagegen repaired artwork; uniform nearest sampling on the existing 2px grid; existing 96-color palette; alpha128; rectangle cropping only. No hand-painted or primitive cover pixels. Original source files unchanged.",
+  "runtime": "Only presentation inside per-tier world rectangle is replaced. Existing shell/bay remain at their original positions, scale and size; their fragment shader discards the replacement rectangle so removed double rails do not show through. Tier0 restores original materials and no patch.",
+  "tiers": [
+    {
+      "tier": 1,
+      "asset": "assets/2d_v5/workshop-seam/entrance-tier1.png",
+      "world_rect_xyxy": [
+        1008,
+        340,
+        1288,
+        720
+      ],
+      "source_world_top_left": [
+        880,
+        240
+      ],
+      "source_original": "seam-original01.png",
+      "source_sha256": "9c1a2245c35fac5e4cc5781d8f871b5944c0e26f63c4b3b78f258aa54d62ff6e",
+      "source_dimensions": [
+        1341,
+        1173
+      ],
+      "uniform_source_to_world_scale": 0.4772557792692021,
+      "logical_pixel_size": 2,
+      "palette": "res://source_art/pixel_pipeline_studies/palette_96.json",
+      "alpha_threshold": 128,
+      "asset_sha256": "254a6f889b9b424cb28b0d0afa84e419d7d9b1bdc1921420492605dfc944cbd3",
+      "asset_dimensions": [
+        280,
+        380
+      ]
+    },
+    {
+      "tier": 2,
+      "asset": "assets/2d_v5/workshop-seam/entrance-tier2.png",
+      "world_rect_xyxy": [
+        1008,
+        340,
+        1328,
+        720
+      ],
+      "source_world_top_left": [
+        880,
+        240
+      ],
+      "source_original": "seam-original02-tier2.png",
+      "source_sha256": "1f266fe20228d6bb1b7e9cb04879f3e3baa657f64aaedf2d3513a4ff2b4fa455",
+      "source_dimensions": [
+        1341,
+        1173
+      ],
+      "uniform_source_to_world_scale": 0.4772557792692021,
+      "logical_pixel_size": 2,
+      "palette": "res://source_art/pixel_pipeline_studies/palette_96.json",
+      "alpha_threshold": 128,
+      "asset_sha256": "536d3914d3d0b7438202acb28c6097539000bc69f90b373ceb2331f76b6e8269",
+      "asset_dimensions": [
+        320,
+        380
+      ]
+    }
+  ]
+}

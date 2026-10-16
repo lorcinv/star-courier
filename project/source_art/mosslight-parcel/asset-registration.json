@@ -1,0 +1,153 @@
+{
+  "schema": "mosslight-parcel-art-registration-v1",
+  "created_date_utc": "2026-10-14",
+  "tool": "image_gen.imagegen (built-in)",
+  "artwork_count": 1,
+  "preserved_tool_output_count": 2,
+  "runtime_path": "assets/2d_v5/mosslight/parcel-flowerpot-spoon.png",
+  "runtime_sha256": "93e0b2fe5943e32b8c35f9d2824ac220ad8a61cafcd9b6a7c9d72275e9924c50",
+  "canvas_px": [
+    2172,
+    724
+  ],
+  "mode": "RGBA",
+  "runtime_bytes_identical_to_final_original": true,
+  "pixel_transformation_applied_to_runtime": false,
+  "texture_filter_recommendation": "nearest",
+  "content": "One shallow rigid kraft cardboard tray, exposed silver spoon bowl on left, green binding cord around handle on right. No character or new scene.",
+  "visible_bounds_px_exclusive_max": [
+    512,
+    206,
+    1628,
+    527
+  ],
+  "visible_bounds_measurement_threshold_alpha": 16,
+  "visible_size_px": [
+    1116,
+    321
+  ],
+  "contact_anchor_px": [
+    1070,
+    366.5
+  ],
+  "contact_anchor_semantic": "center of measured visible parcel, intended to align with existing customer/clerk/robot parcel_point() center",
+  "registration_is_recommendation_not_runtime_proof": true,
+  "recommended_visible_width_world_px": 52,
+  "recommended_uniform_scale": 0.04659498207885305,
+  "resulting_visible_height_world_px": 14.956989247311828,
+  "centered_sprite_offset_px": [
+    16,
+    -4.5
+  ],
+  "bounds_by_alpha_threshold": {
+    "alpha_gte_1": [
+      168,
+      23,
+      1790,
+      706
+    ],
+    "alpha_gte_2": [
+      512,
+      204,
+      1630,
+      529
+    ],
+    "alpha_gte_16": [
+      512,
+      206,
+      1628,
+      527
+    ],
+    "alpha_gte_128": [
+      513,
+      207,
+      1628,
+      526
+    ],
+    "alpha_gte_254": [
+      514,
+      208,
+      1627,
+      525
+    ],
+    "alpha_gte_255": [
+      547,
+      208,
+      1627,
+      525
+    ]
+  },
+  "alpha_counts": {
+    "zero": 1241001,
+    "partial_1_to_254": 330296,
+    "fully_opaque_255": 1231
+  },
+  "margins_at_alpha_gte16_px": {
+    "left": 512,
+    "top": 206,
+    "right": 544,
+    "bottom": 197
+  },
+  "alpha_note": "Generated RGBA is preserved unchanged. Alpha=1 stray pixels outside the visible parcel cause raw alpha bounds to be much larger. Thresholds are read-only measurements, not cleanup. Strict binary alpha/zero-outside-visible-bounds is not claimed.",
+  "references_inspected": [
+    {
+      "path": "assets/2d_v5/npcs/shared/customer-parcel-neutral-pixel.png",
+      "role": "existing parcel pixel style and prior 66x45 box shape"
+    },
+    {
+      "path": "assets/2d_v5/actors/customer-handoff-pixel.png",
+      "role": "existing empty-hand human 小禾 pose, visual inspection"
+    },
+    {
+      "path": "assets/2d_v5/actors/clerk-handoff-pixel.png",
+      "role": "existing empty-hand recipient clerk pose, visual inspection"
+    },
+    {
+      "path": "scripts/world_view_2d.gd",
+      "role": "existing parcel sprite shown at 49 x (49*45/66) pixels, centered lifecycle"
+    },
+    {
+      "path": "scripts/npc_sprite_2d.gd",
+      "role": "human handoff empty hands; original handoff transfer anchor (135.23,115.37)"
+    }
+  ],
+  "generation": [
+    {
+      "original_path": "source_art/mosslight-parcel/originals/parcel-flowerpot-spoon-initial.png",
+      "original_sha256": "39aff9298b7972913869e65f36568eba68c59172ca926e13357f4714a46db97e",
+      "tool_output_filename": "exec-2425d753-975f-45e6-a47f-330afb295d56.png",
+      "dimensions_px": [
+        1774,
+        887
+      ],
+      "prompt_path": "source_art/mosslight-parcel/parcel-flowerpot-spoon.prompt.txt",
+      "status": "not selected; overly elongated silhouette"
+    },
+    {
+      "original_path": "source_art/mosslight-parcel/originals/parcel-flowerpot-spoon-refined.png",
+      "original_sha256": "93e0b2fe5943e32b8c35f9d2824ac220ad8a61cafcd9b6a7c9d72275e9924c50",
+      "tool_output_filename": "exec-f0c7259d-5f78-4b02-926a-fcc4f36d1c76.png",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "prompt_path": "source_art/mosslight-parcel/parcel-flowerpot-spoon-refinement.prompt.txt",
+      "status": "selected runtime; shorter handle and tray edit",
+      "reference": "initial generated output"
+    }
+  ],
+  "editable_source": {
+    "path": "source_art/mosslight-parcel/parcel-flowerpot-spoon.ora",
+    "canvas_px": [
+      2172,
+      724
+    ],
+    "layer_count": 1,
+    "layer_granularity": "one complete generated raster sprite; spoon, tray and cord are painted together, not separate editable object layers",
+    "raw_layer_bytes_verified": true,
+    "mergedimage_bytes_verified": true,
+    "gui_open_verified": false,
+    "sha256": "7084e2cfba581d64f8058064f7165e92b11abf183eec41e969b995bb29eeeba6"
+  },
+  "validation_status": "final PNG visually inspected; alpha, margins, checksums and ORA container verified; no game/build/GUI validation by art worker; runtime import generated separately by integration"
+}

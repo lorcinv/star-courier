@@ -1,0 +1,101 @@
+{
+  "design": [
+    {
+      "id": 1,
+      "type": "cargo",
+      "x": 0,
+      "y": 0,
+      "rot": 0,
+      "param": 100,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 2,
+      "type": "battery",
+      "x": -1,
+      "y": 0,
+      "rot": 0,
+      "param": 300,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    }
+  ],
+  "launcher": [
+    {
+      "id": 100,
+      "type": "battery",
+      "x": -1,
+      "y": 0,
+      "rot": 0,
+      "param": 300,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 101,
+      "type": "thruster",
+      "x": 0,
+      "y": 0,
+      "rot": 0,
+      "param": 12,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 102,
+      "type": "spring",
+      "x": 0,
+      "y": 1,
+      "rot": 2,
+      "param": 0,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 103,
+      "type": "armor",
+      "x": 1,
+      "y": 0,
+      "rot": 0,
+      "param": 150,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    }
+  ],
+  "route_conditions": {
+    "weight": 1.0,
+    "gravity": 0,
+    "pilot_drag": 0,
+    "wind": [
+      0,
+      0
+    ]
+  },
+  "expected_without_zero_spring": {
+    "launch_velocity": [
+      2.4,
+      0
+    ],
+    "energy_drawn": 18
+  },
+  "source_predicted_actual": {
+    "launch_velocity": [
+      -2.4,
+      0
+    ],
+    "energy_drawn": 18,
+    "spring_impulse": [
+      -24,
+      0
+    ],
+    "spring_charge": 0,
+    "launch_modules_fired": 2
+  }
+}

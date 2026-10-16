@@ -1,0 +1,47 @@
+{
+  "status": "reconstructed candidate; neck/body visual acceptance pending",
+  "runtime": "assets/2d_v5/actors/reconstructed_recovery_v1/head-level-pixel.png",
+  "sha256": "7be2749bdb3dfe41be424144a198f0b7597f50921b46ef6618a40834bde0e0eb",
+  "source_sha256": "e6fe584386de2947531e471cd9a32387058dbffc35b3ca48a351bd010139f61e",
+  "source_alpha128_bounds": [
+    117,
+    79,
+    1226,
+    1055
+  ],
+  "source_neck_root": [
+    686.0,
+    1055.0
+  ],
+  "neck_measurement": "Last10 skin rows1034..1043 have x637..735; center686. Root uses bottom neck/collar outline at1055. Needs rendered collar review.",
+  "uniform_scale": 0.0932377049180328,
+  "canvas": [
+    104,
+    91
+  ],
+  "pad_x": 0.2996926229508148,
+  "root": [
+    53.35194672131147,
+    91.0
+  ],
+  "tip": [
+    53.35194672131147,
+    101.0
+  ],
+  "palette_sha256": "5bb6b501d7bece46b528a3c230e39c207e5f8a3aac6be15969f21683e73f2944",
+  "alpha_values": [
+    0,
+    255
+  ],
+  "palette_used": 68,
+  "alpha_bounds": [
+    0,
+    0,
+    104,
+    91
+  ],
+  "head_body_scale": "104x91 canvas at reference body height240; unchanged rigid neck socket/torso/legs",
+  "blink": "preview freezes eye texture to this same candidate; no old upward-eye variant swaps",
+  "tablet": "unchanged original full-body/tablet pixels",
+  "recipe": "prepare_head.py + exact copied study_reference.map_palette Oklab + shared96; no dithering, no painting"
+}

@@ -1,0 +1,716 @@
+{
+  "tablet_parts": {
+    "near_upper": {
+      "file": "near_upper.png",
+      "dimensions": [
+        33,
+        43
+      ],
+      "root": [
+        21.06,
+        12.24
+      ],
+      "tip": [
+        16.875,
+        39.15
+      ],
+      "source": "accepted near_arm.png",
+      "source_bbox": [
+        0,
+        0,
+        33,
+        43
+      ],
+      "uniform_scale": 1,
+      "sha256": "4067a93a303d9e16f0d8a1b5d77ee826806a4a35a64efe6cbb310820e89ba092"
+    },
+    "near_fore": {
+      "file": "near_fore.png",
+      "dimensions": [
+        33,
+        27
+      ],
+      "root": [
+        16.875,
+        4.149999999999999
+      ],
+      "tip": [
+        13.55,
+        25.0
+      ],
+      "source": "accepted near_arm.png",
+      "source_bbox": [
+        0,
+        35,
+        33,
+        62
+      ],
+      "uniform_scale": 1,
+      "sha256": "51a317963b370d0142fcde5d6b5f6ccc255a5b98f3a7e596366f1fd765f628d6"
+    },
+    "far_upper": {
+      "file": "far_upper.png",
+      "dimensions": [
+        32,
+        41
+      ],
+      "root": [
+        11.79,
+        11.52
+      ],
+      "tip": [
+        17.325,
+        37.845
+      ],
+      "source": "accepted far_arm.png",
+      "source_bbox": [
+        0,
+        0,
+        32,
+        41
+      ],
+      "uniform_scale": 1,
+      "sha256": "c3a44cdddd523c88ff7bcb40143a2b55bda1a6ccf722d8a1bb8e19596d8bc227"
+    },
+    "far_fore": {
+      "file": "far_fore.png",
+      "dimensions": [
+        32,
+        26
+      ],
+      "root": [
+        17.325,
+        3.844999999999999
+      ],
+      "tip": [
+        21.5,
+        24.0
+      ],
+      "source": "accepted far_arm.png",
+      "source_bbox": [
+        0,
+        34,
+        32,
+        60
+      ],
+      "uniform_scale": 1,
+      "sha256": "53095cebd5710f624db5fef2a687b4b1f9a0d7ec2a4394ece13100c3d443f653"
+    },
+    "hand_tap": {
+      "file": "hand_tap.png",
+      "dimensions": [
+        14,
+        8
+      ],
+      "root": [
+        0.7150000000000001,
+        3.705
+      ],
+      "tip": [
+        10.715,
+        3.705
+      ],
+      "source": "tablet-arm-parts-generated-original.png",
+      "source_bbox": [
+        294,
+        636,
+        516,
+        755
+      ],
+      "uniform_scale": 0.065,
+      "sha256": "d01a72f13e81dc951b4058a96d7a33139702875bd8563739638c9155ef03828e"
+    },
+    "hand_support": {
+      "file": "hand_support.png",
+      "dimensions": [
+        12,
+        10
+      ],
+      "root": [
+        0.91,
+        3.575
+      ],
+      "tip": [
+        10.91,
+        3.575
+      ],
+      "source": "tablet-arm-parts-generated-original.png",
+      "source_bbox": [
+        784,
+        651,
+        975,
+        805
+      ],
+      "uniform_scale": 0.065,
+      "sha256": "2b16560ad807fd9a43eacfb8efe75602f8868519c3d2b17e47a9ed8e4f9f9eaa"
+    },
+    "hand_hold": {
+      "file": "hand_hold.png",
+      "dimensions": [
+        11,
+        10
+      ],
+      "root": [
+        0.78,
+        3.77
+      ],
+      "tip": [
+        10.78,
+        3.77
+      ],
+      "source": "tablet-arm-parts-generated-original.png",
+      "source_bbox": [
+        1558,
+        646,
+        1734,
+        795
+      ],
+      "uniform_scale": 0.065,
+      "sha256": "228acc749e868e72ee22cdcda3884d7e083f90d9360df83544515552bf74e93f"
+    },
+    "tablet": {
+      "file": "tablet.png",
+      "dimensions": [
+        40,
+        29
+      ],
+      "root": [
+        20.020000000000003,
+        14.700000000000001
+      ],
+      "tip": [
+        30.020000000000003,
+        14.700000000000001
+      ],
+      "source": "tablet-arm-parts-generated-original.png",
+      "source_bbox": [
+        1017,
+        597,
+        1303,
+        807
+      ],
+      "uniform_scale": 0.14,
+      "sha256": "224932f3c67f82c4888a3bd09beeff1a91530da30ddedba6c2aad89a546d2f1f"
+    },
+    "near_hand_relaxed": {
+      "file": "near_hand_relaxed.png",
+      "root": [
+        13.55,
+        2
+      ],
+      "tip": [
+        12.69,
+        8.060000000000002
+      ],
+      "source_bbox": [
+        0,
+        58,
+        33,
+        73
+      ],
+      "source_sha256": "7d48910b09df75b003c641d8acc0a17a4daeacfb67822a227f7a04807bdefedb",
+      "sha256": "1d5f8d7ab4e531d24447459a9ed4ad049ea37e2c4ac217d69b6e6c991e74f22c"
+    },
+    "far_hand_relaxed": {
+      "file": "far_hand_relaxed.png",
+      "root": [
+        21.5,
+        2
+      ],
+      "tip": [
+        22.86,
+        8.170000000000002
+      ],
+      "source_bbox": [
+        0,
+        56,
+        32,
+        71
+      ],
+      "source_sha256": "a4e858ca416696106853f38348c63132fc454c2ad7b9686777ab1a91eb3ee767",
+      "sha256": "fce19b9c2b30d6b804b19dbeacd353da8a2ddffda2c1fd258bc2eb97667fcbc1"
+    }
+  },
+  "rig_parts": {
+    "far_thigh": {
+      "path": "assets/2d_v5/actors/rig_motion_v1/far_thigh.png",
+      "root": [
+        14.079999999999998,
+        8.36
+      ],
+      "tip": [
+        11.44,
+        52.8
+      ],
+      "pixel_scale": 1,
+      "z": 10,
+      "sha256": "a077e55295a049c7f06d865ae9b8e347ee4c499e7573490a674fe09411c87bf0",
+      "source": "source_art/2d_v5/actors/motion_quality_staging/generated/canonical-long-shorts-boots-original.png",
+      "source_bbox": [
+        790,
+        25,
+        1099,
+        672
+      ],
+      "source_joint_root": [
+        950,
+        120
+      ],
+      "source_joint_tip": [
+        920,
+        625
+      ],
+      "source_uniform_scale": 0.088,
+      "segmentation_polygon": null,
+      "contains_cuff": false
+    },
+    "far_shin": {
+      "path": "assets/2d_v5/actors/rig_motion_v1/far_shin.png",
+      "root": [
+        7.125,
+        1.2
+      ],
+      "tip": [
+        7.574999999999999,
+        21.224999999999998
+      ],
+      "pixel_scale": 1,
+      "z": 11,
+      "sha256": "28563b024eebbe0d25a047264ebef1f0f66f98d0b4f0ebf3912f9ce277593df8",
+      "source": "source_art/2d_v5/actors/motion_quality_staging/generated/leg-pieces-original.png",
+      "source_bbox": [
+        672,
+        630,
+        864,
+        960
+      ],
+      "source_joint_root": [
+        767,
+        646
+      ],
+      "source_joint_tip": [
+        773,
+        913
+      ],
+      "source_uniform_scale": 0.075,
+      "segmentation_polygon": null,
+      "contains_cuff": false
+    },
+    "far_boot": {
+      "path": "assets/2d_v5/actors/rig_motion_v1/far_boot.png",
+      "root": [
+        16.544,
+        12.76
+      ],
+      "tip": [
+        25.343999999999998,
+        12.76
+      ],
+      "pixel_scale": 1,
+      "z": 12,
+      "sha256": "4d9b1ffbd75526b54f871a4df2194c99d081568e75d1611ed84ff7e7819e06b5",
+      "source": "source_art/2d_v5/actors/motion_quality_staging/generated/canonical-long-shorts-boots-original.png",
+      "source_bbox": [
+        692,
+        705,
+        1190,
+        1179
+      ],
+      "source_joint_root": [
+        880,
+        850
+      ],
+      "source_joint_tip": [
+        980,
+        850
+      ],
+      "source_uniform_scale": 0.088,
+      "segmentation_polygon": null,
+      "owns_cuff": true,
+      "sole": [
+        23.584,
+        41.711999999999996
+      ],
+      "heel": [
+        2.376,
+        36.608
+      ],
+      "toe": [
+        42.064,
+        36.256
+      ]
+    },
+    "near_thigh": {
+      "path": "assets/2d_v5/actors/rig_motion_v1/near_thigh.png",
+      "root": [
+        18.215999999999998,
+        8.888
+      ],
+      "tip": [
+        12.408,
+        52.888
+      ],
+      "pixel_scale": 1,
+      "z": 20,
+      "sha256": "3473bc5c929e1e7265ee3d454cf81f37069fc58c0ab77765b09ab24841330502",
+      "source": "source_art/2d_v5/actors/motion_quality_staging/generated/canonical-long-shorts-boots-original.png",
+      "source_bbox": [
+        158,
+        19,
+        513,
+        666
+      ],
+      "source_joint_root": [
+        365,
+        120
+      ],
+      "source_joint_tip": [
+        299,
+        620
+      ],
+      "source_uniform_scale": 0.088,
+      "segmentation_polygon": null,
+      "contains_cuff": false
+    },
+    "near_shin": {
+      "path": "assets/2d_v5/actors/rig_motion_v1/near_shin.png",
+      "root": [
+        7.199999999999999,
+        0.75
+      ],
+      "tip": [
+        8.25,
+        20.775
+      ],
+      "pixel_scale": 1,
+      "z": 21,
+      "sha256": "21670f23325d0c62e1a37009e034aff0cd1d791f9a688828d6c3d6e1a82b0a1b",
+      "source": "source_art/2d_v5/actors/motion_quality_staging/generated/leg-pieces-original.png",
+      "source_bbox": [
+        662,
+        135,
+        864,
+        445
+      ],
+      "source_joint_root": [
+        758,
+        145
+      ],
+      "source_joint_tip": [
+        772,
+        412
+      ],
+      "source_uniform_scale": 0.075,
+      "segmentation_polygon": null,
+      "contains_cuff": false
+    },
+    "near_boot": {
+      "path": "assets/2d_v5/actors/rig_motion_v1/near_boot.png",
+      "root": [
+        16.896,
+        12.76
+      ],
+      "tip": [
+        25.695999999999998,
+        12.76
+      ],
+      "pixel_scale": 1,
+      "z": 22,
+      "sha256": "6695fce83474491a6d09265476b120a9d83cc9b910857e6aadb5182771fce658",
+      "source": "source_art/2d_v5/actors/motion_quality_staging/generated/canonical-long-shorts-boots-original.png",
+      "source_bbox": [
+        118,
+        705,
+        605,
+        1190
+      ],
+      "source_joint_root": [
+        310,
+        850
+      ],
+      "source_joint_tip": [
+        410,
+        850
+      ],
+      "source_uniform_scale": 0.088,
+      "segmentation_polygon": null,
+      "owns_cuff": true,
+      "sole": [
+        22.176,
+        42.68
+      ],
+      "heel": [
+        2.376,
+        37.4
+      ],
+      "toe": [
+        40.391999999999996,
+        39.16
+      ]
+    },
+    "torso": {
+      "path": "assets/2d_v5/actors/rig_motion_v1/torso.png",
+      "root": [
+        27,
+        54.53736654804271
+      ],
+      "tip": [
+        27,
+        74.53736654804271
+      ],
+      "pixel_scale": 1,
+      "z": 40,
+      "sha256": "20b0bb677ac4f4d2cee98b286b70c84219fe1571ac36473dd6998132675c8dcf",
+      "source_bbox": [
+        61,
+        99,
+        121,
+        161
+      ],
+      "attachment": "hip"
+    },
+    "pelvis": {
+      "path": "assets/2d_v5/actors/rig_motion_v1/pelvis.png",
+      "root": [
+        21.36,
+        6.96
+      ],
+      "tip": [
+        21.36,
+        14.96
+      ],
+      "pixel_scale": 1.0,
+      "z": 30,
+      "sha256": "09065f83dde16f02d7016675383b95b14107c903a8006833169c466ea69b9f0b",
+      "source": "source_art/2d_v5/actors/motion_quality_staging/generated/relaxed-arms-pelvis-original.png",
+      "source_bbox": [
+        1159,
+        418,
+        1695,
+        575
+      ],
+      "source_joint_root": [
+        1426,
+        505
+      ],
+      "source_joint_tip": [
+        1426,
+        605
+      ],
+      "source_uniform_scale": 0.08,
+      "segmentation_polygon": null,
+      "attachment": "hip"
+    },
+    "far_arm": {
+      "path": "assets/2d_v5/actors/rig_motion_v1/far_arm.png",
+      "root": [
+        11.79,
+        11.52
+      ],
+      "tip": [
+        22.86,
+        64.17
+      ],
+      "pixel_scale": 1.0,
+      "z": 1,
+      "sha256": "a4e858ca416696106853f38348c63132fc454c2ad7b9686777ab1a91eb3ee767",
+      "source": "source_art/2d_v5/actors/motion_quality_staging/generated/relaxed-arms-pelvis-original.png",
+      "source_bbox": [
+        654,
+        72,
+        1009,
+        859
+      ],
+      "source_joint_root": [
+        785,
+        200
+      ],
+      "source_joint_tip": [
+        908,
+        785
+      ],
+      "source_uniform_scale": 0.09,
+      "segmentation_polygon": null,
+      "attachment": "shoulder",
+      "attachment_offset": [
+        24,
+        -39.5373665480427
+      ]
+    },
+    "near_arm": {
+      "path": "assets/2d_v5/actors/rig_motion_v1/near_arm.png",
+      "root": [
+        21.06,
+        12.24
+      ],
+      "tip": [
+        12.69,
+        66.06
+      ],
+      "pixel_scale": 1.0,
+      "z": 35,
+      "sha256": "7d48910b09df75b003c641d8acc0a17a4daeacfb67822a227f7a04807bdefedb",
+      "source": "source_art/2d_v5/actors/motion_quality_staging/generated/relaxed-arms-pelvis-original.png",
+      "source_bbox": [
+        123,
+        44,
+        488,
+        852
+      ],
+      "source_joint_root": [
+        357,
+        180
+      ],
+      "source_joint_tip": [
+        264,
+        778
+      ],
+      "source_uniform_scale": 0.09,
+      "segmentation_polygon": null,
+      "attachment": "shoulder",
+      "attachment_offset": [
+        -24,
+        -36.5373665480427
+      ]
+    },
+    "head": {
+      "path": "assets/2d_v5/actors/reconstructed_recovery_v1/head-level-pixel.png",
+      "root": [
+        53.35194672131147,
+        91.0
+      ],
+      "tip": [
+        53.35194672131147,
+        101.0
+      ],
+      "pixel_scale": 1,
+      "z": 60,
+      "sha256": "7be2749bdb3dfe41be424144a198f0b7597f50921b46ef6618a40834bde0e0eb",
+      "attachment": "neck",
+      "attachment_offset": [
+        0,
+        -54.5373665480427
+      ]
+    },
+    "head_half": {
+      "path": "assets/2d_v5/actors/rig_motion_v1/head_half.png",
+      "root": [
+        55,
+        91
+      ],
+      "tip": [
+        55,
+        101
+      ],
+      "pixel_scale": 1,
+      "z": 60,
+      "sha256": "79b4b46e8d4f9142842b37e232b60b78d0274ff0194a0d20fd6dca42cc12b95b",
+      "attachment": "neck",
+      "attachment_offset": [
+        0,
+        -54.5373665480427
+      ],
+      "eye_only_regions": [
+        [
+          38,
+          52,
+          61,
+          69
+        ],
+        [
+          67,
+          51,
+          83,
+          68
+        ]
+      ],
+      "source": "source_art/2d_v5/actors/motion_quality_staging/generated/head-expressions-original.png",
+      "source_cell": [
+        0,
+        6,
+        724,
+        647
+      ]
+    },
+    "head_closed": {
+      "path": "assets/2d_v5/actors/rig_motion_v1/head_closed.png",
+      "root": [
+        55,
+        91
+      ],
+      "tip": [
+        55,
+        101
+      ],
+      "pixel_scale": 1,
+      "z": 60,
+      "sha256": "092997011d9f2f9264f52124090b7710871cd53b0f0ad95402b347238f004398",
+      "attachment": "neck",
+      "attachment_offset": [
+        0,
+        -54.5373665480427
+      ],
+      "eye_only_regions": [
+        [
+          38,
+          52,
+          61,
+          69
+        ],
+        [
+          67,
+          51,
+          83,
+          68
+        ]
+      ],
+      "source": "source_art/2d_v5/actors/motion_quality_staging/generated/head-expressions-original.png",
+      "source_cell": [
+        724,
+        6,
+        1448,
+        647
+      ]
+    },
+    "head_gaze": {
+      "path": "assets/2d_v5/actors/rig_motion_v1/head_gaze.png",
+      "root": [
+        55,
+        91
+      ],
+      "tip": [
+        55,
+        101
+      ],
+      "pixel_scale": 1,
+      "z": 60,
+      "sha256": "95694b9f14806e570bfb838abed586adb6eed597b336bb5b9fef93f28fd669f5",
+      "attachment": "neck",
+      "attachment_offset": [
+        0,
+        -54.5373665480427
+      ],
+      "eye_only_regions": [
+        [
+          38,
+          52,
+          61,
+          69
+        ],
+        [
+          67,
+          51,
+          83,
+          68
+        ]
+      ],
+      "source": "source_art/2d_v5/actors/motion_quality_staging/generated/head-expressions-original.png",
+      "source_cell": [
+        1448,
+        6,
+        2172,
+        647
+      ]
+    }
+  }
+}

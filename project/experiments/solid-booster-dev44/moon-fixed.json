@@ -1,0 +1,529 @@
+{
+  "route": {
+    "accelerator_clearance_seconds": 0.18,
+    "accelerator_damage_policy": "finite-stroke-delta-v-v1",
+    "accelerator_policy": "target-component-recoil-v1",
+    "accelerator_stroke_metres": 1.0,
+    "accepted_day": 4,
+    "accessory_id": "seed_pod",
+    "appearance_id": "alien_botanist",
+    "appearance_seed": 578106108,
+    "ascent_event_schema": "warned-meteor-shower-v1",
+    "ascent_event_world_bounds": [
+      -160.0,
+      -650.0,
+      320.0,
+      700.0
+    ],
+    "ascent_layers": [
+      {
+        "drag": 0.025,
+        "gravity": 2.8,
+        "phase": "ground",
+        "start_altitude_m": 0.0,
+        "wind": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "drag": 0.015,
+        "gravity": 1.2,
+        "phase": "upper_air",
+        "start_altitude_m": 100.0,
+        "wind": [
+          0.35,
+          0.0
+        ]
+      },
+      {
+        "drag": 0.0,
+        "gravity": 0.08,
+        "phase": "space",
+        "start_altitude_m": 240.0,
+        "wind": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "drag": 0.0,
+        "gravity": 0.25,
+        "phase": "lunar_approach",
+        "start_altitude_m": 520.0,
+        "wind": [
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "ascent_lunar_approach_begin_altitude_m": 500.0,
+    "ascent_lunar_approach_full_altitude_m": 560.0,
+    "ascent_meteor_events": [
+      {
+        "health": 55.0,
+        "id": "ascent-shower-1",
+        "mass": 12.0,
+        "position": [
+          -50.0,
+          -330.0
+        ],
+        "radius": 0.9,
+        "trigger_altitude_m": 280.0,
+        "velocity": [
+          16.0,
+          2.5
+        ],
+        "warning_seconds": 3.25
+      },
+      {
+        "health": 55.0,
+        "id": "ascent-shower-2",
+        "mass": 12.0,
+        "position": [
+          50.0,
+          -360.0
+        ],
+        "radius": 1.1,
+        "trigger_altitude_m": 280.0,
+        "velocity": [
+          -14.0,
+          2.0
+        ],
+        "warning_seconds": 3.9
+      },
+      {
+        "health": 55.0,
+        "id": "ascent-shower-3",
+        "mass": 12.0,
+        "position": [
+          -50.0,
+          -390.0
+        ],
+        "radius": 1.0,
+        "trigger_altitude_m": 280.0,
+        "velocity": [
+          13.0,
+          1.5
+        ],
+        "warning_seconds": 4.55
+      }
+    ],
+    "ascent_return_below_ground_m": 8.0,
+    "ascent_schema": "continuous-altitude-v1",
+    "ascent_transition_metres": 20.0,
+    "background_cloud_top_altitude_m": 240.0,
+    "background_ground_y_m": 0.0,
+    "background_orbit_begin_altitude_m": 180.0,
+    "background_orbit_full_altitude_m": 260.0,
+    "background_route": "ascent",
+    "cargo": "\u6708\u9762\u89c2\u6d4b\u7ad9\u8865\u7ed9\u7bb1",
+    "cargo_contact_damage_scale": 1.0,
+    "cargo_damage_per_excess_mps": 0.5,
+    "cargo_damage_policy": "physical-cargo-load-v3",
+    "cargo_kind": "lunar_supply",
+    "cargo_loaded": true,
+    "cargo_safe_acceleration": 35.0,
+    "cargo_value": 500,
+    "cell_environment": "ascent",
+    "cell_rules_schema": "cell-combinations-v1",
+    "chapter_id": 2,
+    "chapter_level": 4,
+    "chapter_progression": true,
+    "client": "\u7ed2\u56e2",
+    "contract_id": "D4-A",
+    "control_version": "pilot-ascent-v8",
+    "damper_reference_inertia_kg_m2": 1.0,
+    "damper_reference_mass_kg": 1.0,
+    "deadline": 10000000.0,
+    "delivery_policy": "minimum-integrity-arrival-v3",
+    "delivery_radius": 9.0,
+    "destination_id": "ascent-lunar-outpost-v1",
+    "destination_name": "\u6708\u9762\u89c2\u6d4b\u7ad9",
+    "destination_y": -560.0,
+    "distance": 40.0,
+    "economy_policy": "delivery-economy-v3",
+    "energy_policy": "unpowered-coast-v1",
+    "free_boost_throttle": 1.0,
+    "free_brake_seconds": 0.24,
+    "free_brake_throttle": 0.9,
+    "free_drive_throttle": 0.72,
+    "free_flight_schema": "delivery-ascent-policy-v8",
+    "free_force_policy": "held-thrust-coast-explicit-brake-v2",
+    "free_gimbal_degrees": 180.0,
+    "free_gimbal_slew_degrees": 720.0,
+    "free_teleport_policy": "mass-distance-preserve-momentum-v3",
+    "gravity": 0.0,
+    "hazards": [
+      {
+        "ascent_asteroid": true,
+        "conductive": true,
+        "destructible": true,
+        "health": 120.0,
+        "id": "ascent-asteroid-lower",
+        "mass": 80.0,
+        "radius": 6.0,
+        "type": "rock",
+        "x": 0.0,
+        "y": -170.0
+      },
+      {
+        "ascent_asteroid": true,
+        "conductive": true,
+        "destructible": true,
+        "health": 120.0,
+        "id": "ascent-asteroid-middle",
+        "mass": 80.0,
+        "radius": 5.0,
+        "type": "rock",
+        "x": 16.0,
+        "y": -300.0
+      },
+      {
+        "ascent_asteroid": true,
+        "conductive": true,
+        "destructible": true,
+        "health": 120.0,
+        "id": "ascent-asteroid-upper",
+        "mass": 80.0,
+        "radius": 6.0,
+        "type": "rock",
+        "x": -18.0,
+        "y": -445.0
+      }
+    ],
+    "id": 3,
+    "input_schema": "free-flight-input-v2",
+    "launch_policy": "delivery-launch-v3",
+    "liability_policy": "actual-loss-no-cash-cap-v3",
+    "material_geometry_policy": "constant-working-length-v1",
+    "material_rules_schema": "parallel-material-v1",
+    "max_delivery_speed": 8.0,
+    "min_delivery_integrity": 0.8,
+    "mode": "pilot",
+    "name": "\u7b2c\u56db\u5173 \u00b7 \u6301\u7eed\u5347\u7a7a\u767b\u6708",
+    "nozzle_policy": "paid-full-swivel-v1",
+    "pilot_battery_multiplier": 20.0,
+    "pilot_drag": 0.0,
+    "pilot_energy_tariff": 0.025,
+    "pilot_gates": [],
+    "pilot_overdrive": "mounted-output",
+    "pilot_profile": "pilot-ascent-v8",
+    "recovery_offer": false,
+    "recovery_policy": "failed-survivors-rescued-v1",
+    "rep": 0,
+    "required": 80.0,
+    "reward": 620,
+    "risk": "\u6301\u7eed\u4e0a\u5347\u81f3\u6708\u9762\u7ad9\uff1b\u4f4e\u7a7a\u68c0\u67e5\u63a8\u91cd\u6bd4\uff0c\u9ad8\u7a7a\u6709\u6a2a\u98ce\uff0c\u8f68\u9053\u9668\u77f3\u53ef\u7ed5\u884c\uff0c\u6d41\u661f\u96e8\u63d0\u524d\u9884\u8b66\u3002\u4e3a\u63a5\u8fd1\u6536\u4ef6\u7ad9\u7559\u8db3\u5236\u52a8\u7535\u91cf\u3002",
+    "route_kind": "ascent",
+    "route_profile": "delivery-lunar-ascent-v1",
+    "shield_base_radius_metres": 1.5,
+    "shield_radius_policy": "sqrt-material-area-v1",
+    "spatial_shield_schema": "cell-center-shield-v1",
+    "species": "alien",
+    "status": "accepted",
+    "story": "\u8fd9\u7bb1\u6708\u9762\u89c2\u6d4b\u7ad9\u8865\u7ed9\u7bb1\u9001\u5f80\u6708\u9762\u89c2\u6d4b\u7ad9\uff0c\u6700\u4f4e\u4ea4\u4ed8\u5b8c\u6574\u5ea6 80%\u3002",
+    "story_id": "sunny_side_of_a_pot",
+    "story_node": 1,
+    "supply_policy": "proportional-circuit-energy-v1",
+    "teleport_joules_per_kg_metre": 6.0,
+    "time_limit": 10000000.0,
+    "variant": "\u7b2c\u4e8c\u7ae0 \u00b7 \u767b\u6708\u8865\u7ed9",
+    "variation": 0.0,
+    "weight": 1.0,
+    "wind": [
+      0.0,
+      0.0
+    ]
+  },
+  "ship": [
+    {
+      "id": 1,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 100.0,
+      "rot": 0,
+      "target": -1,
+      "type": "cargo",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 1022,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 300.0,
+      "rot": 0,
+      "target": -1,
+      "type": "battery",
+      "x": -1,
+      "y": 0
+    },
+    {
+      "id": 1023,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 28.0,
+      "rot": 0,
+      "target": -1,
+      "type": "thruster",
+      "x": 0,
+      "y": 1
+    },
+    {
+      "id": 1024,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 28.0,
+      "rot": 0,
+      "target": -1,
+      "type": "thruster",
+      "x": 0,
+      "y": -1
+    },
+    {
+      "id": 1025,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 300.0,
+      "rot": 0,
+      "target": -1,
+      "type": "battery",
+      "x": 1,
+      "y": 0
+    }
+  ],
+  "launcher": [
+    {
+      "id": 1001,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 300.0,
+      "rot": 0,
+      "target": -1,
+      "type": "battery",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 1002,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 60.0,
+      "rot": 0,
+      "target": -1,
+      "type": "spring",
+      "x": -1,
+      "y": 0
+    },
+    {
+      "id": 1003,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 60.0,
+      "rot": 0,
+      "target": -1,
+      "type": "spring",
+      "x": 1,
+      "y": 0
+    },
+    {
+      "id": 1004,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 60.0,
+      "rot": 0,
+      "target": -1,
+      "type": "spring",
+      "x": 0,
+      "y": -1
+    },
+    {
+      "id": 1005,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 60.0,
+      "rot": 0,
+      "target": -1,
+      "type": "spring",
+      "x": 0,
+      "y": 1
+    },
+    {
+      "id": 1006,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 32.0,
+      "rot": 0,
+      "target": -1,
+      "type": "beam",
+      "x": -1,
+      "y": -1
+    },
+    {
+      "id": 1007,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 32.0,
+      "rot": 0,
+      "target": -1,
+      "type": "beam",
+      "x": 1,
+      "y": -1
+    },
+    {
+      "id": 1008,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 32.0,
+      "rot": 0,
+      "target": -1,
+      "type": "beam",
+      "x": -1,
+      "y": 1
+    },
+    {
+      "id": 1009,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 32.0,
+      "rot": 0,
+      "target": -1,
+      "type": "beam",
+      "x": 1,
+      "y": 1
+    },
+    {
+      "id": 1010,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 32.0,
+      "rot": 0,
+      "target": -1,
+      "type": "beam",
+      "x": -2,
+      "y": -1
+    },
+    {
+      "id": 1011,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 32.0,
+      "rot": 0,
+      "target": -1,
+      "type": "beam",
+      "x": -3,
+      "y": -1
+    },
+    {
+      "id": 1012,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 150.0,
+      "rot": 0,
+      "target": -1,
+      "type": "armor",
+      "x": -3,
+      "y": 0
+    },
+    {
+      "id": 1013,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 150.0,
+      "rot": 0,
+      "target": -1,
+      "type": "armor",
+      "x": -2,
+      "y": 0
+    },
+    {
+      "id": 1014,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 60.0,
+      "rot": 0,
+      "target": -1,
+      "type": "spring",
+      "x": 2,
+      "y": -1
+    },
+    {
+      "id": 1015,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 60.0,
+      "rot": 0,
+      "target": -1,
+      "type": "spring",
+      "x": 3,
+      "y": -1
+    },
+    {
+      "id": 1016,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 60.0,
+      "rot": 0,
+      "target": -1,
+      "type": "spring",
+      "x": 2,
+      "y": 0
+    },
+    {
+      "id": 1017,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 60.0,
+      "rot": 0,
+      "target": -1,
+      "type": "spring",
+      "x": 3,
+      "y": 0
+    },
+    {
+      "id": 1018,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 60.0,
+      "rot": 0,
+      "target": -1,
+      "type": "spring",
+      "x": 2,
+      "y": 1
+    },
+    {
+      "id": 1019,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 60.0,
+      "rot": 0,
+      "target": -1,
+      "type": "spring",
+      "x": 3,
+      "y": 1
+    },
+    {
+      "id": 1020,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 60.0,
+      "rot": 0,
+      "target": -1,
+      "type": "spring",
+      "x": -3,
+      "y": 1
+    },
+    {
+      "id": 1021,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 60.0,
+      "rot": 0,
+      "target": -1,
+      "type": "spring",
+      "x": -2,
+      "y": 1
+    }
+  ]
+}

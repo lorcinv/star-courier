@@ -1,0 +1,1332 @@
+{
+  "active_contract_id": "",
+  "contracts": [
+    {
+      "accepted_day": 3.0,
+      "accessory_id": "none",
+      "appearance_id": "human_courier",
+      "appearance_seed": 981505425.0,
+      "boundary_y": 230.0,
+      "cargo": "包好的一把小勺",
+      "client": "小禾",
+      "contract_id": "D3-A",
+      "control_version": "pilot-free-v2",
+      "deadline": 48.0,
+      "delivery_policy": "any-direction-safe-arrival-v1",
+      "delivery_radius": 9.0,
+      "destination_name": "晨星轨道站",
+      "destination_y": -150.0,
+      "distance": 520.0,
+      "economy_policy": "free-flight-economy-v1",
+      "energy_policy": "cargo-connected-empty-fails-v1",
+      "free_boost_throttle": 1.0,
+      "free_brake_seconds": 0.24,
+      "free_brake_throttle": 0.9,
+      "free_drive_throttle": 0.72,
+      "free_flight_schema": "free-flight-policy-v2",
+      "free_force_policy": "held-thrust-coast-explicit-brake-v2",
+      "free_gimbal_degrees": 180.0,
+      "free_gimbal_slew_degrees": 720.0,
+      "free_teleport_policy": "current-or-last-recorded-direction-v2",
+      "gravity": 0.0,
+      "hazards": [
+        {
+          "gate_index": 0.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 105.0,
+          "y": -37.728515625
+        },
+        {
+          "gate_index": 0.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 105.0,
+          "y": -7.728515625
+        },
+        {
+          "gate_index": 1.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 220.0,
+          "y": -81.5
+        },
+        {
+          "gate_index": 1.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 220.0,
+          "y": -51.5
+        },
+        {
+          "gate_index": 2.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 330.0,
+          "y": -154.4326171875
+        },
+        {
+          "gate_index": 2.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 330.0,
+          "y": -124.4326171875
+        },
+        {
+          "gate_index": 3.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 465.0,
+          "y": -165.0
+        },
+        {
+          "gate_index": 3.0,
+          "health": 1000000.0,
+          "mass": 1000000.0,
+          "pilot_gate": true,
+          "radius": 5.0,
+          "type": "rock",
+          "x": 465.0,
+          "y": -135.0
+        }
+      ],
+      "id": 2.0,
+      "input_schema": "free-flight-input-v2",
+      "lookahead_seconds": 3.5,
+      "max_delivery_speed": 24.0,
+      "mode": "pilot",
+      "name": "城市升空 → 晨星轨道站",
+      "nozzle_policy": "paid-full-swivel-v1",
+      "pilot_altitude": 150.0,
+      "pilot_battery_multiplier": 20.0,
+      "pilot_boost_speed": 22.0,
+      "pilot_climb_end": 410.0,
+      "pilot_climb_start": 35.0,
+      "pilot_cruise_speed": 18.0,
+      "pilot_drag": 0.025,
+      "pilot_energy_tariff": 0.025,
+      "pilot_gates": [
+        {
+          "half_gap": 10.0,
+          "heading": -0.34942174970958734,
+          "index": 0.0,
+          "lane_offset": -9.0,
+          "x": 105.0,
+          "y": -22.728515625
+        },
+        {
+          "half_gap": 10.0,
+          "heading": -0.5403410652071341,
+          "index": 1.0,
+          "lane_offset": 7.0,
+          "x": 220.0,
+          "y": -66.5
+        },
+        {
+          "half_gap": 10.0,
+          "heading": -0.3828948929736634,
+          "index": 2.0,
+          "lane_offset": -7.0,
+          "x": 330.0,
+          "y": -139.4326171875
+        },
+        {
+          "half_gap": 10.0,
+          "heading": 0.0,
+          "index": 3.0,
+          "lane_offset": 0.0,
+          "x": 465.0,
+          "y": -150.0
+        }
+      ],
+      "pilot_net_force_limit": 30.0,
+      "pilot_overdrive": "mounted-output",
+      "pilot_profile": "pilot-free-v2",
+      "pilot_vertical_speed": 5.0,
+      "recovery_policy": "failed-survivors-rescued-v1",
+      "rep": 4.0,
+      "required": 75.0,
+      "reward": 330.0,
+      "risk": "自行选择飞行方向 · 安全抵达即可 · 电量耗尽则失败",
+      "species": "human",
+      "status": "declined",
+      "story": "又来麻烦你了。还是送去星港中转站，这回我把地址写大了。",
+      "story_id": "spoon_at_the_station",
+      "story_node": 1.0,
+      "time_limit": 70.0,
+      "variant": "标准件",
+      "variation": 0.0,
+      "weight": 2.0,
+      "wind": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "accepted_day": 3.0,
+      "accessory_id": "book_pouch",
+      "appearance_id": "elf_archivist",
+      "appearance_seed": 1540281332.0,
+      "background_route": "city",
+      "boundary_y": 230.0,
+      "cargo": "加急补货 · 压花书签",
+      "cargo_loaded": true,
+      "client": "叶笺",
+      "contract_id": "D3-B",
+      "control_version": "pilot-free-v2",
+      "deadline": 83.0,
+      "delivery_policy": "any-direction-safe-arrival-v1",
+      "delivery_radius": 7.0,
+      "destination_id": "lunar-delivery-platform-v2",
+      "destination_name": "月面前哨收件台",
+      "destination_y": -40.0,
+      "distance": 250.0,
+      "economy_policy": "free-flight-economy-v1",
+      "energy_policy": "cargo-connected-empty-fails-v1",
+      "free_boost_throttle": 1.0,
+      "free_brake_seconds": 0.24,
+      "free_brake_throttle": 0.9,
+      "free_drive_throttle": 0.72,
+      "free_flight_schema": "free-flight-policy-v2",
+      "free_force_policy": "held-thrust-coast-explicit-brake-v2",
+      "free_gimbal_degrees": 180.0,
+      "free_gimbal_slew_degrees": 720.0,
+      "free_teleport_policy": "current-or-last-recorded-direction-v2",
+      "gravity": 0.2,
+      "hazards": [
+        {
+          "conductive": true,
+          "destructible": true,
+          "health": 42.0,
+          "id": "lunar-ore-west-v2",
+          "lunar_art": "rock-1",
+          "lunar_role": "ore",
+          "mass": 30.0,
+          "radius": 3.75,
+          "type": "rock",
+          "x": 95.0,
+          "y": -15.0
+        },
+        {
+          "conductive": true,
+          "destructible": true,
+          "health": 48.0,
+          "id": "lunar-ore-east-v2",
+          "lunar_art": "rock-2",
+          "lunar_role": "ore",
+          "mass": 36.0,
+          "radius": 4.0,
+          "type": "rock",
+          "x": 165.0,
+          "y": -26.0
+        },
+        {
+          "conductive": true,
+          "destructible": true,
+          "health": 24.0,
+          "id": "lunar-drifter-v2",
+          "lunar_art": "rock-1",
+          "lunar_role": "drifter",
+          "mass": 8.0,
+          "radius": 1.0,
+          "type": "rock",
+          "velocity": [
+            -0.25,
+            0.75
+          ],
+          "x": 144.0,
+          "y": -57.0
+        }
+      ],
+      "id": 6.0,
+      "input_schema": "free-flight-input-v2",
+      "lookahead_seconds": 3.5,
+      "lunar_art_schema": "lunar-outpost-art-v2",
+      "lunar_backdrop_begin_x": 32.0,
+      "lunar_backdrop_full_x": 72.0,
+      "lunar_hint": "月面低重力会让飞行器缓慢下坠。轻装可上下绕开矿石；钻头要慢速接触，护盾会耗电吸收部分碰撞。接近前哨时按 Ctrl 刹车，或用反向推力减速；飞过头也能返回。",
+      "lunar_receiver": {
+        "art": "flight/receiver.png",
+        "art_width_m": 8.0,
+        "capture_center": [
+          250.0,
+          -40.0
+        ],
+        "capture_radius": 7.0,
+        "deck_anchor_native": [
+          139.5,
+          149.0
+        ],
+        "deck_clearance_m": 6.0,
+        "entry": "any-direction",
+        "id": "lunar-delivery-platform-v2",
+        "native_size": [
+          279.0,
+          220.0
+        ]
+      },
+      "lunar_schema": "lunar-outpost-v2",
+      "max_delivery_speed": 24.0,
+      "mode": "pilot",
+      "name": "城市货站 → 月面前哨",
+      "nozzle_policy": "paid-full-swivel-v1",
+      "pilot_altitude": 40.0,
+      "pilot_battery_multiplier": 20.0,
+      "pilot_climb_end": 210.0,
+      "pilot_climb_start": 20.0,
+      "pilot_drag": 0.025,
+      "pilot_energy_tariff": 0.025,
+      "pilot_gates": [],
+      "pilot_overdrive": "mounted-output",
+      "pilot_profile": "pilot-free-v2",
+      "recovery_policy": "failed-survivors-rescued-v1",
+      "rep": 2.0,
+      "required": 85.0,
+      "reward": 385.0,
+      "risk": "月面低重力 · 矿石可绕行或慢速钻切 · 小心漂石 · 可从两侧返回收件",
+      "route_kind": "lunar",
+      "route_profile": "lunar-outpost-v2",
+      "species": "elf",
+      "status": "settled",
+      "story": "书签这回去月面前哨收件台。她一看地球就忘了读到哪页。",
+      "story_id": "a_bookmark_on_leave",
+      "story_node": 1.0,
+      "success": true,
+      "time_limit": 110.0,
+      "variant": "重货件",
+      "variation": 0.0,
+      "weight": 1.9375,
+      "wind": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "credits": 605.0,
+  "day": 3.0,
+  "deliveries": 4.0,
+  "design": [
+    {
+      "id": 1.0,
+      "input_a": -1.0,
+      "input_b": -1.0,
+      "param": 100.0,
+      "rot": 0.0,
+      "target": -1.0,
+      "type": "cargo",
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "id": 2.0,
+      "input_a": -1.0,
+      "input_b": -1.0,
+      "param": 32.0,
+      "rot": 0.0,
+      "target": -1.0,
+      "type": "beam",
+      "x": 1.0,
+      "y": -1.0
+    },
+    {
+      "id": 3.0,
+      "input_a": -1.0,
+      "input_b": -1.0,
+      "param": 300.0,
+      "rot": 0.0,
+      "target": -1.0,
+      "type": "battery",
+      "x": -1.0,
+      "y": 0.0
+    },
+    {
+      "id": 4.0,
+      "input_a": -1.0,
+      "input_b": -1.0,
+      "param": 28.0,
+      "rot": 0.0,
+      "target": -1.0,
+      "type": "thruster",
+      "x": 0.0,
+      "y": -1.0
+    },
+    {
+      "id": 5.0,
+      "input_a": -1.0,
+      "input_b": -1.0,
+      "param": 150.0,
+      "rot": 0.0,
+      "target": -1.0,
+      "type": "armor",
+      "x": 1.0,
+      "y": 0.0
+    },
+    {
+      "id": 6.0,
+      "input_a": -1.0,
+      "input_b": -1.0,
+      "param": 28.0,
+      "rot": 0.0,
+      "target": -1.0,
+      "type": "thruster",
+      "x": 0.0,
+      "y": 1.0
+    },
+    {
+      "id": 7.0,
+      "input_a": -1.0,
+      "input_b": -1.0,
+      "param": 32.0,
+      "rot": 0.0,
+      "target": -1.0,
+      "type": "beam",
+      "x": 1.0,
+      "y": 1.0
+    },
+    {
+      "id": 8.0,
+      "input_a": -2.0,
+      "input_b": -1.0,
+      "param": 0.0,
+      "rot": 0.0,
+      "target": 3.0,
+      "type": "coupler",
+      "x": -1.0,
+      "y": 1.0
+    },
+    {
+      "id": 1005.0,
+      "input_a": -2.0,
+      "input_b": -1.0,
+      "param": 8.0,
+      "rot": 0.0,
+      "target": -1.0,
+      "type": "teleporter",
+      "x": -1.0,
+      "y": -1.0
+    },
+    {
+      "id": 1006.0,
+      "input_a": -2.0,
+      "input_b": 999,
+      "param": 0.0,
+      "rot": 0.0,
+      "target": -1.0,
+      "type": "drill",
+      "x": 2.0,
+      "y": 0.0
+    },
+    {
+      "id": 999,
+      "input_a": -1,
+      "input_b": -1,
+      "param": 0.0,
+      "rot": 0,
+      "target": -1,
+      "type": "not_gate",
+      "x": 4,
+      "y": 2
+    }
+  ],
+  "designs": {
+    "historical": {
+      "design": [
+        {
+          "id": 1.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 100.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "cargo",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "id": 2.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 32.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "beam",
+          "x": 1.0,
+          "y": -1.0
+        },
+        {
+          "id": 3.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 300.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "battery",
+          "x": -1.0,
+          "y": 0.0
+        },
+        {
+          "id": 4.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 28.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "thruster",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "id": 5.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 150.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "armor",
+          "x": 1.0,
+          "y": 0.0
+        },
+        {
+          "id": 6.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 28.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "thruster",
+          "x": 0.0,
+          "y": 1.0
+        },
+        {
+          "id": 7.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 32.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "beam",
+          "x": 1.0,
+          "y": 1.0
+        },
+        {
+          "id": 8.0,
+          "input_a": -2.0,
+          "input_b": -1.0,
+          "param": 0.0,
+          "rot": 0.0,
+          "target": 3.0,
+          "type": "coupler",
+          "x": -1.0,
+          "y": 1.0
+        },
+        {
+          "id": 1005.0,
+          "input_a": -2.0,
+          "input_b": -1.0,
+          "param": 8.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "teleporter",
+          "x": -1.0,
+          "y": -1.0
+        },
+        {
+          "id": 1006.0,
+          "input_a": -2.0,
+          "input_b": 999,
+          "param": 0.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "drill",
+          "x": 2.0,
+          "y": 0.0
+        },
+        {
+          "id": 999,
+          "input_a": -1,
+          "input_b": -1,
+          "param": 0.0,
+          "rot": 0,
+          "target": -1,
+          "type": "not_gate",
+          "x": 4,
+          "y": 2
+        }
+      ],
+      "launcher": [
+        {
+          "id": 1001.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 60.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "spring",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "id": 1002.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 300.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "battery",
+          "x": -1.0,
+          "y": 0.0
+        },
+        {
+          "id": 1003.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 32.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "beam",
+          "x": 1.0,
+          "y": 0.0
+        },
+        {
+          "id": 1004.0,
+          "input_a": -1.0,
+          "input_b": -1.0,
+          "param": 32.0,
+          "rot": 0.0,
+          "target": -1.0,
+          "type": "beam",
+          "x": 1.0,
+          "y": 1.0
+        }
+      ]
+    }
+  },
+  "flight_mode": "pilot-free-v2",
+  "history": [
+    {
+      "actual_costs": 73.0,
+      "ammo": 0.0,
+      "base_income": 385.0,
+      "charge_cap": 30.0,
+      "charged_costs": 30.0,
+      "client": "叶笺",
+      "contract_id": "D3-B",
+      "control_version": "pilot-free-v2",
+      "day": 3.0,
+      "deadline": 83.0,
+      "delivery_policy": "any-direction-safe-arrival-v1",
+      "economy_policy": "free-flight-economy-v1",
+      "elapsed": 27.774999999999064,
+      "energy": 71.0,
+      "energy_j": 2812.7769815704455,
+      "energy_tariff": 0.025,
+      "income": 385.0,
+      "income_adjustment": 0.0,
+      "insurance_coverage": 43.0,
+      "integrity": 100.0,
+      "lost": 0.0,
+      "profit": 355.0,
+      "repairs": 2.0,
+      "replenishment": "发射前装置已恢复；驿站承担保障费用，无需另购丢失零件。",
+      "reputation": 2.0,
+      "required": 85.0,
+      "restored": true,
+      "review": "包装完整，谢谢你把这份心意送到了。",
+      "review_context": {
+        "appearance_id": "elf_archivist",
+        "destination_name": "月面前哨收件台",
+        "version": 1.0
+      },
+      "route": "城市货站 → 月面前哨",
+      "route_context": {
+        "destination_id": "lunar-delivery-platform-v2",
+        "destination_name": "月面前哨收件台",
+        "route_kind": "lunar",
+        "route_name": "城市货站 → 月面前哨",
+        "route_profile": "lunar-outpost-v2"
+      },
+      "success": true
+    },
+    {
+      "actual_costs": 94.0,
+      "ammo": 0.0,
+      "base_income": 385.0,
+      "charge_cap": 30.0,
+      "charged_costs": 30.0,
+      "client": "铆钉",
+      "contract_id": "D2-B",
+      "control_version": "pilot-free-v2",
+      "day": 2.0,
+      "deadline": 83.0,
+      "delivery_policy": "any-direction-safe-arrival-v1",
+      "economy_policy": "free-flight-economy-v1",
+      "elapsed": 31.799999999998835,
+      "energy": 94.0,
+      "energy_j": 3749.038344017808,
+      "energy_tariff": 0.025,
+      "income": 385.0,
+      "income_adjustment": 0.0,
+      "insurance_coverage": 64.0,
+      "integrity": 100.0,
+      "lost": 0.0,
+      "profit": 355.0,
+      "repairs": 0.0,
+      "replenishment": "发射前装置已恢复；驿站承担保障费用，无需另购丢失零件。",
+      "reputation": 2.0,
+      "required": 85.0,
+      "restored": true,
+      "review": "包装完整，谢谢你把这份心意送到了。",
+      "review_context": {
+        "appearance_id": "robot_machinist",
+        "destination_name": "月面前哨收件台",
+        "version": 1.0
+      },
+      "route": "城市货站 → 月面前哨",
+      "route_context": {
+        "destination_id": "lunar-delivery-platform-v2",
+        "destination_name": "月面前哨收件台",
+        "route_kind": "lunar",
+        "route_name": "城市货站 → 月面前哨",
+        "route_profile": "lunar-outpost-v2"
+      },
+      "success": true
+    },
+    {
+      "actual_costs": 64.0,
+      "ammo": 0.0,
+      "base_income": 220.0,
+      "charge_cap": 30.0,
+      "charged_costs": 30.0,
+      "client": "叶笺",
+      "contract_id": "D1-B",
+      "control_version": "pilot-free-v2",
+      "day": 1.0,
+      "deadline": 35.0,
+      "delivery_policy": "any-direction-safe-arrival-v1",
+      "economy_policy": "free-flight-economy-v1",
+      "elapsed": 281.0083333332421,
+      "energy": 63.0,
+      "energy_j": 2492.1486013448566,
+      "energy_tariff": 0.025,
+      "income": 220.0,
+      "income_adjustment": 0.0,
+      "insurance_coverage": 34.0,
+      "integrity": 100.0,
+      "lost": 0.0,
+      "profit": 190.0,
+      "repairs": 1.0,
+      "replenishment": "发射前装置已恢复；驿站承担保障费用，无需另购丢失零件。",
+      "reputation": 2.0,
+      "required": 85.0,
+      "restored": true,
+      "review": "包装完整，谢谢你把这份心意送到了。",
+      "review_context": {
+        "appearance_id": "elf_archivist",
+        "destination_name": "屋顶收件台",
+        "version": 1.0
+      },
+      "route": "城市货站 → 屋顶收件台",
+      "success": true
+    },
+    {
+      "actual_costs": 130.0,
+      "ammo": 0.0,
+      "base_income": 220.0,
+      "charge_cap": 30.0,
+      "charged_costs": 30.0,
+      "client": "小禾",
+      "contract_id": "D1-A",
+      "control_version": "pilot-free-v2",
+      "day": 1.0,
+      "deadline": 32.0,
+      "delivery_policy": "any-direction-safe-arrival-v1",
+      "economy_policy": "free-flight-economy-v1",
+      "elapsed": 41.24166666666497,
+      "energy": 130.0,
+      "energy_j": 5168.104789378001,
+      "energy_tariff": 0.025,
+      "income": 220.0,
+      "income_adjustment": 0.0,
+      "insurance_coverage": 100.0,
+      "integrity": 100.0,
+      "lost": 0.0,
+      "profit": 190.0,
+      "repairs": 0.0,
+      "replenishment": "发射前装置已恢复；驿站承担保障费用，无需另购丢失零件。",
+      "reputation": 2.0,
+      "required": 85.0,
+      "restored": true,
+      "review": "包装完整，谢谢你把这份心意送到了。",
+      "review_context": {
+        "appearance_id": "human_courier",
+        "destination_name": "屋顶收件台",
+        "version": 1.0
+      },
+      "route": "城市货站 → 屋顶收件台",
+      "success": true
+    }
+  ],
+  "in_flight": {
+
+  },
+  "inventory": {
+    "armor": 1.0,
+    "battery": 3.0,
+    "beam": 5.0,
+    "cargo": 1.0,
+    "coupler": 1.0,
+    "drill": 1.0,
+    "not_gate": 2,
+    "spring": 1.0,
+    "teleporter": 1.0,
+    "thruster": 2.0
+  },
+  "jobs_today": 1.0,
+  "last_settlement": {
+    "actual_costs": 73.0,
+    "ammo": 0.0,
+    "base_income": 385.0,
+    "charge_cap": 30.0,
+    "charged_costs": 30.0,
+    "client": "叶笺",
+    "contract_id": "D3-B",
+    "control_version": "pilot-free-v2",
+    "day": 3.0,
+    "deadline": 83.0,
+    "delivery_policy": "any-direction-safe-arrival-v1",
+    "economy_policy": "free-flight-economy-v1",
+    "elapsed": 27.774999999999064,
+    "energy": 71.0,
+    "energy_j": 2812.7769815704455,
+    "energy_tariff": 0.025,
+    "income": 385.0,
+    "income_adjustment": 0.0,
+    "insurance_coverage": 43.0,
+    "integrity": 100.0,
+    "lost": 0.0,
+    "profit": 355.0,
+    "repairs": 2.0,
+    "replenishment": "发射前装置已恢复；驿站承担保障费用，无需另购丢失零件。",
+    "reputation": 2.0,
+    "required": 85.0,
+    "restored": true,
+    "review": "包装完整，谢谢你把这份心意送到了。",
+    "review_context": {
+      "appearance_id": "elf_archivist",
+      "destination_name": "月面前哨收件台",
+      "version": 1.0
+    },
+    "route": "城市货站 → 月面前哨",
+    "route_context": {
+      "destination_id": "lunar-delivery-platform-v2",
+      "destination_name": "月面前哨收件台",
+      "route_kind": "lunar",
+      "route_name": "城市货站 → 月面前哨",
+      "route_profile": "lunar-outpost-v2"
+    },
+    "success": true
+  },
+  "last_trials": {
+
+  },
+  "launcher": [
+    {
+      "id": 1001.0,
+      "input_a": -1.0,
+      "input_b": -1.0,
+      "param": 60.0,
+      "rot": 0.0,
+      "target": -1.0,
+      "type": "spring",
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "id": 1002.0,
+      "input_a": -1.0,
+      "input_b": -1.0,
+      "param": 300.0,
+      "rot": 0.0,
+      "target": -1.0,
+      "type": "battery",
+      "x": -1.0,
+      "y": 0.0
+    },
+    {
+      "id": 1003.0,
+      "input_a": -1.0,
+      "input_b": -1.0,
+      "param": 32.0,
+      "rot": 0.0,
+      "target": -1.0,
+      "type": "beam",
+      "x": 1.0,
+      "y": 0.0
+    },
+    {
+      "id": 1004.0,
+      "input_a": -1.0,
+      "input_b": -1.0,
+      "param": 32.0,
+      "rot": 0.0,
+      "target": -1.0,
+      "type": "beam",
+      "x": 1.0,
+      "y": 1.0
+    }
+  ],
+  "offer_generation_state": {
+    "introduced_day": 0.0,
+    "ordinary_policy": "seeded-readable-policy-a1",
+    "pirate_introduced_day": 0.0,
+    "version": "seeded-protected-bird-policy-v3-pirate-a1",
+    "world_seed": 592853699.0
+  },
+  "phase": "day",
+  "reputation": 8.0,
+  "research": 0.0,
+  "review_state": {
+    "dispatch": {
+      "D1-A": {
+        "facts_schema": "delivery-facts-v1",
+        "template_id": "free-delivery-review-v1"
+      },
+      "D1-B": {
+        "facts_schema": "delivery-facts-v1",
+        "template_id": "free-delivery-review-v1"
+      },
+      "D2-B": {
+        "facts_schema": "delivery-facts-v1",
+        "template_id": "free-delivery-review-v1"
+      },
+      "D3-B": {
+        "facts_schema": "delivery-facts-v1",
+        "template_id": "free-delivery-review-v1"
+      }
+    },
+    "pending": {
+      "D3-B": {
+        "appearance_id": "elf_archivist",
+        "client": "叶笺",
+        "deadline": 83.0,
+        "delivery_day": 3.0,
+        "destination_name": "月面前哨收件台",
+        "elapsed": 27.774999999999064,
+        "integrity": 100.0,
+        "required": 85.0,
+        "route_name": "城市货站 → 月面前哨",
+        "settlement_id": "D3-B",
+        "success": true
+      }
+    },
+    "published": [
+      {
+        "appearance_id": "robot_machinist",
+        "body": "月面前哨收件台收到货了，包装完好。谢谢你送过来。",
+        "category": "complete",
+        "client": "铆钉",
+        "deadline": 83.0,
+        "delivery_day": 2.0,
+        "destination_name": "月面前哨收件台",
+        "elapsed": 31.799999999998835,
+        "integrity": 100.0,
+        "published_day": 3.0,
+        "rating": 5.0,
+        "required": 85.0,
+        "route_name": "城市货站 → 月面前哨",
+        "settlement_id": "D2-B",
+        "success": true
+      },
+      {
+        "appearance_id": "human_courier",
+        "body": "屋顶收件台收到货了，包装完好。谢谢你送过来。",
+        "category": "complete",
+        "client": "小禾",
+        "deadline": 32.0,
+        "delivery_day": 1.0,
+        "destination_name": "屋顶收件台",
+        "elapsed": 41.24166666666497,
+        "integrity": 100.0,
+        "published_day": 2.0,
+        "rating": 5.0,
+        "required": 85.0,
+        "route_name": "城市货站 → 屋顶收件台",
+        "settlement_id": "D1-A",
+        "success": true
+      },
+      {
+        "appearance_id": "elf_archivist",
+        "body": "屋顶收件台收到货了，包装完好。谢谢你送过来。",
+        "category": "complete",
+        "client": "叶笺",
+        "deadline": 35.0,
+        "delivery_day": 1.0,
+        "destination_name": "屋顶收件台",
+        "elapsed": 281.0083333332421,
+        "integrity": 100.0,
+        "published_day": 2.0,
+        "rating": 5.0,
+        "required": 85.0,
+        "route_name": "城市货站 → 屋顶收件台",
+        "settlement_id": "D1-B",
+        "success": true
+      }
+    ],
+    "published_through_day": 2.0,
+    "start_day": 1.0,
+    "template_version": 2.0,
+    "version": 2.0
+  },
+  "settings": {
+    "controller_deadzone": 0.22,
+    "customer_reviews_schema": 2.0,
+    "dialogue_muted": false,
+    "dialogue_volume": 0.55,
+    "fullscreen": false,
+    "motion_blur": true,
+    "offer_authoring_policy": "seeded-protected-bird-policy-v3-pirate-a1",
+    "offer_generation_schema": 1.0,
+    "pixel_density": "auto",
+    "protected_bird_schema": 1.0,
+    "quality": "auto",
+    "reduced_motion": false,
+    "volume": 0.55
+  },
+  "settled_ids": {
+    "D1-A": {
+      "actual_costs": 130.0,
+      "ammo": 0.0,
+      "base_income": 220.0,
+      "charge_cap": 30.0,
+      "charged_costs": 30.0,
+      "client": "小禾",
+      "contract_id": "D1-A",
+      "control_version": "pilot-free-v2",
+      "day": 1.0,
+      "deadline": 32.0,
+      "delivery_policy": "any-direction-safe-arrival-v1",
+      "economy_policy": "free-flight-economy-v1",
+      "elapsed": 41.24166666666497,
+      "energy": 130.0,
+      "energy_j": 5168.104789378001,
+      "energy_tariff": 0.025,
+      "income": 220.0,
+      "income_adjustment": 0.0,
+      "insurance_coverage": 100.0,
+      "integrity": 100.0,
+      "lost": 0.0,
+      "profit": 190.0,
+      "repairs": 0.0,
+      "replenishment": "发射前装置已恢复；驿站承担保障费用，无需另购丢失零件。",
+      "reputation": 2.0,
+      "required": 85.0,
+      "restored": true,
+      "review": "包装完整，谢谢你把这份心意送到了。",
+      "review_context": {
+        "appearance_id": "human_courier",
+        "destination_name": "屋顶收件台",
+        "version": 1.0
+      },
+      "route": "城市货站 → 屋顶收件台",
+      "success": true
+    },
+    "D1-B": {
+      "actual_costs": 64.0,
+      "ammo": 0.0,
+      "base_income": 220.0,
+      "charge_cap": 30.0,
+      "charged_costs": 30.0,
+      "client": "叶笺",
+      "contract_id": "D1-B",
+      "control_version": "pilot-free-v2",
+      "day": 1.0,
+      "deadline": 35.0,
+      "delivery_policy": "any-direction-safe-arrival-v1",
+      "economy_policy": "free-flight-economy-v1",
+      "elapsed": 281.0083333332421,
+      "energy": 63.0,
+      "energy_j": 2492.1486013448566,
+      "energy_tariff": 0.025,
+      "income": 220.0,
+      "income_adjustment": 0.0,
+      "insurance_coverage": 34.0,
+      "integrity": 100.0,
+      "lost": 0.0,
+      "profit": 190.0,
+      "repairs": 1.0,
+      "replenishment": "发射前装置已恢复；驿站承担保障费用，无需另购丢失零件。",
+      "reputation": 2.0,
+      "required": 85.0,
+      "restored": true,
+      "review": "包装完整，谢谢你把这份心意送到了。",
+      "review_context": {
+        "appearance_id": "elf_archivist",
+        "destination_name": "屋顶收件台",
+        "version": 1.0
+      },
+      "route": "城市货站 → 屋顶收件台",
+      "success": true
+    },
+    "D2-B": {
+      "actual_costs": 94.0,
+      "ammo": 0.0,
+      "base_income": 385.0,
+      "charge_cap": 30.0,
+      "charged_costs": 30.0,
+      "client": "铆钉",
+      "contract_id": "D2-B",
+      "control_version": "pilot-free-v2",
+      "day": 2.0,
+      "deadline": 83.0,
+      "delivery_policy": "any-direction-safe-arrival-v1",
+      "economy_policy": "free-flight-economy-v1",
+      "elapsed": 31.799999999998835,
+      "energy": 94.0,
+      "energy_j": 3749.038344017808,
+      "energy_tariff": 0.025,
+      "income": 385.0,
+      "income_adjustment": 0.0,
+      "insurance_coverage": 64.0,
+      "integrity": 100.0,
+      "lost": 0.0,
+      "profit": 355.0,
+      "repairs": 0.0,
+      "replenishment": "发射前装置已恢复；驿站承担保障费用，无需另购丢失零件。",
+      "reputation": 2.0,
+      "required": 85.0,
+      "restored": true,
+      "review": "包装完整，谢谢你把这份心意送到了。",
+      "review_context": {
+        "appearance_id": "robot_machinist",
+        "destination_name": "月面前哨收件台",
+        "version": 1.0
+      },
+      "route": "城市货站 → 月面前哨",
+      "route_context": {
+        "destination_id": "lunar-delivery-platform-v2",
+        "destination_name": "月面前哨收件台",
+        "route_kind": "lunar",
+        "route_name": "城市货站 → 月面前哨",
+        "route_profile": "lunar-outpost-v2"
+      },
+      "success": true
+    },
+    "D3-B": {
+      "actual_costs": 73.0,
+      "ammo": 0.0,
+      "base_income": 385.0,
+      "charge_cap": 30.0,
+      "charged_costs": 30.0,
+      "client": "叶笺",
+      "contract_id": "D3-B",
+      "control_version": "pilot-free-v2",
+      "day": 3.0,
+      "deadline": 83.0,
+      "delivery_policy": "any-direction-safe-arrival-v1",
+      "economy_policy": "free-flight-economy-v1",
+      "elapsed": 27.774999999999064,
+      "energy": 71.0,
+      "energy_j": 2812.7769815704455,
+      "energy_tariff": 0.025,
+      "income": 385.0,
+      "income_adjustment": 0.0,
+      "insurance_coverage": 43.0,
+      "integrity": 100.0,
+      "lost": 0.0,
+      "profit": 355.0,
+      "repairs": 2.0,
+      "replenishment": "发射前装置已恢复；驿站承担保障费用，无需另购丢失零件。",
+      "reputation": 2.0,
+      "required": 85.0,
+      "restored": true,
+      "review": "包装完整，谢谢你把这份心意送到了。",
+      "review_context": {
+        "appearance_id": "elf_archivist",
+        "destination_name": "月面前哨收件台",
+        "version": 1.0
+      },
+      "route": "城市货站 → 月面前哨",
+      "route_context": {
+        "destination_id": "lunar-delivery-platform-v2",
+        "destination_name": "月面前哨收件台",
+        "route_kind": "lunar",
+        "route_name": "城市货站 → 月面前哨",
+        "route_profile": "lunar-outpost-v2"
+      },
+      "success": true
+    }
+  },
+  "story_state": {
+    "committed_contract_ids": {
+      "D1-A": {
+        "route_context": {
+          "destination_name": "屋顶收件台",
+          "route_name": "城市货站 → 屋顶收件台",
+          "route_profile": "free-ground-choice-v1"
+        },
+        "success": true
+      },
+      "D1-B": {
+        "route_context": {
+          "destination_name": "屋顶收件台",
+          "route_name": "城市货站 → 屋顶收件台",
+          "route_profile": "free-ground-choice-v1"
+        },
+        "success": true
+      },
+      "D2-B": {
+        "route_context": {
+          "destination_id": "lunar-delivery-platform-v2",
+          "destination_name": "月面前哨收件台",
+          "route_kind": "lunar",
+          "route_name": "城市货站 → 月面前哨",
+          "route_profile": "lunar-outpost-v2"
+        },
+        "success": true
+      },
+      "D3-B": {
+        "route_context": {
+          "destination_id": "lunar-delivery-platform-v2",
+          "destination_name": "月面前哨收件台",
+          "route_kind": "lunar",
+          "route_name": "城市货站 → 月面前哨",
+          "route_profile": "lunar-outpost-v2"
+        },
+        "success": true
+      }
+    },
+    "contract_bindings": {
+      "D1-A": {
+        "accessory_id": "none",
+        "appearance_id": "human_courier",
+        "appearance_seed": 981505425.0,
+        "species": "human",
+        "story_id": "spoon_at_the_station",
+        "story_node": 0.0
+      },
+      "D1-B": {
+        "accessory_id": "book_pouch",
+        "appearance_id": "elf_archivist",
+        "appearance_seed": 1540281332.0,
+        "species": "elf",
+        "story_id": "a_bookmark_on_leave",
+        "story_node": 0.0
+      },
+      "D2-A": {
+        "accessory_id": "seed_pod",
+        "appearance_id": "alien_botanist",
+        "appearance_seed": 394703830.0,
+        "species": "alien",
+        "story_id": "sunny_side_of_a_pot",
+        "story_node": 0.0
+      },
+      "D2-B": {
+        "accessory_id": "tool_pack",
+        "appearance_id": "robot_machinist",
+        "appearance_seed": 1827872482.0,
+        "species": "robot",
+        "story_id": "a_kettle_for_two",
+        "story_node": 0.0
+      },
+      "D3-A": {
+        "accessory_id": "none",
+        "appearance_id": "human_courier",
+        "appearance_seed": 981505425.0,
+        "species": "human",
+        "story_id": "spoon_at_the_station",
+        "story_node": 1.0
+      },
+      "D3-B": {
+        "accessory_id": "book_pouch",
+        "appearance_id": "elf_archivist",
+        "appearance_seed": 1540281332.0,
+        "species": "elf",
+        "story_id": "a_bookmark_on_leave",
+        "story_node": 1.0
+      }
+    },
+    "pending_returns": [
+      "D1-B",
+      "D2-B",
+      "D3-B"
+    ],
+    "roster": {
+      "alien_botanist": {
+        "accessory_id": "seed_pod",
+        "appearance_id": "alien_botanist",
+        "appearance_seed": 394703830.0,
+        "species": "alien",
+        "story_id": "sunny_side_of_a_pot",
+        "story_node": 0.0
+      },
+      "elf_archivist": {
+        "accessory_id": "book_pouch",
+        "appearance_id": "elf_archivist",
+        "appearance_seed": 1540281332.0,
+        "species": "elf",
+        "story_id": "a_bookmark_on_leave",
+        "story_node": 2.0
+      },
+      "human_courier": {
+        "accessory_id": "none",
+        "appearance_id": "human_courier",
+        "appearance_seed": 981505425.0,
+        "species": "human",
+        "story_id": "spoon_at_the_station",
+        "story_node": 1.0
+      },
+      "robot_machinist": {
+        "accessory_id": "tool_pack",
+        "appearance_id": "robot_machinist",
+        "appearance_seed": 1827872482.0,
+        "species": "robot",
+        "story_id": "a_kettle_for_two",
+        "story_node": 1.0
+      }
+    },
+    "seen_dialogue_ids": {
+      "D1-A": {
+        "D1-A/accept": true,
+        "D1-A/result": true,
+        "D1-A/return": true
+      },
+      "D1-B": {
+        "D1-B/accept": true,
+        "D1-B/result": true
+      },
+      "D2-B": {
+        "D2-B/accept": true,
+        "D2-B/result": true
+      },
+      "D3-B": {
+        "D3-B/accept": true,
+        "D3-B/result": true
+      }
+    },
+    "version": 1.0,
+    "world_seed": 592853699.0
+  },
+  "version": 5.0,
+  "workshop_tier": 2.0
+}

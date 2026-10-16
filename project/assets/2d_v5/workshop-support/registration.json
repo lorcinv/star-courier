@@ -1,0 +1,240 @@
+{
+  "arm_link_endpoints": [
+    [
+      0.5,
+      6.5
+    ],
+    [
+      17.5,
+      4.0
+    ]
+  ],
+  "arm_joint_pivot": [
+    9.705882352941176,
+    10.666666666666666
+  ],
+  "arm_claw_grip": [
+    22.870975,
+    11.74468085106383
+  ],
+  "arm_claw_wrist": [
+    7.0,
+    5.1063829787234045
+  ],
+  "correction": "Actual28x20 shaft crop and opaque endpoint registration repair the first GUI floating-link failure. Joint/claw cuts remain inside recovered source dimensions.",
+  "status": "reconstructed kit v1; isolated lane; requires native whole-scene acceptance",
+  "source_sha256": "610959baa4d74b769da0ca2c875f7c3f4bc9c9db9dd7775b40fec62f04976526",
+  "minimum_contact_height": 18.0,
+  "rail_running_surface_offset": 8.0,
+  "saddle_contact": [
+    18,
+    7
+  ],
+  "carriage_floor": [
+    24,
+    18
+  ],
+  "max_jacks": 153,
+  "max_rail_tiles": 64,
+  "max_background_arms": 2,
+  "parts": [
+    {
+      "asset": "assets/2d_v5/workshop-support/jack-saddle.png",
+      "source": "source_art/workshop-support/rail-jack-original-reconstructed.png",
+      "source_sha256": "610959baa4d74b769da0ca2c875f7c3f4bc9c9db9dd7775b40fec62f04976526",
+      "source_crop": [
+        533,
+        45,
+        1020,
+        267
+      ],
+      "nominal_uniform_scale": 0.07692307692307693,
+      "dimensions": [
+        37,
+        17
+      ],
+      "sha256": "4eee6f339739d3732f49a699a44400e2c01b6c193e1347de6f624210e6d3ed13",
+      "method": "rectangular extraction, uniform nearest sampling, existing96 RGB palette, alpha128; no painted pixels"
+    },
+    {
+      "asset": "assets/2d_v5/workshop-support/jack-piston.png",
+      "source": "source_art/workshop-support/rail-jack-original-reconstructed.png",
+      "source_sha256": "610959baa4d74b769da0ca2c875f7c3f4bc9c9db9dd7775b40fec62f04976526",
+      "source_crop": [
+        709,
+        260,
+        811,
+        417
+      ],
+      "nominal_uniform_scale": 0.07692307692307693,
+      "dimensions": [
+        8,
+        12
+      ],
+      "sha256": "0c759520fa2dcc34cc1bd098197f7a9bebcc56b38368fb597b737f3879933e0f",
+      "method": "rectangular extraction, uniform nearest sampling, existing96 RGB palette, alpha128; no painted pixels"
+    },
+    {
+      "asset": "assets/2d_v5/workshop-support/jack-cylinder.png",
+      "source": "source_art/workshop-support/rail-jack-original-reconstructed.png",
+      "source_sha256": "610959baa4d74b769da0ca2c875f7c3f4bc9c9db9dd7775b40fec62f04976526",
+      "source_crop": [
+        652,
+        405,
+        884,
+        706
+      ],
+      "nominal_uniform_scale": 0.07692307692307693,
+      "dimensions": [
+        18,
+        23
+      ],
+      "sha256": "03cba53b60d30fa40f4367c5d6e796e9def085d45b31f0b2c0ddb8762aacb930",
+      "method": "rectangular extraction, uniform nearest sampling, existing96 RGB palette, alpha128; no painted pixels"
+    },
+    {
+      "asset": "assets/2d_v5/workshop-support/jack-carriage.png",
+      "source": "source_art/workshop-support/rail-jack-original-reconstructed.png",
+      "source_sha256": "610959baa4d74b769da0ca2c875f7c3f4bc9c9db9dd7775b40fec62f04976526",
+      "source_crop": [
+        454,
+        628,
+        1080,
+        861
+      ],
+      "nominal_uniform_scale": 0.07692307692307693,
+      "dimensions": [
+        48,
+        18
+      ],
+      "sha256": "f75076ea0c8117c0f0a3499188e228d572834631b8303a0dafdbaaf6b877f7d4",
+      "method": "rectangular extraction, uniform nearest sampling, existing96 RGB palette, alpha128; no painted pixels"
+    },
+    {
+      "asset": "assets/2d_v5/workshop-support/rail-middle.png",
+      "source": "source_art/workshop-support/rail-jack-original-reconstructed.png",
+      "source_sha256": "610959baa4d74b769da0ca2c875f7c3f4bc9c9db9dd7775b40fec62f04976526",
+      "source_crop": [
+        191,
+        880,
+        1344,
+        985
+      ],
+      "nominal_uniform_scale": 0.125,
+      "dimensions": [
+        144,
+        13
+      ],
+      "sha256": "aa6fffee44223c39c0c82aa2901a2a6ff6ff9b10bfa1f1d34baa6eb6a3255ff8",
+      "method": "rectangular extraction, uniform nearest sampling, existing96 RGB palette, alpha128; no painted pixels"
+    },
+    {
+      "asset": "assets/2d_v5/workshop-support/rail-left.png",
+      "source": "source_art/workshop-support/rail-jack-original-reconstructed.png",
+      "source_sha256": "610959baa4d74b769da0ca2c875f7c3f4bc9c9db9dd7775b40fec62f04976526",
+      "source_crop": [
+        45,
+        880,
+        192,
+        985
+      ],
+      "nominal_uniform_scale": 0.125,
+      "dimensions": [
+        18,
+        13
+      ],
+      "sha256": "520e17807e7b30d2c7899ad81751863d335ebaabe9aa5d2ef54fe821357c8c77",
+      "method": "rectangular extraction, uniform nearest sampling, existing96 RGB palette, alpha128; no painted pixels"
+    },
+    {
+      "asset": "assets/2d_v5/workshop-support/rail-right.png",
+      "source": "source_art/workshop-support/rail-jack-original-reconstructed.png",
+      "source_sha256": "610959baa4d74b769da0ca2c875f7c3f4bc9c9db9dd7775b40fec62f04976526",
+      "source_crop": [
+        1343,
+        880,
+        1493,
+        985
+      ],
+      "nominal_uniform_scale": 0.125,
+      "dimensions": [
+        19,
+        13
+      ],
+      "sha256": "7ca5d91c3e10486d0af81025e5b62de6c2697ae7d72aa45750f080376ce96054",
+      "method": "rectangular extraction, uniform nearest sampling, existing96 RGB palette, alpha128; no painted pixels"
+    },
+    {
+      "asset": "assets/2d_v5/workshop-support/arm-link.png",
+      "source": "assets/2d_v5/robot/lift-shaft.png",
+      "source_sha256": "644f16ecbf340f7d68406d8dc957d2b534a9df64084ecc5c9e523316184b58e5",
+      "source_crop": [
+        0,
+        0,
+        28,
+        20
+      ],
+      "nominal_uniform_scale": 0.65,
+      "dimensions": [
+        18,
+        13
+      ],
+      "sha256": "b812f54df42de7ffb98b8217128a390e2f7fce42f343299ccc4e9c4cbe6637f5",
+      "method": "rectangular extraction, uniform nearest sampling, existing96 RGB palette, alpha128; no painted pixels"
+    },
+    {
+      "asset": "assets/2d_v5/workshop-support/arm-joint.png",
+      "source": "assets/2d_v5/robot/lift-joint.png",
+      "source_sha256": "ccb7436bd499220968f5d3169b1754121eeacda3268ecbf5b673083e1bed8f24",
+      "source_crop": [
+        3,
+        3,
+        37,
+        33
+      ],
+      "nominal_uniform_scale": 0.65,
+      "dimensions": [
+        22,
+        20
+      ],
+      "sha256": "d5e07411f76f6b3c6a007a7f902efe813faa8fce7a36909ee8ac98cea4023bc7",
+      "method": "rectangular extraction, uniform nearest sampling, existing96 RGB palette, alpha128; no painted pixels"
+    },
+    {
+      "asset": "assets/2d_v5/workshop-support/arm-claw.png",
+      "source": "assets/2d_v5/robot/lift-claw.png",
+      "source_sha256": "be41c046667c885d323c479cf944b5ce0caef73339eadcd15e4c21fce25e50ec",
+      "source_crop": [
+        0,
+        3,
+        66,
+        50
+      ],
+      "nominal_uniform_scale": 0.5,
+      "dimensions": [
+        33,
+        24
+      ],
+      "sha256": "3a5d2630deb53f5c2bd39a7cdf7911bec151762325d8a69d960ca4740aea6c43",
+      "method": "rectangular extraction, uniform nearest sampling, existing96 RGB palette, alpha128; no painted pixels"
+    },
+    {
+      "asset": "assets/2d_v5/workshop-support/arm-post.png",
+      "source": "assets/2d_v5/launch-support/support-base-pixel.png",
+      "source_sha256": "078e5118fc5352914c51293999ae2b45401b3428cd211d08691085b1f3820344",
+      "source_crop": [
+        0,
+        0,
+        65,
+        56
+      ],
+      "nominal_uniform_scale": 0.55,
+      "dimensions": [
+        36,
+        31
+      ],
+      "sha256": "e535272221f60ceb13af5813e5431bf43c97947eba944b6f954762c934841e1d",
+      "method": "rectangular extraction, uniform nearest sampling, existing96 RGB palette, alpha128; no painted pixels"
+    }
+  ]
+}

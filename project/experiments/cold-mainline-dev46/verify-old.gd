@@ -1,0 +1,5 @@
+extends SceneTree
+const E=preload("res://scripts/economy.gd")
+func same(a,b)->bool:return JSON.parse_string(JSON.stringify(a))==JSON.parse_string(JSON.stringify(b))
+func _initialize():
+ var raw=JSON.parse_string(FileAccess.get_file_as_string("user://savegame.json"));var e=E.new();e.load_state();e.enable_story_mode();assert(not e.review_load_blocked);assert(same(raw.contracts,e.contracts));e.ensure_contracts();assert(same(raw.contracts,e.contracts));assert(e.accept_contract_and_save("D5-A",raw.design,raw.launcher,raw.settings).ok);assert(e.active_contract().distance==200 and not e.active_contract().has("rift_delivery_layout"));var expected=raw.contracts[0].duplicate(true);expected.status="accepted";expected.cargo_loaded=false;print("OLD45_SHOWN_TO46 ",JSON.stringify(e.active_contract()));assert(e.save_state(raw.design,raw.launcher,raw.settings));var loaded=E.new();loaded.load_state();assert(not loaded.review_load_blocked and same(loaded.active_contract(),e.active_contract()));print("OLD45 SHOWN FULL STRUCTURE/ENSURE/ACCEPT/RELOAD PASS");quit()

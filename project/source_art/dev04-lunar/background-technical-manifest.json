@@ -1,0 +1,109 @@
+{
+  "status": "BACKGROUND CANDIDATES ONLY. Moon route remains unavailable.",
+  "method": "Uniform source nearest registration; explicit 2px grid; source/shared palettes; binary alpha; same-direction narrow regolith edge repair. No new illustration or geometry changes.",
+  "recipe_sha256": "53dc62ae584741c41690e0f453e602a01bf34c733704420c054e896c3645c5c2",
+  "assets": [
+    {
+      "provenance": "Reconstructed imagegen original with technical source-only derivative",
+      "source": "originals/moon-far-sky-original.png",
+      "source_sha256": "da5b4fcb0320cf1c03520c21ac081a159bc2ffafaa1e6fe75a7f214e1a53f212",
+      "runtime_candidate": "runtime/assets/2d_v5/moon/far-sky-clamped.png",
+      "sha256": "a7556349c5c61047bd5e96ce1b25681057555b9fa399f22678441ac51215fed9",
+      "bytes": 582005,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "uniform_registration": {
+        "uniform_scale": 0.9186602870813397,
+        "translation_px": [
+          0.0,
+          -0.22966507177034146
+        ]
+      },
+      "nearest_grid_px": 2,
+      "palette_mode": "source-only-adaptive-256",
+      "palette_path": "records/moon-sky-source-palette-256.json",
+      "palette_sha256": "3c20a6546b97c75059fc8625047df53e9794ff6150c1ab84fd82151585c1dbfb",
+      "alpha_threshold": 128,
+      "alpha_values": [
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "alpha_bounds_xyxy": [
+        0,
+        0,
+        1536,
+        864
+      ],
+      "visible_palette_colors": 256,
+      "horizontal_repeat": false,
+      "vertical_repeat": false,
+      "mirrored_or_reversed": false,
+      "edge_bridge_grid_texels": 0,
+      "edge_before": {
+        "max_premultiplied_rgba_error": 38.0,
+        "mean_premultiplied_rgba_error": 2.4224536418914795
+      },
+      "edge_after": {
+        "max_premultiplied_rgba_error": 40.0,
+        "mean_premultiplied_rgba_error": 2.4311342239379883
+      }
+    },
+    {
+      "provenance": "Reconstructed imagegen original with technical source-only derivative",
+      "source": "originals/moon-regolith-original.png",
+      "source_sha256": "21d5ed6286399f53e4885d8b5aa0b3636e64dfc63c20403d60dd31464a5db8c0",
+      "runtime_candidate": "runtime/assets/2d_v5/moon/regolith-decorative-wrap.png",
+      "sha256": "32b046c05035b4c8882841518c8567ba3b5b75fa651dc7b549240ffed1951888",
+      "bytes": 35134,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "uniform_registration": {
+        "uniform_scale": 0.7655502392344498,
+        "translation_px": [
+          0.0,
+          -0.19138755980861788
+        ]
+      },
+      "nearest_grid_px": 2,
+      "palette_mode": "approved-reference-96",
+      "palette_path": "inputs/palette_96.json",
+      "palette_sha256": "5bb6b501d7bece46b528a3c230e39c207e5f8a3aac6be15969f21683e73f2944",
+      "alpha_threshold": 128,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "alpha_bounds_xyxy": [
+        0,
+        590,
+        1280,
+        720
+      ],
+      "visible_palette_colors": 68,
+      "horizontal_repeat": true,
+      "vertical_repeat": false,
+      "mirrored_or_reversed": false,
+      "edge_bridge_grid_texels": 8,
+      "edge_before": {
+        "max_premultiplied_rgba_error": 81.35686492919922,
+        "mean_premultiplied_rgba_error": 1.0701253414154053
+      },
+      "edge_after": {
+        "max_premultiplied_rgba_error": 0.0,
+        "mean_premultiplied_rgba_error": 0.0
+      },
+      "upper_75_percent_fully_transparent": true
+    }
+  ],
+  "limitations": [
+    "Receiver candidate 02 still fails five saved solid-core discs.",
+    "Missing moon_background.gdshader has not been reconstructed or compiled.",
+    "No Godot import, shader, gameplay, native-screen or temporal-motion validation has run in this Moon lane.",
+    "Single Earth count is visually reviewed, not an image-classifier claim."
+  ]
+}

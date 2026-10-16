@@ -1,0 +1,150 @@
+{
+  "schema": "mosslight-source-art-registration-v1",
+  "generated_utc": "2026-10-14",
+  "tool": "image_gen.imagegen (built-in)",
+  "generated_artwork_count": 3,
+  "preserved_tool_output_count": 5,
+  "external_artwork_used": false,
+  "pixel_transformation_applied_to_runtime": false,
+  "frozen_runtime_assets": [
+    {
+      "runtime_path": "assets/2d_v5/mosslight/far-garden-wrap.png",
+      "original_path": "source_art/mosslight/originals/far-garden-wrap.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "sha256": "37e19d3d1d1027c0146e4dff98a470d7580361db7d8fb2295f757f9770257328",
+      "bbox_alpha_gte1": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "bbox_alpha_gte2": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "bbox_alpha_gte16": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "texture_filter": "nearest",
+      "runtime_bytes_identical_to_source": true,
+      "role": "opaque_far_background_only_no_collision",
+      "strict_horizontal_seamless": false,
+      "vertical_repeat": false,
+      "seam_handling_required": true,
+      "seam_measurement": {
+        "strict_seamless": false,
+        "left_right_mean_abs_channel_delta": 4.884520014169324,
+        "left_right_max_abs_channel_delta": 93,
+        "note": "Wrap-compatible composition, not an exact mathematical tile. Presenter must avoid a hard seam (clamp, mirror, or blend) and validate in game."
+      }
+    },
+    {
+      "runtime_path": "assets/2d_v5/mosslight/decorative-island-band.png",
+      "original_path": "source_art/mosslight/originals/decorative-island-band-alpha-cleanup.png",
+      "width": 1672,
+      "height": 940,
+      "mode": "RGBA",
+      "sha256": "b0b0119ae638291f0c2d62d55adca9009c9995e790c9b21a538e6253f4586e66",
+      "bbox_alpha_gte1": [
+        33,
+        54,
+        1632,
+        922
+      ],
+      "bbox_alpha_gte2": [
+        133,
+        632,
+        1596,
+        883
+      ],
+      "bbox_alpha_gte16": [
+        135,
+        634,
+        1594,
+        881
+      ],
+      "texture_filter": "nearest",
+      "runtime_bytes_identical_to_source": true,
+      "role": "background_decoration_only_no_collision",
+      "horizontal_repeat": true,
+      "vertical_repeat": false,
+      "strict_zero_upper65_pass": false,
+      "visible_upper65_clear": true,
+      "upper65_measurement": {
+        "max_alpha": 1,
+        "nonzero": 31,
+        "gte2": 0,
+        "gte16": 0
+      }
+    },
+    {
+      "runtime_path": "assets/2d_v5/mosslight/receiver-greenhouse.png",
+      "original_path": "source_art/mosslight/originals/receiver-greenhouse-alpha-cleanup.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "0ffe52151a86cd47b27059d6652d17ceed8090f2167214bbe612463b563b77e8",
+      "bbox_alpha_gte1": [
+        0,
+        136,
+        1242,
+        1254
+      ],
+      "bbox_alpha_gte2": [
+        13,
+        788,
+        1241,
+        1144
+      ],
+      "bbox_alpha_gte16": [
+        15,
+        790,
+        1239,
+        1142
+      ],
+      "texture_filter": "nearest",
+      "runtime_bytes_identical_to_source": true,
+      "role": "receiver_sprite_only_no_collision",
+      "registration": {
+        "anchor_px": [
+          627.0,
+          509.4375
+        ],
+        "original_capture_radius_px": 225.328125,
+        "original_required_clear_radius_px": 244.921875
+      },
+      "visual_clearance_radius_px": 400,
+      "strict_zero_alpha_clearance_pass": false,
+      "visibility_threshold_alpha": 2,
+      "alpha_threshold_is_measurement_only": true,
+      "clearance_measurement": {
+        "pixel_count": 188438,
+        "max_alpha": 1,
+        "nonzero": 6,
+        "gte2": 0,
+        "gte16": 0
+      },
+      "visible_nearest_pixel_distance": 409.7487845085694
+    }
+  ],
+  "editable_source": {
+    "path": "source_art/mosslight/mosslight-source-layers.ora",
+    "canvas": [
+      1672,
+      1254
+    ],
+    "layer_count": 3,
+    "layer_granularity": "one complete original PNG per layer",
+    "raw_layer_bytes_verified": true,
+    "gui_open_verified": false,
+    "sha256": "9cae56d694cb619faeb166193096904217dd78d4bbf15d644150c3994a714780"
+  },
+  "validation_status": "visual-inspection-complete; raw-alpha-zero-known-failure; game-integration-not-tested-by-art-worker"
+}

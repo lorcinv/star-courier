@@ -1,0 +1,336 @@
+{
+  "schema": "dev35-fixed-drill-comparison-v1",
+  "frozen_utc": "2026-10-14T17:56:03.498658+00:00",
+  "physics_runs_before_freeze": 0,
+  "runtime_pck": "recovery/dev33-runtime-candidate01/StarCourier.pck",
+  "pck_sha256": "1f3d2ae32e10879bfee64d528e0238604fb048f70d867ea780c8fd3c0f49c130",
+  "production_runtime_overlay": false,
+  "seed": 42,
+  "route_factory": "Chapter.fresh_route(3), unchanged",
+  "route_identity": {
+    "control_version": "pilot-delivery-v8",
+    "route_layout": {
+      "schema": "delivery-route-layout-v1",
+      "id": "fragile-dual-rock-v1"
+    },
+    "distance": 95.0,
+    "destination_y": -10.0,
+    "min_delivery_integrity": 0.9,
+    "delivery_radius": 7.0,
+    "max_delivery_speed": 6.0,
+    "hazards": [
+      {
+        "id": "chapter-fragile-upper",
+        "x": 48.0,
+        "y": -18.2,
+        "radius": 7.0,
+        "type": "rock",
+        "health": 100.0,
+        "mass": 70.0,
+        "destructible": true,
+        "conductive": true
+      },
+      {
+        "id": "chapter-fragile-lower",
+        "x": 48.0,
+        "y": -1.8,
+        "radius": 7.0,
+        "type": "rock",
+        "health": 100.0,
+        "mass": 70.0,
+        "destructible": true,
+        "conductive": true
+      }
+    ]
+  },
+  "ship": [
+    {
+      "id": 1,
+      "type": "cargo",
+      "x": 0,
+      "y": 0,
+      "rot": 0,
+      "param": 100,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 2,
+      "type": "battery",
+      "x": -1,
+      "y": 0,
+      "rot": 0,
+      "param": 300,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 3,
+      "type": "thruster",
+      "x": 0,
+      "y": -1,
+      "rot": 0,
+      "param": 28,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 4,
+      "type": "thruster",
+      "x": 0,
+      "y": 1,
+      "rot": 0,
+      "param": 28,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 5,
+      "type": "damper",
+      "x": 1,
+      "y": 0,
+      "rot": 0,
+      "param": 8,
+      "input_a": -1,
+      "input_b": -1,
+      "target": 1
+    },
+    {
+      "id": 6,
+      "type": "shield",
+      "x": 1,
+      "y": -1,
+      "rot": 0,
+      "param": 1.5,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 7,
+      "type": "drill",
+      "x": 2,
+      "y": 0,
+      "rot": 0,
+      "param": 0,
+      "input_a": -2,
+      "input_b": -1,
+      "target": -1
+    }
+  ],
+  "launcher": [
+    {
+      "id": 1001,
+      "type": "battery",
+      "x": 0,
+      "y": 0,
+      "rot": 0,
+      "param": 300,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1002,
+      "type": "spring",
+      "x": -1,
+      "y": 0,
+      "rot": 0,
+      "param": 60,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1003,
+      "type": "spring",
+      "x": 1,
+      "y": 0,
+      "rot": 0,
+      "param": 60,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1004,
+      "type": "spring",
+      "x": 0,
+      "y": -1,
+      "rot": 0,
+      "param": 60,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1005,
+      "type": "spring",
+      "x": 0,
+      "y": 1,
+      "rot": 0,
+      "param": 60,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1006,
+      "type": "beam",
+      "x": -1,
+      "y": -1,
+      "rot": 0,
+      "param": 32,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1007,
+      "type": "beam",
+      "x": 1,
+      "y": -1,
+      "rot": 0,
+      "param": 32,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1008,
+      "type": "beam",
+      "x": -1,
+      "y": 1,
+      "rot": 0,
+      "param": 32,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1009,
+      "type": "beam",
+      "x": 1,
+      "y": 1,
+      "rot": 0,
+      "param": 32,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    }
+  ],
+  "grid": {
+    "ship_width": 4,
+    "ship_height": 3,
+    "normal_workshop_width": 9,
+    "normal_workshop_height": 5,
+    "no_overlap": true,
+    "socket_connected": true
+  },
+  "capital": {
+    "experimental_ceiling": 600,
+    "ceiling_origin": "Research ceiling selected by lead, not a user target; no budget search",
+    "ship_hardware_excluding_commissioned_cargo": 270,
+    "starter_launcher": 205,
+    "total_hardware": 475,
+    "cargo_registry_not_purchased": 35,
+    "including_cargo_registry_value_for_transparency": 510
+  },
+  "launch": {
+    "angle_degrees": 15.0,
+    "power_fraction": 0.12,
+    "expected_paid_joules": 28.8
+  },
+  "controller": {
+    "origin": "Adapted once from dev29 compare.gd before physics, no tuning",
+    "external_dt_seconds": 0.016666666666666666,
+    "horizon_seconds": 120.0,
+    "max_external_ticks": 7200,
+    "waypoint_radius_m": 2.0,
+    "max_speed_mps": 5.0,
+    "acceleration_limit_mps2": 2.0,
+    "stopping_margin_m": 0.2,
+    "velocity_feedback_gain": 1.0,
+    "input_quantization": 1000,
+    "boost": false,
+    "brake": false,
+    "drill_device_id": 7,
+    "target_obstacle_id": "chapter-fragile-upper",
+    "approach_speed_cap_mps": 2.0,
+    "approach_cargo_distance_m": 14.0,
+    "approach_cargo_vertical_offset_max_m": 4.0,
+    "approach_only_while_obstacle_alive": true,
+    "drill_trigger_tip_distance_leq_radius_plus_m": 0.75,
+    "drill_tip_offset_m": 0.3,
+    "drill_release_when_obstacle_dead_or_outside_proximity": true,
+    "input_formula": "request=(unit(delta)*min(speed_cap,sqrt(2*2*max(0,length(delta)-.2)))-body.velocity).limit_length(2); input=request*body.mass/sum(alive thruster.param*output_factor*route.free_drive_throttle); round*1000, clamped by API"
+  },
+  "samples": [
+    {
+      "id": "direct_drill_on",
+      "drill_allowed": true,
+      "waypoints": [
+        [
+          28,
+          -18.2
+        ],
+        [
+          66,
+          -18.2
+        ],
+        [
+          95,
+          -10
+        ]
+      ]
+    },
+    {
+      "id": "direct_drill_off",
+      "drill_allowed": false,
+      "waypoints": [
+        [
+          28,
+          -18.2
+        ],
+        [
+          66,
+          -18.2
+        ],
+        [
+          95,
+          -10
+        ]
+      ]
+    },
+    {
+      "id": "bypass_drill_off",
+      "drill_allowed": false,
+      "waypoints": [
+        [
+          28,
+          -30
+        ],
+        [
+          68,
+          -30
+        ],
+        [
+          95,
+          -10
+        ]
+      ]
+    }
+  ],
+  "rationale": [
+    "Upper-rock centreline gives the forward-facing drill genuine frontal contact; avoids the known narrow-gap tangent miss.",
+    "Damper directly socket-neighbours cargo; shield is sqrt(2) grid units from both drill and cargo, within unchanged 1.5m radius.",
+    "Fixed 2m/s contact approach limits hard-ram impulse; same position/velocity controller in all samples. Bypass does not enter the four-metre vertical contact corridor.",
+    "Off sample changes only held drill input. Bypass retains paid drill, same assembly and budget, with unchanged dev29 upper-route waypoints.",
+    "Configure establishes physical COM-based starting state; no position/velocity/battery writes, no damage calls, no physics modifications."
+  ],
+  "stopping_condition": "Exactly three samples once; terminal game status or 120s observation horizon. A still-running horizon is inconclusive/non-delivery within window, not automatic failure. No further designs or parameter search even after failure."
+}

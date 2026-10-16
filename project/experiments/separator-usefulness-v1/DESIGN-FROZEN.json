@@ -1,0 +1,489 @@
+{
+  "schema": "dev38-separator-fixed-v1",
+  "frozen_utc": "2026-10-15T07:39:42.691083+00:00",
+  "physics_runs_before_freeze": 0,
+  "pck_sha256": "58a38904b838cb92d4e7db12b6e4580b71f02ef1ee769026f1b2b3a183c8dd54",
+  "route": "Unchanged original Chapter.fresh_route(3,false,false), original dual rock2.4m gap; no edits",
+  "seed": 42,
+  "core": [
+    {
+      "id": 1,
+      "type": "cargo",
+      "x": 0,
+      "y": 0,
+      "param": 100,
+      "rot": 0,
+      "target": -1,
+      "input_a": -1,
+      "input_b": -1
+    },
+    {
+      "id": 2,
+      "type": "battery",
+      "x": -1,
+      "y": 0,
+      "param": 300,
+      "rot": 0,
+      "target": -1,
+      "input_a": -1,
+      "input_b": -1
+    },
+    {
+      "id": 3,
+      "type": "thruster",
+      "x": 0,
+      "y": -1,
+      "param": 28,
+      "rot": 0,
+      "target": -1,
+      "input_a": -1,
+      "input_b": -1
+    },
+    {
+      "id": 4,
+      "type": "thruster",
+      "x": -1,
+      "y": -1,
+      "param": 28,
+      "rot": 0,
+      "target": -1,
+      "input_a": -1,
+      "input_b": -1
+    }
+  ],
+  "booster": [
+    {
+      "id": 5,
+      "type": "coupler",
+      "x": -2,
+      "y": 0,
+      "param": 0,
+      "rot": 0,
+      "target": 2,
+      "input_a": -2,
+      "input_b": -1
+    },
+    {
+      "id": 6,
+      "type": "thruster",
+      "x": -3,
+      "y": 0,
+      "param": 28,
+      "rot": 0,
+      "target": -1,
+      "input_a": -1,
+      "input_b": -1
+    },
+    {
+      "id": 7,
+      "type": "thruster",
+      "x": -3,
+      "y": 1,
+      "param": 28,
+      "rot": 0,
+      "target": -1,
+      "input_a": -1,
+      "input_b": -1
+    },
+    {
+      "id": 8,
+      "type": "battery",
+      "x": -4,
+      "y": 0,
+      "param": 300,
+      "rot": 0,
+      "target": -1,
+      "input_a": -1,
+      "input_b": -1
+    }
+  ],
+  "launcher": [
+    {
+      "id": 1001,
+      "type": "battery",
+      "x": 0,
+      "y": 0,
+      "rot": 0,
+      "param": 300,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1002,
+      "type": "spring",
+      "x": -1,
+      "y": 0,
+      "rot": 0,
+      "param": 60,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1003,
+      "type": "spring",
+      "x": 1,
+      "y": 0,
+      "rot": 0,
+      "param": 60,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1004,
+      "type": "spring",
+      "x": 0,
+      "y": -1,
+      "rot": 0,
+      "param": 60,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1005,
+      "type": "spring",
+      "x": 0,
+      "y": 1,
+      "rot": 0,
+      "param": 60,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1006,
+      "type": "beam",
+      "x": -1,
+      "y": -1,
+      "rot": 0,
+      "param": 32,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1007,
+      "type": "beam",
+      "x": 1,
+      "y": -1,
+      "rot": 0,
+      "param": 32,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1008,
+      "type": "beam",
+      "x": -1,
+      "y": 1,
+      "rot": 0,
+      "param": 32,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 1009,
+      "type": "beam",
+      "x": 1,
+      "y": 1,
+      "rot": 0,
+      "param": 32,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    }
+  ],
+  "launch": {
+    "angle": 15,
+    "power": 0.12
+  },
+  "controller": {
+    "dt": 0.008333333333333333,
+    "max_ticks": 14400,
+    "cruise": 5,
+    "acceleration": 2,
+    "response": 0.7,
+    "arrival_radius": 1.5,
+    "release_x": 32,
+    "brake_seconds": 0.5,
+    "coupler_id": 5
+  },
+  "samples": [
+    {
+      "id": "separate",
+      "ship": [
+        {
+          "id": 1,
+          "type": "cargo",
+          "x": 0,
+          "y": 0,
+          "param": 100,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        },
+        {
+          "id": 2,
+          "type": "battery",
+          "x": -1,
+          "y": 0,
+          "param": 300,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        },
+        {
+          "id": 3,
+          "type": "thruster",
+          "x": 0,
+          "y": -1,
+          "param": 28,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        },
+        {
+          "id": 4,
+          "type": "thruster",
+          "x": -1,
+          "y": -1,
+          "param": 28,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        },
+        {
+          "id": 5,
+          "type": "coupler",
+          "x": -2,
+          "y": 0,
+          "param": 0,
+          "rot": 0,
+          "target": 2,
+          "input_a": -2,
+          "input_b": -1
+        },
+        {
+          "id": 6,
+          "type": "thruster",
+          "x": -3,
+          "y": 0,
+          "param": 28,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        },
+        {
+          "id": 7,
+          "type": "thruster",
+          "x": -3,
+          "y": 1,
+          "param": 28,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        },
+        {
+          "id": 8,
+          "type": "battery",
+          "x": -4,
+          "y": 0,
+          "param": 300,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        }
+      ],
+      "waypoints": [
+        [
+          95,
+          -10
+        ]
+      ],
+      "release": true,
+      "ship_hardware_cost": 270,
+      "pad_cost": 205
+    },
+    {
+      "id": "intact_bypass",
+      "ship": [
+        {
+          "id": 1,
+          "type": "cargo",
+          "x": 0,
+          "y": 0,
+          "param": 100,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        },
+        {
+          "id": 2,
+          "type": "battery",
+          "x": -1,
+          "y": 0,
+          "param": 300,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        },
+        {
+          "id": 3,
+          "type": "thruster",
+          "x": 0,
+          "y": -1,
+          "param": 28,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        },
+        {
+          "id": 4,
+          "type": "thruster",
+          "x": -1,
+          "y": -1,
+          "param": 28,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        },
+        {
+          "id": 5,
+          "type": "coupler",
+          "x": -2,
+          "y": 0,
+          "param": 0,
+          "rot": 0,
+          "target": 2,
+          "input_a": -2,
+          "input_b": -1
+        },
+        {
+          "id": 6,
+          "type": "thruster",
+          "x": -3,
+          "y": 0,
+          "param": 28,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        },
+        {
+          "id": 7,
+          "type": "thruster",
+          "x": -3,
+          "y": 1,
+          "param": 28,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        },
+        {
+          "id": 8,
+          "type": "battery",
+          "x": -4,
+          "y": 0,
+          "param": 300,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        }
+      ],
+      "waypoints": [
+        [
+          30,
+          -32
+        ],
+        [
+          65,
+          -32
+        ],
+        [
+          95,
+          -10
+        ]
+      ],
+      "release": false,
+      "ship_hardware_cost": 270,
+      "pad_cost": 205
+    },
+    {
+      "id": "compact_direct",
+      "ship": [
+        {
+          "id": 1,
+          "type": "cargo",
+          "x": 0,
+          "y": 0,
+          "param": 100,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        },
+        {
+          "id": 2,
+          "type": "battery",
+          "x": -1,
+          "y": 0,
+          "param": 300,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        },
+        {
+          "id": 3,
+          "type": "thruster",
+          "x": 0,
+          "y": -1,
+          "param": 28,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        },
+        {
+          "id": 4,
+          "type": "thruster",
+          "x": -1,
+          "y": -1,
+          "param": 28,
+          "rot": 0,
+          "target": -1,
+          "input_a": -1,
+          "input_b": -1
+        }
+      ],
+      "waypoints": [
+        [
+          95,
+          -10
+        ]
+      ],
+      "release": false,
+      "ship_hardware_cost": 125,
+      "pad_cost": 205
+    }
+  ],
+  "acceptance": "At least one practical time/energy/cargo advantage over cheaper compact pod, plus safe ordinary delivery. No retune on failure; no formal/native claims."
+}

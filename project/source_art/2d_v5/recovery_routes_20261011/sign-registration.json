@@ -1,0 +1,70 @@
+{
+  "status": "reconstructed imagegen art; native visual verification pending",
+  "runtime": "assets/2d_v5/shop-sign/hanging-sign-pixel.png",
+  "dimensions": [
+    436,
+    148
+  ],
+  "runtime_sha256": "232b448cd04972e95a3771269c549f35846ed21b0a62971cd933ded8595756d1",
+  "source": "originals/sign-original.png",
+  "source_sha256": "b7466dca5d22e00ce1287e5057487929a9bb011eb18779793f6ad8ec6420192f",
+  "source_alpha128_bounds_xyxy": [
+    227,
+    60,
+    1927,
+    671
+  ],
+  "uniform_scale": 0.20470588235294118,
+  "source_anchor": [
+    1077,
+    365.5
+  ],
+  "runtime_anchor": [
+    218,
+    67
+  ],
+  "pixel_grid_px": 2,
+  "alpha_bounds_xyxy": [
+    44,
+    4,
+    392,
+    130
+  ],
+  "alpha_values": [
+    0,
+    255
+  ],
+  "connected_components": 1,
+  "transparent_rgb_zero": true,
+  "palette": "inputs/palette_96.json",
+  "palette_sha256": "5bb6b501d7bece46b528a3c230e39c207e5f8a3aac6be15969f21683e73f2944",
+  "recipe": "prepare_shop_props.py",
+  "recipe_sha256": "d290188abcade2985dd16916df98ca5f31b6841fbf947bcf5a350db8b418df68",
+  "method": "Single uniform inverse nearest sampling of generated pixels, shared96 Oklab palette, alpha128 threshold, transparent canvas padding. No painting, reflection or silhouette reshaping.",
+  "source_mounting_plate_reference_points": [
+    [
+      557,
+      90
+    ],
+    [
+      1596,
+      90
+    ]
+  ],
+  "support_anchors_native": [
+    [
+      111.552941,
+      10.603529
+    ],
+    [
+      324.242353,
+      10.603529
+    ]
+  ],
+  "world_top_left": [
+    4,
+    46
+  ],
+  "runtime_metadata_patch_required": true,
+  "reason": "Measured reconstructed opaque bounds and mounting references differ from the lost historical derivative. Preserve historical hashes; use truthful new registration."
+}

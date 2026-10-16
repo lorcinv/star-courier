@@ -1,0 +1,196 @@
+{
+  "schema": 1,
+  "scope": "new isolated Moon presenter source and tests; saved route/physics and production capability unchanged",
+  "state": "HOLD: 26px terminal craft failed lead visual readability review; no Main/caps/timer promotion; bounded lane finished",
+  "new_files": [
+    {
+      "path": "project/scripts/moon_presentation_2d.gd",
+      "sha256": "efeeb4d977f601722f416dd26f041d0216ebe7b4badacb398bf57a2f70c7124e",
+      "bytes": 18018
+    },
+    {
+      "path": "project/scripts/moon_raster_registration.gd",
+      "sha256": "28e2f5e25d52bebfb356619148f12612de962c336e254b1385230fa636141ab9",
+      "bytes": 1424
+    },
+    {
+      "path": "project/assets/2d_v5/moon/moon_background.gdshader",
+      "sha256": "5b53b57650f2737e6c1d56e626b29ec63b367a21df523aa5bc86413f77530379",
+      "bytes": 2317
+    },
+    {
+      "path": "project/tests/test_moon_reconstructed_presentation.gd",
+      "sha256": "2d475e82118e305438c9e3149962e50f3e4a0169fe90f303930b160b63d5dad7",
+      "bytes": 14555
+    },
+    {
+      "path": "tools/build_presenter_tests.py",
+      "sha256": "a86e84c333c53a48ab0f43557b046fe073f46562b56dcc504188222949a4da6e",
+      "bytes": 8131
+    },
+    {
+      "path": "tools/verify_static_pipeline.py",
+      "sha256": "8cece28d1b7f4443cc8e3c3cae5a0ef2ae26c797517da4d4fb09494a8e8a5a44",
+      "bytes": 4876
+    },
+    {
+      "path": "tools/seal_source.py",
+      "sha256": "546df9ae33e8d25847d6fd92d318c6279b8e8a75177666f64f2dfaadc18f2be0",
+      "bytes": 3493
+    },
+    {
+      "path": "README.md",
+      "sha256": "237b1a95fa6eb652713d33f74a8df1c15bc9e15603c8a628306532b5cada54b3",
+      "bytes": 5285
+    },
+    {
+      "path": "TERMINAL-REVIEW.md",
+      "sha256": "c932467ce7f891636d73a217f62767be7ab72d1f77d13e468557cb682523d189",
+      "bytes": 4774
+    },
+    {
+      "path": "project/scripts/moon_receipt_framing_2d.gd",
+      "sha256": "a55d1d0d38f1dfac40fa7da2b1a3522fc2de82966a5c81529bde703b10389c0f",
+      "bytes": 3800
+    },
+    {
+      "path": "project/tests/test_moon_terminal_receipt.gd",
+      "sha256": "9fa37f7bd2f14d38a1bef34ddbe167214517279edfc636f96d914ae2a83dcc00",
+      "bytes": 6412
+    },
+    {
+      "path": "project/tools/qa_moon_reconstructed_gui.gd",
+      "sha256": "d1aa371be1a2d5b7241d31b7025073b9ca198a556f7607d51b29508c2ba4bbd2",
+      "bytes": 14351
+    },
+    {
+      "path": "tools/run_gui_gate.sh",
+      "sha256": "d8b1c39876b80ef758dfbc2b0cce20d227ca4eb74bc1213b4b56b7849ab65324",
+      "bytes": 710
+    },
+    {
+      "path": "tools/build_terminal_excerpt.py",
+      "sha256": "2362dbea170e7fb42787b5de88351e0bd1cd4d9c2556d1e7c4b0e30672a04a0d",
+      "bytes": 2352
+    },
+    {
+      "path": "project/scripts/moon_raster_registration.gd.uid",
+      "sha256": "28aa7fe5b90de4cee6b747b900c5a605c48bddb50d59d5dfcc31b1eaa7bca046",
+      "bytes": 20
+    },
+    {
+      "path": "project/tests/test_moon_reconstructed_presentation.gd.uid",
+      "sha256": "e4c59b9680c5e43cee288e34ab68f35676dd6eba2764e4e7e13dcafe515fb7ab",
+      "bytes": 19
+    },
+    {
+      "path": "project/assets/2d_v5/moon/moon_background.gdshader.uid",
+      "sha256": "598b122a070fb3bcfd1229052b7232df535d1149b372b92027ce9f40b0408dda",
+      "bytes": 19
+    },
+    {
+      "path": "project/assets/2d_v5/moon/airlock-pixel.png.import",
+      "sha256": "01f71ff156f217fe046a209717acd88c2b4813a272733c68d2a8b6c3c8a29bda",
+      "bytes": 961
+    },
+    {
+      "path": "project/assets/2d_v5/moon/far-sky-clamped.png.import",
+      "sha256": "67bc9993511ad7df864c601aff270ececb67eb679a2300d90f45816b14220d7b",
+      "bytes": 967
+    },
+    {
+      "path": "project/assets/2d_v5/moon/regolith-decorative-wrap.png.import",
+      "sha256": "71596ebace025e6abbc719d662f4c8cdd6319050f0014ab907990a5e1ac19ad5",
+      "bytes": 994
+    }
+  ],
+  "prior_inputs_by_hash": [
+    {
+      "consumer_path": "inputs/ascent_background.gdshader",
+      "sha256": "07ad5af97fd3c0628c545d7deceea843dc4d926a847d1491c0dc671192b76fac",
+      "bytes": 2064
+    },
+    {
+      "consumer_path": "inputs/background-technical-manifest.json",
+      "sha256": "1968dbb5a3bdc75127aa3fb5e82897c5e67c1de4b0432d88cd1b223d62bdd74f",
+      "bytes": 3878
+    },
+    {
+      "consumer_path": "inputs/compatibility-archive-receipt.json",
+      "sha256": "82ff3542a4eb9f6270d9f40d0e51302f6e647f082e9417d99b08bbbac6413702",
+      "bytes": 867
+    },
+    {
+      "consumer_path": "inputs/moon-receiver-candidate-03-sole-aligned-measurement.json",
+      "sha256": "bfe87ba1df7b536926afa6a0de303e973d8611d02c992bdd020f471b611acc74",
+      "bytes": 4512
+    },
+    {
+      "consumer_path": "inputs/moon_framing_2d.gd",
+      "sha256": "354a9a996b13661024db848690bb4d95a27ff91a8dc216ad5c7655e233e62e63",
+      "bytes": 15018
+    },
+    {
+      "consumer_path": "inputs/moon_presentation_2d.gd",
+      "sha256": "b5c5987cfd8f6f556256c9e0144cb58646a960dc7cb241e3e3a1e733090ab82e",
+      "bytes": 13912
+    },
+    {
+      "consumer_path": "inputs/new-raster-visual-bounds-proposal.json",
+      "sha256": "24883f4706339a15a2f5255d09121a4df8f37310b6af86b63c8f68516551b0d0",
+      "bytes": 10980
+    },
+    {
+      "consumer_path": "inputs/pilot_moon_profile.gd",
+      "sha256": "7d12e0377070f48d69a42ede0ff7b72361706e6a25fa8ea72a1792226695df45",
+      "bytes": 19819
+    },
+    {
+      "consumer_path": "inputs/terminal-v2/moon_presentation_2d.gd",
+      "sha256": "97449db066d42054778f9b4410ddfca9e669e14a295e0680893890ab81f6afbe",
+      "bytes": 16437
+    },
+    {
+      "consumer_path": "inputs/terminal-v2/moon_raster_registration.gd",
+      "sha256": "45b55ee3502e0d1611cec587598408702c9f670182e76f5a47b72d72f8aed3f5",
+      "bytes": 1225
+    },
+    {
+      "consumer_path": "inputs/terminal-v2/qa_moon_reconstructed_gui.gd",
+      "sha256": "eb2f8b7060409da450d277c78fe931de5ac64a40b2f17a9a721fd52fa7d644d8",
+      "bytes": 12878
+    },
+    {
+      "consumer_path": "inputs/test_moon_presentation.gd",
+      "sha256": "6d05cd3fb1ca126a55581c993a85d46584d5d227f46b7ad98e6ff27952201d26",
+      "bytes": 12726
+    },
+    {
+      "consumer_path": "project/assets/2d_v5/moon/airlock-pixel.png",
+      "sha256": "bd8716a00997e8a35c100944ae6787ee5fde5eee0af86bf47543e14a5acf8527",
+      "bytes": 323205
+    },
+    {
+      "consumer_path": "project/assets/2d_v5/moon/far-sky-clamped.png",
+      "sha256": "a7556349c5c61047bd5e96ce1b25681057555b9fa399f22678441ac51215fed9",
+      "bytes": 582005
+    },
+    {
+      "consumer_path": "project/assets/2d_v5/moon/regolith-decorative-wrap.png",
+      "sha256": "32b046c05035b4c8882841518c8567ba3b5b75fa651dc7b549240ffed1951888",
+      "bytes": 35134
+    }
+  ],
+  "receiver_art_revision": "moon-receiver-candidate-03-sole-aligned-v1",
+  "receiver_native_alpha_bounds_xyxy": [
+    40,
+    98,
+    666,
+    628
+  ],
+  "saved_visual_bounds_modified": false,
+  "gameplay_framing_modified": false,
+  "qa_overview_is_explicit_only": true,
+  "background_raster_archive": "moon-group-candidates-v1-20261011.zip",
+  "receiver_raster_archive_sha256": "0baa1724b1aba20691e8219dec962ff954ccbeaef1367772a084532bed00f414"
+}

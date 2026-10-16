@@ -1,0 +1,111 @@
+{
+  "confirmation_token": "40b7c801871c090c5d1dba611165f763fff6fd4eeafda6548dd3dd879cbb8d4c",
+  "controls": [
+    {
+      "after": {
+        "id": 1006.0,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 0.0,
+        "rot": 0.0,
+        "target": -1.0,
+        "type": "drill",
+        "x": 2.0,
+        "y": 0.0
+      },
+      "before": {
+        "id": 1006.0,
+        "input_a": -2.0,
+        "input_b": 999,
+        "param": 0.0,
+        "rot": 0.0,
+        "target": -1.0,
+        "type": "drill",
+        "x": 2.0,
+        "y": 0.0
+      },
+      "id": 1006,
+      "path": "design"
+    },
+    {
+      "after": {
+        "id": 1006.0,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 0.0,
+        "rot": 0.0,
+        "target": -1.0,
+        "type": "drill",
+        "x": 2.0,
+        "y": 0.0
+      },
+      "before": {
+        "id": 1006.0,
+        "input_a": -2.0,
+        "input_b": 999,
+        "param": 0.0,
+        "rot": 0.0,
+        "target": -1.0,
+        "type": "drill",
+        "x": 2.0,
+        "y": 0.0
+      },
+      "id": 1006,
+      "path": "blueprint:historical:design"
+    }
+  ],
+  "placements": [
+    {
+      "after": {
+        "id": 999,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 32.0,
+        "rot": 0,
+        "target": -1,
+        "type": "beam",
+        "x": 4,
+        "y": 2
+      },
+      "before": {
+        "id": 999,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 0.0,
+        "rot": 0,
+        "target": -1,
+        "type": "not_gate",
+        "x": 4,
+        "y": 2
+      },
+      "id": 999,
+      "path": "design"
+    },
+    {
+      "after": {
+        "id": 999,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 32.0,
+        "rot": 0,
+        "target": -1,
+        "type": "beam",
+        "x": 4,
+        "y": 2
+      },
+      "before": {
+        "id": 999,
+        "input_a": -1,
+        "input_b": -1,
+        "param": 0.0,
+        "rot": 0,
+        "target": -1,
+        "type": "not_gate",
+        "x": 4,
+        "y": 2
+      },
+      "id": 999,
+      "path": "blueprint:historical:design"
+    }
+  ]
+}

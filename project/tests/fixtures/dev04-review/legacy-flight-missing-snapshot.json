@@ -1,0 +1,43 @@
+{
+  "credits": 0,
+  "inventory": {
+    "cargo": 1,
+    "not_gate": 1
+  },
+  "design": [
+    {
+      "id": 1,
+      "type": "cargo",
+      "x": 0,
+      "y": 0,
+      "rot": 0,
+      "param": 100,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    },
+    {
+      "id": 2,
+      "type": "not_gate",
+      "x": 1,
+      "y": 0,
+      "rot": 0,
+      "param": 0,
+      "input_a": -1,
+      "input_b": -1,
+      "target": -1
+    }
+  ],
+  "launcher": [],
+  "designs": {},
+  "settings": {},
+  "in_flight": {},
+  "contracts": [
+    {
+      "contract_id": "old",
+      "status": "in_flight",
+      "control_version": "pilot-free-v1"
+    }
+  ],
+  "active_contract_id": "old"
+}

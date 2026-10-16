@@ -1,0 +1,20 @@
+{
+  "tool": "image_gen.imagegen (built-in)",
+  "mode": "image edit with referenced_image_paths; transparent_background=true",
+  "created_utc": "2026-10-14",
+  "outcome": "Improved residual alpha=1 counts, but strict zero-alpha requirement not fully met. No numeric cleanup applied.",
+  "assets": [
+    {
+      "runtime_filename": "decorative-island-band.png",
+      "source_filename": "decorative-island-band-alpha-cleanup.png",
+      "prompt": "Use case: background-extraction. Edit ONLY transparency cleanup of this pixel-art decorative floating-island strip. Preserve the exact five small distant teal-moss blue-violet island designs, all original visible colors, their positions near the bottom, and wide canvas proportions. The empty sky area must be genuinely alpha=0. Remove ALL stray almost-invisible alpha=1 background speckles above and around the islands. In particular the complete upper 65 percent of the canvas and both extreme outer 6 percent vertical edge strips must have EXACTLY ZERO alpha. Every pixel outside visible island silhouettes must be fully transparent. Maintain crisp stepped pixel edges and original distant low-contrast palette; solid island interior should be opaque, not translucently ghostlike. Do not add background, checkerboard, sky, cloud, fog, line, outline, new content, text or border. No composition changes and no crop. This is technical alpha cleanup; avoid recreating or restyling visible island art.",
+      "generation_output": "exec-7a0ad537-1350-4f21-90e1-8b33a1581e3a.png"
+    },
+    {
+      "runtime_filename": "receiver-greenhouse.png",
+      "source_filename": "receiver-greenhouse-alpha-cleanup.png",
+      "prompt": "Use case: background-extraction. Edit ONLY the alpha channel cleanup of this transparent pixel-art receiving platform. Keep the existing warm yellow/navy horizontal deck, left-side teal greenhouse, pixel colors, proportions, placement, resolution, and all visible artwork exactly the same. It is already composed correctly. Critical technical fix: remove the invisible background speckle / residual alpha. The complete upper 62 percent of the square canvas must be empty pixels with alpha EXACTLY ZERO, including the circle centered at normalized(0.5,0.40625) of radius 0.1953125 of image width and the left/right approach corridors. Do not draw any circle or guide. All pixels outside the visible machinery silhouette must be fully transparent alpha=0, no alpha=1 background dust or almost-transparent matte remnants. Solid pixel artwork should be fully opaque, with crisp binary pixel-cutout alpha, NOT softly translucent. No change to visible sprite design. No new objects, no text, no background, no checkerboard. Output an actual transparent PNG, not an opaque illustration of transparency. Maintain empty large headroom, no cropping or enlarging sprite.",
+      "generation_output": "exec-1fdabe1c-7e53-4e6e-ab99-64b6bc79cca6.png"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "drive_dependency_ids": [
+    "18Ze76H4DvJBrHkT3LCxzfG0BmoAG4RbN",
+    "1-iWVIyZ9pen1pZbPwJOxAAaeEMIYPZ9m"
+  ],
+  "scope": "Three existing runtime assets for the NEW lunar-outpost-v2 only. Historical Moon remains closed. No art was generated or transformed.",
+  "pixel_review": "Reviewed actual sky and regolith pixels: one Earth, star sky, transparent upper regolith, low lunar crater horizon.",
+  "files": [
+    {
+      "source": "/workspace/scratch/445d2872ecf6/recovery/dev04-moon-recovery/moon-group-candidates-v1-20261011/runtime/assets/2d_v5/moon/far-sky-clamped.png",
+      "runtime": "assets/2d_v5/moon/far-sky-clamped.png",
+      "sha256": "a7556349c5c61047bd5e96ce1b25681057555b9fa399f22678441ac51215fed9",
+      "bytes": 582005
+    },
+    {
+      "source": "/workspace/scratch/445d2872ecf6/recovery/dev04-moon-recovery/moon-group-candidates-v1-20261011/runtime/assets/2d_v5/moon/regolith-decorative-wrap.png",
+      "runtime": "assets/2d_v5/moon/regolith-decorative-wrap.png",
+      "sha256": "32b046c05035b4c8882841518c8567ba3b5b75fa651dc7b549240ffed1951888",
+      "bytes": 35134
+    },
+    {
+      "source": "/workspace/scratch/445d2872ecf6/recovery/dev04-moon-recovery/moon-presentation-source-v3-20261011/project/assets/2d_v5/moon/moon_background.gdshader",
+      "runtime": "assets/2d_v5/moon/moon_background.gdshader",
+      "sha256": "5b53b57650f2737e6c1d56e626b29ec63b367a21df523aa5bc86413f77530379",
+      "bytes": 2317
+    }
+  ]
+}

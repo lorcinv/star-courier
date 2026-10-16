@@ -1,0 +1,214 @@
+{
+  "status": "isolated candidate; CPU verified 16/16; native runtime not run",
+  "name": "STAR COURIER",
+  "source_wordmark": {
+    "path": "source_art/art_direction_v4/courier-chibi-reference-02.png",
+    "sha256": "c5b33835f5cb073e13d5940cd42764e89ca67f9573a6905af59cc9709a183e5d",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "Library_attachment": "libfile_528b34743abc81919790c1e76968b7ed",
+    "attachment_file_sha256": "be004bec13193c9dc84c06aa95e89dea4d99a3a16dc2ce65c52ec1eecfce09f9",
+    "attachment_comparison": "RGBA pixels exactly equal; PNG containers differ",
+    "whole_source_envelope": [
+      14,
+      6,
+      288,
+      160
+    ],
+    "notch_excluded": [
+      264,
+      150,
+      38,
+      16
+    ],
+    "atlas_slices": [
+      [
+        14,
+        6,
+        250,
+        160
+      ],
+      [
+        264,
+        6,
+        38,
+        144
+      ]
+    ],
+    "slice_local_offsets": [
+      [
+        0,
+        0
+      ],
+      [
+        250,
+        0
+      ]
+    ],
+    "uniform_runtime_scale": 0.5,
+    "local_position": [
+      146,
+      76
+    ],
+    "runtime_envelope": [
+      144,
+      80
+    ],
+    "filter": "nearest",
+    "method": "Atlas-only sampling of original pixels. No relettering, repainting or source mutation. Gold underline retained; unrelated hair excluded.",
+    "decoded_RGBA_sha256": "c6d124cd440f57b95f960d8aeeb8abfaa23c76a0f3b36eab8b19c41dfa6e1cb5"
+  },
+  "original_supports_lamps": {
+    "path": "assets/2d_v5/shop-sign/hanging-sign-pixel.png",
+    "sha256": "232b448cd04972e95a3771269c549f35846ed21b0a62971cd933ded8595756d1",
+    "upper_hardware_region": [
+      0,
+      0,
+      436,
+      54
+    ],
+    "support_bases": [
+      {
+        "region": [
+          96,
+          36,
+          28,
+          28
+        ],
+        "position": [
+          96,
+          36
+        ]
+      },
+      {
+        "region": [
+          310,
+          36,
+          28,
+          28
+        ],
+        "position": [
+          310,
+          36
+        ]
+      }
+    ],
+    "lamps": [
+      {
+        "region": [
+          202,
+          58,
+          32,
+          12
+        ],
+        "position": [
+          202,
+          62
+        ]
+      },
+      {
+        "region": [
+          202,
+          116,
+          32,
+          12
+        ],
+        "position": [
+          202,
+          160
+        ]
+      },
+      {
+        "region": [
+          50,
+          82,
+          14,
+          20
+        ],
+        "position": [
+          30,
+          104
+        ]
+      },
+      {
+        "region": [
+          372,
+          82,
+          14,
+          20
+        ],
+        "position": [
+          392,
+          104
+        ]
+      }
+    ],
+    "uniform_scale": 1
+  },
+  "blank_generated_plaque": {
+    "path": "source_art/2d_v5/shop-sign/blank-plaque-original-v2.png",
+    "sha256": "915880de4a82b9fea10b91910f3375c73389ba4f412906c6ee0d23555498ef60",
+    "dimensions": [
+      2152,
+      731
+    ],
+    "region": [
+      40,
+      24,
+      2080,
+      656
+    ],
+    "uniform_scale": 0.1875,
+    "position": [
+      23,
+      54
+    ],
+    "generation": "image_gen__imagegen precise object edit; original02, no text, no logo, no support bars, no cyan lamp pixels",
+    "original01": "blank-original01 was too shallow, preserved separately",
+    "rejected_wordmark_redraw": "Never integrated. Independently sealed as UNACCEPTED generation01."
+  },
+  "geometry": {
+    "world_origin": [
+      4,
+      46
+    ],
+    "unchanged_support_anchors_local": [
+      [
+        111.552941,
+        10.603529
+      ],
+      [
+        324.242353,
+        10.603529
+      ]
+    ],
+    "cpu_alpha128_bounds_xyxy": [
+      24,
+      4,
+      410,
+      175
+    ],
+    "conservative_local_bounds": [
+      23,
+      3,
+      389,
+      174
+    ],
+    "conservative_world_bottom": 223,
+    "actor_head_safe_line": 266,
+    "minimum_clearance_px": 43
+  },
+  "verification": {
+    "cpu": "16/16 checks passed",
+    "native": "NOT RUN; parent owns engine/GPU/native session",
+    "inherited_legacy_test": "test_shop_sign_2d.gd still contains old hash/child-count/envelope assertions and requires deliberate reconciliation before claiming aggregate passes",
+    "native_cameras_to_review": [
+      "hub",
+      "contracts (HUD can cover top hardware/ornaments while letters remain below)",
+      "expanded-bay hub",
+      "supply"
+    ]
+  }
+}

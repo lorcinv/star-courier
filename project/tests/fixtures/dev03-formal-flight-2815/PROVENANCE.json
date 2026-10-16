@@ -1,0 +1,10 @@
+{
+  "source": "Actual cloud Linux formal source08 session03 paid D1-B paused Save and Exit, no observer",
+  "pck_sha256": "b0aa1ce531db34df13579d5fe5f9bfba5c70f57ba32b399bd6be45e09045f5e7",
+  "ticks": 2815,
+  "schema": "unchanged saved JSON, not a synthetic migrated save",
+  "files": {
+    "savegame.json": "bf50aa77725fa0446a05cb622586e472d5a5f1a1978a7ae807af6f043cdb748d",
+    "savegame.backup.json": "f52a0a1c2f1545b07c2a13ef5d7579ce9241d12a888024ef0cd706fad2dca355"
+  }
+}

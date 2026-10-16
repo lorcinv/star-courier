@@ -1,0 +1,1 @@
+TitleChineseSans is a title/prologue subset of the project's existing Noto Sans CJK SC Regular source. Original copyright and SIL Open Font License are in NotoSansCJK-license.txt. It preserves all codepoints of the existing ChineseSans UI font and adds the requested title/prologue text. Source and output hashes: TITLE_FONT_CHECK.json. Rebuild: tools/build_title_font.py.

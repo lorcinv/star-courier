@@ -1,0 +1,40 @@
+{
+  "note": "Editable originals, prompts, synthesis score and RPP are in the separately preserved source archives listed below. Runtime project imports derived images/audio. All original files remain unchanged. Root Drive receipt supplies durable ID once uploaded.",
+  "inputs": [
+    {
+      "path": "/workspace/scratch/445d2872ecf6/recovery/reconstruction-lanes/title-pixel-art-v2/art-worker/StarCourier-Dev02-PixelTitleAssets-source01-20261012T1435Z.zip",
+      "bytes": 2459851,
+      "sha256": "0a174de6e963eea1672895f68954f7f95e7b48e7afd6f2a9c1998cd7b2f5c42a",
+      "kind": "pixel-wordmarks",
+      "status": "artwork/source-only candidate; engine integration unrun; music subjective listening unverified"
+    },
+    {
+      "path": "/workspace/scratch/445d2872ecf6/recovery/reconstruction-lanes/prologue-illustrations-v2/StarCourier_dev02_prologue_illustrations_v2_source_art.zip",
+      "bytes": 7435399,
+      "sha256": "7ee1dd8548fd5900d39bbf9a24385bed6b513c07286dfcb057d649ee047fa394",
+      "kind": "prologue-original-art",
+      "status": "artwork/source-only candidate; engine integration unrun; music subjective listening unverified"
+    },
+    {
+      "path": "/workspace/scratch/445d2872ecf6/recovery/reconstruction-lanes/prologue-music-v2/star-courier-prologue-music-v2-20261012T143900Z.zip",
+      "bytes": 13791586,
+      "sha256": "8328703458968b6420e56d7a5ff819a4f9559570d8ab2ae5d96123b26ed9e290",
+      "kind": "original-music-editable",
+      "status": "artwork/source-only candidate; engine integration unrun; music subjective listening unverified"
+    },
+    {
+      "path": "/workspace/scratch/445d2872ecf6/recovery/reconstruction-lanes/title-prologue-integration-v2-source02-ENGINE-UNRUN-20261012T1444Z.zip",
+      "bytes": 21738,
+      "sha256": "8aa1aac1bd439ffe16d50ba7f3821cd23e48653e450a99494fa7e837b69827b6",
+      "kind": "title-prologue-source",
+      "status": "artwork/source-only candidate; engine integration unrun; music subjective listening unverified"
+    },
+    {
+      "path": "/workspace/scratch/445d2872ecf6/recovery/reconstruction-lanes/StarCourier-Dev02-Native1080Display-Source01-ENGINE-UNRUN-20261012T1447Z.zip",
+      "bytes": 69317,
+      "sha256": "ae93a57a3a19c51afed6bbaf9c9d8039d100035ab10516a089f9c8ae1342d590",
+      "kind": "native1080-display-source",
+      "status": "artwork/source-only candidate; engine integration unrun; music subjective listening unverified"
+    }
+  ]
+}

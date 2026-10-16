@@ -1,0 +1,71 @@
+{
+  "status": "reconstructed matching-plane candidates; source-only composition reviewed, native acceptance pending",
+  "generator": "built-in image_gen",
+  "source": "source_art/workshop-support/floor-tier2-original-reconstructed-v2.png",
+  "source_sha256": "3c7be3611495b5ef5dbf6e426fda064eb1c7fd8f75824dc077d08de041d0592c",
+  "method": "uniform nearest resampling on the established2px logical grid, at most one bottom padding/crop row, existing96 palette, alpha128. No drawn pixels, anisotropic scaling, reflection, grid shift or shop change.",
+  "tiers": [
+    {
+      "tier": 1,
+      "asset": "assets/2d_v5/workshop-support/right-bay-tier1-floor-reconstructed.png",
+      "dimensions": [
+        1950,
+        1534
+      ],
+      "uniform_source_scale": 1.379066478076379,
+      "scaled_source_height": 1535,
+      "bottom_canvas_crop_or_pad_px": -1,
+      "sprite_top_left": [
+        1040,
+        -560
+      ],
+      "floor_anchor_world_y": 486,
+      "source_nominal_floor_y": 759,
+      "nominal_resampled_floor_y": 486.7114568599718,
+      "measured_source_back_floor_y": 743,
+      "measured_source_top_surface_front_y": 765,
+      "estimated_back_floor_world_y": 464.6463932107497,
+      "estimated_top_surface_front_world_y": 494.9858557284299,
+      "full_grid_footprint": [
+        1872,
+        -126,
+        2808,
+        378
+      ],
+      "footprint_opaque_pixels": 0,
+      "exit_corridor_opaque_pixels": 0,
+      "sha256": "bd5370b58f2ca0a8b2f4138ade709000987f445096072cd1501ef7824238102f"
+    },
+    {
+      "tier": 2,
+      "asset": "assets/2d_v5/workshop-support/right-bay-tier2-floor-reconstructed.png",
+      "dimensions": [
+        2400,
+        1888
+      ],
+      "uniform_source_scale": 1.6973125884016973,
+      "scaled_source_height": 1889,
+      "bottom_canvas_crop_or_pad_px": -1,
+      "sprite_top_left": [
+        1040,
+        -802
+      ],
+      "floor_anchor_world_y": 486,
+      "source_nominal_floor_y": 759,
+      "nominal_resampled_floor_y": 486.2602545968882,
+      "measured_source_back_floor_y": 743,
+      "measured_source_top_surface_front_y": 765,
+      "estimated_back_floor_world_y": 459.103253182461,
+      "estimated_top_surface_front_world_y": 496.4441301272984,
+      "full_grid_footprint": [
+        2028,
+        -282,
+        3252,
+        366
+      ],
+      "footprint_opaque_pixels": 0,
+      "exit_corridor_opaque_pixels": 0,
+      "sha256": "9d9bf62aad43ece01dfa1c286e7a32d9d678609bddc649a31667993420f1fcb0"
+    }
+  ]
+}
