@@ -1,15 +1,51 @@
-# 星际快递 · Dev46 WIP
+# 星际快递 · StarCourier
 
-当前版本：Dev46 / source01。
+**[下载 Dev46 Windows x86_64 试玩版](https://github.com/lorcinv/star-courier/releases/download/dev46-demo/StarCourier-Dev46-Windows-x86_64-WIP.zip)** · [Release 页面](https://github.com/lorcinv/star-courier/releases/tag/dev46-demo)
 
-- **游玩**：完整解压 `playable/StarCourier-Dev46-Windows-x86_64-WIP.zip`，运行其中的 `StarCourier.exe`；保留同目录的 `.pck`、`.dat` 和许可证文件。
-- **工程**：使用 Godot 4.6 打开 `project/project.godot`。
-- **版本说明**：见可玩包内的 `README-zh-CN.txt` 与 `RELEASE-INFO.json`。
+这是仍在开发中的物理组装配送游戏（WIP）。先接单，再用零件搭飞行器和发射台，免费试飞，确认后正式配送。当前包含五关主线、原剧情对白和15种在售配件。
 
-`project/` 保留该版本全部 1,647 个原始文件，包括必要的 `experiments/` 复现资料。`SOURCE-PINS.json` 中的路径相对于 `project/`，记录逐文件大小和 SHA256。
+> 仓库及 Release 为私有访问，需要登录有权限的 GitHub 账号。没有访问权限时，链接可能显示404。试玩版尚未完成 Windows 实机、实体手柄及首次玩家体验验证。
 
-Source ID：`0d80d9cdf5a0b9dfbe906a0dc57c465094650940604fb24dd11ad7c25769f105`
+## 直接试玩
 
-可玩 ZIP SHA256：`e4f76c7a3b061b92a8dcebf518544109faccb54581a88d932d0b7d9d3eb59010`
+1. 下载上方 `StarCourier-Dev46-Windows-x86_64-WIP.zip`，完整解压。
+2. 进入 `StarCourier-Dev46-Windows-x86_64`，运行 `StarCourier.exe`。
+3. 保留同目录的 `StarCourier.pck`、数据与许可文件，不要只拷贝 exe。
+4. 从“新游戏”开始，或用“继续游戏”读取存档。更新前建议保留原存档副本。
 
-本分支工作树只保留当前版本；旧版本仍在 Git 提交历史和 `main` 分支中。
+免费试飞不扣费。每份订单只有一次正式配送机会；失败按实际能耗、货损和零件损失结算，余额不足可能形成债务。失败后可以继续接其他委托或打烊，次日再挑战未完成主线。
+
+## 实机画面
+
+以下为原始 Dev46 游戏内容在云端 Linux/Godot 4.6.3 中实际运行的截图，游戏画面1280×720；不是生成图，也不代表已在 Windows 上实测。
+
+![Dev46装配工位：保温模块与第五关寒带路线提示](docs/images/dev46-workshop.jpg)
+
+装配工位：把保温模块直接接在货物旁，并确保组件内有电；工位会显示当前订单地图及风险。
+
+![Dev46第五关免费试飞：穿门后的寒区、乱流与海盗预警](docs/images/dev46-flight.jpg)
+
+第五关免费试飞的暂停画面：穿门后进入寒区，可见冷区宽限、乱流和海盗预警。截图用于展示实际界面，不是通关结果。
+
+## 基本操作
+
+- 装配：鼠标选零件、点空格安装；拖动模块换位，`R`旋转。中键平移，滚轮缩放，`F`看全工位。
+- 发射：在“发射台”页调角度和力度，再选择“试飞·免费”或“发射配送”。
+- 飞行：`WASD`推进，松开滑行；`Ctrl`推进制动，`Shift`加力。
+- 工具：`Q`切换工具，`Space`使用。具体零件可在工位切换自动/按住模式；固体助推器点火后不能关闭，燃尽停止推力。
+- 暂停与存档：`Esc`或`P`暂停；通过“保存并退出”保留进度，之后从“继续游戏”恢复。
+- 对话：`Enter`或空格快显/继续，`Esc`跳过。
+
+## Dev46 的重点
+
+第五关的新报价加入寒带路线：保温直穿较快，但仍会产生货损与费用；不装保温可以提前减速，从上下暖区绕行。旧已展示或已接受订单保持原布局。
+
+本版保留货舱保温模块、气动刹车板、有限燃料一次点火固体助推器及原剧情。不是所有配件都已证明有稳定的整关策略优势，关卡平衡仍在调整。
+
+同内容包已完成云端 Linux 的正常接单、购买、两条寒带路线、正式结算、在途续读，以及新件装配方案存取检查；不能据此宣称 Windows 实机或首次玩家体验已验证。
+
+## 打开工程
+
+源码位于 `project/`，使用 Godot 4.6.3 打开 `project/project.godot`。工程设计与已知限制见 [project/PDR.md](project/PDR.md)。想直接玩请下载 Release 中的 Windows ZIP，不要把 GitHub 自动生成的源码 ZIP 当作试玩包。
+
+反馈时请注明版本、系统、所处关卡，以及问题出现前的操作；附截图更容易定位。试玩包内含校验清单与许可说明。
