@@ -2,8 +2,6 @@
 
 **[下载 Dev46 Windows x86_64 试玩版](https://github.com/lorcinv/star-courier/releases/download/dev46-demo/StarCourier-Dev46-Windows-x86_64-WIP.zip)** · [Release 页面](https://github.com/lorcinv/star-courier/releases/tag/dev46-demo)
 
-私有仓库，下载需登录有访问权限的 GitHub 账号。
-
 《星际快递》是一款物理组装配送游戏。接单后，用零件搭建飞行器和发射台，先免费试飞，再正式送货。Dev46 是开发中的试玩版（WIP），包含五关主线、剧情对白和 15 种在售配件。
 
 ## 开始试玩
